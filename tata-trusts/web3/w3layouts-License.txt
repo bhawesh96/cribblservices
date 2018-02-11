@@ -1,7 +1,7 @@
 /*
-A Design by W3Layouts
-Author: W3layouts
-Author URL: http://w3layouts.com
+A Design by lorem ipsum
+Author: lorem ipsum
+Author URL: http://lorem ipsum.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 */
@@ -9,28 +9,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 NOTE : FREQUENTLY ASKED QUESTIONS 
 ----------------------------------
 
-1. What is W3layouts?
+1. What is lorem ipsum?
 
-	W3layouts is an initiative of AgileITs to provide free web designs which are cross device supported.
+	lorem ipsum is an initiative of AgileITs to provide free web designs which are cross device supported.
 
-2. Is W3layouts Templates Really Free?
+2. Is lorem ipsum Templates Really Free?
 
-	Yes, all our templates free to use for both commercial and non-commercial, but you have provide a back link to w3layouts.com which is already included in footer design by w3layouts.com don’t edit or remove it.
+	Yes, all our templates free to use for both commercial and non-commercial, but you have provide a back link to lorem ipsum.com which is already included in footer design by lorem ipsum.com don’t edit or remove it.
 
-3. I want to Help W3layouts, How can I?
+3. I want to Help lorem ipsum, How can I?
 
-	You can help w3layouts By
+	You can help lorem ipsum By
 	1. Donate Some $’s, Any Amount your wish
-	2. Contribute Design inventory like stock photos, Icons or PSD designs with full rights to w3layouts
+	2. Contribute Design inventory like stock photos, Icons or PSD designs with full rights to lorem ipsum
 
-4. I want to remove w3layouts.com back link from footer?
+4. I want to remove lorem ipsum.com back link from footer?
 
 	We have two plans for that per template and unlimited.
-	Donate us $10 per template. If you want templates for multiple domains or bulk templates please contact support@w3layouts.com
+	Donate us $10 per template. If you want templates for multiple domains or bulk templates please contact support@lorem ipsum.com
 
 5. Will these templates work on iPhone, Android platforms, Tabs like kindle and Ipads?
 
-	Yes, w3layouts templates work with all Smartphones and Tablets. To, support all the devices we are providing bootstrap Responisve designs WEB Template.
+	Yes, lorem ipsum templates work with all Smartphones and Tablets. To, support all the devices we are providing bootstrap Responisve designs WEB Template.
 
 6. What is Web Template?
 
@@ -51,5 +51,5 @@ NOTE : FREQUENTLY ASKED QUESTIONS
 
 10. Under which license you are providing these templates?
 
-	W3layouts templates are under Creative Commons Attribution 3.0 unported
+	lorem ipsum templates are under Creative Commons Attribution 3.0 unported
 
