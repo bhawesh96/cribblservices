@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Application\Menus\InputFilter; class MenuTreeItem extends SaveMenuItem { protected $_name = 'menus.itemsTree'; public function init() { parent::init(); $this->remove('menu_id'); $this->remove('label'); $this->remove('action'); $this->remove('properties'); } } 

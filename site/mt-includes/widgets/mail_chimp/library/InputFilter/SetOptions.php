@@ -1,0 +1,2 @@
+<?php
+namespace Website\Widgets\MailChimp\InputFilter; use Moto; class SetOptions extends Moto\InputFilter\AbstractInputFilter { public function init() { $this->add(array( 'name' => 'apikey', 'required' => true, 'filters' => array( array('name' => 'StripTags'), array('name' => 'StringTrim'), ), 'validators' => array( array( 'name' => 'Regex', 'break_chain_on_failure' => true, 'options' => array( 'pattern' => '/^([a-z0-9]{32,40}-[a-z0-9]{2,5})$/', ) ), ), )); } }

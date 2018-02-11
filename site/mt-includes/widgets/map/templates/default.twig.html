@@ -1,0 +1,4 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-map moto-preset-default {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getAnimationClasses() }}" data-widget="map" data-spacing="{{ currentWidget.getSpacing('short') }}">
+    <div class="moto-widget-cover"></div>
+    <iframe class="moto-widget-map-frame {{ currentWidget.getLazyLoadingCssClass() }}" height="{{ currentWidget.properties.height }}" {{ Linker.lazySrcAttribute( currentWidget.getApiSrc()|escape ) }}></iframe>
+</div>

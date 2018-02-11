@@ -1,0 +1,8 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-audio_player moto-media-player moto-preset-{{ currentWidget.properties.preset }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getAnimationClasses() }}" data-widget="audio_player" data-preset="{{ currentWidget.properties.preset }}">
+    {% if isPreview %}<div class="moto-widget-cover"></div>{% endif %}
+    <div class="moto-media-player-container"{% if not isPreview %} data-buttons="{{ currentWidget.exportButtons() }}"{% endif %}>
+        <audio preload="none"{% if not isPreview %} data-loop="{{currentWidget.properties.settings.loop}}" data-autoplay="{{currentWidget.properties.settings.autoplay}}"{% endif %}>
+            <source src="{{ Linker.file(currentWidget.properties.tracks[0].path) }}" type="audio/mpeg"{% if not isPreview %} data-track-name="{{currentWidget.properties.tracks[0].name}}" data-track-length="{{currentWidget.properties.tracks[0].length}}"{% endif %}/>
+        </audio>
+    </div>
+</div>

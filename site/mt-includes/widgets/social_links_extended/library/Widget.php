@@ -1,0 +1,2 @@
+<?php
+namespace Website\Widgets\SocialLinksExtended; use Moto; class Widget extends Moto\System\Widgets\AbstractWidget { protected $_name = 'social_links_extended'; protected static $_defaultProperties = array( 'preset' => 'default', 'items' => array(), 'align' => array( 'desktop' => 'left', 'tablet' => '', 'mobile-v' => '', 'mobile-h' => '', ), 'visible_on' => 'mobile-v', 'spacing' => array( 'top' => 'auto', 'right' => 'auto', 'bottom' => 'auto', 'left' => 'auto', ), 'animation' => '' ); protected $_templateType = 'templates'; protected $_widgetId = true; } 

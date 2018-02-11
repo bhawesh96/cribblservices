@@ -1,0 +1,51 @@
+{%- extends 'base.html' -%}
+
+{% block head %}
+    <meta charset="utf-8">
+
+    <title ng-bind-template="{{ '{{' }}pageTitle{{ '}}' }} - {{ '{{\'BRAND.CONTROL_PANEL.NAME\'|translate}}' }}">Control Panel</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="viewport" viewport-initial-scale content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{{ getFileUrl(BRAND.getMediaPath('favicon.ico'), true) }}" type="image/x-icon" />
+    <link rel="stylesheet" href="{{ getFileUrl('@systemIncludes/css/font-awesome.min.css', true) }}" />
+{% endblock %}
+
+
+{% block css %}
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ getFileUrl('@systemAssets/assets.min.css', true) }}" />
+    <link rel="stylesheet" href="{{ getFileUrl('@adminStyles/style.css', true) }}" />
+<style>
+    .spinner-icon {
+        background-image: url({{ getFileUrl(BRAND.getMediaPath('loader.gif'), true) }});
+    }
+    #loading-bar-spinner {
+        {{ BRAND.getStyle('cp_loading_backdrop', 'background: rgba(0, 0, 0, .15);') }}
+    }
+    #loading-bar .bar {
+        {{ BRAND.getStyle('cp_loading_bar', 'background: #ff9000; height: 2px;') }}
+    }
+</style>
+{% endblock %}
+
+
+{% block js %}
+    <script src="{{ getFileUrl('@systemAssets/assets.min.js', true) }}" type="text/javascript" data-cfasync="false"></script>
+{% endblock %}
+
+{% block content %}
+        <div ng-show="loader.status()">
+            <div class="loader"></div>
+            {{ loader.message() }}
+        </div>
+        <div class="moto-ui-notification-panel dark-ui moto-ui-notification-panel_ie-warning" ng-cloak>
+            <p class="moto-ui-notification-panel-message h6 text-center">{{ '{{\'COMMON.TEXT.BROWSER_NOT_SUPPORTED_MESSAGE\'|translate}}' }}</p>
+        </div>
+        <div class="moto-ui-notification-panel dark-ui moto-ui-notification-panel_php-warning" ng-if="showPHPVersionPanel" ng-cloak>
+            <p class="moto-ui-notification-panel-message h6">{{ '{{\'COMMON.TEXT.PHP_SUPPORT_EXPIRY_MESSAGE\'|translate}}' }}</p>
+            <a href class="moto-ui-notification-panel-close-btn" ng-click="hidePHPExpiryPanel()">&times;</a>
+        </div>
+        {% block header %}{% endblock %}
+        {% block body %}{% endblock %}
+{% endblock %}

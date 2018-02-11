@@ -1,0 +1,4 @@
+{% for item in items %}
+    /* {{ item.widget_name ~'/templates/' ~ item.template ~ '.twig.css' }} */
+    {% include '@websiteWidgets/' ~ item.widget_name ~'/templates/' ~ item.template ~ '.twig.css' ignore missing with {'item': item} %}
+{% endfor %}

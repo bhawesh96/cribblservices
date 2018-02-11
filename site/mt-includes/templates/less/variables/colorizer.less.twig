@@ -1,0 +1,11 @@
+{% for colorTheme in colors.base %}
+{% set index = loop.index %}
+@baseColor{{ index }}: {{ colorTheme[0] }};
+{% for i in 1..5 %}
+    @baseColor{{ index }}_{{ i }}: {{ colorTheme[i] }};
+{% endfor %}
+{% endfor %}
+
+{% for colorTheme in colors.custom %}
+@customColor{{ loop.index }}: {{ colorTheme }};
+{% endfor %}

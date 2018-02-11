@@ -1,0 +1,2 @@
+<?php
+namespace Moto\ClickAction; class Mail extends AbstractClickAction { protected $_defaultData = array( 'email' => '', 'subject' => '', 'body' => '', ); public function getUrl() { $email = trim($this->get('email')); $subject = trim($this->get('subject')); $body = trim($this->get('body')); $additional = ''; if (!empty($subject)) { $additional = '?subject=' . $subject; } if (!empty($body)) { $additional .= (empty($additional) ? '?' : '&') . 'body=' . $body; } $url = sprintf('mailto:%s%s', $email, $additional); return $url; } }

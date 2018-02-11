@@ -1,0 +1,28 @@
+{
+    "spacings": {
+        "desktop": {
+            "small": 10,
+            "medium": 30,
+            "large": 130
+        },
+        "tablet": {
+            "small": 10,
+            "medium": 25,
+            "large": 75
+        },
+        "mobile-h": {
+            "small": 10,
+            "medium": 25,
+            "large": 45
+        },
+        "mobile-v": {
+            "small": 10,
+            "medium": 25,
+            "large": 45
+        }
+    },
+    "grid": {
+        "gutter-width": "20px",
+        "fixed-row-width": "1200px"
+    }
+}

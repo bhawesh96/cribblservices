@@ -1,0 +1,10 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-disqus {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }}" data-widget="disqus"{% if not isPreview %} data-params="{{ currentWidget.getParams()|json_encode }}" data-url="{{ currentWidget.getPageUrl(currentPage)}}"{% endif %}>
+    {% if isPreview %}
+        <div class="moto-widget-cover"></div>
+    {% endif %}
+    {% if currentWidget.getParam('shortname') %}
+        <div id="disqus_thread"></div>
+    {% else %}
+        <div class="moto-widget-empty"></div>
+    {% endif %}
+</div>

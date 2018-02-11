@@ -1,0 +1,90 @@
+{
+    "MODULE": {
+        "INSTALL": {
+            "COMMON": {
+                "ERROR_PAGE_HEADING": "Fel",
+                "PASSWORD_LABEL": "Lösenord"
+            },
+            "SET_LANGUAGE_LABEL": "Ställ in språk",
+            "SERVER_TEST": {
+                "TESTING_PAGE_HEADING": "Servertest",
+                "TESTING_DESCRIPTION": "Testar din server för kompatibilitet. Vänligen vänta.",
+                "SUCCESS_PAGE_HEADING": "Din server uppfyller rekommenderade systemkrav",
+                "SUCCESS_DESCRIPTION": "Vänligen klicka på knappen nedan för att påbörja installationen",
+                "BEGIN_INSTALL_BUTTON": "Börja installationen",
+                "LICENSE_AGREEMENT_TEXT": "Genom att installera detta program bekräfta du att du har läst och accepterar våra <a href='http://www.motocms.com/terms/' target='_blank'> Användarvillkor</a> och vår <a href='http://www.motocms.com/privacy/' target='_blank'> Sekretesspolicy</a>."
+            },
+            "SETUP_DATABASE": {
+                "PAGE_HEADING": "Konfigurera databas",
+                "PAGE_DESCRIPTION": "För att ansluta till din MySQL server",
+                "HOSTNAME_LABEL": "Hostnamn",
+                "HOSTNAME_TOOLTIP": "<b class='tooltip-title'> hostnamnet</b> <br/> Domänens namndetaljer måste användas inom följande fält. Om du inte är säker på dessa detaljer - kontakta ditt webbhotell och be dem att lämna dessa uppgifterna till dig.",
+                "USERNAME_LABEL": "Användarnamn",
+                "USERNAME_TOOLTIP": "<b class='tooltip-title'> Användarnamn</b> <br/> Användarnamnet är ditt login till databasen. Om du inte är säker på dessa detaljer - kontakta ditt webbhotell och be dem att lämna dessa uppgifterna till dig.",
+                "DATABASE_LABEL": "Databasnamn",
+                "DATABASE_TOOLTIP": "<b class='tooltip-title'> Databasnamn</b> <br/> Varje databas har ett unikt namn. Om du inte är säker på dessa detaljer - kontakta ditt webbhotell och be dem att lämna dessa uppgifterna till dig.",
+                "PASSWORD_TOOLTIP": "<b class='tooltip-title'> Lösenord</b> <br/> Ditt lösenord till databasen. Om du inte är säker på dessa detaljer - kontakta ditt webbhotell och be dem att lämna dessa uppgifterna till dig.",
+                "TABLE_PREFIX_LABEL": "Tabellprefix",
+                "TABLE_PREFIX_TOOLTIP": "<b class='tooltip-title'> tabellprefix</b> <br/> Detta fält krävs inte. Tabellprefixets standardnamn - moto_. Tillåter att du kopplar ett specifikt tabellprefix till din mall."
+            },
+            "SETUP_USER": {
+                "PAGE_HEADING": "Konfigurera användaren",
+                "PAGE_DESCRIPTION": "Detta blir administratören för den här installationen",
+                "NAME_LABEL": "Namn",
+                "EMAIL_LABEL": "E-post",
+                "PASSWORD_CONFIRMATION_LABEL": "Repetera lösenord:"
+            },
+            "INSTALLATION": {
+                "PAGE_HEADING": "Installera",
+                "PAGE_DESCRIPTION": "Redo att installera Moto. Klicka på knappen nedan för att börja. <br/> Det tar bara några minuter.",
+                "INSTALL_NOW_BUTTON": "Installera nu",
+                "COMMON_ERROR_MESSAGE": "Installationen avbryts av ett fel",
+                "PROCESS_PAGE_HEADING": "Installerar...",
+                "PROCESS_PAGE_DESCRIPTION": "Moto3 installeras nu. Vänligen vänta.",
+                "COMPLETE_PAGE_HEADING": "Installationen komplett",
+                "COMPLETE_PAGE_DESCRIPTION": "Allt gjort. Klicka på knappen nedan för att börja använda Moto3.",
+                "START_WORK_BUTTON": "Start"
+            },
+            "ERROR_MESSAGE": {
+                "BROKEN_RESPONSE": "Korrupt respons från servern",
+                "FILE_WRITABLE": "Filen <strong>{{ name }}</strong> är inte skrivbar. Vänligen ange korrekt behörighet för följande fil.",
+                "FOLDER_WRITABLE": "Mappen <strong>{{ name }}</strong> är inte skrivbar. Vänligen ange korrekt behörighet för följande mapp.",
+                "FILE_READABLE": "Filen <strong>{{ name }}</strong> är inte läsbar. Vänligen ange korrekt behörighet för följande fil.",
+                "FOLDER_READABLE": "Mappen <strong>{{ name }}</strong> är inte läsbar. Vänligen ange korrekt behörighet för följande mapp.",
+                "PHP_VERSION": "Aktuell PHP version stöds inte. Vår mall kräver: PHP version 5.4+, 5.5+ eller 5.6+.",
+                "PHP_FUNCTION_NOT_EXISTS": "PHP funktion {{ function }} finns inte.",
+                "PHP_EXTENSION_LOADED": "PHP tillägget <strong>{{ extension }}</strong> är inte aktiverad. Vänligen verifiera serverkonfigurationen. Kontrollera att tillägget <strong>{{ extension }}</strong> är aktiverad.",
+                "PHP_SESSION_CREATE": "Servern kan inte starta sessionen. Kontrollera att servern kan skapa sessioner.",
+                "PHP_SAFE_MODE": "Vi har upptäckt att PHP felsäkert läge är aktiverat på servern. Vi rekommenderar att stänga av det så att vår programvara kan fungera normalt. Du kan inaktivera felsäkert läge i din kontrollpanel eller genom att redigera en php.ini filen.",
+                "MAIL_FUNCTION": "E-postfunktionen fungerar inte på din server.",
+                "PHP_UPLOAD_ENABLED": "Alternativet ladda upp fil är inaktiverat.",
+                "PHP_UPLOAD_FILE_SIZE": "Maximal uppladdningsstorlek är {{ upload_max_size }}, men {{ min }} krävs.",
+                "ALREADY_INSTALLED": "Moto3 är redan installerat",
+                "THEME_NOT_ACTIVATED": "Ett fel uppstod vid aktivering av temat. <br/> Vänligen kontakta vår tekniska support via följande <a href=\"http://support.cms-guide.com/hc/{{'CURRENT_LANGUAGE'|translate}}/requests/new\" target=\"_blank\"> länk</a> för ytterligare hjälp.",
+                "EXTRA_CONTENT_NOT_INSTALLED": "Ett fel uppstod under installationen av extra innehåll. <br/> Vänligen kontakta vår tekniska support via följande <a href=\"http://support.cms-guide.com/hc/{{'CURRENT_LANGUAGE'|translate}}/requests/new\" target=\"_blank\"> länk</a> för ytterligare hjälp.",
+                "DATABASE": {
+                    "DATA_ALREADY_EXISTS": "Data är redan installerat.",
+                    "IMPORT_STRUCTURE": "Fel vid import av databasstrukturen.",
+                    "IMPORT_DATA": "Fel vid import av databasens data.",
+                    "CONNECT": "Fel vid anslutning till databasen."
+                },
+                "NAMESPACES": {
+                    "DATABASE": "Fel i databasinställningarna.",
+                    "ADMIN": "Fel i användarinställningarna.",
+                    "LANGUAGE": "Fel språk valt.",
+                    "WEBSITE.ADDRESS": "Fel i webbplatsens adressnamn."
+                },
+                "KEYS": {
+                    "EMAIL": "E-postadress.",
+                    "NAME": "Användarnamn.",
+                    "PASSWORD": "Lösenord.",
+                    "PASSWORD_CONFIRM": "Lösenord.",
+                    "DATABASE": "Databasnamn.",
+                    "HOSTNAME": "Hostnamn.",
+                    "PREFIX": "Prefix.",
+                    "USERNAME": "Databasens användarnamn."
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,2 @@
+<?php
+namespace Website\Widgets\Button; use Moto; class Validator extends Moto\System\Widgets\AbstractValidator { public function errors($content, $parent = null, $context = array()) { $errors = array(); if (Moto\Features::isEnabled('widget_validation__button_strict_url')) { if (Moto\Util::getValue($content, 'properties.link.action') === 'url') { if (Moto\Util::getValue($content, 'properties.link.properties.url') === '') { $this->_updateErrors($errors, 'properties.link.action.properties.url', 'isEmpty'); } } } return $errors; } }

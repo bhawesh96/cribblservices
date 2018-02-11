@@ -1,0 +1,7 @@
+{% import "macros/helper.html.twig" as ContentHelper %}
+{# <button title="Close (Esc)" type="button" class="mfp-close">×</button> #}
+<div class="moto-popup_content" style="background: white;">
+    <section class="content moto-section" data-widget="section" data-container="section">
+        {{ ContentHelper.RenderPageSection(currentContentBlock, 'popup') }}
+    </section>
+</div>

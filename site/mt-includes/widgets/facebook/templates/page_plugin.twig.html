@@ -1,0 +1,14 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-facebook_page_plugin {{ currentWidget.getAlignClass() }} {{ currentWidget.getSpacing('classes') }}" data-widget="facebook_page_plugin">
+    {% if isPreview %}<div class="moto-widget-cover"></div>{% endif %}
+    {% if currentWidget.getHref() == '' %}
+        {% if isPreview %}<div class="moto-widget-empty"></div>{% endif %}
+    {% else %}
+        <div class="fb-page" data-href="{{ currentWidget.properties.params.href }}" data-width="{{ currentWidget.properties.params.width }}" data-height="{{ currentWidget.properties.params.height }}" data-hide-cover="{{ currentWidget.properties.params.hide_cover * 1 }}" data-show-facepile="{{ currentWidget.properties.params.show_facepile * 1 }}" {% if currentWidget.properties.params.show_posts * 1 %} data-tabs="timeline" {% endif %}  data-hide-cta="{{ currentWidget.properties.params.hide_cta * 1 }}" data-small-header="{{ currentWidget.properties.params.small_header * 1 }}" data-adapt-container-width="{{ currentWidget.properties.params.adapt_container_width * 1 }}">
+            <div class="fb-xfbml-parse-ignore">
+                <blockquote cite="{{ currentWidget.properties.params.href }}">
+                    <a href="{{ currentWidget.properties.params.href }}">{{ currentWidget.properties.title }}</a>
+                </blockquote>
+            </div>
+        </div>
+    {% endif %}
+</div>

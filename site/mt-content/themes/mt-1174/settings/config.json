@@ -1,0 +1,434 @@
+{
+    "presets": {
+        "image": {
+            "moto-preset-default": {
+                "image_border_color": 0,
+                "layer_background_color": 0,
+                "layer_border_color": 0,
+                "layer_icon_color": 0
+            },
+            "moto-preset-2": {
+                "image_border_color": 0,
+                "layer_background_color": 0,
+                "layer_border_color": 0,
+                "layer_icon_color": 0
+            },
+            "moto-preset-3": {
+                "image_border_color": 0,
+                "layer_background_color": 1,
+                "layer_border_color": 1,
+                "layer_icon_color": 1
+            },
+            "moto-preset-4": {
+                "image_border_color": 0,
+                "layer_background_color": 1,
+                "layer_border_color": 1,
+                "layer_icon_color": 0
+            },
+            "moto-preset-5": {
+                "image_border_color": 0,
+                "layer_background_color": 1,
+                "layer_border_color": 1,
+                "layer_icon_color": 1
+            }
+        },
+        "divider_horizontal": {
+            "moto-preset-default": {
+                "divider_horizontal_enabled": 1
+            },
+            "moto-preset-2": {
+                "divider_horizontal_enabled": 1
+            },
+            "moto-preset-3": {
+                "divider_horizontal_enabled": 1
+            }
+        },
+        "button": {
+            "moto-preset-default": {
+                "button_font": 1,
+                "button_font_color": 1,
+                "button_text_decoration": 1,
+                "button_background_color": 1,
+                "button_border_color": 1,
+                "button_icon_color": 0,
+                "button_icon_background": 0
+            },
+            "moto-preset-2": {
+                "button_font": 1,
+                "button_font_color": 1,
+                "button_text_decoration": 1,
+                "button_background_color": 1,
+                "button_border_color": 1,
+                "button_icon_color": 0,
+                "button_icon_background": 0
+            },
+            "moto-preset-3": {
+                "button_font": 1,
+                "button_font_color": 1,
+                "button_text_decoration": 1,
+                "button_background_color": 1,
+                "button_border_color": 1,
+                "button_icon_color": 0,
+                "button_icon_background": 0
+            },
+            "moto-preset-4": {
+                "button_font": 1,
+                "button_font_color": 1,
+                "button_text_decoration": 1,
+                "button_background_color": 1,
+                "button_border_color": 1,
+                "button_icon_color": 0,
+                "button_icon_background": 0
+            },
+            "moto-preset-5": {
+                "button_font": 1,
+                "button_font_color": 1,
+                "button_text_decoration": 1,
+                "button_background_color": 1,
+                "button_border_color": 1,
+                "button_icon_color": 1,
+                "button_icon_background": 0
+            }
+        },
+        "grid_gallery": {
+            "moto-preset-default": {
+                "caption_font": 1,
+                "caption_text_decoration": 1,
+                "caption_font_color": 1,
+                "caption_background": 1,
+                "image_border_color": 0,
+                "layer_color": 1,
+                "layer_border_color": 0,
+                "layer_icon_color": 1
+            },
+            "moto-preset-2": {
+                "caption_font": 1,
+                "caption_text_decoration": 1,
+                "caption_font_color": 1,
+                "caption_background": 1,
+                "image_border_color": 0,
+                "layer_color": 1,
+                "layer_border_color": 0,
+                "layer_icon_color": 0
+            },
+            "moto-preset-3": {
+                "caption_font": 1,
+                "caption_text_decoration": 1,
+                "caption_font_color": 1,
+                "caption_background": 1,
+                "image_border_color": 0,
+                "layer_color": 1,
+                "layer_border_color": 0,
+                "layer_icon_color": 1
+            }
+        },
+        "social_links": {
+            "moto-preset-default": {
+                "icon_color": 1,
+                "border_color": 0,
+                "background_color": 0
+            },
+            "moto-preset-2": {
+                "icon_color": 1,
+                "border_color": 1,
+                "background_color": 1
+            },
+            "moto-preset-3": {
+                "icon_color": 1,
+                "border_color": 0,
+                "background_color": 1
+            }
+        },
+        "slider": {
+            "moto-preset-default": {
+                "caption_font": 1,
+                "caption_text_decoration": 1,
+                "caption_background_color": 1,
+                "caption_font_color": 1,
+                "arrows_color": 1,
+                "arrows_border_color": 1,
+                "arrows_background_color": 1,
+                "pagination_color": 0,
+                "pagination_border_color": 1,
+                "pagination_background_color": 1,
+                "current_pagination_color": 0,
+                "current_pagination_border_color": 1,
+                "current_pagination_background_color": 1
+            },
+            "moto-preset-2": {
+                "caption_font": 1,
+                "caption_text_decoration": 1,
+                "caption_background_color": 1,
+                "caption_font_color": 1,
+                "arrows_color": 1,
+                "arrows_border_color": 1,
+                "arrows_background_color": 1,
+                "pagination_color": 0,
+                "pagination_border_color": 1,
+                "pagination_background_color": 1,
+                "current_pagination_color": 0,
+                "current_pagination_border_color": 1,
+                "current_pagination_background_color": 1
+            }
+        },
+        "contact_form": {
+            "moto-preset-default": {
+                "common_elements": 1,
+                "input_normal_border_color": 1,
+                "input_error_border_color": 1,
+                "form_border_color": 0,
+                "input_label_color": 0
+            },
+            "moto-preset-2": {
+                "common_elements": 1,
+                "input_normal_border_color": 1,
+                "input_error_border_color": 1,
+                "form_border_color": 0,
+                "input_label_color": 1
+            },
+            "moto-preset-3": {
+                "common_elements": 1,
+                "input_normal_border_color": 1,
+                "input_error_border_color": 1,
+                "form_border_color": 0,
+                "input_label_color": 0
+            }
+        },
+        "menu": {
+            "moto-preset-default": {
+                "desktop-menu-background-color": 0,
+                "desktop-menu-border-color": 0,
+                "desktop-menu-item-font": 1,
+                "desktop-menu-item-color": 1,
+                "desktop-menu-item-text-decoration": 1,
+                "desktop-menu-item-background-color": 0,
+                "desktop-menu-item-border-color": 0,
+                "desktop-menu-item-icon-color": 0,
+                "desktop-menu-active-item-color": 1,
+                "desktop-menu-active-item-text-decoration": 1,
+                "desktop-menu-active-item-background-color": 0,
+                "desktop-menu-active-item-border-color": 0,
+                "desktop-menu-active-item-icon-color": 0,
+                "desktop-menu-item-delimiter-color": 0,
+                "desktop-submenu-background-color": 1,
+                "desktop-submenu-border-color": 0,
+                "desktop-submenu-item-border-color": 0,
+                "desktop-submenu-item-font": 1,
+                "desktop-submenu-item-color": 1,
+                "desktop-submenu-item-text-decoration": 1,
+                "desktop-submenu-item-delimiter-color": 0,
+                "desktop-submenu-item-background-color": 1,
+                "mobile-menu-background-color": 0,
+                "mobile-menu-border-color": 1,
+                "mobile-menu-hamburger-icon-normal-color": 1,
+                "mobile-menu-hamburger-icon-normal-background-color": 1,
+                "mobile-menu-hamburger-icon-active-color": 1,
+                "mobile-menu-hamburger-icon-active-background-color": 1,
+                "mobile-menu-item-color": 1,
+                "mobile-menu-item-text-decoration": 1,
+                "mobile-menu-item-background-color": 1,
+                "mobile-menu-item-border-color": 0,
+                "mobile-menu-item-delimiter-color": 1,
+                "mobile-menu-icon-color": 0,
+                "mobile-menu-icon-background-color": 0,
+                "mobile-menu-active-item-color": 1,
+                "mobile-menu-active-item-text-decoration": 1,
+                "mobile-menu-active-item-background-color": 1,
+                "mobile-menu-active-item-border-color": 0,
+                "mobile-menu-active-item-icon-color": 0,
+                "mobile-menu-active-item-icon-background-color": 0,
+                "mobile-submenu-background-color": 1,
+                "mobile-submenu-border-color": 0,
+                "mobile-submenu-item-color": 1,
+                "mobile-submenu-item-text-decoration": 1,
+                "mobile-submenu-item-background-color": 1,
+                "mobile-submenu-item-border-color": 0,
+                "mobile-submenu-active-item-color": 1,
+                "mobile-submenu-active-item-text-decoration": 1,
+                "mobile-submenu-active-item-background-color": 1,
+                "mobile-submenu-active-item-border-color": 0,
+                "desktop-submenu-item-icon-color": 0,
+                "desktop-submenu-item-icon-background-color": 0,
+                "desktop-submenu-active-item-color": 1,
+                "desktop-submenu-active-item-text-decoration": 1,
+                "desktop-submenu-active-item-background-color": 1,
+                "desktop-submenu-active-item-border-color": 0,
+                "desktop-submenu-active-item-icon-color": 0,
+                "desktop-submenu-active-item-icon-background-color": 0,
+                "mobile-submenu-item-icon-color": 0,
+                "mobile-submenu-item-icon-background-color": 0,
+                "mobile-submenu-active-item-icon-color": 0,
+                "mobile-submenu-active-item-icon-background-color": 0
+            },
+            "moto-preset-2": {
+                "desktop-menu-background-color": 0,
+                "desktop-menu-border-color": 0,
+                "desktop-menu-item-font": 1,
+                "desktop-menu-item-color": 1,
+                "desktop-menu-item-text-decoration": 1,
+                "desktop-menu-item-background-color": 1,
+                "desktop-menu-item-border-color": 1,
+                "desktop-menu-item-icon-color": 0,
+                "desktop-menu-active-item-color": 1,
+                "desktop-menu-active-item-text-decoration": 1,
+                "desktop-menu-active-item-background-color": 1,
+                "desktop-menu-active-item-border-color": 1,
+                "desktop-menu-active-item-icon-color": 0,
+                "desktop-menu-item-delimiter-color": 0,
+                "desktop-submenu-background-color": 1,
+                "desktop-submenu-border-color": 0,
+                "desktop-submenu-item-border-color": 0,
+                "desktop-submenu-item-font": 1,
+                "desktop-submenu-item-color": 1,
+                "desktop-submenu-item-text-decoration": 1,
+                "desktop-submenu-item-delimiter-color": 0,
+                "desktop-submenu-item-background-color": 1,
+                "mobile-menu-background-color": 0,
+                "mobile-menu-border-color": 1,
+                "mobile-menu-hamburger-icon-normal-color": 1,
+                "mobile-menu-hamburger-icon-normal-background-color": 1,
+                "mobile-menu-hamburger-icon-active-color": 1,
+                "mobile-menu-hamburger-icon-active-background-color": 1,
+                "mobile-menu-item-color": 1,
+                "mobile-menu-item-text-decoration": 1,
+                "mobile-menu-item-background-color": 1,
+                "mobile-menu-item-border-color": 0,
+                "mobile-menu-item-delimiter-color": 1,
+                "mobile-menu-icon-color": 0,
+                "mobile-menu-icon-background-color": 0,
+                "mobile-menu-active-item-color": 1,
+                "mobile-menu-active-item-text-decoration": 1,
+                "mobile-menu-active-item-background-color": 1,
+                "mobile-menu-active-item-border-color": 0,
+                "mobile-menu-active-item-icon-color": 0,
+                "mobile-menu-active-item-icon-background-color": 0,
+                "mobile-submenu-background-color": 1,
+                "mobile-submenu-border-color": 0,
+                "mobile-submenu-item-color": 1,
+                "mobile-submenu-item-text-decoration": 1,
+                "mobile-submenu-item-background-color": 1,
+                "mobile-submenu-item-border-color": 0,
+                "mobile-submenu-active-item-color": 1,
+                "mobile-submenu-active-item-text-decoration": 1,
+                "mobile-submenu-active-item-background-color": 1,
+                "mobile-submenu-active-item-border-color": 0,
+                "desktop-submenu-item-icon-color": 0,
+                "desktop-submenu-item-icon-background-color": 0,
+                "desktop-submenu-active-item-color": 1,
+                "desktop-submenu-active-item-text-decoration": 1,
+                "desktop-submenu-active-item-background-color": 1,
+                "desktop-submenu-active-item-border-color": 0,
+                "desktop-submenu-active-item-icon-color": 0,
+                "desktop-submenu-active-item-icon-background-color": 0,
+                "mobile-submenu-item-icon-color": 0,
+                "mobile-submenu-item-icon-background-color": 0,
+                "mobile-submenu-active-item-icon-color": 0,
+                "mobile-submenu-active-item-icon-background-color": 0
+            },
+            "moto-preset-3": {
+                "desktop-menu-background-color": 0,
+                "desktop-menu-border-color": 0,
+                "desktop-menu-item-font": 1,
+                "desktop-menu-item-color": 1,
+                "desktop-menu-item-text-decoration": 1,
+                "desktop-menu-item-background-color": 1,
+                "desktop-menu-item-border-color": 0,
+                "desktop-menu-item-icon-color": 1,
+                "desktop-menu-active-item-color": 1,
+                "desktop-menu-active-item-text-decoration": 1,
+                "desktop-menu-active-item-background-color": 1,
+                "desktop-menu-active-item-border-color": 0,
+                "desktop-menu-active-item-icon-color": 1,
+                "desktop-menu-item-delimiter-color": 0,
+                "desktop-submenu-background-color": 1,
+                "desktop-submenu-border-color": 0,
+                "desktop-submenu-item-border-color": 0,
+                "desktop-submenu-item-font": 1,
+                "desktop-submenu-item-color": 1,
+                "desktop-submenu-item-text-decoration": 1,
+                "desktop-submenu-item-delimiter-color": 1,
+                "desktop-submenu-item-background-color": 1,
+                "mobile-menu-background-color": 0,
+                "mobile-menu-border-color": 1,
+                "mobile-menu-hamburger-icon-normal-color": 1,
+                "mobile-menu-hamburger-icon-normal-background-color": 1,
+                "mobile-menu-hamburger-icon-active-color": 1,
+                "mobile-menu-hamburger-icon-active-background-color": 1,
+                "mobile-menu-item-color": 1,
+                "mobile-menu-item-text-decoration": 1,
+                "mobile-menu-item-background-color": 1,
+                "mobile-menu-item-border-color": 0,
+                "mobile-menu-item-delimiter-color": 1,
+                "mobile-menu-icon-color": 0,
+                "mobile-menu-icon-background-color": 0,
+                "mobile-menu-active-item-color": 1,
+                "mobile-menu-active-item-text-decoration": 1,
+                "mobile-menu-active-item-background-color": 1,
+                "mobile-menu-active-item-border-color": 0,
+                "mobile-menu-active-item-icon-color": 0,
+                "mobile-menu-active-item-icon-background-color": 0,
+                "mobile-submenu-background-color": 1,
+                "mobile-submenu-border-color": 0,
+                "mobile-submenu-item-color": 1,
+                "mobile-submenu-item-text-decoration": 1,
+                "mobile-submenu-item-background-color": 1,
+                "mobile-submenu-item-border-color": 0,
+                "mobile-submenu-active-item-color": 1,
+                "mobile-submenu-active-item-text-decoration": 1,
+                "mobile-submenu-active-item-background-color": 1,
+                "mobile-submenu-active-item-border-color": 0,
+                "desktop-submenu-item-icon-color": 0,
+                "desktop-submenu-item-icon-background-color": 0,
+                "desktop-submenu-active-item-color": 1,
+                "desktop-submenu-active-item-text-decoration": 1,
+                "desktop-submenu-active-item-background-color": 1,
+                "desktop-submenu-active-item-border-color": 0,
+                "desktop-submenu-active-item-icon-color": 0,
+                "desktop-submenu-active-item-icon-background-color": 0,
+                "mobile-submenu-item-icon-color": 0,
+                "mobile-submenu-item-icon-background-color": 0,
+                "mobile-submenu-active-item-icon-color": 0,
+                "mobile-submenu-active-item-icon-background-color": 0
+            }
+        }
+    },
+    "content_section_blog": {
+        "enabled": true,
+        "page_id": null,
+        "show_comments": true,
+        "date_format": "d.m.Y",
+        "post_template": "moto-template-blog-post",
+        "build": 1,
+        "design": {
+            "post_list": {
+                "feature_image": {
+                    "preset": "default"
+                },
+                "title": {
+                    "font_style": "moto-text_system_7"
+                },
+                "meta": {
+                    "font_style": "moto-text_system_11"
+                },
+                "button": {
+                    "preset": "5",
+                    "size": "small"
+                },
+                "divider": {
+                    "preset": "default"
+                }
+            },
+            "recent_posts": {
+                "feature_image": {
+                    "preset": "default"
+                },
+                "heading": {
+                    "font_style": "moto-text_system_7"
+                },
+                "title": {
+                    "font_style": "moto-text_system_8"
+                }
+            }
+        }
+    }
+}

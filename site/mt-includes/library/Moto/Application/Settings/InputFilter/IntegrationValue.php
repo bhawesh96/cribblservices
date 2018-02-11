@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Application\Settings\InputFilter; use Moto\InputFilter\AbstractInputFilter; use Moto; class IntegrationValue extends AbstractInputFilter { protected $_name = 'settingsWebsite.integrations'; public function init() { $this->add(array( 'name' => 'type', 'required' => true, 'allow_empty' => false, 'filters' => array( array('name' => 'StringTrim'), ) )); $this->add(array( 'name' => 'items', 'required' => true, 'allow_empty' => false, 'filters' => array( array('name' => 'StringTrim'), ) )); } }

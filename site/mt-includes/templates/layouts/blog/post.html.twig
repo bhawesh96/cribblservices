@@ -1,0 +1,93 @@
+{%- extends 'base.html.twig' -%}
+
+{% block content %} {% autoescape false %}
+
+{% set postTemplate = currentPage.getTemplate() %}
+{% set header = currentPage.getSection('header') %}
+{% set footer = currentPage.getSection('footer') %}
+
+    <div class="page">
+
+{% if header %}
+        <header id="section-header" class="header{% if not isPreview %} moto-section{% endif %} moto-section_inactive">
+            {{ ContentHelper.RenderPageSection(header, 'header') }}
+        </header>
+{% endif %}
+
+        {% if postTemplate %}
+            <!-- With dynamic template -->
+            {{ ContentHelper.RenderPageSection(postTemplate, postTemplate.type) }}
+        {% else %}
+            <!-- Without template -->
+            <div class="moto-widget moto-widget-row row-fixed" off-data-widget="row">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="moto-cell col-sm-8" off-data-container="container">
+
+                            <div class="moto-widget moto-widget-row">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="moto-cell col-sm-12">
+
+                                            <div class="moto-blog-post-meta moto-blog-post-meta_top">
+                                                <span class="moto-blog-post-meta-author">Author <span class="">{{ currentPage.getAuthor().name }}</span></span>
+                                                <span class="moto-blog-post-meta-publish">Posted on <span class="">{{ currentPage.created|date(currentPage.getDateFormat()) }}</span></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="moto-widget moto-widget-row">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="moto-cell col-sm-12">
+
+                                            <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aaaa">
+                                                <div class="moto-widget-text-content moto-widget-text-editable">
+                                                    <h1 class="moto-text_system_7">{{ currentPage.name }}</h1>
+                                                </div>
+                                            </div>
+
+                                            <section id="section-content" class="content page-{{currentPage.id}} moto-section" data-widget="section" data-container="section">
+                                                {{ ContentHelper.RenderPageSection(currentPage, currentPage.type) }}
+                                            </section>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {% if currentPage.showComments %}
+                                <div class="moto-widget moto-widget-row">
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="moto-cell col-sm-12">
+                                        {{ widget("disqus", {"spacing":{"top":"auto","right":"auto","bottom":"auto","left":"auto"},"params":{"url":"@dynamic"}}) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+
+                        </div>
+                        <div class="moto-cell col-sm-4" off-data-container="container">
+                            {{ widget("blog.recent_posts") }}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        {% endif %}
+
+    </div>
+
+{% if footer %}
+    <footer id="section-footer" class="footer{% if not isPreview %} moto-section{% endif %} moto-section_inactive" {% if footer.properties.sticky and (not isPreview) %} moto-sticky="{mode:'smallHeight', direction:'bottom'}"{% endif %}>
+        {{ ContentHelper.RenderPageSection(footer, 'footer') }}
+    </footer>
+{% endif %}
+
+{% endautoescape %} {% endblock %}

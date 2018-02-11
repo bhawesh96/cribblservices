@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Authentication; use Moto; class StorageCookie implements \Zend\Authentication\Storage\StorageInterface { protected $_user = null; public function isEmpty() { return (null === $this->_user); } public function read() { return $this->_user; } public function write($contents) { $this->_user = $contents; } public function clear() { $this->_user = null; } }

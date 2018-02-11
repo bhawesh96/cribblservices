@@ -1,0 +1,25 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-slider moto-preset-{{ currentWidget.properties.preset }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }} {{ currentWidget.getAnimationClasses() }} moto-widget-slider-loader" data-widget="slider" data-preset="{{ currentWidget.properties.preset }}">
+    {% if currentWidget.properties.items|length > 0 %}
+        <ul class="moto-widget-slider-list"{% if not isPreview %} data-moto-slider-options='{{ currentWidget.exportFrontendSettings() }}'{% endif %}>
+            {% for item in currentWidget.properties.items %}
+                <li><img src="{{ Linker.img(item.content) }}" alt="{% if item.alt %}{{ item.alt }}{% else %}{{ item.name }}{% endif %}"/>
+                    {% if item.caption %}
+                        {% if item.captionType=='html' %}
+                            <div class="bx-caption bx-caption_html {{ currentWidget.getCaptionsVisibleOnClass() }}">
+                                <span class="moto-widget-text">
+                                    {% filter page_html_content(item, 'widget:slider.caption') %}{% include template_from_string(item.caption) %}{% endfilter %}
+                                </span>
+                            </div>
+                        {% else %}
+                            <div class="bx-caption bx-caption_text {{ currentWidget.getCaptionsVisibleOnClass() }}">
+                                <span>{{ item.caption | escape }}</span>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <div class="moto-widget-empty"></div>
+    {% endif %}
+</div>

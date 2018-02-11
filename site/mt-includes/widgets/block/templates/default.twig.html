@@ -1,0 +1,18 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-block {{ currentWidget.getCssClasses() }}{% if (currentWidget.properties.bgFixed) %} moto-background-fixed{% endif %}{% if (currentWidget.properties.bgParallaxed) %} moto-parallax{% endif %}" data-widget="block" data-spacing="{{ currentWidget.getSpacing('short') }}" style="{{ StyleHelper.generateWidgetInlineStyles(currentWidget.getStylesValue()) }}" {{ arrayToAttributes(currentWidget.getCustomAttributes()) }}>
+    {% if currentWidget.properties.anchor %}
+    <a class="moto-anchor" name="{{ currentWidget.properties.anchor }}"></a>
+    {% endif %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="moto-cell col-sm-12" data-container="container">
+                {% for item in currentWidget.children %}
+                    {% if isServer %}
+                        {{ widget(item) }}
+                    {% else %}
+                        {% widget item %}{% endWidget %}
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

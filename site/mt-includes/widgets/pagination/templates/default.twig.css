@@ -1,0 +1,36 @@
+{% macro printStyle(styles) %}
+    {% for key,value in styles %}
+        {% if key == 'before' %}
+            &:before {
+            {{ _self.printStyle(styles[key]) }}
+            }
+        {% elseif key == 'after' %}
+            &:after {
+            {{ _self.printStyle(styles[key]) }}
+            }
+        {% elseif value != '' %}
+            {{ key }}: {{ value|raw }};
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{% set properties = item.properties|json_decode %}
+
+{{ StyleHelper.generatePresetSelector('.moto-widget-pagination', item.class_name) }} {
+    {{ _self.printStyle(properties.pagination.desktop.base) }}
+    .moto-pagination-item, li {
+        {{ _self.printStyle(properties.item.desktop.base) }}
+    }
+    .moto-pagination-link, a {
+        {{ _self.printStyle(properties.item_link.desktop.base) }}
+        &:hover {
+            {{ _self.printStyle(properties.item_link.desktop.hover) }}
+        }
+    }
+    .moto-pagination-link_active, li.active a {
+        {{ _self.printStyle(properties.item_link_active.desktop.base) }}
+        &:hover {
+            {{ _self.printStyle(properties.item_link_active.desktop.base) }}
+        }
+    }
+}

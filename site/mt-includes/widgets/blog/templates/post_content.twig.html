@@ -1,0 +1,12 @@
+{% if isServer %}{% import "macros/helper.html.twig" as ContentHelper %}{% endif %}
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-blog-post_content moto-preset-{{ currentWidget.properties.preset|default('default') }} {{ currentWidget.getAnimationClasses() }} {{ currentWidget.getSpacing('classes') }}" data-widget="blog.post_content">
+
+    {% if currentPage.isTemplate() %}
+        <div class="moto-widget-empty"></div>
+    {% else %}
+        <section id="section-content" class="content page-{{currentPage.id}} moto-section" data-widget="section" data-container="section">
+            {{ ContentHelper.RenderPageSection(currentPage, currentPage.type) }}
+        </section>
+    {% endif %}
+
+</div>

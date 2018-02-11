@@ -1,0 +1,2574 @@
+[
+    {
+        "name": "Preset 1",
+        "widget_name": "divider_horizontal",
+        "class_name": "moto-preset-default",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "line": {
+                "desktop": {
+                    "base": {
+                        "border-top-width": "2px",
+                        "border-top-style": "solid",
+                        "border-top-color": "@baseColor1_3"
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 2",
+        "widget_name": "divider_horizontal",
+        "class_name": "moto-preset-2",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "line": {
+                "desktop": {
+                    "base": {
+                        "border-top-width": "2px",
+                        "border-top-style": "solid",
+                        "border-top-color": "@baseColor3_3"
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 3",
+        "widget_name": "divider_horizontal",
+        "class_name": "moto-preset-3",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "line": {
+                "desktop": {
+                    "base": {
+                        "border-top-width": "1px",
+                        "border-top-style": "solid",
+                        "border-top-color": "@baseColor5_3"
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 1",
+        "widget_name": "image",
+        "class_name": "moto-preset-default",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "icon": {
+
+            },
+            "layer": {
+
+            },
+            "image": {
+
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 2",
+        "widget_name": "image",
+        "class_name": "moto-preset-2",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "icon": {
+
+            },
+            "layer": {
+
+            },
+            "image": {
+
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 3",
+        "widget_name": "image",
+        "class_name": "moto-preset-3",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "icon": {
+                "desktop": {
+                    "base": {
+                        "after": {
+                            "color": "transparent"
+                        }
+                    },
+                    "hover": {
+                        "after": {
+                            "color": "@baseColor5_5"
+                        }
+                    }
+                }
+            },
+            "layer": {
+                "desktop": {
+                    "base": {
+                        "background-color": "transparent",
+                        "border-color": "transparent"
+                    },
+                    "hover": {
+                        "background-color": "rgba(0, 0, 0, 0.5)",
+                        "border-color": "transparent"
+                    }
+                }
+            },
+            "image": {
+
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 4",
+        "widget_name": "image",
+        "class_name": "moto-preset-4",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "icon": {
+
+            },
+            "layer": {
+                "desktop": {
+                    "base": {
+                        "background-color": "transparent",
+                        "border-color": "transparent"
+                    },
+                    "hover": {
+                        "background-color": "transparent",
+                        "border-color": "@baseColor1_3"
+                    }
+                }
+            },
+            "image": {
+
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 5",
+        "widget_name": "image",
+        "class_name": "moto-preset-5",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "icon": {
+                "desktop": {
+                    "base": {
+                        "after": {
+                            "color": "transparent"
+                        }
+                    },
+                    "hover": {
+                        "after": {
+                            "color": "@baseColor1_3"
+                        }
+                    }
+                }
+            },
+            "layer": {
+                "desktop": {
+                    "base": {
+                        "background-color": "transparent",
+                        "border-color": "transparent"
+                    },
+                    "hover": {
+                        "background-color": "rgba(104, 61, 74, 0.5)",
+                        "border-color": "transparent"
+                    }
+                }
+            },
+            "image": {
+
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 1",
+        "widget_name": "button",
+        "class_name": "moto-preset-default",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "button": {
+                "desktop": {
+                    "base": {
+                        "font-family": "'Merriweather', serif",
+                        "font-weight": "400",
+                        "font-style": "normal",
+                        "color": "@baseColor5_5",
+                        "background-color": "@baseColor1_3",
+                        "border-color": "@baseColor1_3"
+                    },
+                    "hover": {
+                        "color": "@baseColor5_5",
+                        "background-color": "@customColor3",
+                        "border-color": "@customColor3"
+                    }
+                }
+            },
+            "icon": {
+
+            },
+            "link": {
+                "desktop": {
+                    "base": {
+                        "text-decoration": "none"
+                    },
+                    "hover": {
+                        "text-decoration": ""
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 2",
+        "widget_name": "button",
+        "class_name": "moto-preset-2",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "button": {
+                "desktop": {
+                    "base": {
+                        "font-family": "'Merriweather', serif",
+                        "font-weight": "400",
+                        "font-style": "normal",
+                        "color": "@baseColor5_5",
+                        "background-color": "@baseColor3_5",
+                        "border-color": "@baseColor3_5"
+                    },
+                    "hover": {
+                        "color": "@baseColor5_5",
+                        "background-color": "@baseColor2_3",
+                        "border-color": "@baseColor2_3"
+                    }
+                }
+            },
+            "icon": {
+
+            },
+            "link": {
+                "desktop": {
+                    "base": {
+                        "text-decoration": "none"
+                    },
+                    "hover": {
+                        "text-decoration": ""
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 3",
+        "widget_name": "button",
+        "class_name": "moto-preset-3",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "button": {
+                "desktop": {
+                    "base": {
+                        "font-family": "'Merriweather', serif",
+                        "font-weight": "400",
+                        "font-style": "normal",
+                        "color": "@baseColor2_3",
+                        "background-color": "@baseColor5_1",
+                        "border-color": "transparent"
+                    },
+                    "hover": {
+                        "color": "@baseColor5_5",
+                        "background-color": "@customColor5",
+                        "border-color": "transparent"
+                    }
+                }
+            },
+            "icon": {
+
+            },
+            "link": {
+                "desktop": {
+                    "base": {
+                        "text-decoration": "none"
+                    },
+                    "hover": {
+                        "text-decoration": ""
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 4",
+        "widget_name": "button",
+        "class_name": "moto-preset-4",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "button": {
+                "desktop": {
+                    "base": {
+                        "font-family": "'Merriweather', serif",
+                        "font-weight": "400",
+                        "font-style": "normal",
+                        "color": "@baseColor2_3",
+                        "background-color": "transparent",
+                        "border-color": "@baseColor1_3"
+                    },
+                    "hover": {
+                        "color": "@baseColor2_3",
+                        "background-color": "transparent",
+                        "border-color": "@baseColor1_3"
+                    }
+                }
+            },
+            "icon": {
+
+            },
+            "link": {
+                "desktop": {
+                    "base": {
+                        "text-decoration": "none"
+                    },
+                    "hover": {
+                        "text-decoration": ""
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 5",
+        "widget_name": "button",
+        "class_name": "moto-preset-5",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "button": {
+                "desktop": {
+                    "base": {
+                        "font-family": "'Merriweather', serif",
+                        "font-weight": "400",
+                        "font-style": "normal",
+                        "color": "@baseColor5_5",
+                        "background-color": "transparent",
+                        "border-color": "@baseColor5_5"
+                    },
+                    "hover": {
+                        "color": "@baseColor5_5",
+                        "background-color": "@baseColor1_3",
+                        "border-color": "@baseColor1_3"
+                    }
+                }
+            },
+            "icon": {
+                "desktop": {
+                    "base": {
+                        "before": {
+                            "color": "@baseColor5_5"
+                        }
+                    },
+                    "hover": {
+                        "before": {
+                            "color": "@baseColor5_5"
+                        }
+                    }
+                }
+            },
+            "link": {
+                "desktop": {
+                    "base": {
+                        "text-decoration": "none"
+                    },
+                    "hover": {
+                        "text-decoration": ""
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 1",
+        "widget_name": "social_links",
+        "class_name": "moto-preset-default",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "social_links": {
+                "desktop": {
+                    "base": {
+                        "before": {
+                            "color": "@baseColor1_3"
+                        }
+                    },
+                    "hover": {
+                        "before": {
+                            "color": "@baseColor3_3"
+                        }
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 2",
+        "widget_name": "social_links",
+        "class_name": "moto-preset-2",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "social_links": {
+                "desktop": {
+                    "base": {
+                        "before": {
+                            "color": "@baseColor2_3"
+                        },
+                        "border-color": "@baseColor1_3",
+                        "background-color": "transparent"
+                    },
+                    "hover": {
+                        "before": {
+                            "color": "@baseColor5_5"
+                        },
+                        "border-color": "@baseColor1_3",
+                        "background-color": "@baseColor1_3"
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 3",
+        "widget_name": "social_links",
+        "class_name": "moto-preset-3",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "social_links": {
+                "desktop": {
+                    "base": {
+                        "before": {
+                            "color": "@baseColor1_3"
+                        },
+                        "background-color": "@baseColor5_3"
+                    },
+                    "hover": {
+                        "before": {
+                            "color": "@baseColor5_5"
+                        },
+                        "background-color": "rgba(104, 61, 74, 0.5)"
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 1",
+        "widget_name": "slider",
+        "class_name": "moto-preset-default",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "caption": {
+                "desktop": {
+                    "base": {
+                        "carousel-background-color": "transparent",
+                        "font-family": "'Merriweather', serif",
+                        "font-weight": "400",
+                        "font-style": "normal",
+                        "color": "@baseColor5_5",
+                        "text-decoration": "none",
+                        "background-color": "transparent"
+                    }
+                }
+            },
+            "arrows": {
+                "desktop": {
+                    "base": {
+                        "background-color": "@baseColor3_3",
+                        "before": {
+                            "color": "@baseColor5_5"
+                        },
+                        "border-color": "transparent"
+                    },
+                    "hover": {
+                        "background-color": "@baseColor1_3",
+                        "before": {
+                            "color": "@baseColor5_3"
+                        },
+                        "border-color": "transparent"
+                    }
+                }
+            },
+            "pagination": {
+                "desktop": {
+                    "base": {
+                        "border-color": "transparent",
+                        "background-color": "@baseColor5_3"
+                    },
+                    "hover": {
+                        "border-color": "transparent",
+                        "background-color": "@baseColor1_3"
+                    }
+                }
+            },
+            "current_pagination": {
+                "desktop": {
+                    "base": {
+                        "border-color": "transparent",
+                        "background-color": "@baseColor1_3"
+                    },
+                    "hover": {
+                        "border-color": "transparent",
+                        "background-color": "@baseColor1_3"
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 2",
+        "widget_name": "slider",
+        "class_name": "moto-preset-2",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "caption": {
+                "desktop": {
+                    "base": {
+                        "carousel-background-color": "transparent",
+                        "font-family": "'Merriweather', serif",
+                        "font-weight": "400",
+                        "font-style": "normal",
+                        "color": "@baseColor5_5",
+                        "text-decoration": "none",
+                        "background-color": "transparent"
+                    }
+                }
+            },
+            "arrows": {
+                "desktop": {
+                    "base": {
+                        "background-color": "@baseColor1_3",
+                        "before": {
+                            "color": "@baseColor3_3"
+                        },
+                        "border-color": "transparent"
+                    },
+                    "hover": {
+                        "background-color": "@baseColor3_3",
+                        "before": {
+                            "color": "@baseColor1_3"
+                        }
+                    }
+                }
+            },
+            "pagination": {
+                "desktop": {
+                    "base": {
+                        "border-color": "transparent",
+                        "background-color": "@baseColor4_3"
+                    },
+                    "hover": {
+                        "border-color": "transparent",
+                        "background-color": "@baseColor1_3"
+                    }
+                }
+            },
+            "current_pagination": {
+                "desktop": {
+                    "base": {
+                        "border-color": "transparent",
+                        "background-color": "@baseColor1_3"
+                    },
+                    "hover": {
+                        "border-color": "transparent",
+                        "background-color": "@baseColor1_3"
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 1",
+        "widget_name": "grid_gallery",
+        "class_name": "moto-preset-default",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "caption": {
+                "desktop": {
+                    "base": {
+                        "font-family": "'Open Sans', sans-serif",
+                        "font-weight": "400",
+                        "font-style": "normal",
+                        "text-decoration": "none",
+                        "color": "@customColor2",
+                        "background-color": "transparent"
+                    }
+                }
+            },
+            "image": {
+                "desktop": {
+                    "base": {
+                        "before": {
+                            "background-color": "transparent"
+                        },
+                        "after": {
+                            "color": "transparent"
+                        }
+                    },
+                    "hover": {
+                        "before": {
+                            "background-color": "rgba(0, 0, 0, 0.5)"
+                        },
+                        "after": {
+                            "color": "@baseColor5_5"
+                        }
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 2",
+        "widget_name": "grid_gallery",
+        "class_name": "moto-preset-2",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "caption": {
+                "desktop": {
+                    "base": {
+                        "font-family": "'Open Sans', sans-serif",
+                        "font-weight": "400",
+                        "font-style": "normal",
+                        "text-decoration": "none",
+                        "color": "@baseColor5_5",
+                        "background-color": "transparent"
+                    }
+                }
+            },
+            "image": {
+                "desktop": {
+                    "base": {
+                        "before": {
+                            "background-color": "transparent"
+                        }
+                    },
+                    "hover": {
+                        "before": {
+                            "background-color": "rgba(255, 255, 255, 0.4)"
+                        }
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 3",
+        "widget_name": "grid_gallery",
+        "class_name": "moto-preset-3",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "caption": {
+                "desktop": {
+                    "base": {
+                        "font-family": "'Open Sans', sans-serif",
+                        "font-weight": "400",
+                        "font-style": "normal",
+                        "text-decoration": "none",
+                        "color": "@customColor2",
+                        "background-color": "transparent"
+                    }
+                }
+            },
+            "image": {
+                "desktop": {
+                    "base": {
+                        "before": {
+                            "background-color": "transparent"
+                        },
+                        "after": {
+                            "color": "transparent"
+                        }
+                    },
+                    "hover": {
+                        "before": {
+                            "background-color": "rgba(0, 0, 0, 0.3)"
+                        },
+                        "after": {
+                            "color": "@customColor2"
+                        }
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 1",
+        "widget_name": "contact_form",
+        "class_name": "moto-preset-default",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "form": {
+                "desktop": {
+                    "base": {
+                        "font-family": "'Open Sans', sans-serif",
+                        "background-color": "transparent"
+                    }
+                }
+            },
+            "input_label": {
+
+            },
+            "input_normal": {
+                "desktop": {
+                    "base": {
+                        "color": "@customColor3",
+                        "background-color": "@baseColor5_5",
+                        "font-style": "normal",
+                        "font-weight": "400",
+                        "border-color": "transparent"
+                    }
+                }
+            },
+            "input_error": {
+                "desktop": {
+                    "base": {
+                        "color": "@customColor3",
+                        "background-color": "@baseColor5_5",
+                        "border-color": "@customColor4"
+                    }
+                }
+            },
+            "input_error_message": {
+                "desktop": {
+                    "base": {
+                        "font-style": "normal",
+                        "font-weight": "400",
+                        "color": "@customColor4"
+                    }
+                }
+            },
+            "form_error_message": {
+                "desktop": {
+                    "base": {
+                        "font-style": "normal",
+                        "font-weight": "400",
+                        "color": "@customColor4"
+                    }
+                }
+            },
+            "form_success_message": {
+                "desktop": {
+                    "base": {
+                        "font-style": "normal",
+                        "font-weight": "400",
+                        "color": "@baseColor3_3"
+                    }
+                }
+            },
+            "input_placeholder": {
+                "desktop": {
+                    "base": {
+                        "color": "@customColor3"
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 2",
+        "widget_name": "contact_form",
+        "class_name": "moto-preset-2",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "form": {
+                "desktop": {
+                    "base": {
+                        "font-family": "'Open Sans', sans-serif",
+                        "background-color": "transparent"
+                    }
+                }
+            },
+            "input_label": {
+                "desktop": {
+                    "base": {
+                        "color": "@baseColor3_3"
+                    }
+                }
+            },
+            "input_normal": {
+                "desktop": {
+                    "base": {
+                        "color": "@baseColor2_3",
+                        "background-color": "@baseColor5_3",
+                        "font-style": "normal",
+                        "font-weight": "400",
+                        "border-color": "@customColor2"
+                    }
+                }
+            },
+            "input_error": {
+                "desktop": {
+                    "base": {
+                        "color": "@baseColor2_3",
+                        "background-color": "@baseColor5_3",
+                        "border-color": "@customColor4"
+                    }
+                }
+            },
+            "input_error_message": {
+                "desktop": {
+                    "base": {
+                        "font-style": "normal",
+                        "font-weight": "400",
+                        "color": "@customColor4"
+                    }
+                }
+            },
+            "form_error_message": {
+                "desktop": {
+                    "base": {
+                        "font-style": "normal",
+                        "font-weight": "400",
+                        "color": "@customColor4"
+                    }
+                }
+            },
+            "form_success_message": {
+                "desktop": {
+                    "base": {
+                        "font-style": "normal",
+                        "font-weight": "400",
+                        "color": "@baseColor2_3"
+                    }
+                }
+            },
+            "input_placeholder": {
+                "desktop": {
+                    "base": {
+                        "color": "@baseColor2_3"
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 3",
+        "widget_name": "contact_form",
+        "class_name": "moto-preset-3",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "form": {
+                "desktop": {
+                    "base": {
+                        "font-family": "'Open Sans', sans-serif",
+                        "background-color": "transparent"
+                    }
+                }
+            },
+            "input_label": {
+
+            },
+            "input_normal": {
+                "desktop": {
+                    "base": {
+                        "color": "@customColor3",
+                        "background-color": "transparent",
+                        "font-style": "normal",
+                        "font-weight": "400",
+                        "border-color": "@baseColor4_3"
+                    }
+                }
+            },
+            "input_error": {
+                "desktop": {
+                    "base": {
+                        "color": "@customColor3",
+                        "background-color": "transparent",
+                        "border-color": "@baseColor4_3"
+                    }
+                }
+            },
+            "input_error_message": {
+                "desktop": {
+                    "base": {
+                        "font-style": "normal",
+                        "font-weight": "400",
+                        "color": "@customColor4"
+                    }
+                }
+            },
+            "form_error_message": {
+                "desktop": {
+                    "base": {
+                        "font-style": "normal",
+                        "font-weight": "400",
+                        "color": "@customColor4"
+                    }
+                }
+            },
+            "form_success_message": {
+                "desktop": {
+                    "base": {
+                        "font-style": "normal",
+                        "font-weight": "400",
+                        "color": "@customColor3"
+                    }
+                }
+            },
+            "input_placeholder": {
+                "desktop": {
+                    "base": {
+                        "color": "@customColor3"
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 1",
+        "widget_name": "menu",
+        "class_name": "moto-preset-default",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "menu_container": {
+
+            },
+            "menu_item": {
+                "desktop": {
+                    "base": {
+                        "font-family": "'Merriweather', serif",
+                        "font-weight": "400",
+                        "font-style": "normal",
+                        "color": "@baseColor2_3",
+                        "text-decoration": "none"
+                    },
+                    "hover": {
+                        "color": "@baseColor1_3",
+                        "text-decoration": ""
+                    }
+                }
+            },
+            "menu_item_active": {
+                "desktop": {
+                    "base": {
+                        "color": "@baseColor2_3",
+                        "text-decoration": "none"
+                    },
+                    "hover": {
+                        "color": "@baseColor1_3",
+                        "text-decoration": ""
+                    }
+                }
+            },
+            "menu_item_delimiter": {
+
+            },
+            "menu_item_icon": {
+
+            },
+            "menu_item_icon_active": {
+
+            },
+            "sub_menu_container": {
+                "desktop": {
+                    "base": {
+                        "background-color": "@baseColor3_3"
+                    }
+                }
+            },
+            "sub_menu_item": {
+                "desktop": {
+                    "base": {
+                        "font-family": "'Merriweather', serif",
+                        "font-weight": "400",
+                        "font-style": "normal",
+                        "color": "@baseColor5_5",
+                        "text-decoration": "none",
+                        "background-color": "transparent"
+                    },
+                    "hover": {
+                        "color": "@baseColor1_3",
+                        "text-decoration": "",
+                        "background-color": "transparent"
+                    }
+                }
+            },
+            "mobile_icon": {
+                "mobile": {
+                    "base": {
+                        "color": "@baseColor5_5",
+                        "background-color": "@baseColor3_3"
+                    }
+                }
+            },
+            "mobile_icon_active": {
+                "mobile": {
+                    "base": {
+                        "color": "@baseColor5_5",
+                        "background-color": "@baseColor3_3"
+                    }
+                }
+            },
+            "mobile_menu_container": {
+                "mobile": {
+                    "base": {
+                        "border-color": "@baseColor2_3"
+                    }
+                }
+            },
+            "mobile_menu_item": {
+                "mobile": {
+                    "base": {
+                        "color": "@baseColor5_5",
+                        "text-decoration": "none",
+                        "background-color": "@baseColor2_3"
+                    }
+                }
+            },
+            "mobile_menu_item_active": {
+                "mobile": {
+                    "base": {
+                        "color": "@baseColor5_5",
+                        "text-decoration": "none",
+                        "background-color": "@baseColor1_3"
+                    }
+                }
+            },
+            "mobile_menu_item_delimiter": {
+                "mobile": {
+                    "base": {
+                        "border-color": "@baseColor2_3"
+                    }
+                }
+            },
+            "mobile_menu_item_icon": {
+
+            },
+            "mobile_menu_item_icon_active": {
+
+            },
+            "mobile_sub_menu_container": {
+                "mobile": {
+                    "base": {
+                        "background-color": "@baseColor2_3"
+                    }
+                }
+            },
+            "mobile_sub_menu_item": {
+                "mobile": {
+                    "base": {
+                        "color": "@baseColor5_5",
+                        "text-decoration": "none",
+                        "background-color": "transparent"
+                    }
+                }
+            },
+            "mobile_sub_menu_item_active": {
+                "mobile": {
+                    "base": {
+                        "color": "@baseColor5_5",
+                        "text-decoration": "none",
+                        "background-color": "@baseColor1_3"
+                    }
+                }
+            },
+            "sub_menu_item_icon": {
+
+            },
+            "sub_menu_item_active": {
+                "desktop": {
+                    "base": {
+                        "color": "@baseColor5_5",
+                        "text-decoration": "none",
+                        "background-color": "transparent"
+                    },
+                    "hover": {
+                        "color": "@baseColor1_3",
+                        "text-decoration": "",
+                        "background-color": "transparent"
+                    }
+                }
+            },
+            "sub_menu_item_active_icon": {
+
+            },
+            "mobile_sub_menu_item_icon": {
+
+            },
+            "mobile_sub_menu_item_active_icon": {
+
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 2",
+        "widget_name": "menu",
+        "class_name": "moto-preset-2",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "menu_container": {
+
+            },
+            "menu_item": {
+                "desktop": {
+                    "base": {
+                        "font-family": "'Open Sans', sans-serif",
+                        "font-weight": "400",
+                        "font-style": "normal",
+                        "color": "@baseColor2_3",
+                        "text-decoration": "none",
+                        "background-color": "transparent",
+                        "border-color": "@baseColor1_3"
+                    },
+                    "hover": {
+                        "color": "@baseColor2_3",
+                        "text-decoration": "",
+                        "background-color": "transparent",
+                        "border-color": "@baseColor1_3"
+                    }
+                }
+            },
+            "menu_item_active": {
+                "desktop": {
+                    "base": {
+                        "color": "@baseColor2_3",
+                        "text-decoration": "none",
+                        "background-color": "transparent",
+                        "border-color": "@baseColor1_3"
+                    },
+                    "hover": {
+                        "color": "@baseColor2_3",
+                        "text-decoration": "",
+                        "background-color": "transparent",
+                        "border-color": "@baseColor1_3"
+                    }
+                }
+            },
+            "menu_item_delimiter": {
+
+            },
+            "menu_item_icon": {
+
+            },
+            "menu_item_icon_active": {
+
+            },
+            "sub_menu_container": {
+                "desktop": {
+                    "base": {
+                        "background-color": "@baseColor5_5"
+                    }
+                }
+            },
+            "sub_menu_item": {
+                "desktop": {
+                    "base": {
+                        "font-family": "'Open Sans', sans-serif",
+                        "font-weight": "400",
+                        "font-style": "normal",
+                        "color": "@baseColor3_3",
+                        "text-decoration": "none",
+                        "background-color": "transparent"
+                    },
+                    "hover": {
+                        "color": "@baseColor1_3",
+                        "text-decoration": "",
+                        "background-color": "transparent"
+                    }
+                }
+            },
+            "mobile_icon": {
+                "mobile": {
+                    "base": {
+                        "color": "@baseColor5_5",
+                        "background-color": "@baseColor3_3"
+                    }
+                }
+            },
+            "mobile_icon_active": {
+                "mobile": {
+                    "base": {
+                        "color": "@baseColor5_5",
+                        "background-color": "@baseColor3_3"
+                    }
+                }
+            },
+            "mobile_menu_container": {
+                "mobile": {
+                    "base": {
+                        "border-color": "@baseColor3_3"
+                    }
+                }
+            },
+            "mobile_menu_item": {
+                "mobile": {
+                    "base": {
+                        "color": "@baseColor5_5",
+                        "text-decoration": "none",
+                        "background-color": "@baseColor3_3"
+                    }
+                }
+            },
+            "mobile_menu_item_active": {
+                "mobile": {
+                    "base": {
+                        "color": "@baseColor3_3",
+                        "text-decoration": "none",
+                        "background-color": "@baseColor5_5"
+                    }
+                }
+            },
+            "mobile_menu_item_delimiter": {
+                "mobile": {
+                    "base": {
+                        "border-color": "@baseColor3_3"
+                    }
+                }
+            },
+            "mobile_menu_item_icon": {
+
+            },
+            "mobile_menu_item_icon_active": {
+
+            },
+            "mobile_sub_menu_container": {
+                "mobile": {
+                    "base": {
+                        "background-color": "@baseColor3_3"
+                    }
+                }
+            },
+            "mobile_sub_menu_item": {
+                "mobile": {
+                    "base": {
+                        "color": "@baseColor5_5",
+                        "text-decoration": "none",
+                        "background-color": "transparent"
+                    }
+                }
+            },
+            "mobile_sub_menu_item_active": {
+                "mobile": {
+                    "base": {
+                        "color": "@baseColor3_3",
+                        "text-decoration": "none",
+                        "background-color": "@baseColor5_5"
+                    }
+                }
+            },
+            "sub_menu_item_icon": {
+
+            },
+            "sub_menu_item_active": {
+                "desktop": {
+                    "base": {
+                        "color": "@baseColor1_3",
+                        "text-decoration": "none",
+                        "background-color": "transparent"
+                    },
+                    "hover": {
+                        "color": "@baseColor1_3",
+                        "text-decoration": "",
+                        "background-color": "transparent"
+                    }
+                }
+            },
+            "sub_menu_item_active_icon": {
+
+            },
+            "mobile_sub_menu_item_icon": {
+
+            },
+            "mobile_sub_menu_item_active_icon": {
+
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 3",
+        "widget_name": "menu",
+        "class_name": "moto-preset-3",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "menu_container": {
+
+            },
+            "menu_item": {
+                "desktop": {
+                    "base": {
+                        "font-family": "'Open Sans', sans-serif",
+                        "font-weight": "400",
+                        "font-style": "normal",
+                        "color": "@customColor3",
+                        "text-decoration": "none",
+                        "background-color": "transparent"
+                    },
+                    "hover": {
+                        "color": "@baseColor5_5",
+                        "text-decoration": "",
+                        "background-color": "@customColor3"
+                    }
+                }
+            },
+            "menu_item_active": {
+                "desktop": {
+                    "base": {
+                        "color": "@baseColor5_5",
+                        "text-decoration": "none",
+                        "background-color": "@customColor3"
+                    },
+                    "hover": {
+                        "color": "@baseColor5_5",
+                        "background-color": "@customColor3"
+                    }
+                }
+            },
+            "menu_item_delimiter": {
+
+            },
+            "menu_item_icon": {
+                "desktop": {
+                    "base": {
+                        "before": {
+                            "color": "@customColor3"
+                        }
+                    },
+                    "hover": {
+                        "before": {
+                            "color": "@baseColor5_5"
+                        }
+                    }
+                }
+            },
+            "menu_item_icon_active": {
+                "desktop": {
+                    "base": {
+                        "before": {
+                            "color": "@baseColor5_5"
+                        }
+                    },
+                    "hover": {
+                        "before": {
+                            "color": "@baseColor5_5"
+                        }
+                    }
+                }
+            },
+            "sub_menu_container": {
+                "desktop": {
+                    "base": {
+                        "background-color": "@customColor3"
+                    }
+                }
+            },
+            "sub_menu_item": {
+                "desktop": {
+                    "base": {
+                        "font-family": "'Open Sans', sans-serif",
+                        "font-weight": "400",
+                        "font-style": "normal",
+                        "color": "@baseColor5_5",
+                        "text-decoration": "none",
+                        "after": {
+                            "background-color": "@baseColor5_5"
+                        },
+                        "background-color": "transparent"
+                    },
+                    "hover": {
+                        "color": "@baseColor1_3",
+                        "text-decoration": "",
+                        "background-color": "transparent"
+                    }
+                }
+            },
+            "mobile_icon": {
+                "mobile": {
+                    "base": {
+                        "color": "@customColor3",
+                        "background-color": "@baseColor5_5"
+                    }
+                }
+            },
+            "mobile_icon_active": {
+                "mobile": {
+                    "base": {
+                        "color": "@customColor3",
+                        "background-color": "@baseColor5_5"
+                    }
+                }
+            },
+            "mobile_menu_container": {
+                "mobile": {
+                    "base": {
+                        "border-color": "@customColor3"
+                    }
+                }
+            },
+            "mobile_menu_item": {
+                "mobile": {
+                    "base": {
+                        "color": "@baseColor5_5",
+                        "text-decoration": "none",
+                        "background-color": "@customColor3"
+                    }
+                }
+            },
+            "mobile_menu_item_active": {
+                "mobile": {
+                    "base": {
+                        "color": "@customColor3",
+                        "text-decoration": "none",
+                        "background-color": "@baseColor5_5"
+                    }
+                }
+            },
+            "mobile_menu_item_delimiter": {
+                "mobile": {
+                    "base": {
+                        "border-color": "@customColor3"
+                    }
+                }
+            },
+            "mobile_menu_item_icon": {
+
+            },
+            "mobile_menu_item_icon_active": {
+
+            },
+            "mobile_sub_menu_container": {
+                "mobile": {
+                    "base": {
+                        "background-color": "@customColor3"
+                    }
+                }
+            },
+            "mobile_sub_menu_item": {
+                "mobile": {
+                    "base": {
+                        "color": "@baseColor5_5",
+                        "text-decoration": "none",
+                        "background-color": "transparent"
+                    }
+                }
+            },
+            "mobile_sub_menu_item_active": {
+                "mobile": {
+                    "base": {
+                        "color": "@customColor3",
+                        "text-decoration": "none",
+                        "background-color": "@baseColor5_5"
+                    }
+                }
+            },
+            "sub_menu_item_icon": {
+
+            },
+            "sub_menu_item_active": {
+                "desktop": {
+                    "base": {
+                        "color": "@baseColor1_3",
+                        "text-decoration": "none",
+                        "background-color": "transparent"
+                    },
+                    "hover": {
+                        "color": "@baseColor1_3",
+                        "text-decoration": "",
+                        "background-color": "transparent"
+                    }
+                }
+            },
+            "sub_menu_item_active_icon": {
+
+            },
+            "mobile_sub_menu_item_icon": {
+
+            },
+            "mobile_sub_menu_item_active_icon": {
+
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 1",
+        "widget_name": "audio_player",
+        "class_name": "moto-preset-default",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "widget_container": {
+                "desktop": {
+                    "base": {
+                        "font-family": "tahoma, arial, helvetica, sans-serif",
+                        "font-weight": "400",
+                        "font-style": "normal",
+                        "color": "#81868c",
+                        "background-color": "#ffffff",
+                        "font-size": "12px",
+                        "border-color": "#d3d8db"
+                    }
+                }
+            },
+            "buttons_normal": {
+                "desktop": {
+                    "base": {
+                        "before": {
+                            "color": "#d3d8db"
+                        },
+                        "background-color": "transparent"
+                    },
+                    "hover": {
+                        "before": {
+                            "color": "#7f878a"
+                        },
+                        "background-color": ""
+                    }
+                }
+            },
+            "buttons_active": {
+                "desktop": {
+                    "base": {
+                        "background-color": "#d3d8db",
+                        "before": {
+                            "color": "#55616d"
+                        }
+                    },
+                    "hover": {
+                        "background-color": "",
+                        "before": {
+                            "color": ""
+                        }
+                    }
+                }
+            },
+            "progress_bar": {
+                "desktop": {
+                    "base": {
+                        "background-color": "#7f878a"
+                    }
+                }
+            },
+            "volume_bar": {
+                "desktop": {
+                    "base": {
+                        "background-color": "#7f878a"
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 1",
+        "widget_name": "pagination",
+        "class_name": "moto-preset-default",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "pagination": {
+                "desktop": {
+                    "base": {
+                        "font-family": "tahoma, arial, helvetica, sans-serif",
+                        "font-style": "normal",
+                        "font-weight": "400",
+                        "font-size": "14px"
+                    }
+                }
+            },
+            "item": {
+                "desktop": {
+                    "base": {
+                        "margin-right": "5px"
+                    }
+                }
+            },
+            "item_link_active": {
+                "desktop": {
+                    "base": {
+                        "font-style": "normal",
+                        "font-weight": "700",
+                        "color": "#2e3a46",
+                        "background-color": "",
+                        "border-color": "transparent",
+                        "text-decoration": "none"
+                    }
+                }
+            },
+            "item_link": {
+                "desktop": {
+                    "base": {
+                        "color": "#81868c",
+                        "background-color": "transparent",
+                        "border-color": "transparent",
+                        "border-width": "1px",
+                        "border-radius": "0%",
+                        "border-style": "solid",
+                        "text-decoration": "none",
+                        "width": "31px",
+                        "height": "31px"
+                    },
+                    "hover": {
+                        "color": "#d3d8db",
+                        "background-color": "",
+                        "border-color": "",
+                        "text-decoration": ""
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 1",
+        "widget_name": "countdown",
+        "class_name": "moto-preset-default",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "general": {
+                "desktop": {
+                    "base": {
+                        "font-family": "'Merriweather', serif",
+                        "font-weight": "400",
+                        "font-style": "normal",
+                        "color": "#81868c",
+                        "background-color": "transparent",
+                        "font-size": "12px",
+                        "height": "112px",
+                        "width": "112px"
+                    }
+                }
+            },
+            "delimiter": {
+                "desktop": {
+                    "base": {
+                        "min-width": "40px",
+                        "font-size": "25px",
+                        "color": "@baseColor5_5"
+                    }
+                }
+            },
+            "text": {
+                "desktop": {
+                    "base": {
+                        "color": "@baseColor1_3",
+                        "font-style": "normal",
+                        "font-weight": "400",
+                        "font-size": "18px"
+                    }
+                }
+            },
+            "digits": {
+                "desktop": {
+                    "base": {
+                        "color": "@baseColor5_5",
+                        "font-style": "normal",
+                        "font-weight": "400",
+                        "font-size": "27px"
+                    }
+                }
+            },
+            "border": {
+                "desktop": {
+                    "base": {
+                        "border-color": "@baseColor5_5",
+                        "border-top-width": "2px",
+                        "border-left-width": "2px",
+                        "border-right-width": "2px",
+                        "border-bottom-width": "2px",
+                        "border-style": "solid",
+                        "border-radius": "61px"
+                    }
+                }
+            },
+            "input_placeholder": {
+                "desktop": {
+                    "base": {
+                        "color": ""
+                    }
+                }
+            },
+            "spacing": {
+                "desktop": {
+                    "base": [
+
+                    ],
+                    "hover": [
+
+                    ]
+                },
+                "mobile": {
+                    "base": [
+
+                    ],
+                    "hover": [
+
+                    ]
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 2",
+        "widget_name": "countdown",
+        "class_name": "moto-preset-2",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "general": {
+                "desktop": {
+                    "base": {
+                        "font-family": "'Merriweather', serif",
+                        "font-weight": "400",
+                        "font-style": "normal",
+                        "color": "#81868c",
+                        "background-color": "@baseColor1_3",
+                        "font-size": "12px",
+                        "height": "112px",
+                        "width": "112px"
+                    }
+                }
+            },
+            "delimiter": {
+                "desktop": {
+                    "base": {
+                        "min-width": "40px",
+                        "font-size": "25px",
+                        "color": "transparent"
+                    }
+                }
+            },
+            "text": {
+                "desktop": {
+                    "base": {
+                        "color": "@baseColor5_5",
+                        "font-style": "normal",
+                        "font-weight": "400",
+                        "font-size": "18px"
+                    }
+                }
+            },
+            "digits": {
+                "desktop": {
+                    "base": {
+                        "color": "@baseColor5_5",
+                        "font-style": "normal",
+                        "font-weight": "400",
+                        "font-size": "27px"
+                    }
+                }
+            },
+            "border": {
+                "desktop": {
+                    "base": {
+                        "border-color": "",
+                        "border-top-width": "0px",
+                        "border-left-width": "0px",
+                        "border-right-width": "0px",
+                        "border-bottom-width": "0px",
+                        "border-style": "none",
+                        "border-radius": "0px"
+                    }
+                }
+            },
+            "input_placeholder": {
+                "desktop": {
+                    "base": {
+                        "color": ""
+                    }
+                }
+            },
+            "spacing": {
+                "desktop": {
+                    "base": [
+
+                    ],
+                    "hover": [
+
+                    ]
+                },
+                "mobile": {
+                    "base": [
+
+                    ],
+                    "hover": [
+
+                    ]
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 3",
+        "widget_name": "countdown",
+        "class_name": "moto-preset-3",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "general": {
+                "desktop": {
+                    "base": {
+                        "font-family": "'Merriweather', serif",
+                        "font-weight": "400",
+                        "font-style": "normal",
+                        "color": "#81868c",
+                        "background-color": "transparent",
+                        "font-size": "12px",
+                        "height": "112px",
+                        "width": "112px"
+                    }
+                }
+            },
+            "delimiter": {
+                "desktop": {
+                    "base": {
+                        "min-width": "40px",
+                        "font-size": "20px",
+                        "color": "transparent"
+                    }
+                }
+            },
+            "text": {
+                "desktop": {
+                    "base": {
+                        "color": "@baseColor2_3",
+                        "font-style": "normal",
+                        "font-weight": "400",
+                        "font-size": "18px"
+                    }
+                }
+            },
+            "digits": {
+                "desktop": {
+                    "base": {
+                        "color": "@baseColor2_3",
+                        "font-style": "normal",
+                        "font-weight": "400",
+                        "font-size": "27px"
+                    }
+                }
+            },
+            "border": {
+                "desktop": {
+                    "base": {
+                        "border-color": "@customColor3",
+                        "border-top-width": "3px",
+                        "border-left-width": "3px",
+                        "border-right-width": "3px",
+                        "border-bottom-width": "3px",
+                        "border-style": "solid",
+                        "border-radius": "5px"
+                    }
+                }
+            },
+            "input_placeholder": {
+                "desktop": {
+                    "base": {
+                        "color": ""
+                    }
+                }
+            },
+            "spacing": {
+                "desktop": {
+                    "base": [
+
+                    ],
+                    "hover": [
+
+                    ]
+                },
+                "mobile": {
+                    "base": [
+
+                    ],
+                    "hover": [
+
+                    ]
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 1",
+        "widget_name": "accordion",
+        "class_name": "moto-preset-default",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "collapse_icon": {
+                "desktop": {
+                    "base": {
+                        "before": {
+                            "content": {
+                                "id": "angle-right",
+                                "provider": "FontAwesome",
+                                "unicode": "f105"
+                            }
+                        },
+                        "color": "@baseColor1_3",
+                        "font-size": "22px"
+                    },
+                    "hover": {
+                        "color": "@baseColor1_3"
+                    }
+                },
+                "tablet": {
+                    "base": {
+                        "font-size": "16px"
+                    }
+                },
+                "mobile-h": {
+                    "base": {
+                        "font-size": "14px"
+                    }
+                }
+            },
+            "collapse_icon_opened": {
+                "desktop": {
+                    "base": {
+                        "before": {
+                            "content": {
+                                "id": "angle-down",
+                                "provider": "FontAwesome",
+                                "unicode": "f107"
+                            }
+                        },
+                        "color": "@baseColor1_3"
+                    },
+                    "hover": {
+                        "color": "@baseColor1_3"
+                    }
+                }
+            },
+            "content_opened": {
+                "desktop": {
+                    "base": {
+                        "background-color": "transparent",
+                        "border-bottom-width": "0px",
+                        "border-color": "transparent",
+                        "border-left-width": "0px",
+                        "border-radius": "0px",
+                        "border-style": "none",
+                        "border-top-width": "0px"
+                    },
+                    "hover": [
+
+                    ]
+                }
+            },
+            "header": {
+                "desktop": {
+                    "base": {
+                        "background-color": "transparent",
+                        "border-bottom-width": "0px",
+                        "border-color": "transparent",
+                        "border-left-width": "0px",
+                        "border-radius": "0px",
+                        "border-right-width": "0px",
+                        "border-style": "none",
+                        "border-top-width": "0px",
+                        "color": "@baseColor2_3",
+                        "font-family": "'Raleway', sans-serif",
+                        "font-size": "22px",
+                        "font-style": "normal",
+                        "font-weight": "500"
+                    },
+                    "hover": {
+                        "background-color": "",
+                        "border-color": "",
+                        "color": "@baseColor2_3"
+                    }
+                },
+                "tablet": {
+                    "base": {
+                        "font-size": "16px"
+                    }
+                },
+                "mobile-h": {
+                    "base": {
+                        "font-size": "14px"
+                    }
+                }
+            },
+            "header_icon": {
+                "desktop": {
+                    "base": {
+                        "color": "@baseColor2_3",
+                        "font-size": "22px"
+                    },
+                    "hover": {
+                        "color": "@baseColor2_3"
+                    }
+                },
+                "tablet": {
+                    "base": {
+                        "font-size": "16px"
+                    }
+                },
+                "mobile-h": {
+                    "base": {
+                        "font-size": "14px"
+                    }
+                },
+                "mobile-v": {
+                    "base": {
+                        "font-size": "14px"
+                    }
+                }
+            },
+            "header_icon_opened": {
+                "desktop": {
+                    "base": {
+                        "color": "@baseColor2_3"
+                    },
+                    "hover": {
+                        "color": "@baseColor2_3"
+                    }
+                }
+            },
+            "header_opened": {
+                "desktop": {
+                    "base": {
+                        "background-color": "transparent",
+                        "border-bottom-width": "0px",
+                        "border-color": "transparent",
+                        "border-radius": "0px",
+                        "border-style": "none",
+                        "color": "@baseColor2_3"
+                    },
+                    "hover": {
+                        "border-color": "",
+                        "color": "@baseColor2_3"
+                    }
+                }
+            },
+            "header_title": {
+                "desktop": {
+                    "base": {
+                        "text-decoration": "none"
+                    },
+                    "hover": {
+                        "text-decoration": ""
+                    }
+                }
+            },
+            "header_title_opened": {
+                "desktop": {
+                    "base": {
+                        "text-decoration": "none"
+                    },
+                    "hover": {
+                        "text-decoration": ""
+                    }
+                }
+            },
+            "item": {
+                "desktop": {
+                    "base": {
+                        "border-bottom-width": "1px",
+                        "border-color": "@baseColor2_3",
+                        "border-left-width": "0px",
+                        "border-radius": "0px",
+                        "border-right-width": "0px",
+                        "border-style": "solid",
+                        "border-top-width": "0px",
+                        "margin-bottom": "10px"
+                    },
+                    "hover": {
+                        "border-color": "@baseColor2_3"
+                    }
+                }
+            },
+            "item_opened": {
+                "desktop": {
+                    "base": {
+                        "border-bottom-width": "1px",
+                        "border-color": "@baseColor2_3",
+                        "border-left-width": "0px",
+                        "border-radius": "0px",
+                        "border-style": "solid"
+                    },
+                    "hover": {
+                        "border-color": "@baseColor2_3"
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 2",
+        "widget_name": "accordion",
+        "class_name": "moto-preset-2",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "collapse_icon": {
+                "desktop": {
+                    "base": {
+                        "before": {
+                            "content": {
+                                "provider": "FontAwesome",
+                                "id": "angle-double-up",
+                                "unicode": "f102"
+                            }
+                        },
+                        "color": "@baseColor1_3",
+                        "font-size": "22px"
+                    },
+                    "hover": {
+                        "color": "@baseColor1_3"
+                    }
+                },
+                "mobile-v": {
+                    "base": {
+                        "font-size": "14px"
+                    }
+                },
+                "mobile-h": {
+                    "base": {
+                        "font-size": "14px"
+                    }
+                },
+                "tablet": {
+                    "base": {
+                        "font-size": "16px"
+                    }
+                }
+            },
+            "collapse_icon_opened": {
+                "desktop": {
+                    "base": {
+                        "before": {
+                            "content": {
+                                "provider": "FontAwesome",
+                                "id": "angle-double-down",
+                                "unicode": "f103"
+                            }
+                        },
+                        "color": "@baseColor1_3"
+                    },
+                    "hover": {
+                        "color": "@baseColor1_3"
+                    }
+                }
+            },
+            "content_opened": {
+                "desktop": {
+                    "base": {
+                        "background-color": "transparent",
+                        "border-bottom-width": "0px",
+                        "border-color": "transparent",
+                        "border-left-width": "0px",
+                        "border-radius": "0px",
+                        "border-style": "none",
+                        "border-top-width": "0px"
+                    },
+                    "hover": {
+                        "background-color": ""
+                    }
+                }
+            },
+            "header": {
+                "desktop": {
+                    "base": {
+                        "background-color": "transparent",
+                        "border-bottom-width": "0px",
+                        "border-color": "transparent",
+                        "border-left-width": "0px",
+                        "border-radius": "0px",
+                        "border-right-width": "0px",
+                        "border-style": "none",
+                        "border-top-width": "0px",
+                        "color": "@baseColor2_3",
+                        "font-family": "'Raleway', sans-serif",
+                        "font-size": "22px",
+                        "font-style": "normal",
+                        "font-weight": "500"
+                    },
+                    "hover": {
+                        "background-color": "transparent",
+                        "border-color": "",
+                        "color": "@baseColor2_3"
+                    }
+                },
+                "mobile-v": {
+                    "base": {
+                        "font-size": "14px"
+                    }
+                },
+                "mobile-h": {
+                    "base": {
+                        "font-size": "14px"
+                    }
+                },
+                "tablet": {
+                    "base": {
+                        "font-size": "16px"
+                    }
+                }
+            },
+            "header_icon": {
+                "desktop": {
+                    "base": {
+                        "color": "@baseColor2_3",
+                        "font-size": "22px"
+                    },
+                    "hover": {
+                        "color": "@baseColor2_3"
+                    }
+                },
+                "mobile-v": {
+                    "base": {
+                        "font-size": "14px"
+                    }
+                },
+                "mobile-h": {
+                    "base": {
+                        "font-size": "14px"
+                    }
+                },
+                "tablet": {
+                    "base": {
+                        "font-size": "16px"
+                    }
+                }
+            },
+            "header_icon_opened": {
+                "desktop": {
+                    "base": {
+                        "color": "@baseColor2_3"
+                    },
+                    "hover": [
+
+                    ]
+                }
+            },
+            "header_opened": {
+                "desktop": {
+                    "base": {
+                        "background-color": "transparent",
+                        "border-bottom-width": "0px",
+                        "border-color": "transparent",
+                        "border-radius": "0px",
+                        "border-style": "none",
+                        "color": "@baseColor2_3"
+                    },
+                    "hover": {
+                        "border-color": "",
+                        "color": "@baseColor2_3"
+                    }
+                }
+            },
+            "header_title": {
+                "desktop": {
+                    "base": {
+                        "text-decoration": "none"
+                    },
+                    "hover": {
+                        "text-decoration": ""
+                    }
+                }
+            },
+            "header_title_opened": {
+                "desktop": {
+                    "base": {
+                        "text-decoration": "none"
+                    },
+                    "hover": {
+                        "text-decoration": ""
+                    }
+                }
+            },
+            "item": {
+                "desktop": {
+                    "base": {
+                        "border-bottom-width": "1px",
+                        "border-color": "@baseColor2_3",
+                        "border-left-width": "0px",
+                        "border-radius": "0px",
+                        "border-right-width": "0px",
+                        "border-style": "solid",
+                        "border-top-width": "0px",
+                        "margin-bottom": "10px"
+                    },
+                    "hover": {
+                        "border-color": "@baseColor2_3"
+                    }
+                }
+            },
+            "item_opened": {
+                "desktop": {
+                    "base": {
+                        "border-bottom-width": "1px",
+                        "border-color": "@baseColor2_3",
+                        "border-left-width": "0px",
+                        "border-radius": "0px",
+                        "border-right-width": "0px",
+                        "border-style": "solid",
+                        "border-top-width": "0px"
+                    },
+                    "hover": {
+                        "border-color": "@baseColor2_3"
+                    }
+                }
+            }
+        },
+        "template": "default"
+    },
+    {
+        "name": "Preset 3",
+        "widget_name": "accordion",
+        "class_name": "moto-preset-3",
+        "is_system": "1",
+        "is_responsive": "0",
+        "properties": {
+            "collapse_icon": {
+                "desktop": {
+                    "base": {
+                        "before": {
+                            "content": {
+                                "id": "angle-right",
+                                "provider": "FontAwesome",
+                                "unicode": "f105"
+                            }
+                        },
+                        "color": "@baseColor5_5",
+                        "font-size": "22px"
+                    },
+                    "hover": {
+                        "color": "#ffffff"
+                    }
+                },
+                "tablet": {
+                    "base": {
+                        "font-size": "18px"
+                    }
+                },
+                "mobile-h": {
+                    "base": {
+                        "font-size": "14px"
+                    }
+                }
+            },
+            "collapse_icon_opened": {
+                "desktop": {
+                    "base": {
+                        "before": {
+                            "content": {
+                                "id": "angle-down",
+                                "provider": "FontAwesome",
+                                "unicode": "f107"
+                            }
+                        },
+                        "color": "#ffffff"
+                    },
+                    "hover": {
+                        "color": ""
+                    }
+                }
+            },
+            "content_opened": {
+                "desktop": {
+                    "base": {
+                        "background-color": "transparent",
+                        "border-bottom-width": "0px",
+                        "border-color": "transparent",
+                        "border-left-width": "0px",
+                        "border-radius": "0px",
+                        "border-style": "none",
+                        "border-top-width": "0px"
+                    },
+                    "hover": [
+
+                    ]
+                }
+            },
+            "header": {
+                "desktop": {
+                    "base": {
+                        "background-color": "@baseColor1_3",
+                        "border-bottom-width": "0px",
+                        "border-color": "transparent",
+                        "border-left-width": "0px",
+                        "border-radius": "0px",
+                        "border-right-width": "0px",
+                        "border-style": "none",
+                        "border-top-width": "0px",
+                        "color": "@baseColor5_5",
+                        "font-family": "'Raleway', sans-serif",
+                        "font-size": "22px",
+                        "font-style": "normal",
+                        "font-weight": "500"
+                    },
+                    "hover": {
+                        "background-color": "@baseColor1_3",
+                        "border-color": "",
+                        "color": "#ffffff"
+                    }
+                },
+                "tablet": {
+                    "base": {
+                        "font-size": "18px"
+                    }
+                },
+                "mobile-h": {
+                    "base": {
+                        "font-size": "14px"
+                    }
+                }
+            },
+            "header_icon": {
+                "desktop": {
+                    "base": {
+                        "color": "@baseColor5_5",
+                        "font-size": "22px"
+                    },
+                    "hover": {
+                        "color": "#ffffff"
+                    }
+                },
+                "tablet": {
+                    "base": {
+                        "font-size": "18px"
+                    }
+                },
+                "mobile-h": {
+                    "base": {
+                        "font-size": "14px"
+                    }
+                }
+            },
+            "header_icon_opened": {
+                "desktop": {
+                    "base": {
+                        "color": "#ffffff"
+                    },
+                    "hover": [
+
+                    ]
+                }
+            },
+            "header_opened": {
+                "desktop": {
+                    "base": {
+                        "background-color": "@baseColor1_3",
+                        "border-bottom-width": "0px",
+                        "border-color": "transparent",
+                        "border-radius": "0px",
+                        "border-style": "none",
+                        "color": "#ffffff"
+                    },
+                    "hover": {
+                        "background-color": "@baseColor1_3",
+                        "border-color": "",
+                        "color": ""
+                    }
+                }
+            },
+            "header_title": {
+                "desktop": {
+                    "base": {
+                        "text-decoration": "none"
+                    },
+                    "hover": {
+                        "text-decoration": ""
+                    }
+                }
+            },
+            "header_title_opened": {
+                "desktop": {
+                    "base": {
+                        "text-decoration": "none"
+                    },
+                    "hover": {
+                        "text-decoration": ""
+                    }
+                }
+            },
+            "item": {
+                "desktop": {
+                    "base": {
+                        "border-bottom-width": "0px",
+                        "border-color": "transparent",
+                        "border-left-width": "0px",
+                        "border-radius": "0px",
+                        "border-right-width": "0px",
+                        "border-style": "none",
+                        "border-top-width": "0px",
+                        "margin-bottom": "10px"
+                    },
+                    "hover": {
+                        "border-color": ""
+                    }
+                }
+            },
+            "item_opened": {
+                "desktop": {
+                    "base": {
+                        "border-bottom-width": "0px",
+                        "border-color": "transparent",
+                        "border-left-width": "0px",
+                        "border-radius": "0px",
+                        "border-style": "none"
+                    },
+                    "hover": [
+
+                    ]
+                }
+            }
+        },
+        "template": "default"
+    }
+]

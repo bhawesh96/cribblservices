@@ -1,0 +1,34 @@
+Options +FollowSymLinks -Indexes
+
+
+
+AddDefaultCharset UTF-8
+<IfModule mod_mime.c>
+    AddCharset UTF-8 .js .json .css .html .twig .less
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    ## uncomment the following line, if you are having trouble
+    ## getting no_script_name to work
+    #RewriteBase /
+
+    ## no, so we redirect to our front web controller
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    ## Block start engine when request static file
+    #RewriteCond %{REQUEST_FILENAME} !\.(png|gif|jpg|jpeg|css|js|tpl.html|less|twig)$
+    RewriteCond %{REQUEST_FILENAME} !\.(png|gif|jpg|jpeg|css|js|less|twig)$
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+
+<IfModule mod_expires.c>
+    <FilesMatch ".(png|gif|jpg|jpeg|css|js)$">
+        ExpiresActive on
+        ExpiresDefault "access plus 7 days"
+    </FilesMatch>
+    <FilesMatch ".(less|twig)$">
+        ExpiresActive off
+    </FilesMatch>
+</IfModule>

@@ -1,0 +1,2 @@
+<?php
+namespace Moto\InputFilter\ClickAction; use Moto\InputFilter\AbstractInputFilter; class Call extends AbstractInputFilter { public function init() { $this->add(array( 'name' => 'phoneNumber', 'required' => true, 'filters' => array( array('name' => 'StripTags'), array('name' => 'StringTrim'), ), 'validators' => array( array( 'name' => 'StringLength', 'options' => array( 'encoding' => 'UTF-8', 'min' => 1, 'max' => 100, ), ), ), )); } } 

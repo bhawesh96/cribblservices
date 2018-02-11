@@ -1,0 +1,2 @@
+<?php
+namespace Moto\ClickAction; use Moto; class HomePage extends AbstractClickAction { protected $_defaultData = array(); protected $_url = '/'; protected function _init() { parent::_init(); $this->_url = Moto\System::getRelativeUrl('@website'); } public function getUrl() { $anchor = $this->get('anchor'); if (!empty($anchor)) { $anchor = trim($anchor); $anchor = trim($anchor, '#'); $anchor = '#' . $anchor; } return $this->_url . $anchor; } public function isCurrent($properties, $linker) { return in_array(Moto\System\Request::getRequestUrl(), ['', '/']); } }

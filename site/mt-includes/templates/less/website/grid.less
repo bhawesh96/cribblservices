@@ -1,0 +1,19 @@
+.container-fluid, .moto-cell {
+    padding-left: @grid-gutter-width / 2;
+    padding-right: @grid-gutter-width / 2;
+}
+
+.row {
+    margin-left: -@grid-gutter-width / 2;
+    margin-right: -@grid-gutter-width / 2;
+}
+
+.fn_generate_fixed_row_width() {}
+
+.fn_generate_fixed_row_width() when (@feature_theme_grid_fixed_row_width = 1) {
+    .row-fixed .container-fluid {
+        max-width: @grid-fixed-row-width;
+    }
+}
+
+.fn_generate_fixed_row_width();

@@ -1,0 +1,2 @@
+<?php
+ include_once __DIR__ . '/mt-includes/library/Moto/System.php'; if (!defined('WEBSITE_DIR')) { define('WEBSITE_DIR', __DIR__); } if (!defined('WEBSITE_ADMIN_DIR')) { define('WEBSITE_ADMIN_DIR', WEBSITE_DIR . '/mt-admin'); } if (!defined('MOTO_CHECK_INSTALL')) { define('MOTO_CHECK_INSTALL', true); } if (!defined('MOTO_ENGINE')) { define('MOTO_ENGINE', 'website'); } Moto\System::bootstrap(array( 'paths' => array( 'website' => __DIR__, ) ));

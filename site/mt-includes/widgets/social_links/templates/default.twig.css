@@ -1,0 +1,26 @@
+{% macro printStyle(styles) %}
+    {% for key,value in styles %}
+        {% if key == 'before' %}
+            &:before {
+            {{ _self.printStyle(styles[key]) }}
+            }
+        {% elseif key == 'after' %}
+            &:after {
+            {{ _self.printStyle(styles[key]) }}
+            }
+        {% elseif value != '' %}
+            {{ key }}: {{ value|raw }};
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{% set properties = item.properties|json_decode %}
+
+{{ StyleHelper.generatePresetSelector('.moto-widget-social-links', item.class_name) }} {
+    .moto-widget-social-links-link {
+        {{ _self.printStyle(properties.social_links.desktop.base) }}
+        &:hover {
+            {{ _self.printStyle(properties.social_links.desktop.hover) }}
+        }
+    }
+}

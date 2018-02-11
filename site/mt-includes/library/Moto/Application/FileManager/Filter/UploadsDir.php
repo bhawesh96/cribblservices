@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Application\FileManager\Filter; use Moto\Filter\AbstractFilter; use Zend\Filter\Exception; use Moto; class UploadsDir extends AbstractFilter { public function filter($value = '') { $base = Moto\System::getAbsolutePath('@userUploads') . '/'; if (!is_string($value)) { return $base; } if (strpos($value, trim($base, '/')) !== false) { return $value; } return $base . $value; } }

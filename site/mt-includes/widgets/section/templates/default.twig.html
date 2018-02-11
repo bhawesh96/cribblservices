@@ -1,0 +1,7 @@
+{% for item in currentWidget.children %}
+    {% if isServer %}
+        {{ widget(item) }}
+    {% else %}
+        {% widget item %}{% endWidget %}
+    {% endif %}
+{% endfor %}

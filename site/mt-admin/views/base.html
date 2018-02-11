@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{ renderHook('head.top') }}
+    {% block head %}{% endblock %}
+    {% block css %}{% endblock %}
+    {% block custom_css %}{% endblock %}
+    {% block js %}{% endblock %}
+    {% block before_custom_js %}{% endblock %}
+    {% block custom_js %}{% endblock %}
+    {% block after_custom_js %}{% endblock %}
+    {{ renderHook('head.bottom') }}
+</head>
+<body class="{% if user %}app{% else %}guest-app{% endif %}">
+    {{ renderHook('body.top') }}
+    {% block content %}{% endblock %}
+
+    {# @TODO : activate
+    <script type="text/javascript" data-cfasync="false">
+        angular.module('application.config.value', ['ng']).constant('application.config.value', {{ config|json_encode()|raw }} );
+    </script>';
+    #}
+
+    <script type="text/javascript" data-cfasync="false">
+        angular.element(window).one('load', function() {
+            angular.bootstrap(angular.element('html'), ['{% if user %}application{% else %}guest{% endif %}']);
+        });
+    </script>
+    {{ renderHook('body.bottom') }}
+</body>
+</html>

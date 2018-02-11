@@ -1,0 +1,9 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-row__column moto-cell {{ currentWidget.getCssClasses() }}" style="{{ StyleHelper.generateWidgetInlineStyles(currentWidget.getStylesValue()) }}" {{ arrayToAttributes(currentWidget.getCustomAttributes()) }} data-widget="row.column" data-container="container" data-spacing="{{ currentWidget.getSpacing('short') }}">
+    {% for item in currentWidget.children %}
+        {% if isServer %}
+            {{ widget(item) }}
+        {% else %}
+            {% widget item %}{% endWidget %}
+        {% endif %}
+    {% endfor %}
+</div>

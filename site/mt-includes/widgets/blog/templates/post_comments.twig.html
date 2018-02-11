@@ -1,0 +1,6 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-blog-post_comments moto-preset-default {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }}" data-widget="blog.post_comments" data-preset="default">
+    <div class="moto-widget-empty"></div>
+    {% if not isPreview and currentPage.showComments %}
+        {{ widget("disqus", {"spacing":{"top":"auto","right":"auto","bottom":"auto","left":"auto"},"visible_on":"mobile-v","params":{"url":"@dynamic"}}) }}
+    {% endif %}
+</div>

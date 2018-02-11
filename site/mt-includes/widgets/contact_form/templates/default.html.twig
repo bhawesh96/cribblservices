@@ -1,0 +1,16 @@
+You have a new message from <a href="{{ WEBSITE.address }}"><b>{{ WEBSITE.address }}</b></a><br/>
+
+<b>Details:</b>
+<ul style="list-style: none; margin: 0; padding: 0 0 0 12px;">
+{% for key, value in message if key|first != '_'%}
+<li style="list-style: none; margin: 6px 0 0 0; padding: 0;">
+	<b>{{ placeholder[key] }}:</b> {% if key == 'message' %}
+
+	</li><li style="list-style: none; margin: 0 0 6px 0; padding: 0;">{{ value|replace({"\n": "<br/>"})|raw }}
+{% else %}{{ value }}{% endif %}
+</li>
+{% endfor %}
+
+</ul>
+
+Sent on: {{ "now"|date("m/d/Y H:i") }}<br/>

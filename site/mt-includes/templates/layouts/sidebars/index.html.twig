@@ -1,0 +1,57 @@
+{%- extends 'base.html.twig' -%}
+
+{% block content %} {% autoescape false %}
+
+{% set content_row_width = 12 %}
+
+{% set header = currentPage.getSection('header') %}
+{% set footer = currentPage.getSection('footer') %}
+{% set sidebar_left = currentPage.getSection('sidebar_left') %}
+{% set sidebar_right = currentPage.getSection('sidebar_right') %}
+
+{% if sidebar_left %}
+    {% set content_row_width = content_row_width - sidebar_left.properties.size|default(3) %}
+{% endif %}
+{% if sidebar_right %}
+    {% set content_row_width = content_row_width - sidebar_right.properties.size|default(3) %}
+{% endif %}
+
+    <div class="page">
+
+{% if header %}
+        <header id="section-header" class="header moto-section" data-widget="section" data-container="section">
+            {{ ContentHelper.RenderPageSection(header, 'header') }}
+        </header>
+{% endif %}
+
+        <div class="row">
+
+{% if sidebar_left %}
+            <div class="col-xs-{{ sidebar_left.properties.size|default(3) }}">
+                <section id="section-sidebar_left" class="sidebar sidebar_left moto-section" data-widget="section" data-container="section">
+                    {{ ContentHelper.RenderPageSection(sidebar_left, 'sidebar_left') }}
+                </section>
+            </div>
+{% endif %}
+            <div class="col-xs-{{ content_row_width }}">
+                <section id="section-content" class="content page-{{currentPage.id}} moto-section" data-widget="section" data-container="section">
+                    {{ ContentHelper.RenderPageSection(currentPage, currentPage.type) }}
+                </section>
+            </div>
+{% if sidebar_right %}
+            <div class="col-xs-{{ sidebar_right.properties.size|default(3) }}">
+                <section id="section-sidebar_right" class="sidebar sidebar_right moto-section" data-widget="section" data-container="section">
+                    {{ ContentHelper.RenderPageSection(sidebar_right, 'sidebar_right') }}
+                </section>
+            </div>
+{% endif %}
+        </div>
+
+{% if footer %}
+    <footer id="section-footer" class="footer moto-section" data-widget="section" data-container="section"{% if footer.properties.sticky and (not isPreview) %} data-moto-sticky="{mode:'smallHeight', direction:'bottom'}"{% endif %}>
+        {{ ContentHelper.RenderPageSection(footer, 'footer') }}
+    </footer>
+{% endif %}
+
+</div>
+{% endautoescape %} {% endblock %}

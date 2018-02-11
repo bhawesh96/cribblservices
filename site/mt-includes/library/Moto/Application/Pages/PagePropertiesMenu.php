@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Application\Pages; use Moto\Application\Model; use Moto\Application\Model\AbstractModel; class PagePropertiesMenu extends AbstractModel { protected $_fields = array( 'label' => array( 'default' => null ), 'title' => array( 'default' => null ), 'icon' => array( 'default' => null ), ); protected $_skipDefaults = true; } 

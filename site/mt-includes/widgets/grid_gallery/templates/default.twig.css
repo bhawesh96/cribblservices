@@ -1,0 +1,48 @@
+{% macro printStyle(styles) %}
+    {% for key,value in styles %}
+        {% if key == 'before' %}
+            &:before {
+            {{ _self.printStyle(styles[key]) }}
+            }
+        {% elseif key == 'after' %}
+            &:after {
+            {{ _self.printStyle(styles[key]) }}
+            }
+        {% elseif value != '' %}
+            {{ key }}: {{ value|raw }};
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{% macro printGridGalleryCaption(styles) %}
+    {% for key,value in styles %}
+        {% if value != '' and  key != 'background-color' %}
+            {{ key }}: {{ value|raw }};
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{% set properties = item.properties|json_decode %}
+
+{{ StyleHelper.generatePresetSelector('.moto-widget-grid-gallery', item.class_name) }} {
+    {% if FEATURES.theme_widget_grid_gallery__html_caption %}
+        .caption_text {
+            {{ _self.printGridGalleryCaption(properties.caption.desktop.base) }}
+        }
+    {% else %}
+        .caption {
+            {{ _self.printGridGalleryCaption(properties.caption.desktop.base) }}
+        }
+    {% endif %}
+    {% if properties.caption.desktop.base['background-color'] != '' %}
+        .caption {
+            background-color: {{ properties.caption.desktop.base['background-color'] }};
+        }
+    {% endif %}
+    .moto-widget-grid-gallery-item {
+        {{ _self.printStyle(properties.image.desktop.base) }}
+        &:hover {
+            {{ _self.printStyle(properties.image.desktop.hover) }}
+        }
+    }
+}

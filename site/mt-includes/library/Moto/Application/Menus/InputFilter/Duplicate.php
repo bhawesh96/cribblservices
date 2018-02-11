@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Application\Menus\InputFilter; use Moto\InputFilter\AbstractInputFilter; use Zend\InputFilter\Exception; class Duplicate extends AbstractInputFilter { protected $_name = 'menus.duplicate'; public function init() { $this->add(array( 'name' => 'name', 'required' => true, 'validators' => array( array( 'name' => 'StringLength', 'options' => array( 'encoding' => 'UTF-8', 'min' => 1, 'max' => 200, ) ), ), )); } }

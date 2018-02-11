@@ -1,0 +1,2 @@
+<?php
+namespace Moto\ClickAction; use Moto; class Popup extends Moto\ClickAction\File { protected $_defaultData = array( 'id' => null, ); public function getUrl() { return '#'; } public function getTarget() { return ''; } public function getAdditionalAttributes() { return 'data-popup-id="' . $this->get('id') . '"'; } public function isCurrent($properties, $linker) { return false; } } 

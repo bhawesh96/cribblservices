@@ -1,0 +1,2 @@
+<?php
+namespace Moto\ClickAction; use Moto\Twig\Extension\LinkerExtension; class Lightbox extends AbstractClickAction { public function getUrl() { $lightboxImageSrc = $this->get('src'); if ($lightboxImageSrc) { $linker = new LinkerExtension(); return $linker->img($lightboxImageSrc); } else { return ''; } } }

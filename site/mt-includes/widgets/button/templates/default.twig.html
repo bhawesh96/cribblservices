@@ -1,0 +1,7 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-button moto-preset-{{ currentWidget.properties.preset }} {{ currentWidget.getAlignClass() }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getAnimationClasses() }}" data-widget="button">
+    {% if isPreview %}
+        <span class="moto-widget-button-link moto-size-{{ currentWidget.properties.size }}"><span class="fa moto-widget-theme-icon"></span> <span class="moto-widget-button-label">{{ currentWidget.properties.label }}</span></span>
+    {% else %}
+        <a {{ Linker.getLinkAttributes(currentWidget.properties.link) }} class="moto-widget-button-link moto-size-{{ currentWidget.properties.size }} moto-link"><span class="fa moto-widget-theme-icon"></span> <span class="moto-widget-button-label">{{ currentWidget.properties.label }}</span></a>
+    {% endif %}
+</div>

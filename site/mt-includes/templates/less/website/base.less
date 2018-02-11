@@ -1,0 +1,1088 @@
+html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100%;
+}
+
+// styles for color palette (color property)
+.moto-color1 {color: @baseColor1;}
+.moto-color1_1 {color: @baseColor1_1;}
+.moto-color1_2 {color: @baseColor1_2;}
+.moto-color1_3 {color: @baseColor1_3;}
+.moto-color1_4 {color: @baseColor1_4;}
+.moto-color1_5 {color: @baseColor1_5;}
+
+.moto-color2 {color: @baseColor2;}
+.moto-color2_1 {color: @baseColor2_1;}
+.moto-color2_2 {color: @baseColor2_2;}
+.moto-color2_3 {color: @baseColor2_3;}
+.moto-color2_4 {color: @baseColor2_4;}
+.moto-color2_5 {color: @baseColor2_5;}
+
+.moto-color3 {color: @baseColor3;}
+.moto-color3_1 {color: @baseColor3_1;}
+.moto-color3_2 {color: @baseColor3_2;}
+.moto-color3_3 {color: @baseColor3_3;}
+.moto-color3_4 {color: @baseColor3_4;}
+.moto-color3_5 {color: @baseColor3_5;}
+
+.moto-color4 {color: @baseColor4;}
+.moto-color4_1 {color: @baseColor4_1;}
+.moto-color4_2 {color: @baseColor4_2;}
+.moto-color4_3 {color: @baseColor4_3;}
+.moto-color4_4 {color: @baseColor4_4;}
+.moto-color4_5 {color: @baseColor4_5;}
+
+.moto-color5 {color: @baseColor5;}
+.moto-color5_1 {color: @baseColor5_1;}
+.moto-color5_2 {color: @baseColor5_2;}
+.moto-color5_3 {color: @baseColor5_3;}
+.moto-color5_4 {color: @baseColor5_4;}
+.moto-color5_5 {color: @baseColor5_5;}
+
+.moto-color_custom1 {color: @customColor1;}
+.moto-color_custom2 {color: @customColor2;}
+.moto-color_custom3 {color: @customColor3;}
+.moto-color_custom4 {color: @customColor4;}
+.moto-color_custom5 {color: @customColor5;}
+
+// styles for color palette (background property)
+.moto-bg-color1 {background: @baseColor1;}
+.moto-bg-color1_1 {background: @baseColor1_1;}
+.moto-bg-color1_2 {background: @baseColor1_2;}
+.moto-bg-color1_3 {background: @baseColor1_3;}
+.moto-bg-color1_4 {background: @baseColor1_4;}
+.moto-bg-color1_5 {background: @baseColor1_5;}
+
+.moto-bg-color2 {background: @baseColor2;}
+.moto-bg-color2_1 {background: @baseColor2_1;}
+.moto-bg-color2_2 {background: @baseColor2_2;}
+.moto-bg-color2_3 {background: @baseColor2_3;}
+.moto-bg-color2_4 {background: @baseColor2_4;}
+.moto-bg-color2_5 {background: @baseColor2_5;}
+
+.moto-bg-color3 {background: @baseColor3;}
+.moto-bg-color3_1 {background: @baseColor3_1;}
+.moto-bg-color3_2 {background: @baseColor3_2;}
+.moto-bg-color3_3 {background: @baseColor3_3;}
+.moto-bg-color3_4 {background: @baseColor3_4;}
+.moto-bg-color3_5 {background: @baseColor3_5;}
+
+.moto-bg-color4 {background: @baseColor4;}
+.moto-bg-color4_1 {background: @baseColor4_1;}
+.moto-bg-color4_2 {background: @baseColor4_2;}
+.moto-bg-color4_3 {background: @baseColor4_3;}
+.moto-bg-color4_4 {background: @baseColor4_4;}
+.moto-bg-color4_5 {background: @baseColor4_5;}
+
+.moto-bg-color5 {background: @baseColor5;}
+.moto-bg-color5_1 {background: @baseColor5_1;}
+.moto-bg-color5_2 {background: @baseColor5_2;}
+.moto-bg-color5_3 {background: @baseColor5_3;}
+.moto-bg-color5_4 {background: @baseColor5_4;}
+.moto-bg-color5_5 {background: @baseColor5_5;}
+
+.moto-bg-color_custom1 {background: @customColor1;}
+.moto-bg-color_custom2 {background: @customColor2;}
+.moto-bg-color_custom3 {background: @customColor3;}
+.moto-bg-color_custom4 {background: @customColor4;}
+.moto-bg-color_custom5 {background: @customColor5;}
+
+// default styles for all our widgets
+.moto-widget {
+    position: relative;
+}
+
+// hide cover and frame-empty div for all widgets outside admin panel
+.moto-widget-cover, .frame-empty {
+    display: none;
+}
+
+// enable flex system
+@media screen and (min-width: @const_media_mobile-h_max_width) {
+    .moto-widget-row, .moto-widget-block {
+        .container-fluid {
+            &:after, &:before {
+                display: block;
+            }
+        }
+        .row {
+            &:after, &:before {
+                display: block;
+            }
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+        }
+    }
+    .moto-widget-row.moto-justify-content_center, .moto-widget-row.moto-justify-content_bottom {
+        > .container-fluid > .row > .moto-cell {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+        // Ugly fixes for flexboxes in IE versions < Edge
+        .moto-widget-row, .moto-widget-image, .moto-widget-menu, .moto-widget-social-links {
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+        }
+    }
+    .moto-widget-row.moto-justify-content_center {
+        > .container-fluid > .row > .moto-cell {
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+        }
+    }
+    .moto-widget-row.moto-justify-content_bottom {
+        > .container-fluid > .row > .moto-cell {
+            -webkit-box-pack: flex-end;
+            -webkit-justify-content: flex-end;
+            -ms-flex-pack: flex-end;
+            justify-content: flex-end;
+        }
+    }
+}
+
+// fixed row reset styles
+.row-fixed .container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+}
+.moto-disabling_row-fixed .row-fixed .container-fluid {
+    max-width: none;
+}
+
+.row-gutter-0 .container-fluid, .row-gutter-0 .moto-cell {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.row-gutter-0 .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+// fluid inner rows reset styles
+.moto-widget-row > .container-fluid .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+// special class for parallax
+@media screen and (min-width: @const_media_tablet_max_width) {
+    .moto-parallax {
+        background-attachment: fixed;
+    }
+}
+
+@media screen and (min-width: @const_media_tablet_max_width) {
+    .moto-background-fixed {
+        background-attachment: fixed;
+    }
+}
+
+// all text widgets default word breaking settings
+.moto-widget-text-content {
+    padding: 0 1px;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// all widgets common alignment classes
+.moto-align-left {
+  text-align: left;
+}
+
+.moto-align-center {
+  text-align: center;
+}
+
+.moto-align-right {
+  text-align: right;
+}
+
+// all widgets common visibility classes
+@media screen and (max-width: @const_media_tablet_max_width) {
+  .moto-visible-on_desktop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: @const_media_mobile-h_max_width) {
+  .moto-visible-on_tablet {
+    display: none;
+  }
+}
+
+@media screen and (max-width: @const_media_mobile-v_max_width) {
+  .moto-visible-on_mobile-h {
+    display: none;
+  }
+}
+
+@media screen and (max-width: @const_media_tablet_max_width) {
+  .moto-align-left_tablet {
+    text-align: left;
+  }
+  .moto-align-center_tablet{
+    text-align: center;
+  }
+  .moto-align-right_tablet {
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: @const_media_mobile-h_max_width) {
+  .moto-align-left_mobile-h {
+    text-align: left;
+  }
+  .moto-align-center_mobile-h {
+    text-align: center;
+  }
+  .moto-align-right_mobile-h {
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: @const_media_mobile-v_max_width) {
+  .moto-align-left_mobile-v {
+    text-align: left;
+  }
+  .moto-align-center_mobile-v {
+    text-align: center;
+  }
+  .moto-align-right_mobile-v {
+    text-align: right;
+  }
+}
+
+// default styles for all button widgets
+.moto-widget-button {
+    .moto-widget-button-link {
+        display: inline-block;
+        cursor: pointer;
+    }
+    .moto-widget-theme-icon {
+        display: none;
+    }
+    button {
+        background: none;
+        border: none;
+        font: inherit;
+        outline: none;
+    }
+}
+
+// default styles for all lists inside our text widgets
+.moto-widget-text ul, .moto-widget-text ol {
+    list-style-type: none;
+}
+
+// default styles for our divider widget
+.moto-widget-divider {
+    font-size: 0;
+    .moto-widget-divider-line {
+        margin: 0;
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+// default styles for our social links widget
+.moto-widget-social-links {
+    font-size: 0;
+    .moto-widget-social-links-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+    }
+    .moto-widget-social-links-item {
+        display: inline-block;
+        list-style: none;
+        &.moto-widget-social-links-item_hidden {
+            display: none;
+        }
+    }
+    .moto-widget-social-links-link {
+        display: inline-block;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+// default styles for our image widget
+.moto-widget-image {
+    font-size: 0;
+    .moto-widget-image-link {
+        display: inline-block;
+        &:hover {
+            zoom: 1;
+        }
+    }
+    .moto-widget-image-picture {
+        width: 100%;
+        max-width: 100%;
+    }
+    &.moto-widget-image_empty {
+        display: none;
+    }
+}
+
+// default styles for our menu widget
+.moto-widget-menu {
+    .moto-widget-menu-toggle-btn {
+        display: none;
+        text-align: center;
+        @media screen and (max-width: @const_media_mobile-h_max_width) {
+            display: inline-block;
+        }
+    }
+    &.moto-align-right {
+        .moto-widget-menu-sublist {
+            .moto-widget-menu-item {
+                .moto-widget-menu-sublist {
+                    left: -100%;
+                }
+            }
+        }
+    }
+    &.moto-widget-menu-mobile-open {
+        @media screen and (max-width: @const_media_mobile-h_max_width) {
+            .moto-widget-menu-list {
+                display: block;
+                padding: 0;
+                .moto-widget-menu-item {
+                    display: block;
+                    margin: 0;
+                    .moto-widget-menu-link {
+                        width: 100%;
+                        .moto-widget-menu-link-arrow {
+                            display: none;
+                        }
+                    }
+                }
+                .moto-widget-menu-sublist {
+                    position: static;
+                    display: block;
+                    padding: 0;
+                    .moto-widget-menu-item {
+                        width: auto;
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .moto-widget-menu-list {
+        list-style: none;
+        @media screen and (max-width: @const_media_mobile-h_max_width) {
+            position: absolute;
+            z-index: 500;
+            left: 0;
+            right: 0;
+            display: none;
+        }
+        .moto-widget-menu-item {
+            display: inline-block;
+            position: relative;
+        }
+    }
+    .moto-widget-menu-sublist {
+        display: none;
+        position: absolute;
+        left: 0;
+        z-index: 500;
+        .moto-widget-menu-item {
+            display: block;
+            .moto-widget-menu-sublist {
+                left: 100%;
+                top: 0;
+            }
+        }
+        .moto-widget-menu-link {
+            position: relative;
+            display: block;
+        }
+    }
+    .moto-widget-menu-item {
+        &:hover {
+            > .moto-widget-menu-sublist {
+                display: block;
+            }
+        }
+    }
+}
+
+// default styles for our google map widget
+.moto-widget-map {
+    .moto-widget-map-frame {
+        display: block;
+        pointer-events: none;
+        width: 100%;
+        border: 0;
+        &.moto-widget-map-frame_active {
+            pointer-events: auto;
+        }
+    }
+}
+
+// default styles for our iframe widget
+.moto-widget-iframe {
+    .moto-widget-iframe-frame{
+        display: block;
+    }
+}
+
+// default styles for our video widget
+.moto-widget-video {
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+        .video-frame {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+}
+
+// default styles for our contact form widget
+.moto-widget-contact_form {
+    .moto-widget-contact_form-form {
+        width: 100%;
+        overflow: hidden;
+    }
+    .moto-widget-contact_form-group {
+        position: relative;
+    }
+    .moto-widget-contact_form-field {
+        display: block;
+        width: 100%;
+        &.moto-widget-contact_form-textarea {
+            resize: none;
+        }
+    }
+}
+
+@-webkit-keyframes defaultLoader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes defaultLoader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+// default styles for our SlideShare widget
+.moto-widget-slideshare {
+    .moto-widget-slideshare-container {
+        position: relative;
+        height: 0;
+        overflow: hidden;
+        .moto-widget-slideshare-frame {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+    }
+}
+
+// default styles facebook page widget for fix resize
+.moto-widget-facebook_page_plugin {
+    .fb-page {
+        overflow-y: hidden;
+        max-width: 100%;
+    }
+}
+
+// default styles for our SoundCloud widget
+.moto-widget-sound_cloud {
+    .moto-widget-sound_cloud-container {
+        line-height: 0;
+        font-size: 0;
+    }
+    .moto-widget-sound_cloud-iframe {
+        width: 100%;
+        border: 0;
+    }
+}
+
+// default styles for our slider widget
+.moto-widget-slider {
+    .moto-widget-empty {
+        display: none;
+    }
+    .bx-wrapper {
+        position: relative;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .bx-viewport {
+        -webkit-transform: translatez(0);
+        transform: translatez(0);
+    }
+    .bx-caption {
+        position: absolute;
+        text-align: left;
+    }
+    .bx-pager,
+    .bx-controls-auto {
+        width: 100%;
+    }
+    .bx-loading {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2000;
+        visibility: hidden; // bx-loading is deprecated loader class, use .moto-widget-slider li:first-child
+    }
+    .bx-pager {
+        text-align: center;
+    }
+    .bx-pager .bx-pager-item,
+    .bx-controls-auto .bx-controls-auto-item {
+        display: inline-block;
+    }
+    .bx-pager.bx-default-pager a {
+        display: block;
+        outline: 0;
+    }
+    .bx-controls-direction a {
+        position: absolute;
+        outline: 0;
+        z-index: 9999;
+        &.bx-prev, &.bx-next {
+            &.disabled {
+                display: none;
+            }
+        }
+    }
+    .bx-controls-auto {
+        text-align: center;
+        .bx-start, .bx-stop {
+            display: block;
+            outline: 0;
+        }
+    }
+    li {
+        text-align: center;
+        width: 100%;
+        img {
+            width: 100%;
+            display: inline-block;
+        }
+        &:before {
+            content: ' ';
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+        }
+    }
+    &.moto-widget-slider-loader {
+        .bx-controls, .bx-caption {
+            visibility: hidden;
+        }
+        li {
+            position: absolute;
+            list-style: none;
+            img {
+                visibility: hidden;
+            }
+            &:first-child {
+                position: relative !important;
+                min-height: 80px;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                    display: block;
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    border: 5px solid;
+                    border-top-color: fade(#181b27, 20%);
+                    border-right-color: fade(#181b27, 20%);
+                    border-bottom-color: fade(#181b27, 20%);
+                    border-left-color: #181b27;
+                    -webkit-animation: defaultLoader 1.1s infinite linear;
+                    animation: defaultLoader 1.1s infinite linear;
+                }
+            }
+        }
+    }
+}
+
+@-webkit-keyframes defaultCarouselLoader {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        left: 0;
+        opacity: 1;
+    }
+    12.5% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    25% {
+        left: 0;
+    }
+    37.5% {
+        left: 18px;
+    }
+    50% {
+        left: 18px;
+    }
+    62.5% {
+        left: 36px;
+    }
+    75% {
+        left: 36px;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    87.5% {
+        left: 36px;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        left: 36px;
+        opacity: 0;
+    }
+}
+
+@keyframes defaultCarouselLoader {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        left: 0;
+        opacity: 1;
+    }
+    12.5% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    25% {
+        left: 0;
+    }
+    37.5% {
+        left: 18px;
+    }
+    50% {
+        left: 18px;
+    }
+    62.5% {
+        left: 36px;
+    }
+    75% {
+        left: 36px;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    87.5% {
+        left: 36px;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        left: 36px;
+        opacity: 0;
+    }
+}
+
+// default styles for our carousel widget
+.moto-widget-carousel {
+    .carousel-empty {
+        display: none;
+    }
+    .moto-widget-carousel-item {
+        img {
+            width: 100%;
+        }
+        .moto-widget-carousel-link {
+            width: 100%;
+            display: inline-block;
+        }
+    }
+    .loading-block {
+        display: none;
+    }
+    &.moto-widget-carousel-loader {
+        .bx-controls {
+            display: none;
+        }
+        .moto-widget-carousel-item {
+            position: absolute;
+            list-style: none;
+            visibility: hidden;
+        }
+        .loading-block {
+            display: block;
+            height: 40px;
+            width: 46px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .loading-circle {
+            position: absolute;
+            opacity: 0;
+            top: 16px;
+            text-align: center;
+            -webkit-animation: defaultCarouselLoader 1.25s linear infinite;
+            animation: defaultCarouselLoader 1.25s linear infinite;
+        }
+        .loading-circle > div {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #2d2f3a;
+        }
+        .loading-circle:nth-of-type(1) {
+            -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+        }
+        .loading-circle:nth-of-type(2) {
+            -webkit-animation-delay: 0.3125s;
+            animation-delay: 0.3125s;
+        }
+        .loading-circle:nth-of-type(3) {
+            -webkit-animation-delay: 0.625s;
+            animation-delay: 0.625s;
+        }
+        .loading-circle:nth-of-type(4) {
+            -webkit-animation-delay: 0.9375s;
+            animation-delay: 0.9375s;
+        }
+    }
+}
+
+// default styles for our grid gallery widget
+.moto-widget-grid-gallery {
+    .moto-widget-grid-gallery-items {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    .moto-widget-grid-gallery-items .moto-widget-grid-gallery-item {
+        position: absolute;
+        display: inline-block;
+        overflow: hidden;
+        opacity: 0;
+    }
+    .moto-widget-grid-gallery-items .moto-widget-grid-gallery-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+    .moto-widget-grid-gallery-items .caption {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        &.caption-visible {
+            display: block;
+            opacity: 1;
+        }
+    }
+    .moto-widget-grid-gallery-items .caption-empty {
+        visibility: hidden;
+    }
+    .moto-widget-grid-gallery-items .entry-visible {
+        opacity: 1;
+    }
+    .moto-widget-grid-gallery-items .spinner {
+        position: absolute;
+        bottom: 0;
+        margin-left: -24px;
+        padding: 10px 0 10px 0;
+        left: 50%;
+        opacity: initial;
+        filter: initial;
+        overflow: initial;
+    }
+    .moto-widget-grid-gallery-items .spinner > span {
+        display: inline-block;
+        opacity: 0;
+        width: 8px;
+        height: 8px;
+        margin: 0 4px 0 4px;
+        background-color: #000;
+        border-radius: 6px;
+    }
+}
+
+// default styles for social buttons widget
+.moto-widget-social-buttons {
+    .social-buttons-list {
+        .social-button {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 6px 5px 0;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+// default styles for blog.recent_posts widget
+.moto-widget-blog-recent_posts {
+    .moto-widget-blog-recent_posts-list {
+        list-style-type: none;
+    }
+
+    .moto-widget-blog-recent_posts-list {
+        .moto-widget-blog-recent_posts-item:last-child {
+            .moto-widget-text {
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+
+// default styles for blog.post_list widget
+.moto-widget-blog-post_list {
+    .moto-blog-posts-list, .moto-pagination-pager {
+        list-style-type: none;
+    }
+}
+
+.moto-widget-blog-post_published_on {
+    .moto-widget-blog-post_published_on-icon {
+        margin-right: 10px;
+    }
+}
+
+// default styles for blog author
+.moto-widget-blog-post-author-icon {
+    margin-right: 10px;
+}
+
+// default styles for widget pagination
+.moto-widget-pagination {
+    .moto-pagination-group {
+        list-style: none;
+        float: left;
+        cursor: default;
+        &:last-child {
+            .moto-pagination-item {
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .moto-pagination-item {
+        line-height: 0;
+        float: left;
+        text-align: center;
+    }
+    .moto-pagination-item-control {
+        line-height: 0;
+    }
+    .moto-pagination-link {
+        padding: 0 0.75em;
+        display: table;
+        .moto-pagination-link-icon {
+            font-size: 1.42em;
+            line-height: 0;
+            height: 0;
+            padding-top: 0.039em;
+        }
+    }
+    .moto-pagination-link-text {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    // new "native" pagination
+    ul {
+        list-style: none;
+        display: inline-block;
+    }
+    li {
+        line-height: 0;
+        float: left;
+        text-align: center;
+    }
+    a {
+        padding: 0 0.75em;
+        display: table;
+        i {
+            font-size: 1.42em;
+            line-height: 0;
+            height: 0;
+            padding-top: 0.039em;
+        }
+        span {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+}
+
+// default styles for back to top button
+.moto-back-to-top-button {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 500;
+    &.moto-back-to-top-button_visible {
+        visibility: visible;
+        opacity: 1;
+    }
+    .moto-back-to-top-button-link {
+        display: inline-block;
+    }
+}
+
+// moto sticky styles
+.moto-sticky__hidden {
+    display: none;
+}
+
+.moto-sticky__attached,
+.moto-sticky__attached_top,
+.moto-sticky__attached_bottom {
+    position: fixed;
+    z-index: 400;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -moz-transform: none;
+}
+
+.moto-sticky__attached_top {
+    top: 0;
+}
+
+.moto-sticky__attached_bottom {
+    bottom: 0;
+}
+
+.moto-sticky-pseudo-element {
+    position: static;
+}
+
+@media screen and (max-width: @const_media_mobile-h_max_width) {
+    .moto-sticky-pseudo-element,
+    .moto-widget.moto-sticky__hidden {
+        display: none !important;
+    }
+    .moto-widget.moto-sticky__attached, .moto-section.moto-sticky__attached {
+        position: static !important;
+        width: auto !important;
+        -webkit-transform: initial;
+        transform: initial;
+    }
+}
+
+// reload angular class for hide data before app bootstrapping (fix ng-show, ng-hide before init)
+.ng-cloak {
+    display: none !important;
+}
+
+.moto-anchor {
+    position: absolute;
+    top: 0;
+}
+
+// default styles for CKEditor motoimageplugin
+.moto-content-image-plugin-wrapper {
+    display: inline-block;
+    max-width: 100%;
+}
+
+.moto-content-image-container {
+    display: inline-block;
+    max-width: 100%;
+}
+
+.moto-content-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.moto-content-image_left-floated {
+    float: left;
+}
+
+.moto-content-image_right-floated {
+    float: right;
+}
+
+.moto-content-image_centered-block {
+    display: block;
+    line-height: 0;
+    text-align: center;
+}
+
+.moto-popup__content_error {
+    font-family: Verdana, sans-serif;
+    color: #d3d8db;
+    font-size: 16px;
+    text-align: center;
+}
+
+.moto-popup_content {
+    .moto-sticky__attached_top {
+        top: 50px;
+    }
+}

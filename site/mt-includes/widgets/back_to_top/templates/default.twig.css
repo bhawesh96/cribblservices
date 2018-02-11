@@ -1,0 +1,129 @@
+{% macro get_coordinates(vertical_align, horizontal_align, coordX, coordY) %}
+
+    {% if vertical_align == 'top' %}
+        {% if coordY != "" %}top: {{ coordY }};{% endif %}
+        bottom: auto;
+    {% elseif vertical_align == 'center' %}
+        {% if coordY != "" %}top: calc(~"50% - ({{coordY}} / 2)");{% endif %}
+    {% elseif vertical_align == 'bottom' %}
+        top: auto;
+        {% if coordY != "" %}bottom: {{ coordY }};{% endif %}
+    {% endif %}
+
+    {% if horizontal_align == 'left' %}
+        right: auto;
+        {% if coordX != "" %}left: {{ coordX }};{% endif %}
+    {% elseif horizontal_align == 'center' %}
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+    {% elseif horizontal_align == 'right' %}
+        {% if coordX != "" %}right: {{ coordX }};{% endif %}
+        left: auto;
+    {% endif %}
+
+{% endmacro %}
+
+{% set properties = item.properties|json_decode %}
+{% set coordX = {
+    'desktop': properties.position.desktop.horizontal,
+    'tablet': properties.position.tablet.horizontal,
+    'mobile-h': properties.position['mobile-h'].horizontal,
+    'mobile-v': properties.position['mobile-v'].horizontal
+}%}
+{% set coordY = {
+    'desktop': properties.position.desktop.vertical,
+    'tablet': properties.position.tablet.vertical,
+    'mobile-h': properties.position['mobile-h'].vertical,
+    'mobile-v':  properties.position['mobile-v'].vertical
+}%}
+
+{% set widget_height = {
+    'desktop': properties.box_model.desktop.base.height,
+    'tablet': properties.box_model.tablet.base.height,
+    'mobile-h': properties.box_model['mobile-h'].base.height,
+    'mobile-v': properties.box_model['mobile-v'].base.height
+}%}
+
+.moto-widget-back-to-top {
+    &.moto-back-to-top-button_visible {
+        -webkit-animation-name: {% if properties.animation %}{{properties.animation}}{% else %}none{% endif %};
+        animation-name: {% if properties.animation %}{{properties.animation}}{% else %}none{% endif %};
+    }
+    {% if properties.position.type == 'top_left' %}
+        {{ _self.get_coordinates('top', 'left', coordX.desktop, coordY.desktop) }}
+        @media screen and (max-width: @const_media_tablet_max_width) { {{ _self.get_coordinates('top', 'left', coordX.tablet, coordY.tablet) }} }
+        @media screen and (max-width: @const_media_mobile-h_max_width) { {{ _self.get_coordinates('top', 'left', coordX['mobile-h'], coordY['mobile-h']) }} }
+        @media screen and (max-width: @const_media_mobile-v_max_width) { {{ _self.get_coordinates('top', 'left', coordX['mobile-v'], coordY['mobile-v']) }} }
+
+    {% elseif properties.position.type == 'top_center' %}
+        {{ _self.get_coordinates('top', 'center', coordX.desktop, coordY.desktop) }}
+        @media screen and (max-width: @const_media_tablet_max_width) { {{ _self.get_coordinates('top', 'center', coordX.tablet, coordY.tablet) }} }
+        @media screen and (max-width: @const_media_mobile-h_max_width) { {{ _self.get_coordinates('top', 'center', coordX['mobile-h'], coordY['mobile-h']) }} }
+        @media screen and (max-width: @const_media_mobile-v_max_width) { {{ _self.get_coordinates('top', 'center', coordX['mobile-v'], coordY['mobile-v']) }} }
+
+    {% elseif properties.position.type == 'top_right' %}
+        {{ _self.get_coordinates('top', 'right', coordX.desktop, coordY.desktop) }}
+        @media screen and (max-width: @const_media_tablet_max_width) { {{ _self.get_coordinates('top', 'right', coordX.tablet, coordY.tablet) }} }
+        @media screen and (max-width: @const_media_mobile-h_max_width) { {{ _self.get_coordinates('top', 'right', coordX['mobile-h'], coordY['mobile-h']) }} }
+        @media screen and (max-width: @const_media_mobile-v_max_width) { {{ _self.get_coordinates('top', 'right', coordX['mobile-v'], coordY['mobile-v']) }} }
+
+    {% elseif properties.position.type == 'center_left' %}
+        {{ _self.get_coordinates('center', 'left', coordX.desktop, widget_height.desktop) }}
+        @media screen and (max-width: @const_media_tablet_max_width) { {{ _self.get_coordinates('center', 'left', coordX.tablet, widget_height.tablet) }} }
+        @media screen and (max-width: @const_media_mobile-h_max_width) { {{ _self.get_coordinates('center', 'left', coordX['mobile-h'], widget_height['mobile-h']) }} }
+        @media screen and (max-width: @const_media_mobile-v_max_width) { {{ _self.get_coordinates('center', 'left', coordX['mobile-v'], widget_height['mobile-v']) }} }
+
+    {% elseif properties.position.type == 'center_right' %}
+        {{ _self.get_coordinates('center', 'right', coordX.desktop, widget_height.desktop) }}
+        @media screen and (max-width: @const_media_tablet_max_width) { {{ _self.get_coordinates('center', 'right', coordX.tablet, widget_height.tablet) }} }
+        @media screen and (max-width: @const_media_mobile-h_max_width) { {{ _self.get_coordinates('center', 'right', coordX['mobile-h'], widget_height['mobile-h']) }} }
+        @media screen and (max-width: @const_media_mobile-v_max_width) { {{ _self.get_coordinates('center', 'right', coordX['mobile-v'], widget_height['mobile-v']) }} }
+
+    {% elseif properties.position.type == 'bottom_left' %}
+        {{ _self.get_coordinates('bottom', 'left', coordX.desktop, coordY.desktop) }}
+        @media screen and (max-width: @const_media_tablet_max_width) { {{ _self.get_coordinates('bottom', 'left', coordX.tablet, coordY.tablet) }} }
+        @media screen and (max-width: @const_media_mobile-h_max_width) { {{ _self.get_coordinates('bottom', 'left', coordX['mobile-h'], coordY['mobile-h']) }} }
+        @media screen and (max-width: @const_media_mobile-v_max_width) { {{ _self.get_coordinates('bottom', 'left', coordX['mobile-v'], coordY['mobile-v']) }} }
+
+    {% elseif properties.position.type == 'bottom_center' %}
+        {{ _self.get_coordinates('bottom', 'center', coordX.desktop, coordY.desktop) }}
+        @media screen and (max-width: @const_media_tablet_max_width) { {{ _self.get_coordinates('bottom', 'center', coordX.tablet, coordY.tablet) }} }
+        @media screen and (max-width: @const_media_mobile-h_max_width) { {{ _self.get_coordinates('bottom', 'center', coordX['mobile-h'], coordY['mobile-h']) }} }
+        @media screen and (max-width: @const_media_mobile-v_max_width) { {{ _self.get_coordinates('bottom', 'center', coordX['mobile-v'], coordY['mobile-v']) }} }
+
+    {% elseif properties.position.type == 'bottom_right' %}
+        {{ _self.get_coordinates('bottom', 'right', coordX.desktop, coordY.desktop) }}
+        @media screen and (max-width: @const_media_tablet_max_width) { {{ _self.get_coordinates('bottom', 'right', coordX.tablet, coordY.tablet) }} }
+        @media screen and (max-width: @const_media_mobile-h_max_width) { {{ _self.get_coordinates('bottom', 'right', coordX['mobile-h'], coordY['mobile-h']) }} }
+        @media screen and (max-width: @const_media_mobile-v_max_width) { {{ _self.get_coordinates('bottom', 'right', coordX['mobile-v'], coordY['mobile-v']) }} }
+    {% endif %}
+}
+{{ StyleHelper.generateLessFromArray(properties.box_model.desktop.base, '.moto-widget-back-to-top-link') }}
+{% if properties.box_model.tablet.base %}
+    @media screen and (max-width: @const_media_tablet_max_width) {
+        {{ StyleHelper.generateLessFromArray(properties.box_model.tablet.base, '.moto-widget-back-to-top-link') }}
+    }
+{% endif %}
+{% if properties.box_model['mobile-h'].base %}
+    @media screen and (max-width: @const_media_mobile-h_max_width) {
+        {{ StyleHelper.generateLessFromArray(properties.box_model['mobile-h'].base, '.moto-widget-back-to-top-link') }}
+    }
+{% endif %}
+{% if properties.box_model['mobile-v'].base %}
+    @media screen and (max-width: @const_media_mobile-v_max_width) {
+        {{ StyleHelper.generateLessFromArray(properties.box_model['mobile-v'].base, '.moto-widget-back-to-top-link') }}
+    }
+{% endif %}
+
+{{ StyleHelper.generateLessFromArray(properties.common_styles.desktop, '.moto-widget-back-to-top-link') }}
+@media screen and (max-width: @const_media_tablet_max_width) {
+    {{ StyleHelper.generateLessFromArray(properties.common_styles.tablet, '.moto-widget-back-to-top-link') }}
+}
+@media screen and (max-width: @const_media_mobile-h_max_width) {
+    {{ StyleHelper.generateLessFromArray(properties.common_styles['mobile-h'], '.moto-widget-back-to-top-link') }}
+}
+@media screen and (max-width: @const_media_mobile-v_max_width) {
+    {{ StyleHelper.generateLessFromArray(properties.common_styles['mobile-v'], '.moto-widget-back-to-top-link') }}
+}
+{{ StyleHelper.generateLessFromArray(properties.icon.desktop, '.moto-widget-back-to-top-icon') }}

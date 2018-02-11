@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Application\MediaLibrary\InputFilter; use Moto\InputFilter\AbstractInputFilter; use Zend\InputFilter\Exception; class DeleteItem extends AbstractInputFilter { protected $_name = 'mediaLibraryItem.delete'; public function init() { $this->add(array( 'name' => 'id', 'type' => 'Zend\InputFilter\ArrayInput', 'required' => true, 'validators' => array( array( "name" => "NotEmpty" ), array( "name" => "Digits" ) ) )); } }

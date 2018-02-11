@@ -1,0 +1,100 @@
+{% set widgetId = currentWidget.getWidgetId() %}
+<div data-widget-id="{{ widgetId }}" class="moto-widget moto-widget-contact_form moto-preset-{{ currentWidget.properties.preset }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }} {{ currentWidget.getAnimationClasses() }}" data-preset="{{ currentWidget.properties.preset }}" data-widget="contact_form" data-spacing="{{ currentWidget.getSpacing('short') }}">
+    <div ng-controller="widget.ContactForm.Controller" ng-init="hash = '{{ currentWidget.getProtectedHash() }}'">
+        {% if isPreview %}
+            <div class="moto-widget-cover"></div>
+        {% endif %}
+
+        <form class="moto-widget-contact_form-form" role="form" name="contactForm" ng-submit="submit()" novalidate>
+            <div ng-show="sending" class="contact-form-loading"></div>
+            {% for name, field in currentWidget.properties.fields %}
+
+                {% if field.enabled %}
+
+                    {% if field.tag == 'textarea' %}
+
+                        <div class="moto-widget-contact_form-group">
+                            <label for="field_{{name}}" class="moto-widget-contact_form-label">{{ field.placeholder }}</label>
+                            <textarea class="moto-widget-contact_form-field moto-widget-contact_form-textarea" rows="3" placeholder="{{ field.placeholder }} {% if field.required %}*{% endif %}" {% if field.required %} ng-blur="validate('{{ name }}')" required {% endif %} ng-model-options="{ updateOn: 'blur' }" name="{{ name }}" id="field_{{name}}" ng-model="message.{{ name }}"></textarea>
+                            {% if not isPreview %}
+                                <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak ng-show="contactForm.{{name}}.$invalid && !contactForm.{{name}}.$pristine" >{{ currentWidget.properties.messages.required|default('Field is required') }}</span>
+                            {% endif %}
+                        </div>
+
+                    {% elseif field.type == 'file' %}
+
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="moto-cell col-xs-6">
+                                    <div class="moto-widget-contact_form-group moto-widget-contact_form-group__attachment">
+                                        <div>
+                                            <input type="text" class="moto-widget-contact_form-field moto-widget-contact_form-input" readonly="readonly" placeholder="" id="field_{{name}}" ng-model="attachment.name"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="moto-cell col-xs-6">
+                                    <div class="moto-widget moto-widget-button moto-preset-{{ currentWidget.properties.buttons.attachment.preset|default('default') }}" data-preset="{{ currentWidget.properties.buttons.attachment.preset }}">
+                                        <button type="button" ngf-select ng-model="attachment" class="moto-widget-button-link moto-size-{{ currentWidget.properties.buttons.attachment.size }}" data-size="{{ currentWidget.properties.buttons.attachment.size }}"><span class="fa moto-widget-theme-icon"></span><span class="moto-widget-button-label">{{ field.placeholder|default('Upload') }}</span></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    {% elseif field.type == 'checkbox' %}
+                        <div class="moto-widget-contact_form-group" ng-class="{'moto-widget-contact_form-group-not-valid': contactForm.checkbox.$invalid, 'moto-widget-contact_form-checkbox-checked': message.checkbox}">
+                            <input id="moto-widget-contact_form-checkbox-{{ widgetId }}" name="checkbox" ng-model="message.checkbox" ng-change="checkboxChanged()" type="checkbox" class="moto-widget-contact_form-checkbox"{% if field.required %} ng-init="requiredCheckbox()"{% endif %}>
+                            <label class="moto-widget-contact_form-checkbox-label" for="moto-widget-contact_form-checkbox-{{ widgetId }}">
+                                <span class="moto-widget-contact_form-checkbox-icon"></span>
+                                <span class="moto-widget-contact_form-checkbox-text {{ field.text_style }}">{{ field.label }}</span>
+                            </label>
+                        </div>
+                    {% else %}
+
+                        <div class="moto-widget-contact_form-group">
+                            <label for="field_{{name}}" class="moto-widget-contact_form-label">{{ field.placeholder }}</label>
+                            <input type="text" class="moto-widget-contact_form-field moto-widget-contact_form-input" placeholder="{{ field.placeholder }} {% if field.required %}*{% endif %}" {% if field.required %} ng-blur="validate('{{ name }}')" required {% endif %} ng-model-options="{ updateOn: 'blur' }" name="{{ name }}" id="field_{{name}}" ng-model="message.{{ name }}"/>
+                            {% if not isPreview %}
+                                <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak ng-show="contactForm.{{name}}.$invalid && !contactForm.{{name}}.$pristine && !contactForm.{{name}}.emailInvalid" >{{ currentWidget.properties.messages.required|default('Field is required') }}</span>
+                                <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak ng-show="contactForm.{{name}}.emailInvalid && !contactForm.{{name}}.$pristine" >{{ currentWidget.properties.messages.invalidEmail|default('Incorrect email') }}</span>
+                            {% endif %}
+                        </div>
+
+                    {% endif %}
+
+                {% endif %}
+
+            {% endfor %}
+
+            {% if not isPreview %}
+
+                <div class="moto-widget-contact_form-success ng-cloak" ng-cloak ng-show="emailSent">
+                    {{ currentWidget.properties.messages.success|default('Your message was sent successfully') }}
+                </div>
+
+                <div class="moto-widget-contact_form-danger ng-cloak" ng-cloak ng-show="emailError">
+                    {{ currentWidget.properties.messages.error|default('Sorry, your message was not sent') }}
+                </div>
+
+            {% endif %}
+
+            <div class="moto-widget-contact_form-buttons">
+
+            {% if currentWidget.properties.buttons.submit.preset %}
+
+                <div class="moto-widget moto-widget-button moto-preset-{{ currentWidget.properties.buttons.submit.preset }} moto-align-{{ currentWidget.properties.buttons.submit.align }}" data-preset="{{ currentWidget.properties.buttons.submit.preset }}" data-align="{{ currentWidget.properties.buttons.submit.align }}">
+                    <a ng-click="submit();" class="moto-widget-button-link moto-size-{{ currentWidget.properties.buttons.submit.size }}"
+                       data-size="{{ currentWidget.properties.buttons.submit.size }}"><span class="fa moto-widget-theme-icon"></span><span class="moto-widget-button-label">{{ currentWidget.properties.buttons.submit.label|default('Send') }}</span></a>
+                </div>
+                <button type="submit" class="hidden"></button>
+
+            {% else %}
+
+                <button type="submit" class="moto-widget-contact_form-submit">{{ currentWidget.properties.buttons.submit.label|default(currentWidget.properties.messages.submitButton)|default('Send') }}</button>
+
+            {% endif %}
+
+            </div>
+
+        </form>
+    </div>
+</div>

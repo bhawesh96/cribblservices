@@ -1,0 +1,2 @@
+<?php
+namespace Website\Widgets\Video; use Moto; class Widget extends Moto\System\Widgets\AbstractWidget { protected $_name = 'video'; protected static $_defaultProperties = array( 'align' => array( 'desktop' => 'left', 'tablet' => '', 'mobile-v' => '', 'mobile-h' => '', ), 'preset' => 'default', 'animation' => '', 'spacing' => array( 'top' => 'auto', 'right' => 'auto', 'bottom' => 'auto', 'left' => 'auto', ), 'uri' => array( 'src' => '', ), ); protected $_templateType = 'templates'; protected $_widgetId = true; } 

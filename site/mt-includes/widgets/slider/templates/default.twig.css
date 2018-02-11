@@ -1,0 +1,70 @@
+{% macro printStyle(styles) %}
+    {% for key,value in styles %}
+        {% if key == 'before' %}
+            &:before {
+                {{ _self.printStyle(styles[key]) }}
+            }
+        {% elseif key == 'after' %}
+            &:after {
+                {{ _self.printStyle(styles[key]) }}
+            }
+        {% elseif value != '' %}
+            {{ key }}: {{ value|raw }};
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{% macro printSliderCaption(styles) %}
+    {% for key,value in styles %}
+        {% if value != '' and  key != 'background-color' and  key != 'carousel-background-color' %}
+            {{ key }}: {{ value|raw }};
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{% set properties = item.properties|json_decode %}
+
+{{ StyleHelper.generatePresetSelector('.moto-widget-slider', item.class_name) }} {
+{% if properties.caption.desktop.base['background-color'] != '' %}
+    .bx-caption {
+        background-color: {{ properties.caption.desktop.base['background-color'] }};
+    }
+{% endif %}
+{% if FEATURES.theme_widget_slider__html_caption %}
+    .bx-caption_text {
+        {{ _self.printSliderCaption(properties.caption.desktop.base) }}
+    }
+{% else %}
+    .bx-caption {
+        {{ _self.printSliderCaption(properties.caption.desktop.base) }}
+    }
+{% endif %}
+    .bx-controls-direction {
+        .bx-prev, .bx-next {
+            {{ _self.printStyle(properties.arrows.desktop.base) }}
+            &:hover {
+                {{ _self.printStyle(properties.arrows.desktop.hover) }}
+            }
+        }
+    }
+    .bx-pager-link {
+        {{ _self.printStyle(properties.pagination.desktop.base) }}
+        &:hover {
+            {{ _self.printStyle(properties.pagination.desktop.hover) }}
+        }
+        &.active {
+            {{ _self.printStyle(properties.current_pagination.desktop.base) }}
+            &:hover {
+                {{ _self.printStyle(properties.current_pagination.desktop.hover) }}
+            }
+        }
+    }
+}
+
+{% if properties.caption.desktop.base['carousel-background-color'] != '' %}
+{{ StyleHelper.generatePresetSelector('.moto-widget.moto-widget-carousel', item.class_name) }} {
+    .moto-widget-carousel-caption {
+        background-color: {{ properties.caption.desktop.base['carousel-background-color'] }};
+    }
+}
+{% endif %}

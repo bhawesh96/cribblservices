@@ -1,0 +1,15 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-image moto-preset-{{ currentWidget.properties.preset }} {{ currentWidget.getAlignClass() }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }} {{ currentWidget.getAnimationClasses() }}" data-widget="image">
+    {% if currentWidget.properties.src %}
+        {% if isPreview or currentWidget.properties.link.action == 'none' %}
+            <span class="moto-widget-image-link">
+                <img {{ Linker.lazyImageSrcAttribute(currentWidget.properties.src) }} class="moto-widget-image-picture {{ currentWidget.getLazyLoadingCssClass() }}" data-id="{{ currentWidget.properties.id }}" title="{{ currentWidget.properties.title }}" alt="{{ currentWidget.properties.alt }}"{% if isPreview %} draggable="false"{% endif %}>
+            </span>
+        {% else %}
+            <a class="moto-widget-image-link moto-link" {{ Linker.getLinkAttributes(currentWidget.properties.link) }}>
+                <img {{ Linker.lazyImageSrcAttribute(currentWidget.properties.src) }} class="moto-widget-image-picture {{ currentWidget.getLazyLoadingCssClass() }}" data-id="{{ currentWidget.properties.id }}" title="{{ currentWidget.properties.title }}" alt="{{ currentWidget.properties.alt }}">
+            </a>
+        {% endif %}
+    {% else %}
+        <div class="moto-widget-empty"></div>
+    {% endif %}
+</div>

@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Application\Settings\InputFilter; use Moto\InputFilter\AbstractInputFilter; use Moto; class SystemEngineData extends AbstractInputFilter { protected $_name = 'settingsSystem.engineData'; public function init() { $this->add(array( 'name' => 'value', 'required' => true, 'allow_empty' => false, 'filters' => array( array('name' => 'StringTrim'), ), 'validators' => array( array( 'name' => 'StringLength', 'options' => array( 'encoding' => 'UTF-8', 'min' => 10, 'max' => 10240, ), ), ), )); } }

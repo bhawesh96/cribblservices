@@ -1,0 +1,1082 @@
+[
+    {
+        "name": "Medium Text",
+        "class_name": "moto-text_normal",
+        "type": "text",
+        "is_system": "1",
+        "is_responsive": "1",
+        "properties": {
+            "desktop": {
+                "base": {
+                    "font-weight": "400",
+                    "font-style": "normal",
+                    "font-family": "'Open Sans', sans-serif",
+                    "color": "@customColor3",
+                    "font-size": "16px",
+                    "line-height": 1.5,
+                    "letter-spacing": "0px"
+                }
+            },
+            "tablet": {
+                "base": {
+                    "font-size": "14px",
+                    "line-height": 1.5,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-h": {
+                "base": {
+                    "font-size": "14px",
+                    "line-height": 1.5,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-v": {
+                "base": {
+                    "font-size": "14px",
+                    "line-height": 1.5,
+                    "letter-spacing": "0px"
+                }
+            }
+        },
+        "link": {
+            "desktop": {
+                "base": {
+                    "color": "@customColor3",
+                    "text-decoration": "none",
+                    "font-weight": "400",
+                    "font-style": "normal"
+                },
+                "hover": {
+                    "text-decoration": "none",
+                    "font-weight": "400",
+                    "font-style": "normal",
+                    "color": "@baseColor1_3"
+                }
+            },
+            "tablet": {
+                "base": [
+
+                ]
+            },
+            "mobile-h": {
+                "base": [
+
+                ]
+            },
+            "mobile-v": {
+                "base": [
+
+                ]
+            }
+        }
+    },
+    {
+        "name": "Site Title",
+        "class_name": "moto-text_system_1",
+        "type": "text",
+        "is_system": "1",
+        "is_responsive": "1",
+        "properties": {
+            "desktop": {
+                "base": {
+                    "font-weight": "700",
+                    "font-style": "normal",
+                    "font-family": "'Merriweather', serif",
+                    "color": "@baseColor3_3",
+                    "font-size": "26px",
+                    "line-height": 1.1,
+                    "letter-spacing": "1px"
+                }
+            },
+            "tablet": {
+                "base": {
+                    "font-size": "22px",
+                    "line-height": 1.1,
+                    "letter-spacing": "1px"
+                }
+            },
+            "mobile-h": {
+                "base": {
+                    "font-size": "25px",
+                    "line-height": 1.1,
+                    "letter-spacing": "1px"
+                }
+            },
+            "mobile-v": {
+                "base": {
+                    "font-size": "25px",
+                    "line-height": 1.1,
+                    "letter-spacing": "1px"
+                }
+            }
+        },
+        "link": {
+            "desktop": {
+                "base": {
+                    "color": "@baseColor3_3",
+                    "text-decoration": "none",
+                    "font-weight": "700",
+                    "font-style": "normal"
+                },
+                "hover": {
+                    "text-decoration": "none",
+                    "font-weight": "700",
+                    "font-style": "normal",
+                    "color": "@baseColor3_3"
+                }
+            },
+            "tablet": {
+                "base": [
+
+                ]
+            },
+            "mobile-h": {
+                "base": [
+
+                ]
+            },
+            "mobile-v": {
+                "base": [
+
+                ]
+            }
+        }
+    },
+    {
+        "name": "Tagline",
+        "class_name": "moto-text_system_2",
+        "type": "text",
+        "is_system": "1",
+        "is_responsive": "1",
+        "properties": {
+            "desktop": {
+                "base": {
+                    "font-weight": "300",
+                    "font-style": "italic",
+                    "font-family": "'Merriweather', serif",
+                    "color": "@customColor5",
+                    "font-size": "12px",
+                    "line-height": 1.2,
+                    "letter-spacing": "0px"
+                }
+            },
+            "tablet": {
+                "base": {
+                    "font-size": "12px",
+                    "line-height": 1.2,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-h": {
+                "base": {
+                    "font-size": "12px",
+                    "line-height": 1.2,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-v": {
+                "base": {
+                    "font-size": "12px",
+                    "line-height": 1.2,
+                    "letter-spacing": "0px"
+                }
+            }
+        },
+        "link": {
+            "desktop": {
+                "base": {
+                    "color": "@customColor5",
+                    "text-decoration": "none",
+                    "font-weight": "300",
+                    "font-style": "italic"
+                },
+                "hover": {
+                    "text-decoration": "none",
+                    "font-weight": "300",
+                    "font-style": "italic",
+                    "color": "@customColor5"
+                }
+            },
+            "tablet": {
+                "base": [
+
+                ]
+            },
+            "mobile-h": {
+                "base": [
+
+                ]
+            },
+            "mobile-v": {
+                "base": [
+
+                ]
+            }
+        }
+    },
+    {
+        "name": "Heading XXL",
+        "class_name": "moto-text_system_3",
+        "type": "text",
+        "is_system": "1",
+        "is_responsive": "1",
+        "properties": {
+            "desktop": {
+                "base": {
+                    "font-weight": "300",
+                    "font-style": "normal",
+                    "font-family": "'Ubuntu', sans-serif",
+                    "color": "@baseColor2_3",
+                    "font-size": "48px",
+                    "line-height": 1.1,
+                    "letter-spacing": "0px"
+                }
+            },
+            "tablet": {
+                "base": {
+                    "font-size": "36px",
+                    "line-height": 1,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-h": {
+                "base": {
+                    "font-size": "26px",
+                    "line-height": 1,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-v": {
+                "base": {
+                    "font-size": "26px",
+                    "line-height": 1,
+                    "letter-spacing": "0px"
+                }
+            }
+        },
+        "link": {
+            "desktop": {
+                "base": {
+                    "color": "@baseColor2_3",
+                    "text-decoration": "none",
+                    "font-weight": "300",
+                    "font-style": "normal"
+                },
+                "hover": {
+                    "text-decoration": "none",
+                    "font-weight": "300",
+                    "font-style": "normal",
+                    "color": "@baseColor1_3"
+                }
+            },
+            "tablet": {
+                "base": [
+
+                ]
+            },
+            "mobile-h": {
+                "base": [
+
+                ]
+            },
+            "mobile-v": {
+                "base": [
+
+                ]
+            }
+        }
+    },
+    {
+        "name": "Heading XL",
+        "class_name": "moto-text_system_4",
+        "type": "text",
+        "is_system": "1",
+        "is_responsive": "1",
+        "properties": {
+            "desktop": {
+                "base": {
+                    "font-weight": "400",
+                    "font-style": "normal",
+                    "font-family": "'Merriweather', serif",
+                    "color": "@baseColor5_5",
+                    "font-size": "64px",
+                    "line-height": 1.3,
+                    "letter-spacing": "0px"
+                }
+            },
+            "tablet": {
+                "base": {
+                    "font-size": "30px",
+                    "line-height": 1.3,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-h": {
+                "base": {
+                    "font-size": "25px",
+                    "line-height": 1.3,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-v": {
+                "base": {
+                    "font-size": "23px",
+                    "line-height": 1.3,
+                    "letter-spacing": "0px"
+                }
+            }
+        },
+        "link": {
+            "desktop": {
+                "base": {
+                    "color": "@baseColor5_5",
+                    "text-decoration": "none",
+                    "font-weight": "400",
+                    "font-style": "normal"
+                },
+                "hover": {
+                    "text-decoration": "none",
+                    "font-weight": "400",
+                    "font-style": "normal",
+                    "color": "@baseColor1_3"
+                }
+            },
+            "tablet": {
+                "base": [
+
+                ]
+            },
+            "mobile-h": {
+                "base": [
+
+                ]
+            },
+            "mobile-v": {
+                "base": [
+
+                ]
+            }
+        }
+    },
+    {
+        "name": "Heading L",
+        "class_name": "moto-text_system_5",
+        "type": "text",
+        "is_system": "1",
+        "is_responsive": "1",
+        "properties": {
+            "desktop": {
+                "base": {
+                    "font-weight": "300",
+                    "font-style": "normal",
+                    "font-family": "'Ubuntu', sans-serif",
+                    "color": "@customColor2",
+                    "font-size": "48px",
+                    "line-height": 1,
+                    "letter-spacing": "0px"
+                }
+            },
+            "tablet": {
+                "base": {
+                    "font-size": "36px",
+                    "line-height": 1,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-h": {
+                "base": {
+                    "font-size": "26px",
+                    "line-height": 1,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-v": {
+                "base": {
+                    "font-size": "26px",
+                    "line-height": 1,
+                    "letter-spacing": "0px"
+                }
+            }
+        },
+        "link": {
+            "desktop": {
+                "base": {
+                    "color": "@customColor2",
+                    "text-decoration": "none",
+                    "font-weight": "300",
+                    "font-style": "normal"
+                },
+                "hover": {
+                    "text-decoration": "none",
+                    "font-weight": "300",
+                    "font-style": "normal",
+                    "color": "@baseColor2_3"
+                }
+            },
+            "tablet": {
+                "base": [
+
+                ]
+            },
+            "mobile-h": {
+                "base": [
+
+                ]
+            },
+            "mobile-v": {
+                "base": [
+
+                ]
+            }
+        }
+    },
+    {
+        "name": "Heading M",
+        "class_name": "moto-text_system_6",
+        "type": "text",
+        "is_system": "1",
+        "is_responsive": "1",
+        "properties": {
+            "desktop": {
+                "base": {
+                    "font-weight": "400",
+                    "font-style": "normal",
+                    "font-family": "'Merriweather', serif",
+                    "color": "@baseColor3_3",
+                    "font-size": "40px",
+                    "line-height": 1.3,
+                    "letter-spacing": "0px"
+                }
+            },
+            "tablet": {
+                "base": {
+                    "font-size": "22px",
+                    "line-height": 1.3,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-h": {
+                "base": {
+                    "font-size": "22px",
+                    "line-height": 1.3,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-v": {
+                "base": {
+                    "font-size": "19px",
+                    "line-height": 1.3,
+                    "letter-spacing": "0px"
+                }
+            }
+        },
+        "link": {
+            "desktop": {
+                "base": {
+                    "color": "@baseColor3_3",
+                    "text-decoration": "none",
+                    "font-weight": "400",
+                    "font-style": "normal"
+                },
+                "hover": {
+                    "text-decoration": "none",
+                    "font-weight": "400",
+                    "font-style": "normal",
+                    "color": "@baseColor1_3"
+                }
+            },
+            "tablet": {
+                "base": [
+
+                ]
+            },
+            "mobile-h": {
+                "base": [
+
+                ]
+            },
+            "mobile-v": {
+                "base": [
+
+                ]
+            }
+        }
+    },
+    {
+        "name": "Heading S",
+        "class_name": "moto-text_system_7",
+        "type": "text",
+        "is_system": "1",
+        "is_responsive": "1",
+        "properties": {
+            "desktop": {
+                "base": {
+                    "font-weight": "400",
+                    "font-style": "normal",
+                    "font-family": "'Merriweather', serif",
+                    "color": "@baseColor1_3",
+                    "font-size": "24px",
+                    "line-height": 1.4,
+                    "letter-spacing": "0px"
+                }
+            },
+            "tablet": {
+                "base": {
+                    "font-size": "19px",
+                    "line-height": 1.2,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-h": {
+                "base": {
+                    "font-size": "18px",
+                    "line-height": 1.2,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-v": {
+                "base": {
+                    "font-size": "18px",
+                    "line-height": 1.2,
+                    "letter-spacing": "0px"
+                }
+            }
+        },
+        "link": {
+            "desktop": {
+                "base": {
+                    "color": "@baseColor1_3",
+                    "text-decoration": "none",
+                    "font-weight": "400",
+                    "font-style": "normal"
+                },
+                "hover": {
+                    "text-decoration": "none",
+                    "font-weight": "400",
+                    "font-style": "normal",
+                    "color": "@baseColor3_3"
+                }
+            },
+            "tablet": {
+                "base": [
+
+                ]
+            },
+            "mobile-h": {
+                "base": [
+
+                ]
+            },
+            "mobile-v": {
+                "base": [
+
+                ]
+            }
+        }
+    },
+    {
+        "name": "Heading XS",
+        "class_name": "moto-text_system_8",
+        "type": "text",
+        "is_system": "1",
+        "is_responsive": "1",
+        "properties": {
+            "desktop": {
+                "base": {
+                    "font-weight": "400",
+                    "font-style": "normal",
+                    "font-family": "'Merriweather', serif",
+                    "color": "@baseColor3_3",
+                    "font-size": "18px",
+                    "line-height": 1.7,
+                    "letter-spacing": "0px"
+                }
+            },
+            "tablet": {
+                "base": {
+                    "font-size": "16px",
+                    "line-height": 1.5,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-h": {
+                "base": {
+                    "font-size": "15px",
+                    "line-height": 1.5,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-v": {
+                "base": {
+                    "font-size": "15px",
+                    "line-height": 1.5,
+                    "letter-spacing": "0px"
+                }
+            }
+        },
+        "link": {
+            "desktop": {
+                "base": {
+                    "color": "@baseColor3_3",
+                    "text-decoration": "none",
+                    "font-weight": "400",
+                    "font-style": "normal"
+                },
+                "hover": {
+                    "text-decoration": "none",
+                    "font-weight": "400",
+                    "font-style": "normal",
+                    "color": "@baseColor1_3"
+                }
+            },
+            "tablet": {
+                "base": [
+
+                ]
+            },
+            "mobile-h": {
+                "base": [
+
+                ]
+            },
+            "mobile-v": {
+                "base": [
+
+                ]
+            }
+        }
+    },
+    {
+        "name": "Large Text",
+        "class_name": "moto-text_system_9",
+        "type": "text",
+        "is_system": "1",
+        "is_responsive": "1",
+        "properties": {
+            "desktop": {
+                "base": {
+                    "font-weight": "400",
+                    "font-style": "normal",
+                    "font-family": "'Merriweather', serif",
+                    "color": "@baseColor5_5",
+                    "font-size": "20px",
+                    "line-height": 1.5,
+                    "letter-spacing": "0px"
+                }
+            },
+            "tablet": {
+                "base": {
+                    "font-size": "18px",
+                    "line-height": 1.5,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-h": {
+                "base": {
+                    "font-size": "16px",
+                    "line-height": 1.5,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-v": {
+                "base": {
+                    "font-size": "16px",
+                    "line-height": 1.5,
+                    "letter-spacing": "0px"
+                }
+            }
+        },
+        "link": {
+            "desktop": {
+                "base": {
+                    "color": "@baseColor5_5",
+                    "text-decoration": "none",
+                    "font-weight": "400",
+                    "font-style": "normal"
+                },
+                "hover": {
+                    "text-decoration": "none",
+                    "font-weight": "400",
+                    "font-style": "normal",
+                    "color": "@baseColor1_3"
+                }
+            },
+            "tablet": {
+                "base": [
+
+                ]
+            },
+            "mobile-h": {
+                "base": [
+
+                ]
+            },
+            "mobile-v": {
+                "base": [
+
+                ]
+            }
+        }
+    },
+    {
+        "name": "Small Text",
+        "class_name": "moto-text_system_10",
+        "type": "text",
+        "is_system": "1",
+        "is_responsive": "1",
+        "properties": {
+            "desktop": {
+                "base": {
+                    "font-weight": "400",
+                    "font-style": "normal",
+                    "font-family": "'Open Sans', sans-serif",
+                    "color": "@customColor3",
+                    "font-size": "14px",
+                    "line-height": 1.5,
+                    "letter-spacing": "0px"
+                }
+            },
+            "tablet": {
+                "base": {
+                    "font-size": "14px",
+                    "line-height": 1.5,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-h": {
+                "base": {
+                    "font-size": "14px",
+                    "line-height": 1.5,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-v": {
+                "base": {
+                    "font-size": "14px",
+                    "line-height": 1.5,
+                    "letter-spacing": "0px"
+                }
+            }
+        },
+        "link": {
+            "desktop": {
+                "base": {
+                    "color": "@customColor3",
+                    "text-decoration": "none",
+                    "font-weight": "400",
+                    "font-style": "normal"
+                },
+                "hover": {
+                    "text-decoration": "none",
+                    "font-weight": "400",
+                    "font-style": "normal",
+                    "color": "@baseColor1_3"
+                }
+            },
+            "tablet": {
+                "base": [
+
+                ]
+            },
+            "mobile-h": {
+                "base": [
+
+                ]
+            },
+            "mobile-v": {
+                "base": [
+
+                ]
+            }
+        }
+    },
+    {
+        "name": "Extrasmall Text",
+        "class_name": "moto-text_system_11",
+        "type": "text",
+        "is_system": "1",
+        "is_responsive": "1",
+        "properties": {
+            "desktop": {
+                "base": {
+                    "font-weight": "300",
+                    "font-style": "normal",
+                    "font-family": "'Ubuntu', sans-serif",
+                    "color": "@customColor2",
+                    "font-size": "14px",
+                    "line-height": 1.7,
+                    "letter-spacing": "0px"
+                }
+            },
+            "tablet": {
+                "base": {
+                    "font-size": "14px",
+                    "line-height": 1.7,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-h": {
+                "base": {
+                    "font-size": "14px",
+                    "line-height": 1.7,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-v": {
+                "base": {
+                    "font-size": "14px",
+                    "line-height": 1.7,
+                    "letter-spacing": "0px"
+                }
+            }
+        },
+        "link": {
+            "desktop": {
+                "base": {
+                    "color": "@customColor2",
+                    "text-decoration": "none",
+                    "font-weight": "300",
+                    "font-style": "normal"
+                },
+                "hover": {
+                    "text-decoration": "none",
+                    "font-weight": "300",
+                    "font-style": "normal",
+                    "color": "@baseColor1_3"
+                }
+            },
+            "tablet": {
+                "base": [
+
+                ]
+            },
+            "mobile-h": {
+                "base": [
+
+                ]
+            },
+            "mobile-v": {
+                "base": [
+
+                ]
+            }
+        }
+    },
+    {
+        "name": "Custom Text 1",
+        "class_name": "moto-text_system_12",
+        "type": "text",
+        "is_system": "1",
+        "is_responsive": "1",
+        "properties": {
+            "desktop": {
+                "base": {
+                    "font-weight": "400",
+                    "font-style": "normal",
+                    "font-family": "'Merriweather', serif",
+                    "color": "@baseColor1_3",
+                    "font-size": "30px",
+                    "line-height": 1.2,
+                    "letter-spacing": "0px"
+                }
+            },
+            "tablet": {
+                "base": {
+                    "font-size": "22px",
+                    "line-height": 1.2,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-h": {
+                "base": {
+                    "font-size": "19px",
+                    "line-height": 1.2,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-v": {
+                "base": {
+                    "font-size": "19px",
+                    "line-height": 1.2,
+                    "letter-spacing": "0px"
+                }
+            }
+        },
+        "link": {
+            "desktop": {
+                "base": {
+                    "color": "@baseColor1_3",
+                    "text-decoration": "none",
+                    "font-weight": "400",
+                    "font-style": "normal"
+                },
+                "hover": {
+                    "text-decoration": "none",
+                    "font-weight": "400",
+                    "font-style": "normal",
+                    "color": "@baseColor3_3"
+                }
+            },
+            "tablet": {
+                "base": [
+
+                ]
+            },
+            "mobile-h": {
+                "base": [
+
+                ]
+            },
+            "mobile-v": {
+                "base": [
+
+                ]
+            }
+        }
+    },
+    {
+        "name": "Custom Text 2",
+        "class_name": "moto-text_system_13",
+        "type": "text",
+        "is_system": "1",
+        "is_responsive": "1",
+        "properties": {
+            "desktop": {
+                "base": {
+                    "font-weight": "400",
+                    "font-style": "normal",
+                    "font-family": "'Open Sans', sans-serif",
+                    "color": "@baseColor3_3",
+                    "font-size": "16px",
+                    "line-height": 1.5,
+                    "letter-spacing": "0px"
+                }
+            },
+            "tablet": {
+                "base": {
+                    "font-size": "14px",
+                    "line-height": 1.5,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-h": {
+                "base": {
+                    "font-size": "14px",
+                    "line-height": 1.5,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-v": {
+                "base": {
+                    "font-size": "14px",
+                    "line-height": 1.5,
+                    "letter-spacing": "0px"
+                }
+            }
+        },
+        "link": {
+            "desktop": {
+                "base": {
+                    "color": "@baseColor3_3",
+                    "text-decoration": "underline",
+                    "font-weight": "400",
+                    "font-style": "normal"
+                },
+                "hover": {
+                    "text-decoration": "none",
+                    "font-weight": "400",
+                    "font-style": "normal",
+                    "color": "@baseColor3_3"
+                }
+            },
+            "tablet": {
+                "base": [
+
+                ]
+            },
+            "mobile-h": {
+                "base": [
+
+                ]
+            },
+            "mobile-v": {
+                "base": [
+
+                ]
+            }
+        }
+    },
+    {
+        "name": "Custom Text 3",
+        "class_name": "moto-text_system_14",
+        "type": "text",
+        "is_system": "1",
+        "is_responsive": "1",
+        "properties": {
+            "desktop": {
+                "base": {
+                    "font-weight": "400",
+                    "font-style": "normal",
+                    "font-family": "'Ubuntu', sans-serif",
+                    "color": "@baseColor2_3",
+                    "font-size": "14px",
+                    "line-height": 1.2,
+                    "letter-spacing": "0px"
+                }
+            },
+            "tablet": {
+                "base": {
+                    "font-size": "10px",
+                    "line-height": 1.2,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-h": {
+                "base": {
+                    "font-size": "12px",
+                    "line-height": 1.2,
+                    "letter-spacing": "0px"
+                }
+            },
+            "mobile-v": {
+                "base": {
+                    "font-size": "12px",
+                    "line-height": 1.2,
+                    "letter-spacing": "0px"
+                }
+            }
+        },
+        "link": {
+            "desktop": {
+                "base": {
+                    "color": "@baseColor2_3",
+                    "text-decoration": "none",
+                    "font-weight": "400",
+                    "font-style": "normal"
+                },
+                "hover": {
+                    "text-decoration": "none",
+                    "font-weight": "400",
+                    "font-style": "normal",
+                    "color": "@baseColor1_3"
+                }
+            },
+            "tablet": {
+                "base": [
+
+                ]
+            },
+            "mobile-h": {
+                "base": [
+
+                ]
+            },
+            "mobile-v": {
+                "base": [
+
+                ]
+            }
+        }
+    }
+]

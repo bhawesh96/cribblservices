@@ -1,0 +1,142 @@
+[
+    {
+        "name": "Arial",
+        "family": "arial, helvetica, sans-serif",
+        "active": true,
+        "provider": "system"
+    },
+    {
+        "name": "Courier New",
+        "family": "courier new, courier",
+        "active": true,
+        "provider": "system"
+    },
+    {
+        "name": "Georgia",
+        "family": "georgia, palatino",
+        "active": true,
+        "provider": "system"
+    },
+    {
+        "name": "Helvetica",
+        "family": "helvetica",
+        "active": true,
+        "provider": "system"
+    },
+    {
+        "name": "Tahoma",
+        "family": "tahoma, arial, helvetica, sans-serif",
+        "active": true,
+        "provider": "system"
+    },
+    {
+        "name": "Times New Roman",
+        "family": "times new roman, times",
+        "active": true,
+        "provider": "system"
+    },
+    {
+        "name": "Trebuchet MS",
+        "family": "trebuchet ms, geneva",
+        "active": true,
+        "provider": "system"
+    },
+    {
+        "name": "Verdana",
+        "family": "verdana, geneva",
+        "active": true,
+        "provider": "system"
+    },
+    {
+        "name": "Open Sans",
+        "family": "'Open Sans', sans-serif",
+        "category": "sans-serif",
+        "variants": [
+            "300",
+            "300italic",
+            "regular",
+            "italic",
+            "600",
+            "600italic",
+            "700",
+            "700italic",
+            "800",
+            "800italic"
+        ],
+        "subsets": [
+            "greek",
+            "vietnamese",
+            "latin",
+            "latin-ext",
+            "cyrillic",
+            "greek-ext",
+            "cyrillic-ext"
+        ],
+        "version": "v14",
+        "last_modified": "2017-08-24",
+        "active_variants": [
+            "regular",
+            "300",
+            "300italic",
+            "italic",
+            "600",
+            "600italic",
+            "700",
+            "700italic",
+            "800",
+            "800italic"
+        ],
+        "active_subsets": [
+            "latin",
+            "greek",
+            "vietnamese",
+            "latin-ext",
+            "cyrillic",
+            "greek-ext",
+            "cyrillic-ext"
+        ],
+        "provider": "google",
+        "active": true
+    },
+    {
+        "name": "Merriweather",
+        "family": "'Merriweather', serif",
+        "category": "serif",
+        "variants": [
+            "300",
+            "300italic",
+            "regular",
+            "italic",
+            "700",
+            "700italic",
+            "900",
+            "900italic"
+        ],
+        "subsets": [
+            "cyrillic-ext",
+            "latin",
+            "cyrillic",
+            "latin-ext"
+        ],
+        "version": "v17",
+        "last_modified": "2017-08-29",
+        "active_variants": [
+            "regular",
+            "300",
+            "300italic",
+            "italic",
+            "700",
+            "700italic",
+            "900",
+            "900italic"
+        ],
+        "active_subsets": [
+            "latin",
+            "cyrillic-ext",
+            "cyrillic",
+            "latin-ext"
+        ],
+        "provider": "google",
+        "active": true
+    }
+]

@@ -1,0 +1,12 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-embed {{ currentWidget.getAlignClass() }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getAnimationClasses() }}" data-widget="embed" data-preset="default">
+    {% if isPreview %}
+        <div class="moto-widget-cover"></div>
+        {% if not currentWidget.properties.code or not currentWidget.isExecutableCode() %}
+            <div class="moto-widget-empty"></div>
+        {% else %}
+            {{ currentWidget.getCode()|raw }}
+        {% endif %}
+    {% else %}
+        {{ currentWidget.getCode()|raw }}
+    {% endif %}
+</div>

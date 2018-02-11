@@ -1,0 +1,113 @@
+<div>
+    <div class="modal-header modal-header_design">
+        <button type="button" class="close" ng-click="cancel()">&times;</button>
+        <strong>{{ ::'WIDGET.COMMON.EDIT_IMAGE_TITLE' | translate }}</strong>
+    </div>
+    <div class="modal-body">
+        <form name="editImageForm" class="moto-ui-lg">
+            <div class="form-group">
+                <label>{{ ::'COMMON.TEXT.IMAGE_LABEL' | translate }}</label>
+                <span class="image-edit-icon image-edit" ng-click="changeImage()"></span>
+                <input type="text" name="label" class="form-control" validate="{req: true}" validate-position="right" ng-model="image.properties.name" readonly/>
+            </div>
+            <div class="form-group">
+                <label for="imageTitle">{{ ::'COMMON.TEXT.IMAGE_TITLE_ATTRIBUTE_LABEL' | translate }}</label>
+                <input type="text" id="imageTitle" class="form-control" ng-model="image.properties.title" validate="{maxLen: 200}" validate-position="right" moto-mask-input="<>\[\]{}&quot;">
+            </div>
+            <div class="form-group">
+                <label for="imageAlt">{{ ::'COMMON.TEXT.IMAGE_ALT_ATTRIBUTE_LABEL' | translate }}</label>
+                <input type="text" id="imageAlt" class="form-control" ng-model="image.properties.alt" validate="{maxLen: 200}" validate-position="right" moto-mask-input="<>\[\]{}&quot;">
+            </div>
+            <div class="form-group">
+                <label>{{ ::'UI.ELEMENT.SPACINGS.NAME' | translate }}</label>
+                <div class="form-control-container">
+                    <div class="row">
+                        <div class="col-xs-4 col-xs-offset-4">
+                            <select class="form-control" ng-model="image.properties.spacing.top">
+                                <option value="zero">{{ ::'UI.ELEMENT.SPACINGS.NONE_LABEL' | translate }}</option>
+                                <option value="small">{{ ::'UI.ELEMENT.SPACINGS.SMALL_LABEL' | translate }}</option>
+                                <option value="medium">{{ ::'UI.ELEMENT.SPACINGS.MEDIUM_LABEL' | translate }}</option>
+                                <option value="large">{{ ::'UI.ELEMENT.SPACINGS.LARGE_LABEL' | translate }}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <select class="form-control" ng-model="image.properties.spacing.left">
+                                <option value="zero">{{ ::'UI.ELEMENT.SPACINGS.NONE_LABEL' | translate }}</option>
+                                <option value="small">{{ ::'UI.ELEMENT.SPACINGS.SMALL_LABEL' | translate }}</option>
+                                <option value="medium">{{ ::'UI.ELEMENT.SPACINGS.MEDIUM_LABEL' | translate }}</option>
+                                <option value="large">{{ ::'UI.ELEMENT.SPACINGS.LARGE_LABEL' | translate }}</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-4 col-xs-offset-4">
+                            <select class="form-control" ng-model="image.properties.spacing.right">
+                                <option value="zero">{{ ::'UI.ELEMENT.SPACINGS.NONE_LABEL' | translate }}</option>
+                                <option value="small">{{ ::'UI.ELEMENT.SPACINGS.SMALL_LABEL' | translate }}</option>
+                                <option value="medium">{{ ::'UI.ELEMENT.SPACINGS.MEDIUM_LABEL' | translate }}</option>
+                                <option value="large">{{ ::'UI.ELEMENT.SPACINGS.LARGE_LABEL' | translate }}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4 col-xs-offset-4">
+                            <select class="form-control" ng-model="image.properties.spacing.bottom">
+                                <option value="zero">{{ ::'UI.ELEMENT.SPACINGS.NONE_LABEL' | translate }}</option>
+                                <option value="small">{{ ::'UI.ELEMENT.SPACINGS.SMALL_LABEL' | translate }}</option>
+                                <option value="medium">{{ ::'UI.ELEMENT.SPACINGS.MEDIUM_LABEL' | translate }}</option>
+                                <option value="large">{{ ::'UI.ELEMENT.SPACINGS.LARGE_LABEL' | translate }}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>{{ ::'COMMON.TEXT.FLOAT' | translate }}</label>
+                <div class="form-control-container">
+                    <div class="moto-ui-cke-image-position">
+                        <ul class="moto-ui-cke-image-position__list">
+                            <li class="moto-ui-cke-image-position__item" ng-class="{'moto-ui_active' : image.properties.align === 'none'}">
+                                <a href="" class="moto-ui-cke-image-position__button" ng-click="image.properties.align = 'none'" title="{{ ::'COMMON.TEXT.NOT_SELECTED' | translate}}">
+                                    <span class="icon btn-position_none"></span>
+                                </a>
+                            </li>
+                            <li class="moto-ui-cke-image-position__item" ng-class="{'moto-ui_active' : image.properties.align === 'left'}">
+                                <a href="" class="moto-ui-cke-image-position__button" ng-click="image.properties.align = 'left'" title="{{ ::'COMMON.TEXT.LEFT' | translate}}">
+                                    <span class="icon btn-position_left-floated"></span>
+                                </a>
+                            </li>
+                            <li class="moto-ui-cke-image-position__item" ng-class="{'moto-ui_active' : image.properties.align === 'center'}">
+                                <a href="" class="moto-ui-cke-image-position__button" ng-click="image.properties.align = 'center'" title="{{ ::'COMMON.TEXT.CENTER' | translate}}">
+                                    <span class="icon btn-position_centered-block"></span>
+                                </a>
+                            </li>
+                            <li class="moto-ui-cke-image-position__item" ng-class="{'moto-ui_active' : image.properties.align === 'right'}">
+                                <a href="" class="moto-ui-cke-image-position__button" ng-click="image.properties.align = 'right'" title="{{ ::'COMMON.TEXT.RIGHT' | translate}}">
+                                    <span class="icon btn-position_right-floated"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group form-group_stepper">
+                <label for="imageWidth">{{ ::'COMMON.TEXT.WIDTH_LABEL' | translate }}</label>
+                <div class="form-control-container">
+                    <div rn-stepper class="stepper" ng-model="image.properties.width" min="1" max="10000" ng-change="recalculateImageSize('width')"></div>
+                    <span class="stepper-units">px</span>
+                </div>
+            </div>
+            <div class="form-group form-group_stepper">
+                <label for="imageHeight">{{ ::'COMMON.TEXT.HEIGHT_LABEL' | translate }}</label>
+                <div class="form-control-container">
+                    <div rn-stepper class="stepper" ng-model="image.properties.height" min="1" max="10000" ng-change="recalculateImageSize('height')"></div>
+                    <span class="stepper-units">px</span>
+                </div>
+            </div>
+            <div class="form-control-buttons text-center">
+                <button type="submit" class="btn btn-success btn-lg text-uppercase" ng-click="ok()">{{ ::'COMMON.BUTTON.APPLY' | translate }}</button>
+                <button type="button" class="btn btn-link" ng-click="cancel()">{{ ::'COMMON.BUTTON.CANCEL' | translate }}</button>
+            </div>
+        </form>
+    </div>
+</div>

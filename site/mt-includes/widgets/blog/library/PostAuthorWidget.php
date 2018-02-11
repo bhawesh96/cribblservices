@@ -1,0 +1,2 @@
+<?php
+namespace Website\Widgets\Blog; use Moto; use Website; class PostAuthorWidget extends Website\Widgets\Blog\AbstractPostsWidget { protected $_name = 'blog.post_author'; protected static $_defaultProperties = array( 'spacing' => array( 'top' => 'auto', 'right' => 'auto', 'bottom' => 'auto', 'left' => 'auto', ), 'align' => array( 'desktop' => 'left', 'tablet' => '', 'mobile-v' => '', 'mobile-h' => '', ), ); public function getTemplatePath($preset = null) { return '@websiteWidgets/blog/templates/post_author.twig.html'; } } 

@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Application\Pages\InputFilter; use Moto\InputFilter\AbstractInputFilter; use Zend\InputFilter\Exception; class PagePropertiesBlocks extends AbstractInputFilter { protected $_name = 'pages.change:properties.blocks'; public function init() { $this->add(array( 'name' => 'header', 'required' => false, 'filters' => array( array('name' => 'Boolean'), ) )); $this->add(array( 'name' => 'footer', 'required' => false, 'filters' => array( array('name' => 'Boolean'), ) )); } } 

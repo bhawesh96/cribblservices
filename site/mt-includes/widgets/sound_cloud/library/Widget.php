@@ -1,0 +1,2 @@
+<?php
+namespace Website\Widgets\SoundCloud; use Moto; class Widget extends Moto\System\Widgets\AbstractWidget { protected $_name = 'sound_cloud'; protected static $_defaultProperties = array( 'spacing' => array( 'top' => 'auto', 'right' => 'auto', 'bottom' => 'auto', 'left' => 'auto', ), 'preset' => 'default', 'params' => array( 'track_id' => null, 'visual' => true, 'height' => 450, 'show_user' => true, 'show_artwork' => true, 'show_comments' => true, 'auto_play' => false, 'color' => 'ff5500' ), ); protected $_templateType = 'templates'; protected $_widgetId = true; } 

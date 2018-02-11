@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Validator; use Zend\Validator\AbstractValidator as ZendValidator; use Zend\Validator\Exception; class AbstractValidator extends ZendValidator { protected $_defaultOptions = array(); function __construct($options = null) { parent::__construct($options); $this->_setDefaultOptions(); } protected function _setDefaultOptions() { $options = array_merge($this->_defaultOptions, $this->getOptions()); $this->setOptions($options); } public function isValid($value) { return parent::isValid($value); } }

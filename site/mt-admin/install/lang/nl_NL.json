@@ -1,0 +1,90 @@
+{
+    "MODULE": {
+        "INSTALL": {
+            "COMMON": {
+                "ERROR_PAGE_HEADING": "Fouten",
+                "PASSWORD_LABEL": "Wachtwoord"
+            },
+            "SET_LANGUAGE_LABEL": "Taal instellen",
+            "SERVER_TEST": {
+                "TESTING_PAGE_HEADING": "Server Test",
+                "TESTING_DESCRIPTION": "Even geduld. De server wordt op compatibiliteit getest.",
+                "SUCCESS_PAGE_HEADING": "De server voldoet aan de systeemvereisten",
+                "SUCCESS_DESCRIPTION": "Klik op de knop hieronder om met installatie te beginnen",
+                "BEGIN_INSTALL_BUTTON": "Begin met installeren",
+                "LICENSE_AGREEMENT_TEXT": "Door het installeren van deze software bevestig je dat je de <a href='http://www.motocms.com/terms/' target='_blank'>Gebruiksvoorwaarden</a> en het <a href='http://www.motocms.com/privacy/' target='_blank'>Privacybeleid</a> hebt gelezen en dat je ermee akkoord gaat."
+            },
+            "SETUP_DATABASE": {
+                "PAGE_HEADING": "Database Instellen",
+                "PAGE_DESCRIPTION": "Voor de verbinding met de MySQL database server",
+                "HOSTNAME_LABEL": "Hostnaam",
+                "HOSTNAME_TOOLTIP": "<b class='tooltip-title'>Hostnaam</b> <br/> Domeinnaam gegevens moeten ingevuld worden in het volgende veld. Wanneer je de gevraagde waarde niet weet, neem dan contact op met je hosting provider en vraag hen om deze gegevens te verstrekken.",
+                "USERNAME_LABEL": "Gebruikersnaam",
+                "USERNAME_TOOLTIP": "<b class='tooltip-title'>Gebruikersnaam</b> <br/> Gebruikersnaam om in te loggen in de database. Wanneer je de gevraagde waarde niet weet, neem dan contact op met je hosting provider en vraag hen om deze gegevens te verstrekken.",
+                "DATABASE_LABEL": "Databasenaam",
+                "DATABASE_TOOLTIP": "<b class='tooltip-title'>Databasenaam</b> <br/> De naam van de database is uniek. Wanneer je de gevraagde waarde niet weet, neem dan contact op met je hosting provider en vraag hen om deze gegevens te verstrekken.",
+                "PASSWORD_TOOLTIP": "<b class='tooltip-title'>Wachtwoord</b> <br/> Het wachtwoord voor de database. Wanneer je de gevraagde waarde niet weet, neem dan contact op met je hosting provider en vraag hen om deze gegevens te verstrekken.",
+                "TABLE_PREFIX_LABEL": "Tabelvoorvoegsel",
+                "TABLE_PREFIX_TOOLTIP": "<b class='tooltip-title'>Tabelvoorvoegsel</b> <br/> Dit veld is niet vereist. Standaard tabel voorvoegsel: moto_. Indien gewenst kun je een ander tabelvoorvoegsel instellen."
+            },
+            "SETUP_USER": {
+                "PAGE_HEADING": "Gebruiker aanmaken",
+                "PAGE_DESCRIPTION": "Dit wordt de beheerder voor deze installatie",
+                "NAME_LABEL": "Naam",
+                "EMAIL_LABEL": "E-mail",
+                "PASSWORD_CONFIRMATION_LABEL": "Herhaal wachtwoord:"
+            },
+            "INSTALLATION": {
+                "PAGE_HEADING": "Installeren",
+                "PAGE_DESCRIPTION": "Ben je klaar om de installatie te beginnen? Klik op de knop hieronder om te beginnen. <br/> Het duurt slechts een paar minuten.",
+                "INSTALL_NOW_BUTTON": "Nu installeren",
+                "COMMON_ERROR_MESSAGE": "Installatie werd onderbroken door een fout",
+                "PROCESS_PAGE_HEADING": "Installeren...",
+                "PROCESS_PAGE_DESCRIPTION": "Moto3 wordt nu geïnstalleerd. Een ogenblik geduld.",
+                "COMPLETE_PAGE_HEADING": "Installatie is voltooid",
+                "COMPLETE_PAGE_DESCRIPTION": "Klaar! Klik op de knop hieronder om Moto3 te gebruiken.",
+                "START_WORK_BUTTON": "Start"
+            },
+            "ERROR_MESSAGE": {
+                "BROKEN_RESPONSE": "Foutieve reactie ontvangen van de server",
+                "FILE_WRITABLE": "Bestand <strong>{{ name }}</strong> is niet schrijfbaar. Stel de juiste schijfrechten in voor het volgende bestand.",
+                "FOLDER_WRITABLE": "Map <strong>{{ name }}</strong> is niet schrijfbaar. Stel de juiste schijfrechten in voor de volgende map.",
+                "FILE_READABLE": "Bestand <strong>{{ name }}</strong> is niet leesbaar. Stel de juiste schijfrechten in voor het volgende bestand.",
+                "FOLDER_READABLE": "Map <strong>{{ name }}</strong> is niet leesbaar. Stel de juiste schijfrechten in voor de volgende map.",
+                "PHP_VERSION": "Huidige PHP versie wordt niet ondersteund. De template vereist: PHP versie 5.4+, 5.5+ of 5.6+.",
+                "PHP_FUNCTION_NOT_EXISTS": "PHP functie {{ function }} is niet beschikbaar.",
+                "PHP_EXTENSION_LOADED": "PHP extensie <strong>{{ extension }}</strong> is niet ingeschakeld. Controleer de configuratie van de server. Zorg ervoor dat de vereiste extensie <strong>{{ extension }}</strong> is ingeschakeld.",
+                "PHP_SESSION_CREATE": "Server kan de sessie niet opstarten. Controleer of uw server sessies kan aanmaken.",
+                "PHP_SAFE_MODE": "We hebben gedetecteerd dat PHP veilige modus (safe mode) is ingeschakeld op uw server. Het is raadzaam deze uit te schakelen om de software normaal te laten werken. Je kunt veilige modus uitschakelen via je hosting control panel, of door het php.ini bestand te bewerken.",
+                "MAIL_FUNCTION": "Mailfunctie werkt niet op de server.",
+                "PHP_UPLOAD_ENABLED": "Bestand upload optie is uitgeschakeld.",
+                "PHP_UPLOAD_FILE_SIZE": "Maximale upload grootte is {{ upload_max_size }}, maar {{ min }} is vereist.",
+                "ALREADY_INSTALLED": "Moto3 is reeds geïnstalleerd",
+                "THEME_NOT_ACTIVATED": "Fout tijdens activeren thema. <br/> Neem voor ondersteuning contact op met onze technische supportafdeling via deze <a href=\"http://support.cms-guide.com/hc/{{'CURRENT_LANGUAGE'|translate}}/requests/new\" target=\"_blank\"> link</a>.",
+                "EXTRA_CONTENT_NOT_INSTALLED": "Fout tijdens de installatie van extra inhoud.<br/>Neem voor ondersteuning contact op met de technische supportafdeling via deze <a href=\"http://support.cms-guide.com/hc/{{'CURRENT_LANGUAGE'|translate}}/requests/new\" target=\"_blank\"> link</a>.",
+                "DATABASE": {
+                    "DATA_ALREADY_EXISTS": "Gegevens zijn al geïnstalleerd.",
+                    "IMPORT_STRUCTURE": "Fout bij het importeren van de databasestructuur.",
+                    "IMPORT_DATA": "Fout opgetreden bij het importeren van database gegevens.",
+                    "CONNECT": "Fout bij het verbinden met database."
+                },
+                "NAMESPACES": {
+                    "DATABASE": "Fouten in de database-instellingen.",
+                    "ADMIN": "Fouten in de gebruikersinstellingen.",
+                    "LANGUAGE": "Verkeerde taal gekozen.",
+                    "WEBSITE.ADDRESS": "Fout in de waarde website-adres."
+                },
+                "KEYS": {
+                    "EMAIL": "E-mailadres.",
+                    "NAME": "Gebruikersnaam.",
+                    "PASSWORD": "Wachtwoord.",
+                    "PASSWORD_CONFIRM": "Wachtwoord.",
+                    "DATABASE": "Databasenaam.",
+                    "HOSTNAME": "Hostname.",
+                    "PREFIX": "Voorvoegsel.",
+                    "USERNAME": "Database-gebruikersnaam."
+                }
+            }
+        }
+    }
+}

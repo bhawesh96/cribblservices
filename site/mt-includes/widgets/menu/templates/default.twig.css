@@ -1,0 +1,146 @@
+{% macro printStyle(styles) %}
+    {% for key,value in styles %}
+        {% if key == 'before' %}
+            &:before {
+            {{ _self.printStyle(styles[key]) }}
+            }
+        {% elseif key == 'after' %}
+            &:after {
+            {{ _self.printStyle(styles[key]) }}
+            }
+        {% elseif value != '' %}
+            {{ key }}: {{ value|raw }};
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{% set properties = item.properties|json_decode %}
+
+{{ StyleHelper.generatePresetSelector('.moto-widget-menu', item.class_name) }} {
+    .moto-widget-menu-list {
+        {{ _self.printStyle(properties.menu_container.desktop.base) }}
+
+        .moto-widget-menu-item {
+            {{ _self.printStyle(properties.menu_item_delimiter.desktop.base) }}
+
+            &:hover {
+                .moto-widget-menu-link-level-1 {
+                    {{ _self.printStyle(properties.menu_item.desktop.hover) }}
+
+                    .moto-widget-menu-link-arrow {
+                        {{ _self.printStyle(properties.menu_item_icon.desktop.hover) }}
+                    }
+                }
+            }
+
+            .moto-widget-menu-link-level-1 {
+                {{ _self.printStyle(properties.menu_item.desktop.base) }}
+
+                .moto-widget-menu-link-arrow {
+                    {{ _self.printStyle(properties.menu_item_icon.desktop.base) }}
+                }
+
+                &.moto-widget-menu-link-active {
+                    {{ _self.printStyle(properties.menu_item_active.desktop.base) }}
+
+                    .moto-widget-menu-link-arrow {
+                        {{ _self.printStyle(properties.menu_item_icon_active.desktop.base) }}
+                    }
+
+                    &:hover {
+                        {{ _self.printStyle(properties.menu_item_active.desktop.hover) }}
+
+                        .moto-widget-menu-link-arrow {
+                            {{ _self.printStyle(properties.menu_item_icon_active.desktop.hover) }}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .moto-widget-menu-sublist {
+        {{ _self.printStyle(properties.sub_menu_container.desktop.base) }}
+
+        .moto-widget-menu-item {
+            &:hover {
+                > .moto-widget-menu-link {
+                    {{ _self.printStyle(properties.sub_menu_item.desktop.hover) }}
+                    .moto-widget-menu-link-arrow {
+                        {{ _self.printStyle(properties.sub_menu_item_icon.desktop.hover) }}
+                    }
+                }
+            }
+            .moto-widget-menu-link {
+                {{ _self.printStyle(properties.sub_menu_item.desktop.base) }}
+                &.moto-widget-menu-link-active {
+                    {{ _self.printStyle(properties.sub_menu_item_active.desktop.base) }}
+                    .moto-widget-menu-link-arrow {
+                        {{ _self.printStyle(properties.sub_menu_item_active_icon.desktop.base) }}
+                    }
+                    &:hover {
+                        {{ _self.printStyle(properties.sub_menu_item_active.desktop.hover) }}
+                        .moto-widget-menu-link-arrow {
+                            {{ _self.printStyle(properties.sub_menu_item_active_icon.desktop.hover) }}
+                        }
+                    }
+                }
+            }
+            .moto-widget-menu-link-arrow {
+                {{ _self.printStyle(properties.sub_menu_item_icon.desktop.base) }}
+            }
+        }
+    }
+
+    .moto-widget-menu-toggle-btn {
+        {{ _self.printStyle(properties.mobile_icon.mobile.base) }}
+    }
+
+    &.moto-widget-menu-mobile-open {
+        @media screen and (max-width: @const_media_mobile-h_max_width) {
+            .moto-widget-menu-toggle-btn {
+                {{ _self.printStyle(properties.mobile_icon_active.mobile.base) }}
+            }
+
+            .moto-widget-menu-list {
+                {{ _self.printStyle(properties.mobile_menu_container.mobile.base) }}
+
+                .moto-widget-menu-item {
+                    {{ _self.printStyle(properties.mobile_menu_item_delimiter.mobile.base) }}
+
+                    .moto-widget-menu-link {
+                        {{ _self.printStyle(properties.mobile_menu_item.mobile.base) }}
+
+                        .moto-widget-menu-link-arrow {
+                            {{ _self.printStyle(properties.mobile_menu_item_icon.mobile.base) }}
+                        }
+
+                        &.moto-widget-menu-link-active {
+                            {{ _self.printStyle(properties.mobile_menu_item_active.mobile.base) }}
+
+                            .moto-widget-menu-link-arrow {
+                                {{ _self.printStyle(properties.mobile_menu_item_icon_active.mobile.base) }}
+                            }
+                        }
+                    }
+                }
+
+                .moto-widget-menu-sublist {
+                    {{ _self.printStyle(properties.mobile_sub_menu_container.mobile.base) }}
+                    .moto-widget-menu-link {
+                        {{ _self.printStyle(properties.mobile_sub_menu_item.mobile.base) }}
+                        &.moto-widget-menu-link-active {
+                            {{ _self.printStyle(properties.mobile_sub_menu_item_active.mobile.base) }}
+                            .moto-widget-menu-link-arrow {
+                                {{ _self.printStyle(properties.mobile_sub_menu_item_active_icon.mobile.base) }}
+                            }
+                        }
+                    }
+                    .moto-widget-menu-link-arrow {
+                        {{ _self.printStyle(properties.mobile_sub_menu_item_icon.mobile.base) }}
+                    }
+                }
+            }
+        }
+    }
+}

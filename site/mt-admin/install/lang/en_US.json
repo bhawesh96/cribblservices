@@ -1,0 +1,93 @@
+{
+    "MODULE": {
+        "INSTALL": {
+            "COMMON": {
+                "ERROR_PAGE_HEADING": "Errors",
+                "PASSWORD_LABEL": "Password"
+            },
+            "SET_LANGUAGE_LABEL": "Set Language",
+            "SERVER_TEST": {
+                "TESTING_PAGE_HEADING": "Server Test",
+                "TESTING_DESCRIPTION": "Testing your server for compatibility. Please wait.",
+                "SUCCESS_PAGE_HEADING": "Your server meets recommended system requirements",
+                "SUCCESS_DESCRIPTION": "Please click the button below to begin installation",
+                "BEGIN_INSTALL_BUTTON": "Begin installation",
+                "LICENSE_AGREEMENT_TEXT": "By installing this application you confirm, that you have read and accepted our <a href='http://www.motocms.com/terms/' target='_blank'>Terms of Use</a> and <a href='http://www.motocms.com/privacy/' target='_blank'>Privacy Policy</a>."
+            },
+            "SETUP_DATABASE": {
+                "PAGE_HEADING": "Setup Database",
+                "PAGE_DESCRIPTION": "For connecting to your server's MySQL",
+                "HOSTNAME_LABEL": "Host Name",
+                "HOSTNAME_TOOLTIP": "<b class='tooltip-title'>Host name</b><br/>Domain name details must be used within the following field. If you are not sure about this details - please contact your hosting provider and kindly ask them to provide such details to you.",
+                "USERNAME_LABEL": "User Name",
+                "USERNAME_TOOLTIP": "<b class='tooltip-title'>User Name</b><br/>User Name is your login to the database. If you are not sure about this details - please contact your hosting provider and kindly ask them to provide such details to you.",
+                "DATABASE_LABEL": "Database Name",
+                "DATABASE_TOOLTIP": "<b class='tooltip-title'>Database Name</b><br/>Each database name is unique. If you are not sure about this details - please contact your hosting provider and kindly ask them to provide such details to you.",
+                "PASSWORD_TOOLTIP": "<b class='tooltip-title'>Password</b><br/>Your password  to the database. If you are not sure about this details - please contact your hosting provider and kindly ask them to provide such details to you.",
+                "TABLE_PREFIX_LABEL": "Table Prefix",
+                "TABLE_PREFIX_TOOLTIP": "<b class='tooltip-title'>Table Prefix</b><br/>This field is not required. Default table prefix name - moto_. Allows you to bound specific table prefix to your template."
+            },
+            "SETUP_USER": {
+                "PAGE_HEADING": "Setup User",
+                "PAGE_DESCRIPTION": "This will be administrator for this installation",
+                "NAME_LABEL": "Name",
+                "EMAIL_LABEL": "Email",
+                "PASSWORD_CONFIRMATION_LABEL": "Re-type password:"
+            },
+            "INSTALLATION": {
+                "PAGE_HEADING": "Install",
+                "PAGE_DESCRIPTION": "Ready to setup Moto. Click the button below to begin.<br/>It should only take a few minutes.",
+                "INSTALL_NOW_BUTTON": "Install Now",
+                "COMMON_ERROR_MESSAGE": "Installation is interrupted by an error",
+                "PROCESS_PAGE_HEADING": "Installing...",
+                "PROCESS_PAGE_DESCRIPTION": "Moto3 is now being installed. Please wait.",
+                "COMPLETE_PAGE_HEADING": "Installation complete",
+                "COMPLETE_PAGE_DESCRIPTION": "All done. Click the button below to start using Moto3.",
+                "START_WORK_BUTTON": "Start"
+            },
+            "RETRIEVE_PRODUCT_INFO": {
+                "PAGE_HEADING": "Please, sign in to your personal MotoCMS account and select the product for installation."
+            },
+            "ERROR_MESSAGE": {
+                "BROKEN_RESPONSE": "Broken response received from server",
+                "FILE_WRITABLE": "File <strong>{{ name }}</strong> is not writable. Please set correct permissions for the following file.",
+                "FOLDER_WRITABLE": "Folder <strong>{{ name }}</strong> is not writable. Please set correct permissions for the following folder.",
+                "FILE_READABLE": "File <strong>{{ name }}</strong> is not readable. Please set correct permissions for the following file.",
+                "FOLDER_READABLE": "Folder <strong>{{ name }}</strong> is not readable. Please set correct permissions for the following folder.",
+                "PHP_VERSION": "Current PHP version is not supported. Our template's requirements are: PHP version 5.4+, 5.5+, 5.6+, 7.0+ or 7.1+.",
+                "PHP_FUNCTION_NOT_EXISTS": "PHP function {{ function }} doesn't exist.",
+                "PHP_EXTENSION_LOADED": "PHP extension <strong>{{ extension }}</strong> is not enabled. Please verify your server configuration. Make sure that extension <strong>{{ extension }}</strong> is enabled.",
+                "PHP_SESSION_CREATE": "Server can not start session. Please verify that your server can create sessions.",
+                "PHP_SAFE_MODE": "We have detected that PHP's Safe Mode is enabled on your server. We recommend turning it off for our software to work normally. You can disable safe mode in your hosting control panel or by editing a php.ini file.",
+                "MAIL_FUNCTION": "Mail function does not work on your server.",
+                "PHP_UPLOAD_ENABLED": "File upload option is disabled.",
+                "PHP_UPLOAD_FILE_SIZE": "Maximum upload file size is {{ upload_max_size }}, but {{ min }} is required.",
+                "ALREADY_INSTALLED": "Moto3 is already installed",
+                "THEME_NOT_ACTIVATED": "Error while activating theme.<br/>Please contact our technical support department using the following <a href=\"http://support.cms-guide.com/hc/{{'CURRENT_LANGUAGE'|translate}}/requests/new\" target=\"_blank\">link</a> for additional help.",
+                "EXTRA_CONTENT_NOT_INSTALLED": "Error during the installation of extra content.<br/>Please contact our technical support department using the following <a href=\"http://support.cms-guide.com/hc/{{'CURRENT_LANGUAGE'|translate}}/requests/new\" target=\"_blank\">link</a> for additional help.",
+                "DATABASE": {
+                    "DATA_ALREADY_EXISTS": "Data is already installed.",
+                    "IMPORT_STRUCTURE": "Error while importing database structure.",
+                    "IMPORT_DATA": "Error while importing database data.",
+                    "CONNECT": "Error while connecting to database."
+                },
+                "NAMESPACES": {
+                    "DATABASE": "Errors in the database settings.",
+                    "ADMIN": "Errors in the user settings.",
+                    "LANGUAGE": "Wrong chosen language.",
+                    "WEBSITE.ADDRESS": "Error in the website address name."
+                },
+                "KEYS": {
+                    "EMAIL": "Email address.",
+                    "NAME": "User name.",
+                    "PASSWORD": "Password.",
+                    "PASSWORD_CONFIRM": "Password.",
+                    "DATABASE": "Database name.",
+                    "HOSTNAME": "Hostname.",
+                    "PREFIX": "Prefix.",
+                    "USERNAME": "Database username."
+                }
+            }
+        }
+    }
+}

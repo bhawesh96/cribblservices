@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Application\Widgets; use Moto; use Moto\Json\Request; use Moto\Json\Server; use Moto\Json\Response; class Service extends Moto\Service\AbstractStaticService { protected static $_resourceName = 'widgets'; public static function register($request = null) { if (null === $request) { $request = static::getRequest()->getParams(); } } }

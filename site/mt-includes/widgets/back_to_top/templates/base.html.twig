@@ -1,0 +1,13 @@
+{% if WEBSITE.back_to_top_button.type == 'custom' %}
+    <div data-moto-back-to-top-button class="moto-widget-back-to-top moto-preset-default wow">
+        <a ng-click="toTop($event)" class="moto-widget-back-to-top-link">
+            <span class="moto-widget-back-to-top-icon fa"></span>
+        </a>
+    </div>
+{% elseif WEBSITE.back_to_top_button.type == 'theme' %}
+    <div data-moto-back-to-top-button class="moto-back-to-top-button">
+        <a ng-click="toTop($event)" class="moto-back-to-top-button-link">
+            <span class="moto-back-to-top-button-icon fa"></span>
+        </a>
+    </div>
+{% endif %}

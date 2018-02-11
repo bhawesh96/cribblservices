@@ -1,0 +1,1 @@
+<?php require_once dirname(__FILE__) . '/' . str_replace('.php', '.' . substr(PHP_VERSION, 0, 3) . '.php', basename(__FILE__));?>

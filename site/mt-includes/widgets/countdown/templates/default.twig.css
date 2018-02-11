@@ -1,0 +1,42 @@
+{% set properties = item.properties|json_decode %}
+
+{{ StyleHelper.generatePresetSelector('.moto-widget-countdown', item.class_name) }} {
+
+    {{ StyleHelper.generateLessFromArray(properties.digits.desktop, '.countdown-item-amount') }}
+    {{ StyleHelper.generateLessFromArray(properties.text.desktop, '.countdown-item-unit') }}
+    {{ StyleHelper.generateLessFromArray(properties.delimiter.desktop, '.countdown-item-delimiter') }}
+    .countdown-item-block {
+        {{ StyleHelper.generateLessFromArray(properties.general.desktop) }}
+        {{ StyleHelper.generateLessFromArray(properties.border.desktop) }}
+    }
+
+    @media screen and (max-width: @const_media_tablet_max_width) {
+        {{ StyleHelper.generateLessFromArray(properties.digits.tablet, '.countdown-item-amount') }}
+        {{ StyleHelper.generateLessFromArray(properties.text.tablet, '.countdown-item-unit') }}
+        {{ StyleHelper.generateLessFromArray(properties.delimiter.tablet, '.countdown-item-delimiter') }}
+        .countdown-item-block {
+            {{ StyleHelper.generateLessFromArray(properties.general.tablet) }}
+            {{ StyleHelper.generateLessFromArray(properties.border.tablet) }}
+        }
+    }
+
+    @media screen and (max-width: @const_media_mobile-h_max_width) {
+        {{ StyleHelper.generateLessFromArray(properties.digits['mobile-h'], '.countdown-item-amount') }}
+        {{ StyleHelper.generateLessFromArray(properties.text['mobile-h'], '.countdown-item-unit') }}
+        {{ StyleHelper.generateLessFromArray(properties.delimiter['mobile-h'], '.countdown-item-delimiter') }}
+        .countdown-item-block {
+            {{ StyleHelper.generateLessFromArray(properties.general['mobile-h']) }}
+            {{ StyleHelper.generateLessFromArray(properties.border['mobile-h']) }}
+        }
+    }
+
+    @media screen and (max-width: @const_media_mobile-v_max_width) {
+        {{ StyleHelper.generateLessFromArray(properties.digits['mobile-v'], '.countdown-item-amount') }}
+        {{ StyleHelper.generateLessFromArray(properties.text['mobile-v'], '.countdown-item-unit') }}
+        {{ StyleHelper.generateLessFromArray(properties.delimiter['mobile-v'], '.countdown-item-delimiter') }}
+        .countdown-item-block {
+            {{ StyleHelper.generateLessFromArray(properties.general['mobile-v']) }}
+            {{ StyleHelper.generateLessFromArray(properties.border['mobile-v']) }}
+        }
+    }
+}

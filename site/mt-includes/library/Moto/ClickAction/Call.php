@@ -1,0 +1,2 @@
+<?php
+namespace Moto\ClickAction; class Call extends AbstractClickAction { protected $_defaultData = array( 'phoneNumber' => '' ); public function getUrl() { $phoneNumber = trim($this->get('phoneNumber')); $url = sprintf('tel:%s', $phoneNumber); return $url; } } 

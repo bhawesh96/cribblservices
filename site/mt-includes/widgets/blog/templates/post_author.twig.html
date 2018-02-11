@@ -1,0 +1,5 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-blog-post-author moto-preset-default {{ currentWidget.getAlignClass() }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }}" data-widget="blog.post_author" data-preset="default">
+    <div class="{{ currentWidget.properties.font_style|default('moto-text_system_11') }}">
+        <span class="fa fa-user moto-widget-blog-post-author-icon"></span><span class="moto-widget-blog-post-author-text">{% if currentPage.isTemplate() %}Admin{% else %}{{ currentPage.getAuthor.name }}{% endif %}</span>
+    </div>
+</div>

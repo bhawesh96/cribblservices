@@ -1,0 +1,11 @@
+{% for colorTheme in colors.base %}
+{% set index = loop.index %}
+.moto-color{{ index }} {color:@baseColor{{ index }};}
+{% for i in 1..5 %}
+    .moto-color{{ index }}_{{ i }} {color:@baseColor{{ index }}_{{ i }};}
+{% endfor %}
+{% endfor %}
+
+{% for colorTheme in colors.custom %}
+.moto-color_custom{{ loop.index }} {color: @customColor{{ loop.index }};}
+{% endfor %}

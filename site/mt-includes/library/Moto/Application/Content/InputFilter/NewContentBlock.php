@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Application\Content\InputFilter; class NewContentBlock extends SaveContentBlock { protected $_name = 'content.new'; public function init() { parent::init(); $this->remove('id'); } } 

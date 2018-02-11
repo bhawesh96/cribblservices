@@ -1,0 +1,27 @@
+{%- extends 'base.html.twig' -%}
+
+{% block content %} {% autoescape false %}
+
+{% set header = currentPage.getSection('header') %}
+{% set footer = currentPage.getSection('footer') %}
+
+    <div class="page">
+
+{% if header %}
+        <header id="section-header" class="header moto-section" data-widget="section" data-container="section">
+            {{ ContentHelper.RenderPageSection(header, 'header') }}
+        </header>
+{% endif %}
+
+        <section id="section-content" class="content page-{{currentPage.id}} moto-section" data-widget="section" data-container="section">
+            {{ ContentHelper.RenderPageSection(currentPage, currentPage.type) }}
+        </section>
+    </div>
+
+{% if footer %}
+    <footer id="section-footer" class="footer moto-section" data-widget="section" data-container="section"{% if footer.properties.sticky and (not isPreview) %} moto-sticky="{mode:'smallHeight', direction:'bottom'}"{% endif %}>
+        {{ ContentHelper.RenderPageSection(footer, 'footer') }}
+    </footer>
+{% endif %}
+
+{% endautoescape %} {% endblock %}

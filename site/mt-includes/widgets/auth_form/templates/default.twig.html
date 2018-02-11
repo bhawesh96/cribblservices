@@ -1,0 +1,30 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-auth_form moto-widget-contact_form moto-preset-{{ currentWidget.properties.preset }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getAnimationClasses() }}" data-preset="{{ currentWidget.properties.preset }}" data-widget="auth_form"{% if not isPreview %} destination-page-id="{{ protectedPage.getId() }}"{% endif %}>
+    {% if isPreview %}
+        <div class="moto-widget-cover"></div>
+    {% endif %}
+    <form class="moto-widget-contact_form-form" role="form" name="authForm" ng-submit="submit()" novalidate>
+        <div ng-show="sending" class="contact-form-loading"></div>
+        {% for name, field in currentWidget.properties.fields %}
+            {% if field.enabled %}
+                <div class="moto-widget-contact_form-group">
+                <label for="field_{{name}}" class="moto-widget-contact_form-label">{{ field.placeholder }}</label>
+                <input type="password" class="moto-widget-contact_form-field moto-widget-contact_form-input" placeholder="{{ field.placeholder }}" {% if field.required %} required {% endif %} {% if not isPreview %} autofocus {% endif %} ng-model-options="{ updateOn: 'blur' }" name="{{ name }}" id="field_{{name}}" ng-model="request.{{name}}" moto-clear-validation-on-change="['passwordInvalid', 'couldNotSend']"/>
+                {% if not isPreview %}
+                    <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak ng-show="!authForm.{{name}}.$error.couldNotSend && (authForm.{{name}}.$invalid && authForm.{{name}}.$touched)">{{ currentWidget.properties.messages.wrong_password|default('') }}</span>
+                    <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak ng-show="authForm.{{name}}.$error.couldNotSend" >{{ currentWidget.properties.messages.error|default('') }}</span>
+                {% endif %}
+                </div>
+            {% endif %}
+        {% endfor %}
+        <div class="moto-widget-contact_form-buttons">
+            {% if currentWidget.properties.buttons.submit.preset %}
+                <div class="moto-widget moto-widget-button moto-preset-{{ currentWidget.properties.buttons.submit.preset }} moto-align-{{ currentWidget.properties.buttons.submit.align }}" data-preset="{{ currentWidget.properties.buttons.submit.preset }}" data-align="{{ currentWidget.properties.buttons.submit.align }}">
+                    <a ng-click="submit();" class="moto-widget-button-link moto-size-{{ currentWidget.properties.buttons.submit.size }}" data-size="{{ currentWidget.properties.buttons.submit.size }}"><span class="fa moto-widget-theme-icon"></span><span class="moto-widget-button-label">{{ currentWidget.properties.buttons.submit.label|default('Send') }}</span></a>
+                </div>
+                <button type="submit" class="hidden"></button>
+            {% else %}
+                <button type="submit" class="moto-widget-contact_form-submit">{{ currentWidget.properties.buttons.submit.label|default(currentWidget.properties.messages.submitButton)|default('Send') }}</button>
+            {% endif %}
+        </div>
+    </form>
+</div>

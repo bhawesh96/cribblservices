@@ -1,0 +1,10 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-video_player moto-media-player moto-preset-default moto-media-player_not-loaded {{ currentWidget.getSpacing('classes') }}" data-widget="video_player" data-preset="default">
+    {% if isPreview %}<div class="moto-widget-cover"></div>{% endif %}
+    {% if currentWidget.properties.tracks[0].path %}
+        <div class="moto-media-player-container"{% if not isPreview %} data-buttons="{{ currentWidget.exportButtons() }}"{% endif %}>
+            <video src="{{ Linker.file(currentWidget.properties.tracks[0].path) }}" width="100%" height="100%"{% if not isPreview %} data-autoplay="{{currentWidget.properties.settings.autoplay}}" data-duration="{{currentWidget.properties.tracks[0].length}}" data-title="{{currentWidget.properties.tracks[0].name}}"{% endif %}></video>
+        </div>
+    {% else %}
+        <div class="moto-widget-empty"></div>
+    {% endif %}
+</div>

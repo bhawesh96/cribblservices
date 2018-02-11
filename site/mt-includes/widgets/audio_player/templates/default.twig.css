@@ -1,0 +1,33 @@
+{% set properties = item.properties|json_decode %}
+
+{{ StyleHelper.generatePresetSelector('.moto-media-player', item.class_name) }}{
+
+    {{ StyleHelper.generateLessFromArray(properties.buttons_active.desktop, '.mejs-inner .mejs-controls .mejs-button.mejs-button_active button') }}
+
+    {{ StyleHelper.generateLessFromArray(properties.buttons_normal.desktop, '.mejs-controls .mejs-button button, .mejs-controls .mejs-volume-button button, .mejs-overlay-button') }}
+
+    .mejs-controls {
+
+        {{ StyleHelper.generateLessFromArray(properties.widget_container.desktop.base) }}
+
+        {{ StyleHelper.generateLessFromArray(properties.progress_bar.desktop.base, '.mejs-time-current, .mejs-time-handle') }}
+
+        {{ StyleHelper.generateLessFromArray(properties.volume_bar.desktop.base, '.mejs-horizontal-volume-current, .mejs-horizontal-volume-handle') }}
+
+        .mejs-time-loaded {
+            background-color: fadeout({{ properties.progress_bar.desktop.base['background-color'] }}, 75%);
+        }
+        .mejs-time-total {
+            background-color: fadeout({{ properties.progress_bar.desktop.base['background-color'] }}, 75%);
+        }
+        .mejs-time-handle {
+            box-shadow: 0px 0px 4px 0px {{ properties.progress_bar.desktop.base['background-color'] }};
+        }
+        .mejs-horizontal-volume-total {
+            background-color: fadeout({{ properties.volume_bar.desktop.base['background-color'] }}, 50%);
+        }
+        .mejs-horizontal-volume-handle {
+            box-shadow: 0px 0px 4px 0px {{ properties.volume_bar.desktop.base['background-color'] }};
+        }
+    }
+}

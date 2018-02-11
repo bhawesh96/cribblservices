@@ -1,0 +1,41 @@
+{% set properties = item.properties|json_decode %}
+
+{{ StyleHelper.generatePresetSelector('.moto-widget-contact_form', item.class_name) }} {
+
+    .moto-widget-contact_form-form {
+
+        {{ StyleHelper.generateLessFromArray(properties.form.desktop.base) }}
+
+        {{ StyleHelper.generateLessFromArray(properties.input_label.desktop.base, '.moto-widget-contact_form-label') }}
+
+        {{ StyleHelper.generateLessFromArray(properties.input_normal.desktop.base, '.moto-widget-contact_form-field') }}
+
+        {{ StyleHelper.generateLessFromArray(properties.input_error.desktop.base, '.moto-widget-contact_form-field.ng-touched.ng-invalid') }}
+
+        {% set placeholderStyles = StyleHelper.generateLessFromArray(properties.input_placeholder.desktop.base) %}
+        .moto-widget-contact_form-field::-webkit-input-placeholder { {{ placeholderStyles }} }
+        .moto-widget-contact_form-field::-moz-placeholder { {{ placeholderStyles }} }
+        .moto-widget-contact_form-field:-ms-input-placeholder { {{ placeholderStyles }} }
+
+        {{ StyleHelper.generateLessFromArray(properties.input_error_message.desktop.base, '.moto-widget-contact_form-field-error') }}
+
+        {{ StyleHelper.generateLessFromArray(properties.form_success_message.desktop.base, '.moto-widget-contact_form-success') }}
+
+        {{ StyleHelper.generateLessFromArray(properties.form_error_message.desktop.base, '.moto-widget-contact_form-danger') }}
+        {% if properties.form_checkbox %}
+            {{ StyleHelper.generateLessFromArray(properties.form_checkbox.desktop.base, '.moto-widget-contact_form-checkbox-icon') }}
+            {{ StyleHelper.generateLessFromArray(properties.form_checkbox_error.desktop.base, '.moto-widget-contact_form-group-not-valid .moto-widget-contact_form-checkbox-icon') }}
+        {% else %}
+            .moto-widget-contact_form-checkbox-icon {
+                width:16px;
+                height:16px;
+                font-size:16px;
+                border-color:#81868c;
+                color:#55616d;
+            }
+            .moto-widget-contact_form-group-not-valid .moto-widget-contact_form-checkbox-icon {
+                border-color:#ff0000;
+            }
+        {% endif %}
+    }
+}

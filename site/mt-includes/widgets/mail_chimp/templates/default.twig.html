@@ -1,0 +1,55 @@
+{% set widgetId = currentWidget.getWidgetId() %}
+<div data-widget-id="{{ widgetId }}" class="moto-widget moto-widget-mail_chimp moto-widget-contact_form moto-preset-{{ currentWidget.properties.preset }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }} {{ currentWidget.getAnimationClasses() }}" data-widget="mail_chimp" data-preset="{{ currentWidget.properties.preset }}">
+    <div ng-controller="widget.MailChimp.Controller" ng-init="listId = '{{ currentWidget.properties.listId }}'">
+
+        {% if isPreview %}
+            <div class="moto-widget-cover"></div>
+        {% endif %}
+
+        <form class="moto-widget-contact_form-form" role="form" name="subscribeForm" ng-submit="submit()" novalidate>
+            <div ng-show="sending" class="contact-form-loading"></div>
+            {% for name, field in currentWidget.properties.fields %}
+                {% if field.enabled %}
+                    {% if field.type == 'checkbox' %}
+                        <div class="moto-widget-contact_form-group" ng-class="{'moto-widget-contact_form-group-not-valid': subscribeForm.checkbox.$invalid, 'moto-widget-contact_form-checkbox-checked': message.checkbox}">
+                            <input id="moto-widget-contact_form-checkbox-{{ widgetId }}" name="checkbox" ng-model="message.checkbox" ng-change="checkboxChanged()" type="checkbox" class="moto-widget-contact_form-checkbox"{% if field.required %} ng-init="requiredCheckbox()"{% endif %}>
+                            <label class="moto-widget-contact_form-checkbox-label" for="moto-widget-contact_form-checkbox-{{ widgetId }}">
+                                <span class="moto-widget-contact_form-checkbox-icon"></span>
+                                <span class="moto-widget-contact_form-checkbox-text {{ field.text_style }}">{{ field.label }}</span>
+                            </label>
+                        </div>
+                    {% else %}
+                        <div class="moto-widget-contact_form-group">
+                            <label for="field_{{name}}" class="moto-widget-contact_form-label">{{ field.placeholder }}</label>
+                            <input type="text" class="moto-widget-contact_form-field moto-widget-contact_form-input" placeholder="{{ field.placeholder }} {% if field.required %}*{% endif %}" {% if field.required %} ng-blur="validate('{{ name }}')" required {% endif %} ng-model-options="{ updateOn: 'blur' }" name="{{ name }}" id="field_{{name}}" ng-model="message.{{ name }}"/>
+                            {% if not isPreview %}
+                                <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak ng-show="subscribeForm.{{name}}.$invalid && !subscribeForm.{{name}}.$pristine && !subscribeForm.{{name}}.emailInvalid" >{{ currentWidget.properties.messages.required | default('Field is required') }}</span>
+                                <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak ng-show="subscribeForm.{{name}}.emailInvalid && !subscribeForm.{{name}}.$pristine" >{{ currentWidget.properties.messages.invalidEmail | default('Incorrect email') }}</span>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+
+            {% if not isPreview %}
+                <div class="moto-widget-contact_form-success ng-cloak" ng-cloak ng-show="emailSent">
+                    {{ currentWidget.properties.messages.success | default('You have been subscribed successfully') }}
+                </div>
+                <div class="moto-widget-contact_form-danger ng-cloak" ng-cloak ng-show="emailError && !isSubscribed">
+                    {{ currentWidget.properties.messages.error | default('Sorry, your message was not sent') }}
+                </div>
+                <div class="moto-widget-contact_form-danger ng-cloak" ng-cloak ng-show="emailError && isSubscribed">
+                    {{ currentWidget.properties.messages.alreadySubscribed | default('You are already subscribed to our newsletter') }}
+                </div>
+            {% endif %}
+
+            <div class="moto-widget-contact_form-buttons">
+                <div class="moto-widget moto-widget-button moto-preset-{{ currentWidget.properties.buttons.submit.preset }} moto-align-{{ currentWidget.properties.buttons.submit.align }}" data-preset="{{ currentWidget.properties.buttons.submit.preset }}" data-align="{{ currentWidget.properties.buttons.submit.align }}">
+                    <a ng-click="submit()" class="moto-widget-button-link moto-size-{{ currentWidget.properties.buttons.submit.size }}"
+                       data-size="{{ currentWidget.properties.buttons.submit.size }}"><span class="fa moto-widget-theme-icon"></span><span class="moto-widget-button-label">{{ currentWidget.properties.buttons.submit.label | default('Subscribe') }}</span></a>
+                </div>
+                <button type="submit" class="hidden"></button>
+            </div>
+        </form>
+    </div>
+</div>

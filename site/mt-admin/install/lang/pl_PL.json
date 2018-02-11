@@ -1,0 +1,90 @@
+{
+    "MODULE": {
+        "INSTALL": {
+            "COMMON": {
+                "ERROR_PAGE_HEADING": "Błędy",
+                "PASSWORD_LABEL": "Hasło"
+            },
+            "SET_LANGUAGE_LABEL": "Zmień język",
+            "SERVER_TEST": {
+                "TESTING_PAGE_HEADING": "Test serwera",
+                "TESTING_DESCRIPTION": "Sprawdzanie kompatybilności serwera. Czekaj.",
+                "SUCCESS_PAGE_HEADING": "Twój serwer spełnia zalecane wymagania systemowe",
+                "SUCCESS_DESCRIPTION": "Proszę kliknąć na przycisk poniżej, aby rozpocząć instalację",
+                "BEGIN_INSTALL_BUTTON": "Rozpocznij instalację",
+                "LICENSE_AGREEMENT_TEXT": "Po zainstalowaniu tej aplikacji potwierdź, że przeczytałeś i akceptujesz nasze <a href='http://www.motocms.com/terms/' target='_blank'> warunki korzystania</a> i <a href='http://www.motocms.com/privacy/' target='_blank'> Politykę prywatności</a>."
+            },
+            "SETUP_DATABASE": {
+                "PAGE_HEADING": "Ustawienie bazy danych",
+                "PAGE_DESCRIPTION": "Do łączenia się z serwerem MySQL",
+                "HOSTNAME_LABEL": "Nazwa hosta",
+                "HOSTNAME_TOOLTIP": "<b class='tooltip-title'>Nazwa hosta</b><br/>W tym polu trzeba wpisać szczegóły nazwy domeny. Jeśli nie posiadasz tych informacji, skontaktuj się z dostawcą usług hostingowych i poproś o podanie wszystkich szczegółów.",
+                "USERNAME_LABEL": "Nazwa użytkownika",
+                "USERNAME_TOOLTIP": "<b class='tooltip-title'>Nazwa użytkownika</b><br/>Nazwa użytkownika jest Twoim loginem do bazy danych. Jeśli nie posiadasz tych informacji, skontaktuj się z dostawcą usług hostingowych i poproś o podanie wszystkich szczegółów.",
+                "DATABASE_LABEL": "Nazwa bazy danych",
+                "DATABASE_TOOLTIP": "<b class='tooltip-title'>Nazwa bazy danych</b><br/>Każda nazwa bazy danych jest unikalna. Jeśli nie posiadasz tych informacji, skontaktuj się z dostawcą usług hostingowych i poproś o podanie wszystkich szczegółów.",
+                "PASSWORD_TOOLTIP": "<b class='tooltip-title'>Hasło</b><br/>Hasło do bazy danych. Jeśli nie posiadasz tych informacji, skontaktuj się z dostawcą usług hostingowych i poproś o podanie wszystkich szczegółów.",
+                "TABLE_PREFIX_LABEL": "Prefiks tabeli",
+                "TABLE_PREFIX_TOOLTIP": "<b class='tooltip-title'>Prefiks tabeli</b><br/>To pole nie jest wymagane. Domyślna nazwa prefiksu tabeli - moto_. Pozwala na powiązanie określonego prefiksu tabeli z wybranym szablonem."
+            },
+            "SETUP_USER": {
+                "PAGE_HEADING": "Ustawienia użytkownika",
+                "PAGE_DESCRIPTION": "To będzie administrator tej instalacji",
+                "NAME_LABEL": "Nazwa",
+                "EMAIL_LABEL": "Adres e-mail",
+                "PASSWORD_CONFIRMATION_LABEL": "Wpisz ponownie hasło:"
+            },
+            "INSTALLATION": {
+                "PAGE_HEADING": "Instaluj",
+                "PAGE_DESCRIPTION": "Gotowy do instalacji Moto. Kliknij przycisk poniżej, aby rozpocząć. <br/> To powinno zająć tylko kilka minut.",
+                "INSTALL_NOW_BUTTON": "Zainstaluj teraz",
+                "COMMON_ERROR_MESSAGE": "Instalacja została przerwana z powodu błędu",
+                "PROCESS_PAGE_HEADING": "Instaluje...",
+                "PROCESS_PAGE_DESCRIPTION": "Moto3 jest obecnie zainstalowany. Proszę czekaj.",
+                "COMPLETE_PAGE_HEADING": "Instalacja zakończona",
+                "COMPLETE_PAGE_DESCRIPTION": "Wszystko zrobione. Kliknij przycisk poniżej, aby rozpocząć korzystanie z Moto3.",
+                "START_WORK_BUTTON": "Start"
+            },
+            "ERROR_MESSAGE": {
+                "BROKEN_RESPONSE": "Niepoprawna odpowiedź od serwera",
+                "FILE_WRITABLE": "Plik <strong>{{ name }}</strong> nie może zostać zapisany. Ustaw odpowiednie uprawnienia do pliku.",
+                "FOLDER_WRITABLE": "Folder <strong>{{ name }}</strong> nie może zostać zapisany. Ustaw poprawne uprawnienia do foldera.",
+                "FILE_READABLE": "Plik <strong>{{ name }}</strong> nie może zostać odczytany. Ustaw poprawne uprawnienia do pliku.",
+                "FOLDER_READABLE": "Folder <strong>{{ name }}</strong> nie może zostać odczytany. Ustaw poprawne uprawnienia do foldera.",
+                "PHP_VERSION": "Obecna wersja PHP nie jest obsługiwana. Nasz szablon wymaga PHP w wersji 5.4+, 5.5+ lub 5.6+.",
+                "PHP_FUNCTION_NOT_EXISTS": "Funkcja PHP {{ function }} nie istnieje.",
+                "PHP_EXTENSION_LOADED": "PHP rozszerzenie <strong>{{ extension }}</strong> nie jest włączone. Sprawdź konfigurację serwera. Upewnij się, że rozszerzenie <strong>{{ extension }}</strong> jest włączone.",
+                "PHP_SESSION_CREATE": "Serwer nie może uruchomić sesję. Upewnij się że serwer może stworzyć sesję.",
+                "PHP_SAFE_MODE": "Według naszych informacji, na Twoim serwerze jest włączony PHP w trybie awaryjnym. Wyłącz go aby nasze oprogramowanie pracowało poprawnie. Tryb można wyłączyć poprzez panel sterowania hostingu lub edycję pliku php.ini.",
+                "MAIL_FUNCTION": "Funkcja poczty e-mail nie działa na serwerze.",
+                "PHP_UPLOAD_ENABLED": "Opcja przesyłania plików jest wyłączona.",
+                "PHP_UPLOAD_FILE_SIZE": "Maksymalny rozmiar pliku wynosi {{ upload_max_size }}, a rozmiar o {{ min }} jest wymagany.",
+                "ALREADY_INSTALLED": "Moto3 jest już zainstalowany",
+                "THEME_NOT_ACTIVATED": "Wystąpił błąd podczas aktywacji tematu.<br/>Skontaktuj się z naszym działem wsparcia technicznego poprzez ten <a href=\"http://support.cms-guide.com/hc/{{'CURRENT_LANGUAGE'|translate}}/requests/new\" target=\"_blank\">link,</a> aby uzyskać pomoc.",
+                "EXTRA_CONTENT_NOT_INSTALLED": "Błąd podczas instalacji dodatkowych treści.<br/>Skontaktuj się z naszym działem wsparcia technicznego poprzez ten <a href=\"http://support.cms-guide.com/hc/{{'CURRENT_LANGUAGE'|translate}}/requests/new\" target=\"_blank\">link,</a> aby uzyskać pomoc.",
+                "DATABASE": {
+                    "DATA_ALREADY_EXISTS": "Dane są już zainstalowane.",
+                    "IMPORT_STRUCTURE": "Wystąpił błąd podczas importowania struktury bazy danych.",
+                    "IMPORT_DATA": "Wystąpił błąd podczas importowania danych z bazy danych.",
+                    "CONNECT": "Wystąpił błąd podczas łączenia z bazą danych."
+                },
+                "NAMESPACES": {
+                    "DATABASE": "Błędy w ustawieniach bazy danych.",
+                    "ADMIN": "Błędy w ustawieniach użytkownika.",
+                    "LANGUAGE": "Źle wybrany język.",
+                    "WEBSITE.ADDRESS": "Błąd w nazwie adresu strony."
+                },
+                "KEYS": {
+                    "EMAIL": "Adres e-mail.",
+                    "NAME": "Nazwa użytkownika.",
+                    "PASSWORD": "Hasło.",
+                    "PASSWORD_CONFIRM": "Hasło.",
+                    "DATABASE": "Nazwa bazy danych.",
+                    "HOSTNAME": "Nazwa hosta.",
+                    "PREFIX": "Prefiks.",
+                    "USERNAME": "Nazwa użytkownika bazy danych."
+                }
+            }
+        }
+    }
+}

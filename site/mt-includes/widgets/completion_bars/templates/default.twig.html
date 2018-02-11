@@ -1,0 +1,29 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-completion_bars moto-preset-{{ currentWidget.properties.preset }} {{ currentWidget.getAlignClass() }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }} {{ currentWidget.getAnimationClasses() }} {% if currentWidget.properties.enableProgressAnimation %}moto-before-in-viewport{% endif %}" data-widget="completion_bars">
+    {% if currentWidget.properties.items|length > 0 %}
+        <div class="moto-widget-completion_bars__items{% if currentWidget.properties.enableForegroundRadius %} moto-widget-completion_bars__rounded-foreground{% endif %}">
+            {% for item in currentWidget.properties.items %}
+            <div class="moto-widget-completion_bars__item {% if item.progress>=100 %}moto-widget-completion_bars__item_completed{% elseif item.progress<=0 %}moto-widget-completion_bars__item_zero{% endif %}">
+                <div class="moto-widget-completion_bars__item-wrapper">
+                    <div class="moto-widget-completion_bars__header{% if (item.customProgressLabelEnabled and item.customProgressLabel|length == 0) or (item.label|length == 0) %} moto-widget-completion_bars__header_no-margin{% endif %}">
+                        <span class="moto-widget-completion_bars__header-item moto-widget-completion_bars__header-label {{ currentWidget.properties.labelTextStyle }}">{{ item.label }}</span>
+                        <span class="moto-widget-completion_bars__header-item moto-widget-completion_bars__header-progress {{ currentWidget.properties.progressTextStyle }}">
+                            {% if item.customProgressLabelEnabled %}
+                                {{ item.customProgressLabel }}
+                            {% else %}
+                                {{ item.progress|default(0) }}%
+                            {% endif %}
+                        </span>
+                    </div>
+                    <div class="moto-widget-completion_bars__stripe">
+                        <div class="moto-widget-completion_bars__stripe-background {{currentWidget.getBackgroundColorClass(item.stripeBackground)}}" style="{{currentWidget.getCssInlineValue('height', currentWidget.properties.stripeHeight, 'px')}}{{currentWidget.getCssInlineValue('border-radius', currentWidget.properties.stripeRadius)}}{{currentWidget.getCssInlineValue('background-color', item.stripeBackground)}}">
+                            <div class="moto-widget-completion_bars__stripe-foreground {{currentWidget.getBackgroundColorClass(item.stripeForeground)}}" style="{{currentWidget.getCssInlineValue('width', item.progress, '%')}}{{currentWidget.getCssInlineValue('background-color', item.stripeForeground)}}"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="moto-widget-empty"></div>
+    {% endif %}
+</div>

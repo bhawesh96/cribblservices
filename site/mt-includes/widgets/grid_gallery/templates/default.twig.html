@@ -1,0 +1,24 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-grid-gallery moto-preset-{{ currentWidget.properties.preset }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }} {{ currentWidget.getAnimationClasses() }}" data-widget="grid_gallery" data-preset="{{ currentWidget.properties.preset }}" data-spacing="{{ currentWidget.getSpacing('short') }}">
+    {% if currentWidget.properties.items|length > 0 %}
+        <div class="moto-widget-grid-gallery-items" {% if not isPreview %} data-moto-grid-gallery-options='{{ currentWidget.exportFrontendSettings() }}'{% endif %}>
+            {% for item in currentWidget.properties.items %}
+                <a {% if not isPreview and currentWidget.properties.settings.enableLightbox %} href="{{ Linker.img(item.content.path) }}"{% endif %} class="moto-widget-grid-gallery-item">
+                    <img src="{{ Linker.img(item.thumbnail.path) }}" alt="{% if item.thumbnail.alt %}{{ item.thumbnail.alt }}{% else %}{{ item.thumbnail.name }}{% endif %}" class="moto-widget-grid-gallery-image">
+                    {% if currentWidget.properties.settings.showCaptions %}
+                        {% if item.captionType == 'html' %}
+                            <div class="caption caption_html moto-widget-text {% if not item.caption %}caption-empty{% endif %}">
+                                {{ item.caption | raw }}
+                            </div>
+                        {% else %}
+                            <div class="caption caption_text {% if not item.caption %}caption-empty{% endif %}">
+                                <p>{{ item.caption }}</p>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                </a>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="moto-widget-empty"></div>
+    {% endif %}
+</div>

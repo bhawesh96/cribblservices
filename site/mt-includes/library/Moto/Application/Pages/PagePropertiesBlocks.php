@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Application\Pages; use Moto\Application\Model; use Moto\Application\Model\AbstractModel; class PagePropertiesBlocks extends AbstractModel { protected $_fields = array( 'header' => array( 'default' => true ), 'footer' => array( 'default' => true ) ); protected $_skipDefaults = true; } 

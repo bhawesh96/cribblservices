@@ -1,0 +1,11 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-blog-post_name moto-preset-{{ currentWidget.properties.preset|default('default') }} {{ currentWidget.getAlignClass() }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }} {{ currentWidget.getAnimationClasses() }}" data-preset="{{ currentWidget.properties.preset|default('default') }}" data-widget="blog.post_name">
+    {% if currentPage.isTemplate() %}
+        <h1 class="{{ currentWidget.properties.text_style }}">{{ currentPage.name }}</h1>
+    {% else %}
+        <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto" data-widget="text" data-preset="default" data-spacing="aaaa">
+            <div class="moto-widget-text-content moto-widget-text-editable">
+                <h1 class="{{ currentWidget.properties.text_style }}">{{ currentPage.name }}</h1>
+            </div>
+        </div>
+    {% endif %}
+</div>

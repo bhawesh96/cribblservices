@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Widgets\Menu; use Website; use Moto; class Menu extends Website\Widgets\Menu\Widget { public function init() { Moto\System\Log::notice('DEPRECATED_FILE', array( 'class' => __CLASS__, 'file' => __FILE__ )); parent::init(); } }

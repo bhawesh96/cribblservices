@@ -1,0 +1,3 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-divider moto-preset-{{ currentWidget.properties.preset }} {{ currentWidget.getAlignClass() }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }} {{ currentWidget.getAnimationClasses() }}" data-widget="divider_horizontal" data-preset="{{ currentWidget.properties.preset }}">
+    <hr class="moto-widget-divider-line" style="max-width:100%;{% if currentWidget.properties.isFixed %}width:{{ currentWidget.properties.fixedWidth }}px{% else %}width:{{ currentWidget.properties.width }}%{% endif %};">
+</div>

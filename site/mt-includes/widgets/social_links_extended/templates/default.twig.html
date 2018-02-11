@@ -1,0 +1,31 @@
+<div id="{{ currentWidget.getWidgetId() }}" data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-social-links-extended moto-preset-{{ currentWidget.properties.preset }} {{ currentWidget.getAlignClass() }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }} {{ currentWidget.getAnimationClasses() }}" data-widget="social_links_extended" data-preset="{{ currentWidget.properties.preset }}">
+    {% if currentWidget.properties.items | length > 0 %}
+    <ul class="moto-widget-social-links-extended__list">
+        {% for item in currentWidget.properties.items %}
+        <li class="moto-widget-social-links-extended__item moto-widget-social-links-extended__item-{{ loop.index }}">
+            <a href="{{ item.link.properties.url }}" class="moto-widget-social-links-extended__link" target="{{ item.link.properties.target }}" {% if item.link.properties.nofollow %}rel="nofollow"{% endif %}>
+                <span class="moto-widget-social-links-extended__icon fa fa-{{ item.icon.id }}"></span>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    <style type="text/css">
+    {% for item in currentWidget.properties.items %}
+        {% if item.advancedStylesEnabled %}
+            #{{ currentWidget.getWidgetId() }} .moto-widget-social-links-extended__item-{{ loop.index }} .moto-widget-social-links-extended__link {
+                {% if item.advancedStyles.desktop.base.color %}color: {{ item.advancedStyles.desktop.base.color }};{% endif %}
+                {% if item.advancedStyles.desktop.base['background-color'] %}background-color: {{ item.advancedStyles.desktop.base['background-color'] }};{% endif %}
+                {% if item.advancedStyles.desktop.base['border-color'] %}border-color: {{ item.advancedStyles.desktop.base['border-color'] }};{% endif %}
+            }
+            #{{ currentWidget.getWidgetId() }} .moto-widget-social-links-extended__item-{{ loop.index }} .moto-widget-social-links-extended__link:hover {
+                {% if item.advancedStyles.desktop.hover.color %}color: {{ item.advancedStyles.desktop.hover.color }};{% endif %}
+                {% if item.advancedStyles.desktop.hover['background-color'] %}background-color: {{ item.advancedStyles.desktop.hover['background-color'] }};{% endif %}
+                {% if item.advancedStyles.desktop.hover['border-color'] %}border-color: {{ item.advancedStyles.desktop.hover['border-color'] }};{% endif %}
+            }
+        {% endif %}
+    {% endfor %}
+    </style>
+    {% else %}
+    <div class="moto-widget-empty"></div>
+    {% endif %}
+</div>

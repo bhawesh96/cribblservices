@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Twig\Widgets; use Moto; class TokenParser extends \Twig_TokenParser_Block { public function decideBlockEnd(\Twig_Token $token) { return $token->test('endWidget'); } public function getTag() { return 'widget'; } } 

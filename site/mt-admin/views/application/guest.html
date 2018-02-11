@@ -1,0 +1,111 @@
+{%- extends 'layouts/default.html' -%}
+
+{% block title %}Hello guest!{% endblock %}
+
+{% block body %}
+    {{ renderHook('guest.body.top') }}
+    <div class="content-wrapper moto-ui-content view-animate">
+        <div class="moto-ui-content-wrapper" ui-view="content">
+        </div>
+    </div>
+    {{ renderHook('guest.body.bottom') }}
+{% endblock %}
+
+{% block custom_js %}
+    <script type="text/javascript" data-cfasync="false">
+        var app = app || {};
+
+        app.config = {{ config|json_encode()|raw }};
+        app.user = null;
+
+        app.config.apiUrl = 'api.php';
+        app.config.getPath = function(name) {
+            //temp
+            if (name[0] !== '@') {
+                name = '@' + name;
+            }
+
+            return this.getUrl(name);
+        };
+
+        app.config.getUrl = function(path, paths, level) {
+            level = level || 0;
+            if (!path) {
+                return path;
+            }
+
+            // legacy code for some plugins, @TEMP, @LEGACY
+            if ( (path.indexOf('@userAssets/css/font-awesome.min.css') === 0) || (path.indexOf('@userAssets/css/assets.min.css') === 0) ) {
+                path = path.replace('@userAssets/', '@systemIncludes/');
+            }
+
+            paths = angular.extend({}, this.path, paths || {});
+
+            //compatibility
+            if (path[0] !== '@' && path.indexOf('/') === -1) {
+                path = '@' + path;
+            }
+
+            var url, namespace,
+                resourceNameRegExp = new RegExp('^\\@([a-zA-z0-9\_]+)(.*)$'),
+                parse = resourceNameRegExp.exec(path);
+            if (path[0] == '@' && parse) {
+                namespace = parse[1];
+                url = parse[2];
+                path = (paths[namespace] ? paths[namespace] : '');
+                if (namespace.indexOf('File') == -1 && url.indexOf('?') == -1 && url[0] != '/') {
+                    if (path.substr(-1) != '/') {
+                        path += '/';
+                    }
+                }
+                if (url[0] == '/' && path.substr(-1) == '/') {
+                    url = url.replace(/^([\/]+)/, '');
+                }
+                path += url;
+                //remove left repeated slash
+                path = path.replace(/^([\/]+)/, '/');
+            }
+
+            if (path[0] == '@') {
+                path = this.getUrl(path, paths, level + 1);
+            }
+
+            return path;
+        };
+
+        app.config.getAbsoluteUrl = function(name) {
+            return this.getUrl(name, {website: app.config.settings.website.address});
+        };
+
+        app.config.getUploadAbsoluteUrl = function(path) {
+            return app.config.getUploadUrl(path, {website: app.config.settings.website.address});
+        };
+
+        app.config.getUploadUrl = function(path, paths, level) {
+            var testRegExp = new RegExp('^([a-z]+:)?\.?\/\/?');
+            if (!path || !angular.isString(path) || !path.length) {
+                return path;
+            }
+            if (path[0] !== '@' && !testRegExp.test(path)) {
+                path = '@userUploads/' + path;
+            }
+
+            return app.config.getUrl(path, paths, level);
+        };
+
+        app.config.getRelativeUrl = function(name, paths) {
+            return this.getUrl(name, paths);
+        };
+
+        app.config.init = function() {
+        };
+
+        app.config.init();
+    </script>
+    <script src="{{ getFileUrl('@adminApplication/app.guest.min.js', true) }}" type="text/javascript" data-cfasync="false"></script>
+    {{ assetJavaScript('@adminApplication/templates.min.js') }}
+    <script type="text/javascript" data-cfasync="false">
+        angular.module('guest.plugins', {{ renderHook('guest.application.plugins', []) | json_encode | raw}});
+    </script>
+    {{ renderHook('guest.head.top') }}
+{% endblock %}

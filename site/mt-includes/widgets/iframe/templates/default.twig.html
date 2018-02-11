@@ -1,0 +1,8 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-iframe moto-preset-default {{ currentWidget.getSpacing('classes') }}{% if currentWidget.properties.animation %} wow {{ currentWidget.properties.animation }}{% endif %}" data-widget="iframe" data-preset="default" data-animation="{{ currentWidget.properties.animation }}" data-spacing="{{ currentWidget.getSpacing('short') }}">
+    {% if isPreview %}<div class="moto-widget-cover"></div>{% endif %}
+    {% if currentWidget.properties.url %}
+        <iframe class="moto-widget-iframe-frame" width="100%" height="{{ currentWidget.properties.height }}" frameborder="0" src="{{ currentWidget.properties.url }}"></iframe>
+    {% else %}
+        <div class="moto-widget-empty"></div>
+    {% endif %}
+</div>

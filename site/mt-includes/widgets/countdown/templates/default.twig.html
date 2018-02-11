@@ -1,0 +1,19 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-countdown moto-preset-{{ currentWidget.properties.preset }} {{ currentWidget.getAlignClass() }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }} {{ currentWidget.getAnimationClasses() }}" data-widget="countdown"{% if currentWidget.properties.type=='event' %} data-timezone="{{ currentWidget.properties.timezone }}"{% endif %}{% if not isPreview %} data-on-expiry="{{ currentWidget.properties.onExpiry }}"{% if currentWidget.properties.onExpiry=='redirect' %} data-redirect-url="{{ currentWidget.properties.redirectUrl }}"{% endif %}{% endif %} data-time="{{ currentWidget.properties.time }}" data-type="{{ currentWidget.properties.type }}">
+    {% if isPreview %}<div class="moto-widget-cover"></div>{% endif %}
+    {% set enabledItems = currentWidget.getEnabledItems() %}
+    <timer countdown="countdownTime" interval="1000" class="countdown-timer">
+    {% for item in enabledItems %}
+        <div class="countdown-item">
+            <div class="countdown-item-wrapper">
+                <div class="countdown-item-block">
+                    <div class="countdown-item-content">
+                        <div class="countdown-item-amount" data-ng-bind="{{ item.id }}"></div>
+                        <div class="countdown-item-unit" data-ng-bind="{{ item.id ~ '|humanizeDuration:\'' ~ item.id ~ '\':\'' ~ currentWidget.properties.language ~ '\'' }}"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="countdown-item-delimiter">{{ currentWidget.properties.delimiter }}</div>
+        </div>
+    {% endfor %}
+    </timer>
+</div>

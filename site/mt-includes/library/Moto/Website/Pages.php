@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Website; use Moto; use Moto\Application\Pages\PagesTable; class Pages { public static function getRelativeUrl($id) { $page = static::find($id); if (!$page) { throw new Exception(Moto\System\Exception::ERROR_NOT_FOUND_MESSAGE, Moto\System\Exception::ERROR_NOT_FOUND_CODE); } return $page->getRelativeUrl(); } public static function find($id) { $table = new PagesTable(); $table->useResultAsModel(true); $page = $table->getById($id); return $page; } }

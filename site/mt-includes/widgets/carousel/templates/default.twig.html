@@ -1,0 +1,24 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-slider moto-widget-carousel moto-preset-{{ currentWidget.properties.preset }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }} {{ currentWidget.getAnimationClasses() }} moto-widget-carousel-loader" data-widget="carousel" data-preset="{{ currentWidget.properties.preset }}">
+    {% if currentWidget.properties.items|length > 0 %}
+        <div class="loading-block">
+            <div class="loading-circle"><div></div></div>
+            <div class="loading-circle"><div></div></div>
+            <div class="loading-circle"><div></div></div>
+            <div class="loading-circle"><div></div></div>
+        </div>
+        <div class="carousel-block">
+            <div class="moto-widget-carousel-list"{% if not isPreview %} data-moto-carousel-options='{{ currentWidget.exportFrontendSettings() }}'{% endif %}>
+                {% for item in currentWidget.properties.items %}
+                    <div class="moto-widget-carousel-item">
+                        <a class="moto-widget-carousel-link moto-link" {{ Linker.getLinkAttributes(item.link) }}><img src="{{ Linker.img(item.content) }}" alt="{% if item.alt %}{{ item.alt }}{% else %}{{ item.name }}{% endif %}"/></a>
+                        {% if item.caption %}
+                            <div class="moto-widget-carousel-caption moto-widget-text">{{ item.caption|raw }}</div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% else %}
+        <div class="moto-widget-empty"></div>
+    {% endif %}
+</div>

@@ -1,0 +1,17 @@
+<div>
+    <div class="modal-header modal-header_design">
+        <button type="button" class="close" ng-click="cancel()">&times;</button>
+        <strong>{{ ::'WIDGET.MAIL_CHIMP.POPUP_CONNECT_ACCOUNT_TITLE' | translate }}</strong>
+    </div>
+    <div class="modal-body">
+        <form name="editMailChimpKey">
+            <div class="form-group">
+                <input type="text" name="apiKey" class="form-control input-lg" ng-model="apiKey" moto-auto-focus placeholder="{{ ::'WIDGET.MAIL_CHIMP.API_KEY_PLACEHOLDER' | translate }}" validate="{reg_exp: '^([a-z0-9]{32,40}-[a-z0-9]{2,5})$'}"/>
+            </div>
+            <div class="form-control-buttons text-center">
+                <button type="submit" class="btn btn-success btn-lg text-uppercase" ng-click="ok()">{{ ::'COMMON.BUTTON.SAVE' | translate }}</button>
+                <button type="button" class="btn btn-link" ng-click="cancel()">{{ ::'COMMON.BUTTON.CANCEL' | translate }}</button>
+            </div>
+        </form>
+    </div>
+</div>

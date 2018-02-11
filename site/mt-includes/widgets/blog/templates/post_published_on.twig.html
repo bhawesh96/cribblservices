@@ -1,0 +1,11 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-blog-post_published_on moto-preset-default {{ currentWidget.getAlignClass() }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }}" data-preset="default" data-widget="blog.post_published_on" data-spacing="{{ currentWidget.getSpacing('short') }}">
+    <div class="{{ currentWidget.properties.font_style|default('moto-text_system_11') }}">
+        <span class="fa fa-calendar moto-widget-blog-post_published_on-icon"></span><span class="moto-widget-blog-post_published_on-date">
+            {% if currentPage.isTemplate() %}
+                {{ "2015-09-22" | date(currentWidget.getDateFormat()) }}
+            {% else %}
+                {{ currentPage.published | date(currentWidget.getDateFormat()) }}
+            {% endif %}
+        </span>
+    </div>
+</div>

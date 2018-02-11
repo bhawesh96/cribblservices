@@ -1,0 +1,10 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-sound_cloud moto-preset-default {{ currentWidget.getSpacing('classes') }}" data-widget="sound_cloud">
+    {% if isPreview %}<div class="moto-widget-cover"></div>{% endif %}
+    {% if not currentWidget.properties.enabled %}
+        <div class="moto-widget-empty"></div>
+    {% else %}
+        <div class="moto-widget-sound_cloud-container">
+            <iframe class="moto-widget-sound_cloud-iframe" width="100%" height="{% if not currentWidget.properties.params.visual %}166{% else %}{{ currentWidget.properties.params.height }}{% endif %}" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ currentWidget.properties.params.track_id }}&amp;auto_play={% if isPreview %}false{% else %}{{ currentWidget.properties.params.auto_play }}{% endif %}&amp;hide_related=false&amp;show_comments={{ currentWidget.properties.params.show_comments }}&amp;show_user={{ currentWidget.properties.params.show_user }}&amp;show_reposts=false{% if currentWidget.properties.params.visual %}&amp;visual=true{% endif %}{% if not currentWidget.properties.params.show_artwork %}&amp;show_artwork=false{% endif %}{% if not currentWidget.properties.params.visual %}&amp;color={{ currentWidget.properties.params.color }}{% endif %}"></iframe>
+        </div>
+    {% endif %}
+</div>

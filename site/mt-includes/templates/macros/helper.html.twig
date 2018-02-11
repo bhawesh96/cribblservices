@@ -1,0 +1,9 @@
+{% macro RenderPageSection(section, type) %}
+    {% filter page_html_content(section, type) %}
+        {% if (is_string(section.content)) %}
+            {% include template_from_string(section.content) %}
+        {% else %}
+            {{ widget(section.content) }}
+        {% endif %}
+    {% endfilter %}
+{% endmacro %}

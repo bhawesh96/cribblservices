@@ -1,0 +1,65 @@
+{% set properties = item.properties|json_decode %}
+
+{{ StyleHelper.generatePresetSelector('.moto-widget-social-links-extended', item.class_name) }} {
+
+    .moto-widget-social-links-extended__item {
+        {{ StyleHelper.generateLessFromArray(properties.spacing.desktop) }}
+        @media screen and (max-width: @const_media_tablet_max_width) {
+            {{ StyleHelper.generateLessFromArray(properties.spacing.tablet) }}
+        }
+        @media screen and (max-width: @const_media_mobile-h_max_width) {
+            {{ StyleHelper.generateLessFromArray(properties.spacing['mobile-h']) }}
+        }
+        @media screen and (max-width: @const_media_mobile-v_max_width) {
+            {{ StyleHelper.generateLessFromArray(properties.spacing['mobile-v']) }}
+        }
+        &:last-child {
+             margin-bottom: 0;
+             margin-right: 0;
+        }
+    }
+
+    &.moto-align-left .moto-widget-social-links-extended__item {
+        margin-left: 0;
+    }
+    &.moto-align-center .moto-widget-social-links-extended__item {
+        margin-right: {{properties.spacing.desktop.base['margin-right']}} / 2;
+        margin-left:  {{properties.spacing.desktop.base['margin-left']}} / 2;
+        {% if properties.spacing.tablet.base['margin-right'] and properties.spacing.tablet.base['margin-left'] %}
+            @media screen and (max-width: @const_media_tablet_max_width) {
+                margin-right: {{properties.spacing.tablet.base['margin-right']}} / 2;
+                margin-left:  {{properties.spacing.tablet.base['margin-left']}} / 2;
+            }
+        {% endif %}
+        {% if properties.spacing['mobile-h'].base['margin-right'] and properties.spacing.tablet.base['margin-left'] %}
+            @media screen and (max-width: @const_media_mobile-h_max_width) {
+                margin-right: {{properties.spacing['mobile-h'].base['margin-right']}} / 2;
+                margin-left:  {{properties.spacing['mobile-h'].base['margin-left']}} / 2;
+            }
+        {% endif %}
+        {% if properties.spacing['mobile-v'].base['margin-right'] and properties.spacing.tablet.base['margin-left'] %}
+            @media screen and (max-width: @const_media_mobile-v_max_width) {
+                margin-right: {{properties.spacing['mobile-v'].base['margin-right']}} / 2;
+                margin-left:  {{properties.spacing['mobile-v'].base['margin-left']}} / 2;
+            }
+        {% endif %}
+    }
+    &.moto-align-right .moto-widget-social-links-extended__item {
+        margin-right: 0;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    {{ StyleHelper.generateLessFromArray(properties.general.desktop, '.moto-widget-social-links-extended__link') }}
+
+    @media screen and (max-width: @const_media_tablet_max_width) {
+        {{ StyleHelper.generateLessFromArray(properties.general.tablet, '.moto-widget-social-links-extended__link') }}
+    }
+    @media screen and (max-width: @const_media_mobile-h_max_width) {
+        {{ StyleHelper.generateLessFromArray(properties.general['mobile-h'], '.moto-widget-social-links-extended__link') }}
+    }
+    @media screen and (max-width: @const_media_mobile-v_max_width) {
+        {{ StyleHelper.generateLessFromArray(properties.general['mobile-v'], '.moto-widget-social-links-extended__link') }}
+    }
+}

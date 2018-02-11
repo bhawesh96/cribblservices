@@ -1,0 +1,91 @@
+[
+    {
+        "name": "Body",
+        "class_name": "moto-background",
+        "is_system": "1",
+        "type": "background",
+        "properties": {
+            "desktop": {
+                "base": {
+                    "background-color": "@baseColor5_5"
+                }
+            },
+            "tablet": {
+                "base": [
+
+                ]
+            },
+            "mobile-h": {
+                "base": [
+
+                ]
+            },
+            "mobile-v": {
+                "base": [
+
+                ]
+            }
+        }
+    },
+    {
+        "name": "Background 1",
+        "class_name": "moto-background_1",
+        "is_system": "1",
+        "type": "background",
+        "properties": {
+            "desktop": {
+                "base": {
+                    "background-color": "@baseColor5_3",
+                    "background-size": "cover",
+                    "background-position": "top",
+                    "background-repeat": "no-repeat",
+                    "background-attachment": "fixed",
+                    "background-image": "2017\/09\/mt-1174-system-page-bg.jpg"
+                }
+            },
+            "tablet": {
+                "base": [
+
+                ]
+            },
+            "mobile-h": {
+                "base": [
+
+                ]
+            },
+            "mobile-v": {
+                "base": [
+
+                ]
+            }
+        }
+    },
+    {
+        "name": "Background 2",
+        "class_name": "moto-background_2",
+        "is_system": "1",
+        "type": "background",
+        "properties": {
+            "desktop": {
+                "base": {
+                    "background-color": "@baseColor1_3"
+                }
+            },
+            "tablet": {
+                "base": [
+
+                ]
+            },
+            "mobile-h": {
+                "base": [
+
+                ]
+            },
+            "mobile-v": {
+                "base": [
+
+                ]
+            }
+        }
+    }
+]

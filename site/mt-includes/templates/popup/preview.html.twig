@@ -1,0 +1,19 @@
+{%- extends 'base.html.twig' -%}
+
+{% block content %} {% autoescape false %}
+
+    <div class="mfp-bg"></div>
+    <div class="moto-popup mfp-wrap mfp-close-btn-in">
+        <div class="mfp-container">
+            <div class="mfp-content" style="width: {{ currentContentBlock.properties.width|default('600px') }}">
+                <div class="moto-popup_content">
+                    <section id="section-content" class="content moto-section" data-widget="section" data-container="section">
+                        {{ ContentHelper.RenderPageSection(currentContentBlock, 'popup') }}
+                    </section>
+                    <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endautoescape %} {% endblock %}

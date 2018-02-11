@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Filter; use Zend\Filter\Exception; class Base64Encode extends AbstractFilter { protected $_options = array(); public function filter($value) { $value = (string)$value; if (!is_string($value)) { throw new \Exception('BAD_PARAMS_TYPE'); } if (empty($value)) return $value; return base64_encode($value); } }

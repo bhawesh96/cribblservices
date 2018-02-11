@@ -1,0 +1,16 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-pinterest {{ currentWidget.getAlignClass() }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }}" data-widget="pinterest">
+    {% if isPreview %}
+        <div class="moto-widget-cover"></div>
+    {% endif %}
+    {% if (currentWidget.getBoardUrl() == '') %}
+        <div class="moto-widget-empty"></div>
+    {% else %}
+        {% if isPreview %}
+            <div style="min-height: {{ currentWidget.properties.board_height + 110 }}px;">
+                <a data-in-progress="{{ isServer }}" data-pin-do="embedBoard" href="{{ currentWidget.properties.url }}" data-pin-scale-width="{{ currentWidget.properties.img_width }}" data-pin-scale-height="{{ currentWidget.properties.board_height }}" data-pin-lang="{{ currentWidget.properties.lang }}"></a>
+            </div>
+        {% else %}
+            <a data-pin-do="embedBoard" href="{{ currentWidget.properties.url }}" data-pin-scale-width="{{ currentWidget.properties.img_width }}" data-pin-scale-height="{{ currentWidget.properties.board_height }}" data-pin-lang="{{ currentWidget.properties.lang }}"></a>
+        {% endif %}
+    {% endif %}
+</div>

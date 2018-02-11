@@ -1,0 +1,10 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-video moto-preset-{{ currentWidget.properties.preset }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getAnimationClasses() }}" data-widget="video" data-preset="{{ currentWidget.properties.preset }}" data-spacing="{{ currentWidget.getSpacing('short') }}">
+    {% if currentWidget.properties.uri.src %}
+        <div class="video-container">
+            <iframe class="video-frame" src="{{ currentWidget.properties.uri.src }}" frameborder="0" style="border: 0" allowfullscreen wmode="opaque"></iframe>
+            <div class="moto-widget-cover"></div>
+        </div>
+    {% else %}
+        <div class="moto-widget-empty"></div>
+    {% endif %}
+</div>

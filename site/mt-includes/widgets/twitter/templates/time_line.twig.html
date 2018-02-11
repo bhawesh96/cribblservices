@@ -1,0 +1,12 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-twitter_time_line moto-align-center {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }}" data-widget="twitter.time_line"{% if not isServer %} data-frontend-rendering{% endif %}>
+    {% if isPreview %}
+        <div class="moto-widget-cover"></div>
+    {% endif %}
+    {% if currentWidget.isValidTwitterSource() %}
+        <div class="moto-widget_wrapper">
+            <a class="twitter-timeline" data-chrome="{{ currentWidget.getTwitterChrome() }}"{% if currentWidget.getTwitterParam('sourceType', 'widget') == 'widget' %} data-widget-id="{{ currentWidget.getTwitterParam('widget_id') }}"{% else %} href="https://twitter.com/{{ currentWidget.getTwitterParam('screenName') }}"{% endif %} data-tweet-limit="{{ currentWidget.getTwitterParam('tweet_limit') }}" data-lang="{{ currentWidget.getTwitterParam('lang') }}"{% if currentWidget.getTwitterParam('theme') != 'transparent' %} data-theme="{{ currentWidget.getTwitterParam('theme') }}"{% endif %}>{{ currentWidget.properties.title }}</a>
+        </div>
+    {% else %}
+        <div class="moto-widget-empty"></div>
+    {% endif %}
+</div>

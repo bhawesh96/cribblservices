@@ -1,0 +1,130 @@
+{% import "macros/helper.html.twig" as ContentHelper %}
+<!DOCTYPE html>
+<html lang="{{ currentPage.getHtmlAttributeLangValue() }}" {% if not isPreview %}data-ng-app="website"{% endif %}>
+<head>
+    {{ renderHook('head.top') }}
+    {{ renderHook('website.head.top') }}
+    {% block head %}
+        <meta charset="utf-8">
+        <title>{% if WEBSITE.title_format %}{% filter page_html_content(page, '@head:title') %}{% include template_from_string(WEBSITE.title_format) %}{% endfilter %}{% else %}{{ currentPage.title }}{% endif %}</title>
+        {{ pageFavicon() }}
+        {% filter page_html_content(page, '@head:seo_meta_tags') %}
+            {% autoescape false %}
+                {{ currentPage.getSeoHtml() }}
+            {% endautoescape %}
+        {% endfilter %}
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% if WEBSITE.google_webmaster_tools_tag %}
+            <meta name="google-site-verification" content="{{ WEBSITE.google_webmaster_tools_tag|trim }}"/>
+        {% endif %}
+        {% if WEBSITE.yandex_webmaster_code %}
+            <meta name="yandex-verification" content="{{ WEBSITE.yandex_webmaster_code|trim }}"/>
+        {% endif %}
+    {% endblock %}
+
+    {% block css %}
+        <link rel="stylesheet" href="{{ getFileUrl('@systemIncludes/css/assets.min.css', true) }}"/>
+        <link rel="stylesheet" href="{{ getFileUrl('@currentTheme/css/styles.css') }}"/>
+        <style>{{ getFileContent('@userFontsFile') }}</style>
+        <link rel="stylesheet" href="{{ getFileUrl('@userStylesFile') }}" id="moto-website-style"/>
+        {% if isPreview %}
+            <link rel="stylesheet" href="{{ getFileUrl('@editorStyles/editor.min.css') }}" />
+        {% endif %}
+    {% endblock %}
+
+    {% if not isPreview %}
+
+    {% if WEBSITE.google_analytics_id %}
+        <script type="text/javascript" data-cfasync="false">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', '{{ WEBSITE.google_analytics_id|trim }}', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+    {% endif %}
+
+    {% if WEBSITE.yandex_metrica_counter.id %}
+        <script type="text/javascript" data-cfasync="false">
+            (function (d, w, c) {
+                (w[c] = w[c] || []).push(function () {
+                    try {
+                        w.yaCounter{{ WEBSITE.yandex_metrica_counter.id|trim }} = new Ya.Metrika({
+                            id: {{ WEBSITE.yandex_metrica_counter.id|trim }},
+                            clickmap: true,
+                            trackLinks: true,
+                            accurateTrackBounce: true
+                            {% if WEBSITE.yandex_metrica_counter.webvisor %},webvisor: true {% endif %}
+                            {% if WEBSITE.yandex_metrica_counter.track_hash %},trackHash: true {% endif %}});
+                    } catch (e) {
+                    }
+                });
+                var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () {
+                    n.parentNode.insertBefore(s, n);
+                };
+                s.type = "text/javascript";
+                s.async = true;
+                s.src = "https://mc.yandex.ru/metrika/watch.js";
+                if (w.opera == "[object Opera]") {
+                    d.addEventListener("DOMContentLoaded", f, false);
+                } else {
+                    f();
+                }
+            })(document, window, "yandex_metrika_callbacks");
+        </script>
+        <noscript>
+            <div><img src="https://mc.yandex.ru/watch/{{ WEBSITE.yandex_metrica_counter_id|trim }}" style="position:absolute; left:-9999px;" alt=""/></div>
+        </noscript>
+    {% endif %}
+
+    {% endif %}
+
+    {{ renderHook('website.head.bottom') }}
+    {{ renderHook('head.bottom') }}
+    {{ currentPage.getCodeInjection('header') | raw }}
+</head>
+<body class="{{ currentPage.getBackgroundClass('moto-background') }}{% if isPreview %} moto-preview moto-preview-overlay{% endif %}">
+    {{ renderHook('body.top') }}
+    {{ renderHook('website.body.top') }}
+    {% filter page_html_content(currentPage, '@body:content') %}
+        {% block content %}{% endblock %}
+    {% endfilter %}
+    {% if WEBSITE.back_to_top_button %}
+        {% include '@websiteWidgets/back_to_top/templates/base.html.twig' %}
+    {% endif %}
+    {% block js %}
+    <script src="{{ getFileUrl('@systemIncludes/js/website.assets.min.js') }}" type="text/javascript" data-cfasync="false"></script>
+    <script type="text/javascript" data-cfasync="false">
+        var websiteConfig = websiteConfig || {};
+        websiteConfig.address = '{{ WEBSITE.address }}';
+        websiteConfig.apiUrl = '{{ Linker.relativeUrl('@website/api.php') }}';
+        websiteConfig.preferredLocale = '{{ WEBSITE.language_locale }}';
+        websiteConfig.preferredLanguage = websiteConfig.preferredLocale.substring(0, 2);
+        {% if WEBSITE.back_to_top_button %}
+        websiteConfig.back_to_top_button = {{ WEBSITE.back_to_top_button|json_encode|raw }};
+        {% endif %}
+        websiteConfig.popup_preferences = {{ WEBSITE.popup_preferences|json_encode|raw }};
+        websiteConfig.lazy_loading = {{ WEBSITE.lazy_loading|json_encode|raw }};
+        angular.module('website.plugins', {{ renderHook('website.application.plugins', []) | json_encode | raw }});
+    </script>
+    <script src="{{ getFileUrl('@systemIncludes/js/website.min.js') }}" type="text/javascript" data-cfasync="false"></script>
+    {% if isPreview %}
+        <script src="{{ getFileUrl('@editorApplication/editor.min.js') }}" type="text/javascript" data-cfasync="false"></script>
+        <script type="text/javascript" data-cfasync="false">
+            var widgetCacheOptions = {};
+            try {
+                widgetCacheOptions = {{ getExportWidgetOptions(true) }};
+            } catch (e) {
+            }
+        </script>
+    {% endif %}
+    {% endblock %}
+    {{ renderHook('website.body.bottom') }}
+    {{ renderHook('body.bottom') }}
+    {{ currentPage.getCodeInjection('footer') | raw }}
+</body>
+</html>

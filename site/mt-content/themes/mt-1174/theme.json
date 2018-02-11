@@ -1,0 +1,33 @@
+{
+    "name": "mt-1173",
+    "label": "Merciful",
+    "version": "1.0",
+    "build": 1,
+    "features": {
+        "theme_spacings": 1,
+        "theme_widget_slider": 1,
+        "theme_widget_grid_gallery": 1,
+        "theme_back_to_top_button": 1,
+        "theme_widget_embed": 1,
+        "theme_widget_menu_levels": 3,
+        "theme_widget_carousel": 1,
+        "theme_widget_mail_chimp": 1,
+        "theme_presets": 1,
+        "theme_presets_divider_horizontal": 1,
+        "theme_presets_image": 1,
+        "theme_presets_button": 1,
+        "theme_presets_social_links": 1,
+        "theme_presets_grid_gallery": 1,
+        "theme_presets_slider": 1,
+        "theme_presets_contact_form": 1,
+        "theme_presets_menu": 1,
+        "theme_grid_fixed_row_width": 1,
+        "theme_widget_contact_form_attachment": 1,
+        "theme_content_blog": 1,
+        "theme_widget_grid_gallery__html_caption" : 1,
+        "theme_widget_slider__html_caption": 1,
+        "theme_widget_block": 1
+    },
+    "template_id": 65474,
+    "engine": "LandingBuilder"
+}

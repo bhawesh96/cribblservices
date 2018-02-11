@@ -1,0 +1,26 @@
+<header id="header" class="header">
+    <a href="./" class="logo"><img class="brand-logo brand-logo__small" ng-src="{{ $motoBrand.getMediaUrl('logo_small.png') }}"/></a>
+    <moto-ui-menu data-menu-name="main_menu" data-template-name="horizontal"></moto-ui-menu>
+    <div class="header-profile">
+        <moto-tutorial-button></moto-tutorial-button>
+        <a href="../" target="_blank" class="view-site"><span class="icon" data-uk-tooltip="{pos: 'bottom-right', animation: true, cls: 'general-tip'}" title="{{ 'COMMON.BUTTON.VIEW_SITE' | translate }}"></span>{{ 'COMMON.BUTTON.VIEW_SITE' | translate }}</a>
+        <a ng-show="$motoFeatures.isEnabled('cp_help_center')" href class="help" data-uk-tooltip="{pos: 'bottom-right', animation: true, cls: 'middle-tip'}" title="{{ 'COMMON.TOOLTIP.HELP_CENTER_LINK' | translate }}"></a>
+        <a ng-if="$motoFeatures.isEnabled('cp_support_feedback') && !isDemoMode" href class="btn btn-sm btn-primary feedback" ng-click="showFeedBackForm()"><span class="icon fa fa-comment"></span>{{ 'COMMON.FEEDBACK.TITLE' | translate }}</a>
+        <a ng-if="$motoFeatures.isEnabled('cp_support_feedback') && !isDemoMode" href class="feedback-icon fa fa-comment" ng-click="showFeedBackForm()" data-uk-tooltip="{pos: 'bottom-right', animation: true, cls: 'general-tip'}" title="{{ 'COMMON.FEEDBACK.TITLE' | translate }}"></a>
+        <div class="profile-block" ng-click="showProfileList()" ng-mouseleave="hideProfileList()">
+            <a href="" class="profile">{{ username }}<span class="icon"></span></a>
+            <ul class="profile-list js-profile-list">
+                <li class="profile-item">
+                    <a href="" class="link profile-link" ui-sref="app.profile"><span class="icon"></span>{{ 'COMMON.BUTTON.PROFILE' | translate }}</a>
+                </li>
+                <li class="profile-item">
+                    <a href="" class="link logout-link" ui-sref="app.logout"><span class="icon"></span>{{ 'COMMON.BUTTON.LOGOUT' | translate }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<moto-updates-available-panel></moto-updates-available-panel>
+
+<moto-upload-files-process></moto-upload-files-process>

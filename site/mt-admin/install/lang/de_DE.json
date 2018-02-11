@@ -1,0 +1,93 @@
+{
+    "MODULE": {
+        "INSTALL": {
+            "COMMON": {
+                "ERROR_PAGE_HEADING": "Fehler",
+                "PASSWORD_LABEL": "Passwort"
+            },
+            "SET_LANGUAGE_LABEL": "Sprache festlegen",
+            "SERVER_TEST": {
+                "TESTING_PAGE_HEADING": "Test des Servers",
+                "TESTING_DESCRIPTION": "Der Kompatibilitätstest des Servers wird dutchgeführt. Warten Sie, bitte.",
+                "SUCCESS_PAGE_HEADING": "Ihr Server entspricht den empfohlenen Systemanforderungen",
+                "SUCCESS_DESCRIPTION": "Klicken Sie auf den Button unten um die Installation anzufangen",
+                "BEGIN_INSTALL_BUTTON": "Installation anfangen",
+                "LICENSE_AGREEMENT_TEXT": "Wenn Sie die Vorlage installieren, bestätigen Sie, dass Sie mit unserer <a href='http://www.motocms.com/de/terms/' target='_blank'>Nutzungsvereinbarung</a> und <a href='http://www.motocms.com/de/privacy/' target='_blank'>Datenschutzrichtlinie</a> einverstanden sind."
+            },
+            "SETUP_DATABASE": {
+                "PAGE_HEADING": "Datenbankanpassung",
+                "PAGE_DESCRIPTION": "Für die Verbindung mit MySQL auf dem Server",
+                "HOSTNAME_LABEL": "Hostname",
+                "HOSTNAME_TOOLTIP": "<b class='tooltip-title'>Hostname</b><br/>In diesem Feld muss man die Informationen des Domain Namens eingebeben. Wenn Sie sich nicht sicher sind, dass diese Informationen richtig sind, wenden Sie sich an Ihren Hosting-Anbieter und bitten Sie ihn richtige Daten an Sie zu schicken.",
+                "USERNAME_LABEL": "Benutzername",
+                "USERNAME_TOOLTIP": "<b class='tooltip-title'>Benutzername</b><br/>Ein Benutzername ist ein Login für die Datenbank. Wenn Sie sich nicht sicher sind, dass diese Informationen richtig sind, wenden Sie sich an Ihren Hosting-Anbieter und bitten Sie ihn richtige Daten an Sie zu schicken.",
+                "DATABASE_LABEL": "Datenbankname",
+                "DATABASE_TOOLTIP": "<b class='tooltip-title'>Datenbank Name</b><br/>Jeder Datenbankname ist einzigartig. Wenn Sie sich nicht sicher sind, dass diese Informationen richtig sind, wenden Sie sich an Ihren Hosting-Anbieter und bitten Sie ihn richtige Daten an Sie zu schicken.",
+                "PASSWORD_TOOLTIP": "<b class='tooltip-title'>Passwort</b><br/>Ihr Passwort für die Datenbank. Wenn Sie sich nicht sicher sind, dass diese Informationen richtig sind, wenden Sie sich an Ihren Hosting-Anbieter und bitten Sie ihn richtige Daten an Sie zu schicken.",
+                "TABLE_PREFIX_LABEL": "Tabellenpräfix",
+                "TABLE_PREFIX_TOOLTIP": "<b class='tooltip-title'>Tabellenpräfix</b><br/>Es ist kein Pflichtfeld. Standardmäßig ist der Tabellenpräfix - moto_. Das Feld ermöglicht es Ihnen, einen Tabellenpräfix mit der Vorlage zu verbinden."
+            },
+            "SETUP_USER": {
+                "PAGE_HEADING": "Benutzeranpassung",
+                "PAGE_DESCRIPTION": "Es ist ein Administrator für diese Installation",
+                "NAME_LABEL": "Name",
+                "EMAIL_LABEL": "E-mail-Adresse",
+                "PASSWORD_CONFIRMATION_LABEL": "Passwort wiederholen:"
+            },
+            "INSTALLATION": {
+                "PAGE_HEADING": "Installation",
+                "PAGE_DESCRIPTION": "Alles ist fertig um Moto3 zu installieren. Klicken Sie den Button unten um zu starten.<br/>Man braucht ein bisschen Zeit dafür.",
+                "INSTALL_NOW_BUTTON": "Jetzt installieren",
+                "COMMON_ERROR_MESSAGE": "Installation wird wegen des Fehlers unterbrochen",
+                "PROCESS_PAGE_HEADING": "Installation...",
+                "PROCESS_PAGE_DESCRIPTION": "Moto3 wird installiert. Warten Sie, bitte.",
+                "COMPLETE_PAGE_HEADING": "Installation wurde abgeschlossen",
+                "COMPLETE_PAGE_DESCRIPTION": "Die Installation wurde erfolgreich abgeschlossen. klicken Sie den Button unten um Moto3 zu bearbeiten.",
+                "START_WORK_BUTTON": "Starten"
+            },
+            "RETRIEVE_PRODUCT_INFO": {
+                "PAGE_HEADING": "Loggen Sie sich bitte in Ihr MotoCMS Profil ein und wählen Sie das zu installierende Produkt aus."
+            },
+            "ERROR_MESSAGE": {
+                "BROKEN_RESPONSE": "Ungültige Antwort vom Server",
+                "FILE_WRITABLE": "Die Datei <strong>{{ name }}</strong> kann man nicht überschreiben. Überzeugen Sie sich, dass Sie richtige Zugriffsrechte für folgende Datei festgelegt haben.",
+                "FOLDER_WRITABLE": "Der Ordner <strong>{{ name }}</strong> kann man nicht überschreiben. Überzeugen Sie sich, dass Sie richtige Zugriffsrechte für folgenden Ordner festgelegt haben.",
+                "FILE_READABLE": "Die Datei <strong>{{ name }}</strong> kann man nicht lesen. Überzeugen Sie sich, dass Sie richtige Zugriffsrechte für folgende Datei festgelegt haben.",
+                "FOLDER_READABLE": "Der Ordner <strong>{{ name }}</strong> kann man nicht lesen. Überzeugen Sie sich, dass Sie richtige Zugriffsrechte für folgenden Ordner festgelegt haben.",
+                "PHP_VERSION": "Aktuelle PHP Version wird nicht unterstützt. Die Anforderungen für unsere Vorlagen sind folgende: PHP version 5.4+, 5.5+ or 5.6+.",
+                "PHP_FUNCTION_NOT_EXISTS": "PHP Funktion {{ function }} existiert nicht.",
+                "PHP_EXTENSION_LOADED": "PHP Erweiterung <strong>{{ extension }}</strong> ist inaktiv. Überprüfen Sie Ihre Serverkonfiguration. Überzeugen Sie sich, dass die Erweiterung <strong>{{ extension }}</strong> ist aktiv.",
+                "PHP_SESSION_CREATE": "Server kann die Session nicht starten. Überprüfen Sie, bitte, dass Ihr Server Sessions erstellt hat.",
+                "PHP_SAFE_MODE": "PHP Safe Mode ist aktiv auf Ihrem Server. PHP Safe Mode muss inaktiv sein, so kann unsere Software korrekt funktionieren. PHP Safe Mode kann man im Hosting Control Panel oder bei der Anpassung der Datei php.ini deaktivieren.",
+                "MAIL_FUNCTION": "Mail Funktion fuktioniert auf Ihrem Server nicht.",
+                "PHP_UPLOAD_ENABLED": "Man darf Dateien nicht hochladen.",
+                "PHP_UPLOAD_FILE_SIZE": "Maximale Größe der geladenen Dateien ist {{ upload_max_size }}, aber {{ min }} muss sein.",
+                "ALREADY_INSTALLED": "Moto3 wurde schon installiert",
+                "THEME_NOT_ACTIVATED": "Fehler bei der Aktivierung des Themes.<br/>Nehmen Sie den Kontakt mit unserem Kundendienst auf, indem Sie diesem <a href=\"http://support.cms-guide.com/hc/{{'CURRENT_LANGUAGE'|translate}}/requests/new\" target=\"_blank\">Link</a> folgen, um dieses Problem zu lösen.",
+                "EXTRA_CONTENT_NOT_INSTALLED": "Fehler bei der Installation des zusätzliches Inhalts.<br/>Nehmen Sie den Kontakt mit unserem Kundendienst auf, indem Sie diesem <a href=\"http://support.cms-guide.com/hc/{{'CURRENT_LANGUAGE'|translate}}/requests/new\" target=\"_blank\">Link</a> folgen, um dieses Problem zu lösen.",
+                "DATABASE": {
+                    "DATA_ALREADY_EXISTS": "Daten wurden schon installiert.",
+                    "IMPORT_STRUCTURE": "Fehler beim Import der Datenbankstruktur.",
+                    "IMPORT_DATA": "Fehler beim Datenimport.",
+                    "CONNECT": "Datenbank Verbindungsfehler."
+                },
+                "NAMESPACES": {
+                    "DATABASE": "Fehler in den Datenbankeinstellungen.",
+                    "ADMIN": "Fehler in den Benutzereinstellungen.",
+                    "LANGUAGE": "Falsche Sprache wurde ausgewählt.",
+                    "WEBSITE.ADDRESS": "Fehler im Namen der Website."
+                },
+                "KEYS": {
+                    "EMAIL": "E-Mail-Adresse.",
+                    "NAME": "Benutzername.",
+                    "PASSWORD": "Passwort.",
+                    "PASSWORD_CONFIRM": "Passwort.",
+                    "DATABASE": "Datenbankname.",
+                    "HOSTNAME": "Hostname.",
+                    "PREFIX": "Präfix.",
+                    "USERNAME": "Benutzername der Datenbank."
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{% macro printStyle(styles) %}
+    {% for key,value in styles %}
+        {% if key == 'before' %}
+            &:before {
+            {{ _self.printStyle(styles[key]) }}
+            }
+        {% elseif key == 'after' %}
+            &:after {
+            {{ _self.printStyle(styles[key]) }}
+            }
+        {% elseif value != '' %}
+            {{ key }}: {{ value|raw }};
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+{% set properties = item.properties|json_decode %}
+
+{{ StyleHelper.generatePresetSelector('.moto-widget-button', item.class_name) }} {
+    .moto-widget-button-link {
+        {{ _self.printStyle(properties.button.desktop.base) }}
+        &:hover {
+            {{ _self.printStyle(properties.button.desktop.hover) }}
+            .moto-widget-button-label {
+                {{ _self.printStyle(properties.link.desktop.hover) }}
+            }
+			.moto-widget-theme-icon {
+				&:before {
+                    {{ _self.printStyle(properties.icon.desktop.hover.before) }}
+				}
+			}
+        }
+        .moto-widget-button-label {
+            {{ _self.printStyle(properties.link.desktop.base) }}
+        }
+		.moto-widget-theme-icon {
+			&:before {
+                {{ _self.printStyle(properties.icon.desktop.base.before) }}
+			}
+		}
+    }
+}

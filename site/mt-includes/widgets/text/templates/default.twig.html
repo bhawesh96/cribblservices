@@ -1,0 +1,3 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-text moto-preset-default {% if currentWidget.properties.content == '' %}moto-widget-text_blank{% endif %} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getAnimationClasses() }}" data-widget="text" data-preset="default" data-spacing="{{ currentWidget.getSpacing('short') }}" data-animation="{{ currentWidget.properties.animation }}">
+    <div class="moto-widget-text-content moto-widget-text-editable">{% filter page_html_content(currentWidget, 'widget:text.content') %}{% include template_from_string(currentWidget.properties.content) %}{% endfilter %}</div>
+</div>

@@ -1,0 +1,26 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-social-buttons moto-preset-default {{ currentWidget.getAlignClass() }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }}" data-widget="social_buttons" data-preset="{{ currentWidget.properties.preset }}" data-spacing="{{ currentWidget.getSpacing('short') }}">
+    {% if isPreview %}
+        {% set count = 0 %}
+        <ul class="social-buttons-list">
+            {% for button in currentWidget.properties.buttons %}
+                {% if button.enabled %}
+                    <li class="social-button {{ button.name }}"></li>
+                    {% set count = count + 1 %}
+                {% endif %}
+            {% endfor %}
+        </ul>
+        {% if count == 0 %}
+            <div class="moto-widget-empty"></div>
+        {% endif %}
+        {{ currentWidget.setCurrentPage(currentPage) }}
+    {% else %}
+        {{ currentWidget.setCurrentPage(currentPage) }}
+        <ul class="social-buttons-list">
+            {% for button in currentWidget.properties.buttons %}
+                {% if button.enabled %}
+                    <li class="social-button" data-name="{{ button.name }}" data-provider="{{ button.provider }}">{{ currentWidget.getSocialButtonTemplate(button.name, button.provider) | raw }}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+</div>

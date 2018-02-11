@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Application\Roles; use Moto; class Service extends Moto\Service\AbstractStaticService { protected static $_resourceName = 'roles'; protected static $_resourcePrivilegesMap = array( 'getList' => 'get', ); public static function getList($request = null) { $table = new RolesTable(); $items = $table->getList(); if (!$items) { throw new Moto\Json\Server\Exception(Moto\System\Exception::ERROR_NOT_FOUND_MESSAGE, Moto\System\Exception::ERROR_NOT_FOUND_CODE); } $result = new Moto\Json\Response\Collection($items); return $result; } }

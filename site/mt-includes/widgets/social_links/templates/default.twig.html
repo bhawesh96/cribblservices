@@ -1,0 +1,27 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-social-links moto-preset-{{ currentWidget.properties.preset }} {{ currentWidget.getAlignClass() }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }} {{ currentWidget.getAnimationClasses() }}" data-widget="social_links" data-preset="{{ currentWidget.properties.preset }}">
+    {% set count = 0 %}
+    <ul class="moto-widget-social-links-list">
+        {% if currentWidget.properties.links[0] %}
+            {% for link in currentWidget.properties.links %}
+                {% if link.url %}
+                    <li class="moto-widget-social-links-item">
+                        <a href="{{ link.url }}" class="moto-widget-social-links-link moto-widget-social-links-link_{{ link.provider }}" data-provider="{{ link.provider }}" target="_blank"></a>
+                    </li>
+                {% set count = count + 1 %}
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            {% for provider, link in currentWidget.properties.links %}
+                {% if link.url %}
+                    <li class="moto-widget-social-links-item">
+                        <a href="{{ link.url }}" class="moto-widget-social-links-link moto-widget-social-links-link_{{ link.provider }}" data-provider="{{ link.provider }}" target="_blank"></a>
+                    </li>
+                    {% set count = count + 1 %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </ul>
+    {% if count == 0 %}
+        <div class="moto-widget-empty"></div>
+    {% endif %}
+</div>

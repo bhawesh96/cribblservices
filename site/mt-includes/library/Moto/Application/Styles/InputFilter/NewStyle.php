@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Application\Styles\InputFilter; use Moto\Application\Styles; use Traversable; use Zend\InputFilter\Exception; use Zend\InputFilter\InputFilterInterface; use Zend\InputFilter; class NewStyle extends SaveStyle { protected $_name = 'styles.new'; public function init() { parent::init(); $this->remove('id'); } }

@@ -1,0 +1,39 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-blog-recent_posts moto-preset-default {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }}" data-widget="blog.recent_posts">
+    {% if isPreview %}<div class="moto-widget-cover"></div>{% endif %}
+    {% if currentWidget.posts.meta.total > 0 %}
+        <div class="moto-widget-blog-recent_posts-title">
+            <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-preset="default" data-spacing="aasa">
+                <div class="moto-widget-text-content moto-widget-text-editable">
+                    <p class="{{ currentWidget.getDesignOption('heading.font_style', 'moto-text_system_7') }}">{{ currentWidget.properties.label|default('Recent Posts') }}</p>
+                </div>
+            </div>
+        </div>
+        <ul class="moto-widget-blog-recent_posts-list">
+            {% for post in currentWidget.posts.records %}
+                <li class="moto-widget-blog-recent_posts-item">
+                    {% if post.properties.feature_media.src and post.properties.feature_media.type == 'image' %}
+                        {% set featureImagePreset = currentWidget.getDesignOption('feature_image.preset', 'default') %}
+                        <div class="moto-widget-blog-recent_posts-item-preview">
+                            <div class="moto-widget moto-widget-image moto-preset-{{ featureImagePreset }} moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-preset="{{ featureImagePreset }}" data-spacing="sasa">
+                                <a href="{% if isPreview %}#{% else %}{{ post.getFullUrl() }}{% endif %}" class="moto-widget-image-link moto-link">
+                                    <img src="{{ Linker.img(post.properties.feature_media.src) }}"{% if post.properties.feature_media.alt %} alt="{{ post.properties.feature_media.alt }}"{% endif %}{% if post.properties.feature_media.title %} title="{{ post.properties.feature_media.title }}"{% endif %} class="moto-widget-image-picture">
+                                </a>
+                            </div>
+                        </div>
+                    {% endif %}
+                    <div class="moto-widget-blog-recent_posts-item-title">
+                        <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-preset="default" data-spacing="aasa">
+                            <div class="moto-widget-text-content moto-widget-text-editable">
+                                <h2 class="blog-post-title {{ currentWidget.getDesignOption('title.font_style', 'moto-text_system_9') }}">
+                                    <a href="{% if isPreview %}#{% else %}{{ post.getFullUrl() }}{% endif %}">{{ post.name }}</a>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        {% if isPreview %}<div class="moto-widget-empty"></div>{% endif %}
+    {% endif %}
+</div>

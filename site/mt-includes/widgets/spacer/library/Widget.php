@@ -1,0 +1,2 @@
+<?php
+namespace Website\Widgets\Spacer; use Moto; class Widget extends Moto\System\Widgets\AbstractWidget { protected $_name = 'spacer'; protected static $_defaultProperties = array( 'preset' => 'default', 'height' => '30px', 'spacing' => array( 'top' => 'auto', 'right' => 'auto', 'bottom' => 'auto', 'left' => 'auto', ), 'visible_on' => 'mobile-v', ); protected $_templateType = 'templates'; protected $_widgetId = true; } 

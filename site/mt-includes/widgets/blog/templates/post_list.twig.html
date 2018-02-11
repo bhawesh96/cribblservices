@@ -1,0 +1,94 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-blog-post_list moto-preset-default {{ currentWidget.getSpacing('classes') }}" data-widget="blog.post_list">
+    {% if isPreview %}
+        <div class="moto-widget-cover"></div>
+    {% endif %}
+    {% if currentWidget.paginator.getTotalItemCount > 0 %}
+        <ul class="moto-blog-posts-list">
+            {% for post in currentWidget.paginator %}
+                <li class="moto-blog-posts-list-item">
+                    <article>
+                        <div class="moto-widget moto-widget-row" data-widget="row">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="moto-cell col-sm-12" data-container="container">
+                                        <div class="moto-widget moto-widget-text moto-preset-default moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto" data-preset="default">
+                                            <div class="moto-widget-text-content moto-widget-text-editable">
+                                                <h2 class="{{ currentWidget.getDesignOption("title.font_style", "moto-text_system_7") }}"><a href="{{ post.getFullUrl() }}">{{ post.name }}</a></h2>
+                                            </div>
+                                        </div>
+                                        <div class="moto-widget moto-widget-row" data-widget="row">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="moto-cell col-sm-12" data-container="container">
+                                                        {{ widget("blog.post_published_on", {"font_style": currentWidget.getDesignOption("meta.font_style", "moto-text_system_11"), "spacing": {"top": "auto", "right": "auto", "bottom": "small", "left": "auto"}}, {"currentPage": post}) }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% if post.properties.feature_media.src and post.properties.feature_media.type == 'image' %}
+                                            {{ widget("image",{"src": post.properties.feature_media.src, "alt": post.properties.feature_media.alt, "title": post.properties.feature_media.title, "preset": currentWidget.getDesignOption("feature_image.preset", "default"), "link": {"action": "blog.post", "properties": {"id": post.id, "anchor": ""}}, "animation": "", "align": {"desktop": "", "tablet": "", "mobile-v": "", "mobile-h": ""}, "spacing": {"top": "auto", "right": "auto", "bottom": "small", "left": "auto"}}) }}
+                                        {% endif %}
+                                        <div class="moto-blog-post-content moto-widget-text moto-preset-default moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto">
+                                            {% filter page_html_content(post, post.type + ':short_description') %}
+                                                {% include template_from_string(post.short_description) %}
+                                            {% endfilter %}
+                                        </div>
+                                        {{ widget("button", {"link": {"action": "blog.post", "properties":{"id": post.id, "anchor": ""}}, "label": currentWidget.properties.read_more_label|default('Read More'), "preset": currentWidget.getDesignOption("button.preset", "5"), "size": currentWidget.getDesignOption("button.size", "medium"), "align": {"desktop": "left", "tablet": "", "mobile-v": "", "mobile-h":""}, "animation": "", "spacing":{"top": "auto", "right": "auto", "bottom": "small", "left": "auto"}}) }}
+                                        <div class="moto-widget moto-widget-divider moto-preset-{{ currentWidget.getDesignOption("divider.preset", "default") }} moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto moto-align-center" data-divider-type="horizontal" data-preset="{{ currentWidget.getDesignOption("divider.preset", "default") }}">
+                                            <hr class="moto-widget-divider-line">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+            {% endfor %}
+        </ul>
+        {% if currentWidget.pager.pageCount > 1 %}
+            <div class="moto-widget moto-widget-pagination moto-preset-default clearfix moto-spacing-top-small moto-spacing-bottom-small">
+                {% if currentWidget.pager.first != currentWidget.pager.current %}
+                    <ul class="moto-pagination-group moto-pagination-group-controls moto-pagination-group_left">
+                        <li class="moto-pagination-item moto-pagination-item-control moto-pagination-item-control_first">
+                            <a href="{{ currentPage.getFullUrl() }}" class="moto-pagination-link"><i class="moto-pagination-link-icon moto-pagination-link-text fa fa-angle-double-left"></i></a>
+                        </li>
+                        <li class="moto-pagination-item moto-pagination-item-control moto-pagination-item-control_previous">
+                            {% if currentWidget.pager.first != currentWidget.pager.previous %}
+                                <a href="{{ currentPage.getFullUrl({ page: currentWidget.pager.previous }) }}" class="moto-pagination-link"><i class="moto-pagination-link-icon moto-pagination-link-text fa fa-angle-left"></i></a>
+                            {% else %}
+                                <a href="{{ currentPage.getFullUrl() }}" class="moto-pagination-link"><i class="moto-pagination-link-icon moto-pagination-link-text fa fa-angle-left"></i></a>
+                            {% endif %}
+                        </li>
+                    </ul>
+                {% endif %}
+                <ul class="moto-pagination-group moto-pagination-group_pages">
+                    {% for i in currentWidget.pager.pagesInRange %}
+                        <li class="moto-pagination-item moto-pagination-item-page">
+                            {% if i == currentWidget.pager.current %}
+                                <span class="moto-pagination-link moto-pagination-link_active"><span class="moto-pagination-link-text">{{ i }}</span></span>
+                            {% else %}
+                                {% if i == 1 %}
+                                    <a href="{{ currentPage.getFullUrl() }}" class="moto-pagination-link"><span class="moto-pagination-link-text">{{ i }}</span></a>
+                                {% else %}
+                                    <a href="{{ currentPage.getFullUrl({ page:i }) }}" class="moto-pagination-link"><span class="moto-pagination-link-text">{{ i }}</span></a>
+                                {% endif %}
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+                {% if currentWidget.pager.last != currentWidget.pager.current %}
+                    <ul class="moto-pagination-group moto-pagination-group-controls moto-pagination-group_right">
+                        <li class="moto-pagination-item moto-pagination-item-control moto-pagination-item-control_next">
+                            <a href="{{ currentPage.getFullUrl({ page: currentWidget.pager.next }) }}" class="moto-pagination-link"><i class="moto-pagination-link-icon moto-pagination-link-text fa fa-angle-right"></i></a>
+                        </li>
+                        <li class="moto-pagination-item moto-pagination-item-control moto-pagination-item-control_last">
+                            <a href="{{ currentPage.getFullUrl({ page: currentWidget.pager.last }) }}" class="moto-pagination-link"><i class="moto-pagination-link-icon moto-pagination-link-text fa fa-angle-double-right"></i></a>
+                        </li>
+                    </ul>
+                {% endif %}
+            </div>
+        {% endif %}
+    {% elseif isPreview %}
+        <div class="moto-widget-empty"></div>
+    {% endif %}
+</div>

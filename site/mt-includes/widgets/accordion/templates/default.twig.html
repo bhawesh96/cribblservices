@@ -1,0 +1,12 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-accordion moto-preset-{{ currentWidget.properties.preset }} {{ currentWidget.getAlignClass() }} {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }} {{ currentWidget.getAnimationClasses() }} moto-disabling_row-fixed row-gutter-0" data-widget="accordion" data-preset="{{ currentWidget.properties.preset }}" {% if currentWidget.properties.closeOthers %} data-close-others{% endif %}>
+    <div class="moto-widget-accordion__wrapper">
+        {% for item in currentWidget.children %}
+            {% if isServer %}
+                {{ widget(item) }}
+            {% else %}
+                {% widget item %}{% endWidget %}
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% if isPreview %}<div class="moto-widget-empty"></div>{% endif %}
+</div>

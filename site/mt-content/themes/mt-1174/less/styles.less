@@ -1,0 +1,1056 @@
+/* $1. Lists */
+/* ------------------------------ */
+
+/* --- general styles for lists --- */
+.moto-widget-text {
+    a { transition: .3s; }
+    li { 
+        position: relative;
+        &:before {
+            position: absolute;
+            content: '';
+            transition: .3s;
+            left: 0;
+            top: 50%;
+            .transform(0 , -50%);
+        }
+     }
+
+    ul {
+        li {
+            padding: 0 0 0 21px;
+            &:not(:last-child) { margin-bottom: 12px; }
+            &:before {
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background: @baseColor1_3;
+            }
+        }
+    }
+
+    ol {
+        counter-reset: moto-counter;
+        li {
+            padding-left: 32px;
+            &:not(:last-child) { margin: 0 0 12px; }
+            &:before {
+                font: 16px/1 'Open Sans';    
+                color: @baseColor2_3;
+                content: counter(moto-counter,decimal-leading-zero) ".";
+                counter-increment: moto-counter;
+            }
+        }
+    }
+}
+
+/* $2. Menus */
+/* ------------------------------ */
+
+/* --- general styles for menu presets --- */
+.moto-widget-menu {
+    .moto-widget-menu-toggle-btn {
+        width: 40px;
+        height: 40px;
+        padding: 0 8px;
+        .moto-widget-menu-toggle-btn-icon {
+            font-size: 24px;
+            line-height: 40px;
+        }
+    }
+    .moto-widget-menu-list {
+        display: inline-block;
+        @media screen and (max-width: @const_media_mobile-h_max_width) { display: none; }
+        > .moto-widget-menu-item {
+            &:not(:first-child) { margin-left: 10px; }
+            > .moto-widget-menu-link {
+                position: relative;
+                display: block;
+                font-size: 14px;
+                line-height: 1.25;
+                transition: .3s;
+                @media screen and (max-width: @const_media_tablet_max_width) { font-size: 13px; }
+            }
+        }
+
+        .moto-widget-menu-sublist {  
+            top: calc(~'100% + 10px');
+            left: -10px;
+            min-width: 134px;
+            padding: 4px 0;
+            transition: .3s;
+            //@media screen and (max-width: @const_media_tablet_max_width) { min-width: 130px; }
+            &:before {
+                position: absolute;
+                top: -11px;
+                height: 11px;
+                left: 0;
+                width: 100%;
+                content: "";
+            }
+            .moto-widget-menu-item {
+                .moto-widget-menu-link {
+                    font-size: 12px;
+                    padding: 5px 10px;
+                    transition: .3s;
+                    text-align: left;
+                }
+            }   
+            /* --- 3rd Level --- */
+            .moto-widget-menu-sublist {
+                left: calc(~'100% + 1px')!important;
+                top: -4px;
+                &:before {
+                    top: 0;
+                    left: -2px;
+                    width: 2px;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    /* --- Menu default preset --- */
+    &.moto-preset-default {
+        .moto-widget-menu-list {
+            >.moto-widget-menu-item {
+                 &:not(:first-child) {
+                    margin-left: 41px;
+                    @media screen and (max-width: @const_media_tablet_max_width) { margin-left: 12px; }
+                }
+                >.moto-widget-menu-link {}
+            }
+        }
+    }
+
+    /* --- Menu 2 preset --- */
+    &.moto-preset-2 {
+        .moto-widget-menu-list {
+            >.moto-widget-menu-item {
+                >.moto-widget-menu-link { 
+                    padding: 12px 20px;
+                    border:none;
+                    @media screen and (max-width: @const_media_tablet_max_width) { padding: 6px 10px; }
+                    &:before {
+                        position: absolute;
+                        content: '';
+                        top: 0;
+                        left: 0;
+                        width: 0;
+                        right: 0;
+                        margin: 0 auto;
+                        border-width: 2px 0 0;
+                        border-style: solid;
+                        border-color: inherit;                
+                        transition: .4s ease;
+                    }
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        border-width: 0 0 2px;
+                        border-style: solid;
+                        border-color: inherit;
+                        transition: .4s ease;
+                        height: 0;
+                    }
+
+                    &:hover:before { width: 100%; }
+                    &:hover:after {
+                        height: 100%;
+                        border-width: 0 2px 2px 2px;
+                    }
+                    @media screen and (max-width: @const_media_tablet_max_width) { padding: 10px 8px; }
+                    &-active {
+                        &:before { width: 100%; }
+                        &:after {
+                            height: 100%;
+                            border-width: 0 2px 2px 2px;
+                        }
+                    }  
+                }
+            }
+            .moto-widget-menu-sublist { box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.3); }
+        }
+    }
+
+    /* --- Menu 3 preset --- */
+    &.moto-preset-3 {
+        .moto-widget-menu-list {
+            >.moto-widget-menu-item {
+               >.moto-widget-menu-link {    
+                    padding: 5px 15px;
+                    .moto-widget-menu-link-arrow {
+                        position: relative;
+                        font-size: 12px;
+                        transition: .3s;
+                        margin-left: 3px;
+                        line-height: 16px;
+                        &:before { content: "\f107"; }
+                    }
+                }
+            }
+            .moto-widget-menu-sublist {
+                .moto-widget-menu-item {
+                    .moto-widget-menu-link {}
+                    &:not(:last-child) {
+                        .moto-widget-menu-link {
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                left: 10px;
+                                right: 10px;
+                                bottom: 0;
+                                margin: 0 auto;
+                                width: auto;
+                                height: 1px;
+                            }
+                        }                    
+                    }
+                }
+                .moto-widget-menu-sublist {
+                    .moto-widget-menu-item { &:last-child { .moto-widget-menu-link { &:after { display: none; } } } }
+                }
+            }
+        }
+    }
+    /* --- General mobile menu styles --- */
+        &.moto-widget-menu-mobile-open {
+        @media screen and (max-width: @const_media_mobile-h_max_width) {
+            .moto-widget-menu-list {
+                border: 1px solid;
+                .moto-widget-menu-item {
+                    border: none;
+                    margin: 0!important;
+                    padding: 0;
+                    &:after, 
+                    &:before { display: none; }
+                    &:not(:last-child) { border-bottom: 1px solid; }
+                    .moto-widget-menu-link {
+                        padding: 10px 50px 10px 20px;
+                        font-size: 18px;
+                        line-height: 1.2;
+                        text-align: left;
+                        border: none;
+                        border-radius: 0;
+                        &:after,
+                        &:before { display: none; }
+                        .moto-widget-menu-link-arrow {
+                            display: block;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            text-align: center;
+                            width: 50px;
+                            height: 100%;
+                            transition: .3s;
+                            font-size: 18px;
+                            &:after {
+                                content: "\f107";
+                                display: -webkit-box;
+                                display: -webkit-flex;
+                                display: flex;
+                                -webkit-box-pack: center;
+                                -webkit-justify-content: center;
+                                justify-content: center;
+                                -webkit-box-align: center;
+                                -webkit-align-items: center;
+                                align-items: center;
+                                height: 100%;
+                            }
+                            &:before {display: none;}
+                        }
+                    }
+                    .moto-widget-menu-sublist {
+                        width: 100%;
+                        padding: 0;
+                        border: none;
+                        box-shadow: none;
+                        border-radius: 0;
+                        -webkit-transform: none;
+                        -moz-transform: none;
+                        transform: none;
+                        &:before,
+                        &:after { content: none; }
+                        .moto-widget-menu-item {
+                            width: 100%;
+                            border-bottom: none;
+                            .moto-widget-menu-link {
+                                padding: 7px 40px;
+                                font-size: 14px;
+                                margin: 0;
+                                border: none;
+                                text-align: left;
+                                .moto-widget-menu-link-arrow {
+                                    right: 0;
+                                    top: 50%;
+                                    font-size: 18px;
+                                    transform: translateY(-50%);
+                                    -webkit-transform: translateY(-50%);
+                                    color: inherit!important;
+                                }
+                                &:before,
+                                &:after { display: none; }
+                            }
+                        }
+                        /* --- third level menu --- */
+                        .moto-widget-menu-sublist {
+                            .moto-widget-menu-item {
+                                .moto-widget-menu-link {padding: 7px 40px 7px 60px;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* $3. Buttons */
+/* ------------------------------ */
+
+/* --- general styles for button presets --- */
+.moto-widget-button {
+    .moto-widget-button-link {
+        position: relative;
+        text-align: center;
+        z-index: 1;
+        line-height: 1.2;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 5px;
+        transition: .3s;
+        padding: 18.5px 10px;
+        @media screen and (max-width: @const_media_tablet_max_width) { padding: 12px 5px; } 
+        .moto-widget-button-label { position: relative; }
+        .moto-widget-theme-icon {
+            position: relative;
+            //display: inline-block;
+            margin-right: 10px;
+            transition: .3s;
+            font-size: 14px;
+            @media screen and (max-width: @const_media_tablet_max_width) { margin-right: 5px; }
+        }
+        &.moto-size-small   {
+            min-width: 120px;
+            font-size: 14px;
+        }
+        &.moto-size-medium  {
+            min-width: 180px;
+            font-size: 16px;
+            @media screen and (max-width: @const_media_tablet_max_width) { 
+                min-width: 130px;
+                font-size: 14px; 
+            }
+        }
+        &.moto-size-large   {
+            min-width: 200px;
+            font-size: 18px;
+            @media screen and (max-width: @const_media_tablet_max_width) { 
+                min-width: 150px;
+                font-size: 16px; 
+            }
+        }
+    }
+
+
+    /* --- Button 3 preset --- */
+    &.moto-preset-3 {
+        .moto-widget-button-link { border-radius: 5px; }
+    }
+
+    /* --- Button 4 preset --- */
+    &.moto-preset-4 {
+        .moto-widget-button-link {
+            border-radius: 0;
+            border: none;
+            &:before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width: 0;
+                border-width: 2px 0 0;
+                border-style: solid;
+                border-color: inherit;                
+                transition: .4s ease;
+            }
+            &:after {
+                position: absolute;
+                content: '';
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                border-width: 0 0 2px;
+                border-style: solid;
+                border-color: inherit;
+                transition: .4s ease;
+                height: 0;
+            }
+
+            &:hover:before { width: 100%; }
+            &:hover:after {
+                height: 100%;
+                border-width: 0 2px 2px 2px;
+            }
+        }
+    }
+
+    /* --- Button 5 preset --- */
+    &.moto-preset-5 {
+        .moto-widget-button-link {
+
+            display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+
+            .moto-widget-theme-icon {
+                display: inline-block;
+                &:before { content: '\f04b'; }
+            }
+        }
+    }
+}
+
+/* $4. Images */
+/* ------------------------------ */
+
+/* --- general styles for image presets --- */
+.moto-widget-image {
+    .moto-widget-image-link {
+        position: relative;
+        overflow:  hidden;
+        transition: .3s;
+        //z-index: 2;
+        &:before {
+            z-index: 1;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            border-width: 1px;
+            border-style: solid;
+            z-index: 5;
+        }
+        &:after {
+            z-index: 5;
+            left: 50%;
+            top: 50%;
+            opacity: 1;
+            font: 24px/1 'FontAwesome';
+            .transform(-50%, -50%);
+        }
+        &:before,
+        &:after {
+            position: absolute;
+            content: "";    
+            transition: 0.3s;
+        }
+    }
+    .moto-widget-image-picture { transition: .3s; }
+
+    /* --- Image default, 2 preset --- */
+    &.moto-preset-default { .moto-widget-image-link { &:before , &:after { display: none; } } }
+    &.moto-preset-2 { .moto-widget-image-link { border-radius: 50%; &:before , &:after { display: none;} } }
+        
+    /* --- Image 3 preset --- */
+    &.moto-preset-3 {
+        .moto-widget-image-link {
+            &:after {  
+                content: "\f00e";
+                top: 45%;
+            }
+            &:hover:after { 
+                top: 50%;
+                transition: .3s ease;
+            }
+        }
+    }
+
+    /* --- Image 4 preset --- */   
+    &.moto-preset-4 {
+        .moto-widget-image-link {
+            .moto-widget-image-picture { -webkit-backface-visibility: hidden; }
+            &:hover {
+                .moto-widget-image-picture { 
+                    transform: scale(1.15);
+                    -webkit-transform: scale(1.15);
+                    -ms-transform: scale(1.15);
+                    transition: .6s;
+                }
+            } 
+            &:before {
+                width: auto;
+                height: auto;
+                left: 20px;
+                right: 20px;
+                top: 20px;
+                bottom: 20px;
+            }
+            &:hover:before {
+                left: 10px;
+                right: 10px;
+                top: 10px;
+                bottom: 10px;
+            } 
+            &:after { display: none; }
+        }
+    }
+
+    /* --- Image 5 preset --- */
+    &.moto-preset-5 {
+        .moto-widget-image-link {
+            &:after {  content: "\f065"; }
+        }    
+    }
+}
+
+/* $5. Grid Gallery */
+/* ------------------------------ */
+
+/* --- general styles for grid gallery presets --- */
+.moto-widget-grid-gallery {
+    .moto-widget-grid-gallery-item {
+        .caption {
+            display: block;
+            z-index: 99;
+            top: 50%;
+            margin: 0 auto;
+            bottom: auto;
+            width: auto;
+            max-width: 90%;
+            padding: 15px;
+            opacity: 0;
+            .transform(0 , -50%);
+            transition: .3s;
+            @media screen and (max-width: @const_media_mobile-h_max_width) { padding: 5px; }
+            &_text {
+                text-align: left;
+                font-size: 14px;
+                line-height: 1.28;
+            }
+            &-visible {opacity: 1;}
+        }
+        &:before {
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            left: 0%;
+            top: 0;
+        }
+        &:after {
+            z-index: 2;
+            font: 24px/1 'FontAwesome';
+            left: 50%;
+            top: 50%;
+            opacity: 1;
+            .transform(-50% , -50%);
+        }
+        &:before,
+        &:after {
+            position: absolute;
+            content: "";
+            transition: .3s;
+        }
+        .moto-widget-grid-gallery-image { transition: .3s; }
+    }
+
+    /* --- Grid Gallery default preset --- */
+    &.moto-preset-default {
+        .moto-widget-grid-gallery-item {
+            .caption {
+                top: auto;
+                bottom: 0;
+                width: 100%;
+                max-width: none;
+                transform:none;
+                -webkit-transform: none;
+                -ms-transform: none;
+                opacity: 1;
+                &-visible { bottom: 12%; }
+            }
+            &:after { 
+                content: "\f00e";
+                top: 50%;
+                @media screen and (max-width: @const_media_mobile-h_max_width) { padding-bottom: 10px; } 
+            }
+            &:hover:after {  padding-bottom: 30px; }
+            .caption , &:after { transition: .2s ease; }
+        }
+    }
+
+    /* --- Grid Gallery 2 preset --- */
+    &.moto-preset-2 {
+        .moto-widget-grid-gallery-item {
+            .caption {
+                top: 65%;
+                &:before {
+                    position: absolute;
+                    content: '';
+                    left: 15px;
+                    top: 0;
+                    width: 40px;
+                    opacity: 0;
+                    border-width: 3px 0 0 ;
+                    border-style: solid; 
+                    border-color: @baseColor1_3;
+                    @media screen and (max-width: @const_media_mobile-h_max_width) {
+                        left: 5px;
+                        width: 20px;
+                    }
+                }
+                &-visible { 
+                    top: 75%;
+                    &:before { opacity: 1; }  
+                }
+                &_text { text-shadow: 2px 2px 2px rgba(0,0,0,0.7); }
+            }
+            &:after { display: none; }
+        }
+    }
+
+    /* --- Grid Gallery 3 preset --- */
+    &.moto-preset-3 {
+        .moto-widget-grid-gallery-item {
+            .caption {
+                top: auto;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                max-width: none;
+                transform:none;
+                -webkit-transform: none;
+                -ms-transform: none;
+            }
+            &:after { content: '\f06e'; }
+            .moto-widget-grid-gallery-image { -webkit-backface-visibility: hidden; }
+            &:hover .moto-widget-grid-gallery-image {
+                transform: scale(1.15);
+                -webkit-transform: scale(1.15);
+                -ms-transform: scale(1.15);
+            }
+        }
+    }
+}
+
+/* $6. Sliders and Carousel */
+/* ------------------------------ */
+
+/* --- general styles for slider presets --- */
+.moto-widget-slider {
+    .bx-pager {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        font-size: 0;
+        @media screen and (max-width: @const_media_tablet_max_width) { bottom: 5px; }
+    }
+    .bx-pager-item { 
+        &:not(:first-child) {  margin-left: 10px; }
+        vertical-align: middle; 
+    }
+    .bx-pager-link {
+        width: 12px;
+        height: 12px;
+        border-width: 2px;
+        border-style: solid;
+        font-size: 0;
+        //transition: all .3s;
+        @media screen and (max-width: @const_media_mobile-h_max_width) {
+            width: 8px;
+            height: 8px;
+            border-width: 1px;
+        }
+    }
+    .bx-caption {
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: auto;
+        padding: 10px;
+        max-width: 75%;
+        .transform(0 , -50%);
+        @media screen and (max-width: @const_media_mobile-h_max_width) { padding: 5px; }
+        &_text {
+            text-align: center;
+            font-size: 64px;
+            line-height: 1.15;
+            @media screen and (max-width: @const_media_tablet_max_width) { font-size: 44px; }
+            @media screen and (max-width: @const_media_mobile-h_max_width) { font-size: 18px; }
+        }
+    }
+    .bx-controls-direction {
+        .bx-prev,
+        .bx-next {
+            top: 50%;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            font: 0/1 'FontAwesome'; 
+            border-width: 2px;
+            border-style: solid;
+            transition: .3s;
+            .transform(0 , -50%);
+            z-index: 1;
+            @media screen and (max-width: @const_media_mobile-h_max_width) {
+                width: 30px;    
+                height: 30px;
+            }
+            &:before { 
+                font-size: 24px;
+                line-height: 34px;
+                transition: .3s;
+                @media screen and (max-width: @const_media_mobile-h_max_width) {
+                    line-height: 27px;
+                    font-size: 14px;
+                }
+            }
+        }
+        .bx-prev {
+            left: 0;
+            padding-right: 2px;
+            &:before { content: "\f104"; }
+        }
+        .bx-next {
+            right: 0;
+            padding-left: 2px;
+            &:before { content: "\f105"; }
+        }
+    }
+
+    /* --- general styles for carousel presets --- */
+    &.moto-widget-carousel {
+        .bx-wrapper {
+            padding: 0 60px;
+            @media screen and (max-width: @const_media_mobile-h_max_width) { padding: 0 40px;  }
+        }
+        .carousel-block { padding: 0 0 40px; }
+        .bx-pager {
+            bottom: -38px;
+            width: auto;
+            left: 60px;
+            right: 60px;
+            text-align: left;
+            @media screen and (max-width: @const_media_mobile-h_max_width) {
+                left: 40px;
+                right: 40px;
+            }
+        }
+        &.moto-preset-2 {
+            .moto-widget-carousel-item {
+                 .moto-widget-carousel-link {
+                    line-height: 0;
+                    display: block;
+                 }
+            }
+            .bx-wrapper { padding: 0; }
+            .bx-pager {
+                left: 0;
+                right: 0;
+                bottom: -44px;
+                @media screen and (max-width: @const_media_mobile-h_max_width) { bottom: -36px; }
+            }
+            .carousel-block { 
+                padding: 0 0 80px;
+                @media screen and (max-width: @const_media_mobile-h_max_width) { bottom: -68px; } 
+            }
+            .bx-controls-direction {
+                position: absolute;
+                bottom: -59px;
+                left: 0;
+                right: 0;
+                text-align: center;
+                @media screen and (max-width: @const_media_mobile-h_max_width) { bottom: -46px; }
+                .bx-prev,
+                .bx-next {
+                    position: relative;
+                    display: inline-block;
+                    top: auto;
+                    -webkit-transform: none;
+                    -ms-transform: none;
+                    transform: none;   
+                }
+                .bx-prev { left: -5px; }
+                .bx-next { left: 5px; }
+            }
+        }
+    }
+
+    /* --- Slider default preset --- */  
+    &.moto-preset-default {
+        .bx-pager-link {
+            &.active {
+                width: 16px;
+                height: 16px;
+                @media screen and (max-width: @const_media_mobile-h_max_width) {
+                    width: 10px;
+                    height: 10px;
+                }  
+            }
+        }
+    }
+
+    /* --- Slider 2 preset --- */
+    &.moto-preset-2 {
+        .bx-pager-link {  
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+            border-width: 1px; 
+        }
+        .bx-controls-direction {
+            .bx-prev,
+            .bx-next { border-radius: 50%; }
+            .bx-prev { 
+                left: 1%;
+                &:before { content: '\f100'; } 
+            }
+            .bx-next { 
+                right: 1%;
+                &:before { content: '\f101'; }  
+            }    
+        }
+    }
+}
+
+/* $7. Social Icons */
+/* ------------------------------ */
+
+/* --- general styles for social links--- */
+.moto-widget-social-links {
+    .moto-widget-social-links-item {
+        &:not(:first-child) { 
+            margin: 0 0 0 10px;
+            @media screen and (max-width: @const_media_tablet_max_width)  { margin: 0 0 0 4px; }
+        }
+        .moto-widget-social-links-link {
+            position: relative;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            font: 16px/60px 'FontAwesome';
+            transition: .3s;
+            @media screen and (max-width: @const_media_tablet_max_width) {
+                width: 40px;
+                height: 40px;
+                font: 14px/40px 'FontAwesome';
+            }
+            &:before {
+                display: block;
+                transition: .3s;
+            }
+        }
+    }
+
+    .moto-widget-social-links-link_facebook   { &:before { content: "\f09a"; } }
+    .moto-widget-social-links-link_googleplus { &:before { content: "\f0d5"; } }
+    .moto-widget-social-links-link_twitter    { &:before { content: "\f099"; } }
+    .moto-widget-social-links-link_pinterest  { &:before { content: "\f0d2"; } }
+    .moto-widget-social-links-link_linkedin   { &:before { content: "\f0e1"; } }
+    .moto-widget-social-links-link_instagram  { &:before { content: "\f16d"; } }
+
+
+    /* --- Social links default preset --- */
+    &.moto-preset-default {
+        .moto-widget-social-links-item {
+            &:not(:first-child) {  
+                margin: 0 0 0 20px;
+                @media screen and (max-width: @const_media_tablet_max_width) { margin: 0 0 0 12px;  } 
+            }
+            .moto-widget-social-links-link {
+                width: auto;
+                height: auto;
+                line-height: 1;
+                font-size: 14px;
+            }
+        }
+    }
+
+    /* --- Social links 2 preset --- */
+    &.moto-preset-2 {
+        .moto-widget-social-links-item {
+            .moto-widget-social-links-link {
+                border-width: 2px;
+                border-style: solid; 
+                border-radius: 3px;
+                width: 40px;
+                height: 40px;
+                font: 14px/36px 'FontAwesome';
+
+            }
+        }
+    }
+
+    /* --- Social links 3 preset --- */
+    &.moto-preset-3 {
+        .moto-widget-social-links-item {
+            .moto-widget-social-links-link { border-radius: 50%; }
+        }
+    }
+}
+
+
+/* $8. Contact Forms */
+/* ------------------------------ */
+
+/* --- default contact form preset --- */
+.moto-widget-contact_form {
+    .moto-widget-contact_form-form { overflow: visible; }
+    .moto-widget-contact_form-group {
+        padding-bottom: 5px;
+        .moto-widget-contact_form-label {  
+            display: none;
+            font-size: 14px;
+            padding: 0 0 2px;  
+        }
+        .moto-widget-contact_form-field {
+            font-size: 16px;
+            padding: 15px 28px;
+            line-height: normal;
+            height: 60px;
+            outline: none;
+            border-width: 1px;
+            border-style: solid;
+            -webkit-appeareance: none;
+            @media screen and (max-width: @const_media_tablet_max_width) {  
+                font-size: 14px; 
+                height: 45px;
+                padding: 10px 20px; 
+            }
+            &.moto-widget-contact_form-textarea { min-height: 138px; }
+        }
+
+        .moto-widget-contact_form-field-error,
+        .moto-widget-contact_form-required {
+            position: absolute;
+            font-size: 12px;
+            top: 2px;
+            right: 7px;
+            line-height: 1;
+        }
+    }
+
+    .moto-widget-contact_form-success,
+    .moto-widget-contact_form-danger {
+        position: relative;
+        font-size: 13px;
+        bottom: 5px;
+    }
+
+    /* --- Contact form default preset --- */
+    &.moto-preset-default {
+        .moto-widget-contact_form-group {
+            .moto-widget-contact_form-field { border-radius: 3px; }
+        }
+    }
+
+    /* --- Contact form 2 preset --- */
+    &.moto-preset-2 {
+        .moto-widget-contact_form-group {
+            .moto-widget-contact_form-label { display: inline-block; }
+            .moto-widget-contact_form-field {}
+            .moto-widget-contact_form-field-error, .moto-widget-contact_form-required { top: 23px; }
+        }
+    }
+
+    /* --- Contact form 3 preset --- */
+    &.moto-preset-3 {
+        .moto-widget-contact_form-group {
+            .moto-widget-contact_form-field {
+                padding: 10px 0;
+                border-width: 0 0 1px;
+            }
+        }
+    }
+}
+
+
+/* $9. Back-to-top */
+/* ------------------------------ */
+
+/* --- default back-to-top styles --- */
+.moto-back-to-top-button {
+    .transform(0,100px);
+    right: 40px;
+    bottom: 40px;
+    transition: .3s;
+    &.moto-back-to-top-button_visible { .transform(0,0); }
+    .moto-back-to-top-button-link {
+        width: 40px;
+        height: 40px;
+        font: 18px/38px 'FontAwesome';
+        color: @baseColor5_5;
+        text-align: center;
+        transition: .3s;
+        background: @baseColor3_3;
+        border-radius: 3px;
+        .moto-back-to-top-button-icon {         
+            &:before { content: "\f106"; }
+        }
+        &:hover { background: @baseColor1_3; }
+    }
+}
+
+/* $10. Countdown Timer */
+/* ------------------------------ */
+
+/* --- default back-to-top styles --- */
+ .moto-widget-countdown {
+    .countdown-item-delimiter {
+        @media screen and (max-width: @const_media_tablet_max_width) { min-width: 20px!important; }
+        @media screen and (max-width: @const_media_mobile-h_max_width) {
+            min-width: 15px!important;
+            font-size: 20px!important;
+        }
+    }
+    .countdown-item-block {
+        @media screen and (max-width: @const_media_tablet_max_width) {
+            width: 74px!important;
+            height: 74px!important;
+        }
+        @media screen and (max-width: @const_media_mobile-h_max_width)  {
+            width: 59px!important;
+            height: 59px!important;
+        }
+    }
+    .countdown-item-amount {
+        @media screen and (max-width: @const_media_tablet_max_width) {  font-size: 25px!important;  }
+        @media screen and (max-width: @const_media_mobile-h_max_width) {  font-size: 20px!important;  }
+    }
+    .countdown-item-unit {
+        line-height: 1.5;
+        @media screen and (max-width: @const_media_tablet_max_width) { 
+            font-size: 15px!important;
+            line-height: 1.8; 
+        }
+        @media screen and (max-width: @const_media_mobile-h_max_width) { font-size: 12px!important; }
+    }
+}  
+
+
+
+/* $0. Mixins */
+/* ------------------------------ */
+.transform(@X: -50%; @Y: -50%;) {
+    -webkit-transform: translate(@X, @Y);
+    transform: translate(@X, @Y);
+}

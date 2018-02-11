@@ -1,0 +1,10 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-slideshare {{ currentWidget.getSpacing('classes') }} {{ currentWidget.getVisibleOn('classes') }}" data-widget="slideshare">
+    {% if isPreview %}<div class="moto-widget-cover"></div>{% endif %}
+    {% if currentWidget.properties.params.src == '' %}
+        {% if isPreview %}<div class="moto-widget-empty"></div>{% endif %}
+    {% else %}
+    <div class="moto-widget-slideshare-container" style="padding-bottom: {{ currentWidget.properties.params.presentationRatio }}%;">
+        <iframe src="{{ currentWidget.properties.params.src }}" class="moto-widget-slideshare-frame" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" allowfullscreen></iframe>
+    </div>
+    {% endif %}
+</div>

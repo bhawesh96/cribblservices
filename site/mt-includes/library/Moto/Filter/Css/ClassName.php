@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Filter\Css; use Moto\Filter\AbstractFilter; use Zend\Filter\Exception; class ClassName extends AbstractFilter { public function filter($value) { if (!is_string($value)) { return $value; } $value = str_replace(' ', '-', $value); $value = preg_replace('/[^_A-Za-z0-9\-]/', '', $value); $value = preg_replace('/^[0-9]+/', '', $value); $value = preg_replace('/-+/', '-', $value); return $value; } }

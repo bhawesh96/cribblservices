@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Json\Response\Collection; class Meta { public $total = 0; public $limit = 0; public $page = 0; public function __construct($data = null) { if (is_array($data)) $this->exchangeArray($data); } public function exchangeArray($data) { if (!empty($data['total'])) $this->total = (int)$data['total']; if (!empty($data['limit'])) $this->limit = (int)$data['limit']; if (!empty($data['page'])) $this->page = (int)$data['page']; } }

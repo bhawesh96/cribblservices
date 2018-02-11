@@ -1,0 +1,95 @@
+{
+    "MODULE": {
+        "INSTALL": {
+            "COMMON": {
+                "NEXT_BUTTON": "次",
+                "RETRY_BUTTON": "再試行",
+                "CONTINUE_BUTTON": "続行"
+            },
+            "SET_LANGUAGE_LABEL": "言語の設定",
+            "SERVER_TEST": {
+                "TESTING_PAGE_HEADING": "サーバーのテスト",
+                "TESTING_DESCRIPTION": "互換性のためあなたのサーバーをテストします。お待ちください。",
+                "SUCCESS_PAGE_HEADING": "サーバーの推奨システム要件を満たしています。",
+                "SUCCESS_DESCRIPTION": "インストールを開始するには下のボタンをクリックしてください。",
+                "BEGIN_INSTALL_BUTTON": "インストールを開始します",
+                "LICENSE_AGREEMENT_TEXT": "このアプリケーションをインストールすることによって、この <a href='http://www.motocms.com/terms/' target='_blank'> 利用規約</a> と <a href='http://www.motocms.com/privacy/' target='_blank'> プライバシー ポリシー</a> を読んで承認します。",
+                "ERROR_PAGE_HEADING": "エラー"
+            },
+            "SETUP_DATABASE": {
+                "PAGE_HEADING": "データベースをセットアップします",
+                "PAGE_DESCRIPTION": "サーバーの MySQL に接続するため",
+                "PARAM_HOSTNAME_LABEL": "ホスト名:",
+                "PARAM_HOSTNAME_TOOLTIP": "<b class='tooltip-title'> ホスト名</b> <br/>ドメイン名の詳細は、次のフィールド内で使用する必要があります。この詳細 について確信を持てない場合、ホスティング プロバイダーに連絡をお願いします。",
+                "PARAM_USERNAME_LABEL": "ユーザー名:",
+                "PARAM_USERNAME_TOOLTIP": "<b class='tooltip-title'> ユーザー名</b> <br/>ユーザー名は、データベースにログインします。この詳細  が分からない場合はホスティング プロバイダーにお問い合わせください。",
+                "PARAM_DATABASE_LABEL": "データベース名:",
+                "PARAM_DATABASE_TOOLTIP": "<b class='tooltip-title'> データベース名</b> <br/>各データベース名が一意です。この詳細 について分からない場合はホスティング プロバイダーにお問い合わせください。",
+                "PARAM_PASSWORD_LABEL": "パスワード:",
+                "PARAM_PASSWORD_TOOLTIP": "<b class='tooltip-title'> パスワード</b> <br/>データベースで使用するパスワードです。この詳細 - について分からない場合はホスティング プロバイダーにお問い合わせください。",
+                "PARAM_TABLE_PREFIX_LABEL": "テーブルのプレフィックス:",
+                "PARAM_TABLE_PREFIX_TOOLTIP": "<b class='tooltip-title'> テーブルプレフィックス</b> <br/>このフィールドは必要ありません。既定のテーブル プレフィックス名 - moto_。あなたのテンプレートに特定のテーブル プレフィックスを結びつけることができます。"
+            },
+            "SETUP_USER": {
+                "PAGE_HEADING": "ユーザーをセットアップします",
+                "PAGE_DESCRIPTION": "インストールの管理者となります。",
+                "PARAM_NAME_LABEL": "名前:",
+                "PARAM_EMAIL_LABEL": "メール：",
+                "PARAM_PASSWORD_LABEL": "パスワード:",
+                "PARAM_PASSWORD_CONFIRM_LABEL": "パスワードを再入力します。"
+            },
+            "INSTALLATION": {
+                "PAGE_HEADING": "インストール",
+                "PAGE_DESCRIPTION": "Motoをセットアップする準備ができています。開始する下のボタンをクリックします <br/>。数分かかります。",
+                "INSTALL_NOW_BUTTON": "今すぐインストール",
+                "COMMON_ERROR_MESSAGE": "インストールがエラーによって中断されました。",
+                "PROCESS_PAGE_HEADING": "インストールしています.",
+                "PROCESS_PAGE_DESCRIPTION": "Moto3 がインストールされているようになりました。お待ちください。",
+                "COMPLETE_PAGE_HEADING": "インストールの完了",
+                "COMPLETE_PAGE_DESCRIPTION": "すべて完了です。Moto3 の使用を開始するには下のボタンをクリックします。",
+                "START_WORK_BUTTON": "スタート",
+                "ERROR_PAGE_HEADING": "エラー"
+            },
+            "ERROR": {
+                "BROKEN_RESPONSE": "サーバーから受信した不正な応答",
+                "FILE_WRITABLE": "ファイル <strong>{{ name }}</strong> は書き込み可能ではありません。次のファイルに正しいアクセス許可を設定してください。",
+                "FOLDER_WRITABLE": "フォルダー <strong>{{ name }}</strong> が書き込み可能ではありません。次のフォルダーに対して正しいアクセス許可を設定してください。",
+                "FILE_READABLE": "ファイル <strong>{{ name }}</strong> は、読み取ることができません。次のファイルに正しいアクセス許可を設定してください。",
+                "FOLDER_READABLE": "フォルダー <strong>{{ name }}</strong> を読み取ることができません。次のフォルダーに正しいアクセス許可を設定してください。",
+                "PHP_VERSION": "現在の PHP のバージョンはサポートされていません。当社テンプレートの要件: PHP バージョン 5.4+、5.5+ または 5.6+。",
+                "PHP_FUNCTION_NOT_EXISTS": "PHP 関数 {{ function }} は存在しません。",
+                "PHP_EXTENSION_LOADED": "PHP 拡張子 <strong>{{ extension }}</strong> が無効です。サーバーの構成を確認してください。その拡張子 <strong>{{ extension }}</strong> が有効になっていることを確認します。",
+                "PHP_SESSION_CREATE": "サーバーは、セッションを開始することができません。サーバーがセッションを作成することができることを確認してください。",
+                "PHP_SAFE_MODE": "あなたのサーバーの PHP のセーフモードが有効なことが検出されました。正常に作動するソフトウェアのオフをお勧めします。ホスティングのコントロール パネルまたは php.ini ファイルを編集することによって安全なモードを無効にできます。",
+                "MAIL_FUNCTION": "サーバーのメール機能が動きません",
+                "PHP_UPLOAD_ENABLED": "ファイルのアップロードオプションは無効になります。",
+                "PHP_UPLOAD_FILE_SIZE": "アップロードの最大ファイル サイズは、{{ upload_max_size }}、{{ min }} は必須です",
+                "ALREADY_INSTALLED": "Moto3 はすでにインストールされています。",
+                "THEME_NOT_ACTIVATED": "テーマのアクティブ化にエラーが発生しました <br/>。詳細については次の <a href=\"http://support.cms-guide.com/hc/{{'CURRENT_LANGUAGE'|translate}}/requests/new\"target=\"_blank\"> リンク</a> を使用して、テクニカル サポート部門にお問い合わせください。",
+                "EXTRA_CONTENT_NOT_INSTALLED": "その他のコンテンツのインストール中にエラーが発生しました <br/>。詳細については次の <a href=\"http://support.cms-guide.com/hc/{{'CURRENT_LANGUAGE'|translate}}/requests/new\"target=\"_blank\"> リンク</a> を使用して、テクニカル サポート部門にお問い合わせください。",
+                "DATABASE": {
+                    "DATA_ALREADY_EXISTS": "データは既にインストールされています。",
+                    "IMPORT_STRUCTURE": "データベース構造のインポート中にエラーが発生しました",
+                    "IMPORT_DATA": "データベースのデータのインポートでエラーが発生しました。",
+                    "CONNECT": "データベース接続中のエラーが発生しました"
+                },
+                "NAMESPACES": {
+                    "DATABASE": "データベースの設定エラー",
+                    "ADMIN": "ユーザー設定のエラーです",
+                    "LANGUAGE": "間違って選択した言語",
+                    "WEBSITE.ADDRESS": "ウェブサイトのアドレスの名前のエラー"
+                },
+                "KEYS": {
+                    "EMAIL": "メール アドレス。",
+                    "NAME": "ユーザー名",
+                    "PASSWORD": "パスワード",
+                    "PASSWORD_CONFIRM": "パスワード",
+                    "DATABASE": "データベース名",
+                    "HOSTNAME": "ホスト名",
+                    "PREFIX": "プレフィックス",
+                    "USERNAME": "データベース ユーザー名"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-container {{ currentWidget.properties.cssName }}{% if (currentWidget.properties.bgFixed) %} moto-background-fixed{% endif %}{% if (currentWidget.properties.bgParallaxed) %} moto-parallax{% endif %}" data-widget="container" data-container="container" {{ arrayToAttributes(currentWidget.getCustomAttributes()) }}>
+    {% if currentWidget.properties.anchor %}
+    <a class="moto-anchor" name="{{ currentWidget.properties.anchor }}"></a>
+    {% endif %}
+    {% for item in currentWidget.children %}
+        {% if isServer %}
+            {{ widget(item) }}
+        {% else %}
+            {% widget item %}{% endWidget %}
+        {% endif %}
+    {% endfor %}
+</div>

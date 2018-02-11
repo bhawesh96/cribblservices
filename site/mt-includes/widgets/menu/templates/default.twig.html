@@ -1,0 +1,23 @@
+{% macro SubMenuMacros(items, level) %}
+    <ul class="moto-widget-menu-sublist">
+        {% for item in items %}
+            {{ _self.MenuItemMacros(item, level) }}
+        {% endfor %}
+    </ul>
+{% endmacro %}
+{% macro MenuItemMacros(item, level) %}<li class="moto-widget-menu-item{% if item.items|length %} moto-widget-menu-item-has-submenu{% endif %}">
+    <a {% if not isPreview %}{{ item.getHtmlAttributes()|raw }}{% endif %} class="moto-widget-menu-link moto-widget-menu-link-level-{{level}}{% if item.items|length %} moto-widget-menu-link-submenu{% endif %}{% if (Linker.isCurrent(item.action, item.properties)) %} moto-widget-menu-link-active{% endif %} moto-link">{{item.label}}{% if item.items|length %}<span class="fa moto-widget-menu-link-arrow"></span>{% endif %}</a>
+    {% if item.items|length %}
+        {{ _self.SubMenuMacros(item.items, level+1) }}
+    {% endif %}
+    </li>{% endmacro %}
+<div data-widget-id="{{ currentWidget.getWidgetId() }}" class="moto-widget moto-widget-menu moto-preset-{{ currentWidget.properties.preset }} {{ currentWidget.getAlignClass() }} {{ currentWidget.getSpacing('classes') }}" data-preset="{{ currentWidget.properties.preset }}" data-widget="menu"{% if isPreview %}{{currentWidget.printLoadItemsFlag()}}{% endif %}>
+    {% if currentWidget.items|length > 0 %}
+        <a href="#" class="moto-widget-menu-toggle-btn"><i class="moto-widget-menu-toggle-btn-icon fa fa-bars"></i></a>
+        <ul class="moto-widget-menu-list moto-widget-menu-list_horizontal">
+            {% for item in currentWidget.items %}{{ _self.MenuItemMacros(item, 1) }}{% endfor %}
+        </ul>
+    {% else %}
+        <div class="moto-widget-empty"></div>
+    {% endif %}
+</div>

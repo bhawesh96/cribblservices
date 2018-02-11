@@ -1,0 +1,54 @@
+{% set properties = item.properties|json_decode %}
+
+{{ StyleHelper.generatePresetSelector('.moto-widget-accordion', item.class_name) }} {
+
+    {{ StyleHelper.generateLessFromArray(properties.header.desktop.base, '.moto-widget-accordion__header') }}
+    {{ StyleHelper.generateLessFromArray(properties.header_icon.desktop.base, '.moto-widget-accordion__header-icon') }}
+    {{ StyleHelper.generateLessFromArray(properties.collapse_icon.desktop.base, '.moto-widget-accordion__collapse-icon') }}
+    @media screen and (max-width: @const_media_tablet_max_width) {
+        {{ StyleHelper.generateLessFromArray(properties.header.tablet.base, '.moto-widget-accordion__header') }}
+        {{ StyleHelper.generateLessFromArray(properties.header_icon.tablet.base, '.moto-widget-accordion__header-icon') }}
+        {{ StyleHelper.generateLessFromArray(properties.collapse_icon.tablet.base, '.moto-widget-accordion__collapse-icon') }}
+    }
+    @media screen and (max-width: @const_media_mobile-h_max_width) {
+        {{ StyleHelper.generateLessFromArray(properties.header['mobile-h'].base, '.moto-widget-accordion__header') }}
+        {{ StyleHelper.generateLessFromArray(properties.header_icon['mobile-h'].base, '.moto-widget-accordion__header-icon') }}
+        {{ StyleHelper.generateLessFromArray(properties.collapse_icon['mobile-h'].base, '.moto-widget-accordion__collapse-icon') }}
+    }
+    @media screen and (max-width: @const_media_mobile-v_max_width) {
+        {{ StyleHelper.generateLessFromArray(properties.header['mobile-v'].base, '.moto-widget-accordion__header') }}
+        {{ StyleHelper.generateLessFromArray(properties.header_icon['mobile-v'].base, '.moto-widget-accordion__header-icon') }}
+        {{ StyleHelper.generateLessFromArray(properties.collapse_icon['mobile-v'].base, '.moto-widget-accordion__collapse-icon') }}
+    }
+    .moto-widget-accordion__item {
+        {{ StyleHelper.generateLessFromArray(properties.item.desktop.base) }}
+        {{ StyleHelper.generateLessFromArray(properties.header_title.desktop.base, '.moto-widget-accordion__header-title') }}
+        {{ StyleHelper.generateLessFromArray(properties.content_opened.desktop.base, '.moto-widget-accordion__content') }}
+
+        &:hover {
+            {{ StyleHelper.generateLessFromArray(properties.item.desktop.hover) }}
+            {{ StyleHelper.generateLessFromArray(properties.header.desktop.hover, '.moto-widget-accordion__header') }}
+            {{ StyleHelper.generateLessFromArray(properties.header_title.desktop.hover, '.moto-widget-accordion__header-title') }}
+            {{ StyleHelper.generateLessFromArray(properties.header_icon.desktop.hover, '.moto-widget-accordion__header-icon') }}
+            {{ StyleHelper.generateLessFromArray(properties.collapse_icon.desktop.hover, '.moto-widget-accordion__collapse-icon') }}
+            {{ StyleHelper.generateLessFromArray(properties.content_opened.desktop.hover, '.moto-widget-accordion__content') }}
+        }
+
+        &.moto-widget-accordion__item_open {
+            {{ StyleHelper.generateLessFromArray(properties.item_opened.desktop.base) }}
+
+            {{ StyleHelper.generateLessFromArray(properties.header_title_opened.desktop.base, '.moto-widget-accordion__header-title') }}
+            {{ StyleHelper.generateLessFromArray(properties.header_opened.desktop.base, '.moto-widget-accordion__header') }}
+            {{ StyleHelper.generateLessFromArray(properties.header_icon_opened.desktop.base, '.moto-widget-accordion__header-icon') }}
+            {{ StyleHelper.generateLessFromArray(properties.collapse_icon_opened.desktop.base, '.moto-widget-accordion__collapse-icon') }}
+
+            &:hover {
+                {{ StyleHelper.generateLessFromArray(properties.item_opened.desktop.hover) }}
+                {{ StyleHelper.generateLessFromArray(properties.header_title_opened.desktop.hover, '.moto-widget-accordion__header-title') }}
+                {{ StyleHelper.generateLessFromArray(properties.header_opened.desktop.hover, '.moto-widget-accordion__header') }}
+                {{ StyleHelper.generateLessFromArray(properties.header_icon_opened.desktop.hover, '.moto-widget-accordion__header-icon') }}
+                {{ StyleHelper.generateLessFromArray(properties.collapse_icon_opened.desktop.hover, '.moto-widget-accordion__collapse-icon') }}
+            }
+        }
+    }
+}

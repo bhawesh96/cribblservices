@@ -1,0 +1,2 @@
+<?php
+namespace Moto\Application\Blocks\InputFilter; class NewBlockTemplate extends SaveBlockTemplate { protected $_name = 'blockTemplate.new'; public function init() { parent::init(); $this->remove('id'); } }
