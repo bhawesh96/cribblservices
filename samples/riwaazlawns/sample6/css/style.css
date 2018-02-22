@@ -1,6 +1,6 @@
 /*--
-	Author: W3Layouts
-	Author URL: http://w3layouts.com
+	Author: CribblServices
+	Author URL: http://CribblServices.com
 	License: Creative Commons Attribution 3.0 Unported
 	License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
@@ -198,7 +198,7 @@ ul.callbacks_tabs {
 }
 
 ul.callbacks_tabs li {
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	display: block;
 }
@@ -248,7 +248,7 @@ ul.callbacks_tabs li {
 
 .slider-3 {
 	position: absolute;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	width: 50%;
 	right: 5%;
@@ -298,7 +298,7 @@ ul.callbacks_tabs li {
 	background-color: #1dc8d9;
 	color: #FFF;
 }
-/*--w3layouts--*/
+/*--CribblServices--*/
 /*--agileits--*/
 .projects-grid .glyphicon {
 	margin-left: 5px;
@@ -348,7 +348,7 @@ ul.callbacks_tabs li {
 	font-size: 20px;
 	text-align: left;
 	margin-top: 25px;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	font-weight: 700;
 }
@@ -398,7 +398,7 @@ ul.callbacks_tabs li {
 }
 
 .awards-grids {
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	margin-left: 200px;
 }
@@ -448,7 +448,7 @@ ul.callbacks_tabs li {
 
 .principles-grids1 h3 {
 	text-align: left;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	font-size: 40px;
 	font-weight: 700;
@@ -498,7 +498,7 @@ ul.callbacks_tabs li {
 	border-radius: 100%;
 	color: #fff;
 	font-size: 26px;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 }
 
@@ -548,7 +548,7 @@ ul.callbacks_tabs li {
 }
 
 .description a {
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	color: #FFF;
 	padding: 7px 30px 8px;
@@ -598,7 +598,7 @@ ul.callbacks_tabs li {
 /*-- Footer --*/
 
 .footer {
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	padding: 100px 0 50px;
 	background: url("../images/footer.jpg");
@@ -648,7 +648,7 @@ ul.callbacks_tabs li {
 .newsletter input[type="text"] {
 	width: 74%;
 	padding: 15px;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	background-color: #333;
 	border: none;
@@ -698,7 +698,7 @@ ul.social-icons li a.facebook:hover {
 	background-position: 0px -50px;
 }
 
-/*--w3layouts--*/
+/*--CribblServices--*/
 /*--agileits--*/
 ul.social-icons li a.twitter {
 	background-position: -50px 0px;
@@ -748,7 +748,7 @@ ul.social-icons li a.youtube:hover {
 /*-- Footer --*/
 
 
-/*--w3layouts--*/
+/*--CribblServices--*/
 /*--agileits--*/
 /*-- //Index-Page-Styling --*/
 
@@ -798,7 +798,7 @@ ul.social-icons li a.youtube:hover {
 .gallery {
 	padding: 100px 0;
 }
-/*--w3layouts--*/
+/*--CribblServices--*/
 /*--agileits--*/
 .gallery h2 {
 	text-align: left;
@@ -848,7 +848,7 @@ ul.social-icons li a.youtube:hover {
 	padding: 100px 0;
 	background-color: #EAEAEA;
 }
-/*--w3layouts--*/
+/*--CribblServices--*/
 /*--agileits--*/
 .details h3 {
 	text-align: left;
@@ -898,7 +898,7 @@ ul.social-icons li a.youtube:hover {
 .modal-title {
 	font-size: 30px;
 	font-weight: 700;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	letter-spacing: -1px;
 	color: #1dc8d9;
@@ -948,7 +948,7 @@ ul.social-icons li a.youtube:hover {
 	height: 185px;
 }
 
-/*--w3layouts--*/
+/*--CribblServices--*/
 /*--agileits--*/
 .ventures-grid-info {
 	padding: 0 10px;
@@ -998,7 +998,7 @@ ul.social-icons li a.youtube:hover {
 	list-style: none;
 	text-align: center;
 }
-/*--w3layouts--*/
+/*--CribblServices--*/
 /*--agileits--*/
 .grid figure {
 	position: relative;
@@ -1047,7 +1047,7 @@ ul.social-icons li a.youtube:hover {
 	opacity: 0;
 }
 
-/*--w3layouts--*/
+/*--CribblServices--*/
 /*--agileits--*/
 .grid figure h4 {
 	font-size: 25px;
@@ -1097,7 +1097,7 @@ figure.effect-zoe:hover ul.social-icons a:hover, figure.effect-zoe:hover ul.soci
 }
 
 figure.effect-zoe p.description {
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	position: absolute;
 	bottom: 119px;
@@ -1147,7 +1147,7 @@ figure.effect-zoe h4 {
 
 figure.effect-zoe:hover p.description {
 	opacity: 1;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 }
 
@@ -1197,7 +1197,7 @@ figure.effect-zoe:hover ul.social-icons a:first-child {
 	background-size: 200px;
 }
 
-/*--w3layouts--*/
+/*--CribblServices--*/
 /*--agileits--*/
 .team ul.social-icons li a.facebook:hover {
 	background-position: 0px -33px;
@@ -1247,7 +1247,7 @@ figure.effect-zoe:hover ul.social-icons a:first-child {
 	padding: 100px 0;
 }
 
-/*--w3layouts--*/
+/*--CribblServices--*/
 /*--agileits--*/
 .cuisines h2 {
 	text-align: left;
@@ -1297,7 +1297,7 @@ figure.effect-zoe:hover ul.social-icons a:first-child {
 
 /*-- Menu --*/
 
-/*--w3layouts--*/
+/*--CribblServices--*/
 /*--agileits--*/
 .menu {
 	padding: 13em 0 5em;
@@ -1347,7 +1347,7 @@ h3.title {
 	margin-bottom: 20px;
 	text-align: left;
 }
-/*--w3layouts--*/
+/*--CribblServices--*/
 /*--agileits--*/
 .menu-text-left h6 {
 	font-size: 1em;
@@ -1397,7 +1397,7 @@ h3.title {
 	left: 15px;
 	display: none;
 	background: rgba(0, 0, 0, 0.5);
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 }
 
@@ -1447,7 +1447,7 @@ h3.title {
 #myList li{ 
 	display: none;
 	list-style-type: none;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 }
 
@@ -1497,7 +1497,7 @@ ul#myList {
 	border-right: none;
 	font-size: 1.1em;
 	position: relative;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	transition: 0.5s all ease;
 	-webkit-transition: 0.5s all ease;
@@ -1547,7 +1547,7 @@ div#showLess:after {
 	width: 1px;
 	height: 57%;
 	position: absolute;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	top: 20%;
 	right: 30%;
@@ -1597,7 +1597,7 @@ div#showLess:after {
 	position: absolute;
 	top: 0;
 	padding-top: 90px;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	padding-right: 50px;
 	font-size: 30px;
@@ -1647,7 +1647,7 @@ figure.effect-apollo img {
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 	-webkit-transform: scale3d(1.05,1.05,1);
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	transform: scale3d(1.05,1.05,1);
 }
@@ -1697,7 +1697,7 @@ figure.effect-apollo:hover figcaption::before {
 	font-weight: 300;
 	font-size: 14px;
 }
-/*--w3layouts--*/
+/*--CribblServices--*/
 /*--agileits--*/
 .list-group-item {
 	font-weight: 300;
@@ -1747,7 +1747,7 @@ li.list-group-item1 {
 
 .grid_4 {
 	background: none;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 }
 
@@ -1797,7 +1797,7 @@ h3.hdg {
 }
 
 .badge-success {
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	background-color: #8bc34a;
 }
@@ -1847,7 +1847,7 @@ section#tables p {
 	display: block;
 	visibility: visible;
 }
-/*--w3layouts--*/
+/*--CribblServices--*/
 /*--agileits--*/
 .label {
 	font-weight: 300!important;
@@ -1897,7 +1897,7 @@ h2.typoh2 {
 @media (max-width:768px) {
 	.grid_5 {
 		padding: 0 0 1em;
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 	}
 	.grid_3 {
@@ -1947,7 +1947,7 @@ h2.typoh2 {
 	}
 	.alert,p {
 		font-size: 14px;
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 	}
 	.pagination {
@@ -1997,7 +1997,7 @@ h2.typoh2 {
 
 
 /*-- Booking-&-Contact-Page-Styling --*/
-/*--w3layouts--*/
+/*--CribblServices--*/
 /*--agileits--*/
 
 
@@ -2047,7 +2047,7 @@ h2.typoh2 {
 .reg h2 {
 	color: #FFF;
 	font-size: 35px;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	font-weight: 600;
 	text-align: left;
@@ -2097,7 +2097,7 @@ input#datepicker2 {
 	display: inline-block;
 }
 
-/*--w3layouts--*/
+/*--CribblServices--*/
 /*--agileits--*/
 li.li2 {
 	margin: 0 122px;
@@ -2111,7 +2111,7 @@ li.li2 {
 
 .submit {
 	margin-top: 50px;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	text-align: center;
 }
@@ -2161,7 +2161,7 @@ h4.payment-head {
 	font-size: 1.9em;
 	color: #222222;
 	padding: 0.5em 0;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	text-align: left;
 	float: left;
@@ -2211,7 +2211,7 @@ input#datepicker {
 .payment-online-form-left ul li:first-child input[type="text"] {
 	margin-right: 2%;
 }
-/*--w3layouts--*/
+/*--CribblServices--*/
 /*--agileits--*/
 
 .payment-online-form-left input[type="text"]:active, .payment-online-form-left input[type="text"]:hover {
@@ -2261,7 +2261,7 @@ input#datepicker {
 	color: #FFF;
 	background: #2980b9;
 }
-/*--w3layouts--*/
+/*--CribblServices--*/
 /*--agileits--*/
 
 input.order {
@@ -2311,7 +2311,7 @@ input[type=checkbox].css-checkbox1 + label.css-label1 {
 	height: 30px;
 	width: 30px;
 	display: inline-block;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	line-height: 18px;
 	background-repeat: no-repeat;
@@ -2361,7 +2361,7 @@ input[type=checkbox].css-checkbox2:checked + label.css-label2 {
 	width: 30%;
 	background: #2B2937;
 	-webkit-border-radius: 5px;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	-moz-border-radius: 5px;
 	-o-border-radius: 5px;
@@ -2411,7 +2411,7 @@ input[type=checkbox].css-checkbox3, input[type=checkbox].css-checkbox4, input[ty
 
 .my-mfp-zoom-in #small-dialog {
 	opacity: 0;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	-webkit-transition: all 0.2s ease-in-out;
 	-moz-transition: all 0.2s ease-in-out;
@@ -2461,7 +2461,7 @@ input[type=checkbox].css-checkbox3, input[type=checkbox].css-checkbox4, input[ty
 .mfp-bg {
 	top: 0;
 	left: 0;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	width: 100%;
 	height: 100%;
@@ -2511,7 +2511,7 @@ input[type=checkbox].css-checkbox3, input[type=checkbox].css-checkbox4, input[ty
 .mfp-content {
 	position: relative;
 	display: inline-block;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	vertical-align: middle;
 	margin: 0 auto;
@@ -2561,7 +2561,7 @@ input[type=checkbox].css-checkbox3, input[type=checkbox].css-checkbox4, input[ty
 
 .mfp-content iframe{
 	width: 100%;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	min-height: 500px;
 }
@@ -2611,7 +2611,7 @@ button::-moz-focus-inner {
 }
 
 .mfp-close {
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	width: 32px;
 	height: 32px;
@@ -2661,7 +2661,7 @@ button::-moz-focus-inner {
 	font-size: 40px;
 	font-weight: 700;
 	color: #1dc8d9;
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 }
 
@@ -2711,7 +2711,7 @@ p.contact-p {
 .email p a {
 	color: #666;
 }
-/*--w3layouts--*/
+/*--CribblServices--*/
 /*--agileits--*/
 .email p a:hover {
 	color: #000;
@@ -2761,7 +2761,7 @@ p.contact-p {
 .map-hover {
 	position: relative;
 }
-/*--w3layouts--*/
+/*--CribblServices--*/
 /*--agileits--*/
 .map-hover-1 {
 	position: absolute;
@@ -2811,7 +2811,7 @@ p.contact-p {
 
 
 
-/*--w3layouts--*/
+/*--CribblServices--*/
 /*--agileits--*/
 
 
@@ -2861,7 +2861,7 @@ p.contact-p {
 	.awards-grids {
 		margin-left: 250px;
 	}
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	.slider-3 {
 		width: 60%;
@@ -2911,7 +2911,7 @@ p.contact-p {
 	}
 	.principles-grids2 {
 		right: 18%;
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 		width: 37%;
 	}
@@ -2961,7 +2961,7 @@ p.contact-p {
 	}
 	.principles-grids2 {
 		right: 10%;
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 		width: 46%;
 	}
@@ -3011,7 +3011,7 @@ p.contact-p {
 		padding: 100px 0;
 	}
 	.services-grid1 p {
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 		line-height: 30px;
 	}
@@ -3064,7 +3064,7 @@ p.contact-p {
 		font-size: 45px;
 	}
 	.ventures-grid-info h4 {
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 		font-size: 19px;
 		margin: 15px 0;
@@ -3115,7 +3115,7 @@ p.contact-p {
 	.caption h3 {
 		font-size: 49px;
 	}
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	.principles-grids2 {
 		width: 53%;
@@ -3165,7 +3165,7 @@ p.contact-p {
 	}
 	.awards-grids {
 		margin-left: 200px;
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 	}
 	.awards-grid {
@@ -3215,7 +3215,7 @@ p.contact-p {
 	.ventures-grid-image, .ventures-grid-info {
 		height: 250px;
 	}
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	.ventures-grid-image img {
 		height: 250px;
@@ -3265,7 +3265,7 @@ p.contact-p {
 	}
 	.banner h1 {
 		top: 41%;
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 	}
 	.gallery-grid-info h3 {
@@ -3315,7 +3315,7 @@ p.contact-p {
 	}
 	.slider-3 {
 		width: 75%;
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 		right: 5%;
 		top: 85%;
@@ -3365,7 +3365,7 @@ p.contact-p {
 	.caption h3 {
 		font-size: 41px;
 	}
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	.slider-3 {
 		width: 66%;
@@ -3415,7 +3415,7 @@ p.contact-p {
 		font-size: 40px;
 	}
 	.gallery-grid-info h4 {
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 		font-size: 18px;
 		margin: 5px 0;
@@ -3465,7 +3465,7 @@ p.contact-p {
 		margin-bottom: 10px;
 	}
 	.footer {
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 		padding: 60px 0 50px;
 	}
@@ -3515,7 +3515,7 @@ p.contact-p {
 		margin: 0;
 		text-align: center;
 	}
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	.caption {
 		top: 46%;
@@ -3565,7 +3565,7 @@ p.contact-p {
 	.ventures-grid3, .ventures-grid7 {
 		padding-left: 0;
 	}
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	.team-grid {
 		width: 33.3%;
@@ -3615,7 +3615,7 @@ p.contact-p {
 	}
 	.rooms-grid-2 h3, .rooms-grid-4 h3 {
 		padding-left: 45px;
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 	}
 	li.li2 {
@@ -3665,7 +3665,7 @@ p.contact-p {
 		height: 3.75em;
 	}
 	.grid figure h4 {
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 		float: left;
 	}
@@ -3715,7 +3715,7 @@ p.contact-p {
 	.service-info .h4-underline {
 		margin: 10px 0;
 		height: 4px;
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 		margin-left: -20px;
 	}
@@ -3775,7 +3775,7 @@ p.contact-p {
 	}
 	.newsletter {
 		margin: 25px 0;
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 	}
 	.newsletter h4 {
@@ -3825,7 +3825,7 @@ p.contact-p {
 	}
 	.slider-2 {
 		width: 70%;
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 	}
 	.slider-3 {
@@ -3875,7 +3875,7 @@ p.contact-p {
 		padding: 0;
 		margin-bottom: 50px;
 	}
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	.slider-4 p {
 		font-size: 13px;
@@ -3919,7 +3919,7 @@ p.contact-p {
 	.menu-text-midle {
 		width: 15%;
 	}
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	.menu-text-left h4 {
 		font-size: 17px;
@@ -3966,7 +3966,7 @@ p.contact-p {
 		height: 10px;
 		width: 10px;
 	}
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	.details-grid {
 		padding: 0;
@@ -4019,7 +4019,7 @@ p.contact-p {
 		background-position: -69px -33px;
 	}
 	ul.social-icons li a.instagram {
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 		background-position: -102px 0px;
 	}
@@ -4069,7 +4069,7 @@ p.contact-p {
 		padding: 0;
 	}
 	.banner h1 {
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 		top: 42%;
 		font-size: 30px;
@@ -4120,7 +4120,7 @@ p.contact-p {
 		font-size: 16px;
 		font-weight: 100;
 	}
-	/*--w3layouts--*/
+	/*--CribblServices--*/
 	/*--agileits--*/
 	.awards-grid .h4-underline, .service-info .h4-underline {
 		margin: 10px 0;
@@ -4170,7 +4170,7 @@ p.contact-p {
 		width: 95%;
 	}
 	.submit {
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 		margin-top: 35px;
 	}
@@ -4224,7 +4224,7 @@ p.contact-p {
 	.awards-grid .h4-underline, .service-info .h4-underline {
 		margin: 10px 0;
 		margin-left: -30px;
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 	}
 	.awards-grid {
@@ -4295,7 +4295,7 @@ p.contact-p {
 		margin-bottom: 0;
 	}
 	.ventures-grid-info {
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 		padding-bottom: 10px;
 		margin-bottom: 30px;
@@ -4364,7 +4364,7 @@ p.contact-p {
 	}
 	.contact-grid {
 		width: 100%;
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 		padding: 0;
 	}
@@ -4417,7 +4417,7 @@ p.contact-p {
 		margin-bottom: 5px;
 	}
 	li.li2 {
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 		margin: 0 18px;
 	}
@@ -4477,7 +4477,7 @@ p.contact-p {
 	}
 	.bottom-gds {
 		width: 100%;
-		/*--w3layouts--*/
+		/*--CribblServices--*/
 		/*--agileits--*/
 	}
 	.newsletter input[type="submit"] {
