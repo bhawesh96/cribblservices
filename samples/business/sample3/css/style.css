@@ -1,7 +1,7 @@
 
 /*--
-Author: cribblservices
-Author URL: http://cribblservices.com
+Author: w3layouts
+Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
@@ -178,6 +178,7 @@ ul {
 /*-- nav --*/
 .header-bar {
     padding: 1em 0em;
+    border-bottom: 1px solid grey;
 }
 h1 a.navbar-brand {
     padding-top: 0px;
@@ -502,7 +503,7 @@ section.what_you {
     padding: 5em 0;
 }
 /*-- //agile-about --*/
-.cribblservices_bottom {
+.w3layouts_bottom {
     background:url(../images/3.jpg) no-repeat 0px 0px;
 	text-align: center;
 	background-size: cover;
@@ -512,12 +513,17 @@ section.what_you {
     -ms-background-size: cover;
 	padding:6em 0;
 }
-.cribblservices_getin_info h3 {
+.w3layouts_getin_info h3 {
     color: #fff;
     letter-spacing: 4px;
     font-size: 40px;
 }
-.cribblservices_getin a {
+.w3layouts_getin_info h4 {
+    color: #fff;
+    letter-spacing: 4px;
+    font-size: 25px;
+}
+.w3layouts_getin a {
     font-size: 1em;
     color: #fff;
     background: #7f67f8;
@@ -525,23 +531,23 @@ section.what_you {
     letter-spacing: 2px;
     display: inline-block;
 }
-.cribblservices_getin a:hover {
+.w3layouts_getin a:hover {
     color: #fff;
     background:#f97c69;
 }
 /*-- stats --*/
-.cribblservices_stats_left {
+.w3layouts_stats_left {
     padding: 0;
     text-align: center;
 }
-.cribblservices_stats_left p {
+.w3layouts_stats_left p {
     font-size: 3.5em;
     font-weight: 700;
     letter-spacing: 2px;
     color: #f97c69;
     margin: 0 0 0.2em 0;
 }
-.cribblservices_stats_left h3 {
+.w3layouts_stats_left h3 {
     font-size: 20px;
     color: #2c363e;
     letter-spacing: 2px;
@@ -731,8 +737,8 @@ h3.w3l_header.ser_m,p.ser_p {
 	padding:5em 0;
 }
 
-.cribblservices_footer_grid h2,
-.cribblservices_footer_grid h3 {
+.w3layouts_footer_grid h2,
+.w3layouts_footer_grid h3 {
     font-size: 1.7em;
     color: #f97c69;
     position: relative;
@@ -761,8 +767,8 @@ ul.links li {
     margin-bottom: 10px;
 }
 
-.cribblservices_footer_grid h2 span,
-.cribblservices_footer_grid h3 span {
+.w3layouts_footer_grid h2 span,
+.w3layouts_footer_grid h3 span {
     color: #FFC107;
 }
 
@@ -830,7 +836,7 @@ ul.links li a {
     color: #FFC107;
 }
 
-.cribblservices_footer_grid p {
+.w3layouts_footer_grid p {
     font-size: 1em;
     line-height: 2em;
     margin-bottom: 2em;
@@ -857,12 +863,12 @@ p.copyright a:hover {
     color: #f97c69;
 }
 
-.cribblservices_footer_grid form {
+.w3layouts_footer_grid form {
     border: 1px solid #fff;
     width: 100%;
 }
 
-.cribblservices_footer_grid input[type="email"] {
+.w3layouts_footer_grid input[type="email"] {
     outline: none;
     padding: 15px 15px;
     color: #fff;
@@ -897,7 +903,7 @@ ul.con_inner_text li {
     letter-spacing: 1px;
     margin-bottom: 17px;
 }
-.cribblservices_footer_grid.fokt {
+.w3layouts_footer_grid.fokt {
     padding-right: 5em;
 }
 ul.con_inner_text li label {
@@ -926,7 +932,7 @@ ul.con_inner_text.midimg li {
     width: 22%;
 }
 /*-- //footer --*/
-.agileits-cribblservices-info img {
+.agileits-w3layouts-info img {
     width: 100%;
 }
 h4.modal-title {
@@ -935,7 +941,7 @@ h4.modal-title {
 	font-weight:600;
     letter-spacing: 2px;
 }
-.agileits-cribblservices-info p {
+.agileits-w3layouts-info p {
     font-size: 14px;
     color: #777;
     line-height: 28px;
@@ -977,7 +983,7 @@ h4.modal-title {
 .agile_gallery_grid1{
     position: relative;
 }
-.cribblservices_gallery_grid1_pos{
+.w3layouts_gallery_grid1_pos{
     background:#7f67f8;
     bottom: 45px;
     left: 45px;
@@ -996,7 +1002,7 @@ h4.modal-title {
     -webkit-transition: all 0.8s ease;
     transition: all 0.8s ease;
 }
-.cribblservices_gallery_grid1_pos h3{
+.w3layouts_gallery_grid1_pos h3{
     font-size: 1.2em;
     letter-spacing: 2px;
     font-weight: 600;
@@ -1006,12 +1012,12 @@ h4.modal-title {
     text-transform: uppercase;
     color: #212121;
 }
-.cribblservices_gallery_grid1_pos p{
+.w3layouts_gallery_grid1_pos p{
 	color: #fff;
 	line-height:2em;
 	letter-spacing:1px;
 }
-.agile_gallery_grid:hover .cribblservices_gallery_grid1_pos{
+.agile_gallery_grid:hover .w3layouts_gallery_grid1_pos{
     opacity: 1;
     visibility: visible;
     -webkit-transform: scaleX(1);
@@ -1516,7 +1522,7 @@ h2.typoh2 {
 .pagination {
 	margin: 20px 0 0px;
 }
-.grid_3.grid_4.cribblservices {
+.grid_3.grid_4.w3layouts {
 	margin-top: 25px;
 }
 }
@@ -1588,14 +1594,14 @@ h1 a.navbar-brand {
 .w3_banner_info_grid h3, .w3_banner_info_grid h2 {
     font-size: 2.5em;
 }
-.cribblservices_getin_info h3 {
+.w3layouts_getin_info h3 {
     letter-spacing: 3px;
     font-size: 36px;
 }
 .banner1 {
     min-height: 250px;
 }
-.cribblservices_gallery_grid1_pos h3 {
+.w3layouts_gallery_grid1_pos h3 {
     margin: 0em 0 .5em;
 }
 }
@@ -1685,11 +1691,11 @@ li.nav-item {
 .wthree_head_section p {
     width: 100%;
 }
-.cribblservices_getin_info h3 {
+.w3layouts_getin_info h3 {
     letter-spacing: 1px;
     font-size: 30px;
 }
-.cribblservices_getin a {
+.w3layouts_getin a {
     padding: 0.7em 1.3em;
 }
 section.stats h4 {
@@ -1701,13 +1707,13 @@ section.stats h4 {
 .w3ls-about-grid h6 {
     font-size: 1.4em;
 }
-.cribblservices_footer_grid.fokt {
+.w3layouts_footer_grid.fokt {
     padding-right: 1em;
 }
 .navbar-light .navbar-nav .nav-link {
     color: #fff;
 }
-.cribblservices_gallery_grid1_pos {
+.w3layouts_gallery_grid1_pos {
     bottom: 20px;
     left: 20px;
     right: 20px;
@@ -1743,13 +1749,13 @@ section.what_you {
 .w3l_header,section.stats h4 {
     font-size: 2.7em;
 }
-.cribblservices_bottom {
+.w3layouts_bottom {
     padding: 4em 0;
 }
 .stats {
     padding: 3em 0;
 }
-.cribblservices_stats_left p {
+.w3layouts_stats_left p {
     font-size: 2.8em;
 }
 p.stap {
@@ -1806,31 +1812,31 @@ section.mid_slider {
 .banner, .agile_dot_info {
     min-height: 455px;
 }
-.cribblservices_getin {
+.w3layouts_getin {
     margin-top: 1.5em;
 }
-.cribblservices_stats_left p {
+.w3layouts_stats_left p {
     font-size: 2.2em;
 }
 section.stats h4 {
     line-height: 1.1em;
 }
-.cribblservices_footer_grid h2, .cribblservices_footer_grid h3 {
+.w3layouts_footer_grid h2, .w3layouts_footer_grid h3 {
     margin-bottom: 0.5em;
 }
-.cribblservices_footer_grid {
+.w3layouts_footer_grid {
     margin-top: 2em;
 }
 .footer {
     padding: 3em 0 2em;
 }
-.cribblservices_gallery_grid1_pos {
+.w3layouts_gallery_grid1_pos {
     bottom: 40px;
     left: 40px;
     right: 40px;
     top: 40px;
 }
-.cribblservices_gallery_grid1_pos h3 {
+.w3layouts_gallery_grid1_pos h3 {
     margin: 3em 0 .5em;
 }
 }
@@ -1899,7 +1905,7 @@ section.stats h4 {
 .banner, .agile_dot_info {
     min-height: 390px;
 }
-.cribblservices_gallery_grid1_pos h3 {
+.w3layouts_gallery_grid1_pos h3 {
     margin: 3em 0 .5em;
 }
 .team_icons ul li {
@@ -1923,7 +1929,7 @@ section.stats h4 {
 .banner, .agile_dot_info {
     min-height: 370px;
 }
-.cribblservices_gallery_grid1_pos h3 {
+.w3layouts_gallery_grid1_pos h3 {
     margin: 1em 0 .5em;
 }
 .team_grid1 {
@@ -1954,7 +1960,7 @@ section.stats h4 {
 @media(max-width:384px){
 }
 @media(max-width:375px){
-.cribblservices_stats_left h3 {
+.w3layouts_stats_left h3 {
 		font-size: 0.8em;
 }
 }
@@ -1965,7 +1971,7 @@ ul.con_inner_text li {
 button.btn1 {
     width: 18%;
 }
-.cribblservices_footer_grid input[type="email"] {
+.w3layouts_footer_grid input[type="email"] {
     width: 80%;
 }
 .footer {
@@ -1989,10 +1995,10 @@ section.services.section {
 .stats {
     padding: 2.5em 0;
 }
-.cribblservices_bottom {
+.w3layouts_bottom {
     padding: 3em 0;
 }
-.cribblservices_getin_info h3 {
+.w3layouts_getin_info h3 {
     font-size: 25px;
 }
 section.what_you {
@@ -2031,19 +2037,19 @@ section.what_you {
     padding: 6px 10px;
     font-size: 13px;
 }
-.cribblservices_footer_grid h2, .cribblservices_footer_grid h3 {
+.w3layouts_footer_grid h2, .w3layouts_footer_grid h3 {
     font-size: 1.5em;
 }
 .typo {
     padding: 2.5em 0;
 }
-.cribblservices_gallery_grid1_pos {
+.w3layouts_gallery_grid1_pos {
     bottom: 30px;
     left: 30px;
     right: 30px;
     top: 30px;
 }
-.cribblservices_gallery_grid1_pos h3 {
+.w3layouts_gallery_grid1_pos h3 {
     margin: 0em 0px 0.5em;
 }
 .banner-bottom.gallery {
