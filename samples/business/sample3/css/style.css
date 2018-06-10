@@ -1125,6 +1125,9 @@ p.sub_p {
 section.mid_slider {
     padding: 5em 0;
 }
+.sub_p ul {
+    margin: 1.2em 1.2em 0;
+}
 /*-- //team --*/
 /*-- icons --*/
 .codes a {
@@ -2061,3 +2064,6 @@ section.mid_slider {
 }
 /*--//responsive--*/
 
+.sub_p ul {
+    margin: 1.2em 1.2em 0;
+}
