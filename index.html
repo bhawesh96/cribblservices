@@ -1341,19 +1341,24 @@
                                         "accept": "application/json",
                                         "Access-Control-Allow-Origin":"*",
                                         "Content-Type": "application/json"
-                                    }
+                                    },
+                          success: function (data, status) {
+                              console.log(status);
+                              if (status == "success") {
+                                  $('#success').html("<div class='alert alert-success'>");
+                                  $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                                      .append("</button>");
+                                  $('#success > .alert-success')
+                                      .append("<strong>Your message has been sent. </strong>");
+                                  $('#success > .alert-success')
+                                      .append('</div>');
+                                  $('#contact-form').trigger("reset");
+                              }
+                              else {
+                                  alert("Sorry, couldn't send your message. Please try again later.");
+                              }
+                          }
 
-                      },
-                      function(data, status) {
-                        alert('here');
-                          // console.log(data + status);
-                          if (status == "success") {
-                              $('#contact-form').trigger("reset");
-                              alert("Thank you for contacting us. We'll reach out to your shortly!");
-                          }
-                          else {
-                              alert("Sorry, couldn't send your message. Please try again later.");
-                          }
                       });
                   });
               });
