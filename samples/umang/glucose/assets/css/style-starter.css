@@ -10804,7 +10804,37 @@ select {
   opacity: 1; }
 
 .w3l-products .products-content .content {
-  position: relative; }
+  position: relative;
+  background-color: #3B3663;
+}
+
+.w3l-products .products-content .content:hover{
+  transform: scale(1.05);
+}
+
+.w3l-products .products-content .content .product-meta {
+  padding: 5px;
+}
+
+.w3l-products .products-content .content .product-meta .product-title{
+  font-weight: 600;
+}
+
+.w3l-products .products-content .content .product-meta .product-holograms img{
+  background-color: var(--primary-color);
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 26px;
+  padding: 3px;
+}
+
+.w3l-products .products-content .content p {
+  margin-bottom: 2px;
+}
+
+.w3l-products .products-content .content a:hover {
+  color: #fe5a0e;
+}
 
 @media screen and (max-width: 992px) {
   .w3l-products .products-content h3 {
