@@ -10805,7 +10805,8 @@ select {
 
 .w3l-products .products-content .content {
   position: relative;
-  background-color: #3B3663;
+  background-color: #fff;
+  border: 1px solid black;
 }
 
 .w3l-products .products-content .content:hover{
@@ -10816,11 +10817,11 @@ select {
   padding: 5px;
 }
 
-.w3l-products .products-content .content .product-meta .product-title{
+.w3l-products .products-content .content .product-meta .product-title {
   font-weight: 600;
 }
 
-.w3l-products .products-content .content .product-meta .product-holograms img{
+.product-holograms img {
   background-color: var(--primary-color);
   border: 1px solid white;
   border-radius: 50%;
@@ -12499,3 +12500,34 @@ h2.title {
     font-size: 18px; } }
 
 /*# sourceMappingURL=style-starter.css.map */
+
+#prod-capacity {
+  display: inline-table;
+  border: 1px solid var(--primary);
+  border-radius: 100%;
+  height: 60px;
+  width: 60px;
+  margin-right: 1%;
+  transition: box-shadow .3s;
+}
+
+#prod-capacity:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+
+#prod-capacity p {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.about-product-holograms #prod-hologram img {
+  width: 60px;
+  display: inline;
+  padding: 6px;
+}
+
+.about-product-holograms {
+  display: flex;
+  margin-top: 2%;;
+}

@@ -104,19 +104,67 @@ Author URL: http://Cribbl Services.com
         <div class="container py-lg-5 py-md-4">
             <div class="cwp4-two row">
                 <div class="cwp4-image col-lg-4">
-                  <img src="assets/images/p1.jpg" class="radius-image img-fluid" alt="" />
+                  <img id="product-image" src="" class="radius-image img-fluid" alt="" />
+                  <ul class="product-holograms about-product-holograms"></ul>
                 </div>  
                 <div class="cwp4-text col-lg-8 pl-lg-5 mt-lg-0 mt-sm-5 mt-4">
                     <!-- <span class="title-small">Our Story</span> -->
                     <h3 class="title-big" id="product-name"></h3>
                     <p class="mt-4" id="product-description"></p>
-                    <p class="mt-4" id="product-capacities">Capacities: </p>
-                    <a class="btn btn-style btn-primary mt-sm-5 mt-4" href="#read"> Read More</a>
+                    <ul class="mt-4" id="product-capacities"></ul>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- contact -->
+<div class="w3l-contact-info py-5" id="contact">
+  <div class="container py-lg-5 py-md-4">
+      <div class="row mt-5">
+          <div class="col-lg-4">
+              <div class="title">
+                  <h3 class="title-big">Get in <span>Touch</span></h3>
+                  <p class="mt-2"><strong>MAHA PETROCHEM PVT. LTD.</strong>
+                  </p>
+                      <p>501, A, Pinnacle Corporate Park,
+                        <br>Near World Trade Centre,
+                        <br>BKC Bandra(East), Mumbai- 400051
+                      </p>
+                  <br>
+                  <p class="mt-2"><strong>Customer Care</strong>
+                      <br><a href="tel:+404-11-22-89">1800 890 6242</a>
+                  </p>
+                  <br>
+                  <p class="mt-2"><strong>Email</strong>
+                      <br><a href="mailto:info@MahaPetro.com">info@MahaPetro.com</a>
+                  </p>
+              </div>
+          </div>
+          <div class="col-lg-8 form-inner-cont mt-lg-0 mt-sm-5 mt-4">
+              <form class="signin-form" id="contact-form">
+                  <div class="form-input">
+                      <input type="text" name="name" id="name" placeholder="Your name">
+                  </div>
+                  <div class="form-input">
+                    <input type="phone" name="phone" id="phone" placeholder="Your phone number"
+                        required="">
+                  </div>
+                  <div class="form-input">
+                      <input type="email" name="email" id="email" placeholder="Your email address"
+                          required="">
+                  </div>
+                  <div class="form-input">
+                      <textarea name="message" id="message" placeholder="Your message (optional)"></textarea>
+                  </div>
+                  <div class="text-right">
+                      <button type="submit" class="btn btn-style btn-primary">Submit</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
 
  <!-- footer -->
  <section class="w3l-footer">
@@ -269,16 +317,24 @@ function getUrlVars()
        $info.show();
      }
    });
-   var prodid = getUrlVars()['abc'];
-   $("#product-name").text(products[prodid]['name']);
-   $("#product-description").text(products[prodid]['description']);
-   var caps = products[prodid]['capacities'];
+   var prodid = getUrlVars()['prodid'];
+   var prod = products[prodid];
+   $("#product-name").text(prod['name']);
+   $("#product-description").text(prod['desc']);
+   var caps = prod['capacities'];
    console.log(caps);
    caps.forEach(element => {
-    $("#product-capacities").append(element + ',');
+    $("#product-capacities").append(`<li id="prod-capacity"><p>${element}</p></li>`);
    });
-   $('#product-capacities').text($('#product-capacities').text().slice(0, -1));
+  //  $('#product-capacities').text($('#product-capacities').text().slice(0, -1));
    
+   var holos = prod['holograms'];
+   holos.forEach(holo => {
+    $(".about-product-holograms").append(`<li id="prod-hologram"><img src="assets/images/holograms/${holo}.png" /></li>`);
+   })
+
+   $("#product-image").attr("src", prod['image']);
+
  });
 </script>
 
@@ -459,6 +515,7 @@ function getUrlVars()
   });
 </script>
 <!--//MENU-JS-->
+<script src="assets/js/email.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 
 </body>
