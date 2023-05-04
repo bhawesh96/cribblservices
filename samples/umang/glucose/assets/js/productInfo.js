@@ -16,9 +16,9 @@ var products = {
         'amex-gel': {
           'name': 'MAHA AMEX GEL AP3 GREASE',
           'desc': 'It is a high quality lithium complex grease suitable for wide range of applications involving high temperature conditions. It is based on high quality mineral base oils and specially selected additives to provide excellent oxidation stability, protection against rust & corrosion, resistance to water contamination, anti-wear properties and resistance to water contamination. It is based on complex thickener. It enables them to retain their structure even at high temperatures and makes them an ideal choice for severe operating conditions offering extended lubrication intervals. This grease is recommended over a wide range of operating temperatures. It is recommended for lubrication of industrial bearings, joints, components operating under extreme temperatures and heavy loads in wide range of industries including steel, mining, cement, paper, chemical, automotive, construction and engineering sectors. Typical applications include conveyor bearings, vibrating sieves, kiln rollers, hot air fan bearings, electric motor bearings, automotive antifriction bearings, disc brake wheel bearings.',
-          'holograms': [ 'not mentioned' ],
-          'image': 'assets/images/products/bucket-1kg.jpg',
-          'capacities': [ 'NA' ]
+          'holograms': [ ],
+          'image': 'assets/images/products/bucket-18kg.jpg',
+          'capacities': [ '500 gm', '1 Kg', '2 Kg', '5 Kg', '18 Kg' ]
         },
         'atq-a': {
           'name': 'MAHA ATQ-A',
@@ -36,7 +36,7 @@ var products = {
           'name': 'MAHA BRONCO 10W-30',
           'desc': "It is a premium synthetic engine oil developed to meet the challenging lubrication requirements of latest generation Petrol and Diesel engines. It is a unique engine oil formulated with the most advanced high quality base oils and additive technology to deliver longer life, outstanding protection to the engine and enhanced fuel economy. This oil is also designed to meet specific requirement of engine technologies used in passenger cars as against conventional IDI/ DI engine technology used in diesel engines of truck/ buses. It exhibits better soot handling capabilities and outstanding control over soot induced thickening.It is recommended for use in automotive petrol or diesel engines of latest generation Petrol and Diesel cars, MUVs and SUVs. Be guided by OEM's recommendation for oil drain period.",
           'holograms': [ 'car' ],
-          'image': 'assets/images/products/bucket-1kg.jpg',
+          'image': 'assets/images/products/bucket-18kg.jpg',
           'capacities': [ 'NA' ]
         },
         'bronco-15w-40': {
@@ -50,7 +50,7 @@ var products = {
           'name': 'MAHA BRONCO 15W-40 API CI4+',
           'desc': "It is a premium quality heavy duty multi-fuel engine oil. It is developed to meet the stringent lubrication requirements of the modern low emission diesel engines. It is designed to improve engine and oil durability by way of acid & corrosion control, reduced engine wear and deposit control. It is highly effective in the corrosive environment of EGR and offers protection to after-treatment devices also. This oil exhibits better soot handling capability. Its' shear stable performance additives helps control the viscosity increase or oil thickening, handle higher soot level and protect engine parts against wear and corrosion.It is recommended for use in modern heavy duty low emission diesel engines such as light and heavy duty trucks, buses, petrol and diesel engines of SUVs, MUs and passenger cars. Be guided by OEM's recommendation for oil drain period.",
           'holograms': [ 'car', 'bus', 'truck' ],
-          'image': 'assets/images/products/bucket-1kg.jpg',
+          'image': 'assets/images/products/bucket-18kg.jpg',
           'capacities': [ 'NA' ]
         },
         'bronco-20w-40': {
@@ -83,7 +83,7 @@ var products = {
           'name': 'MAHA BRONCO 5W-30',
           'desc': 'It is a premium synthetic engine oil designed to meet the challenging lubrication requirements of latest generation Petrol and Diesel engines of passenger cars. It is a unique engine oil formulated with the advanced high performance base oils and additive technology to deliver longer oil life, outstanding engine protection and enhanced fuel economy. It provides exceptional engine performance in latest technology new generation engines functioning on close tolerances and requires special low viscometry oils without compromising on engines durability and reliability.This oil offers outstanding shear stability characteristics under conditions of high temperature and high shear.',
           'holograms': [ 'car' ],
-          'image': 'assets/images/products/bucket-1kg.jpg',
+          'image': 'assets/images/products/bucket-18kg.jpg',
           'capacities': [ 'NA' ]
         },
         'frosto-coolant': {
@@ -122,16 +122,16 @@ var products = {
         'krishi-pumpset': {
           'name': 'MAHA KRISHI PUMPSET 40',
           'desc': 'It 40 is a monograde diesel engine oil blended from high quality base oils and chosen additives. This oil is formulated to perform under very harsh operating conditions of diesel engines and offers superior protection to the engine components. It ensures trouble-free operation of engines. It delivers optimum lubrication and maintains reliability.It 40 is suitable as crankcase oil for slow and medium speed diesel engines of agricultural pump sets, threshers, sugarcane crushers etc.',
-          'holograms': [ 'not mentioned' ],
-          'image': 'assets/images/products/bucket-1kg.jpg',
+          'holograms': [ ],
+          'image': 'assets/images/products/bucket-20l.jpg',
           'capacities': [ '3.5 Ltr' ]
         },
         'pbc-grease': {
-          'name': 'MAHA PBC GREASE (WHITE/ RED)',
+          'name': 'MAHA PBC GREASE (WHITE / RED)',
           'desc': 'It is a premium quality grease manufactured from superior quality base oils. This grease is fortified with a well-balanced additive chemistry comprising of anti-oxidant, anti-wear and anti-rust additives making it suitable for a wide range of applications. The grease also provides excellent resistance to water wash-out. It offers mechanical stability and is suitable for use in applications experiencing moderate temperatures and moderate loads. It is recommended for lubrication of industrial applications like conveyors, machine tools, automotive wheel bearings, pin, bush, universal joints and various chassis parts, operating under moderate load and moderate temperature conditions.',
-          'holograms': [ 'not mentioned' ],
-          'image': 'assets/images/products/bucket-1kg.jpg',
-          'capacities': [ 'NA' ]
+          'holograms': [ ],
+          'image': 'assets/images/products/bucket-18kg.jpg',
+          'capacities': [ '100 gm', '200 gm', '500 gm', '1 Kg', '2 Kg', '5 Kg', '18 Kg' ]
         },
         'shock-up-oil': {
           'name': 'MAHA SHOCK-UP',
@@ -181,5 +181,12 @@ var products = {
           'holograms': [ 'tractor' ],
           'image': 'assets/images/products/tracto-utto.jpg',
           'capacities': [ '5 Ltr', '10 Ltr', '20 Ltr', '26 Ltr' ]
+        },
+        'adblu-def': {
+          'name': 'MAHA M-ADBLU DEF',
+          'desc': "MAHAM-ADBLU is a diesel exhaust fluid (DEF) that reduces air pollution created by diesel engines. It is a clear, non-toxic, non-polluting and non-hazardous solution of pure automotive grade urea in demineralised water. Urea content in the solution is closely controlled in the range of 31.8% to 33.2%. Selective Catalytic Reduction (SCR) system is used to reduce the amount of harmful NO released into the atmosphere. It is injected into the exhaust pipeline. Within the SCR catalyst, the NO, is reduced to harmless nitrogen and water. It is a specially designed DEF for SCR systems used in diesel powered vehicles (on-road and off-road) conforming to BS IV and BS VI emission norms. It is used to control NO emission.",
+          'holograms': [ 'car', 'bus', 'truck' ],
+          'image': 'assets/images/products/bucket-18kg.jpg',
+          'capacities': [ '20 Ltr', '26 Ltr' ]
         }
 }

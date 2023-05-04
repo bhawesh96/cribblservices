@@ -3134,7 +3134,8 @@ input[type="button"].btn-block {
 .navbar-collapse {
   flex-basis: 100%;
   flex-grow: 1;
-  align-items: center; }
+  align-items: center;
+}
 
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
@@ -3185,7 +3186,12 @@ input[type="button"].btn-block {
   .navbar-expand-md > .container,
   .navbar-expand-md > .container-fluid, .navbar-expand-md > .container-sm, .navbar-expand-md > .container-md, .navbar-expand-md > .container-lg, .navbar-expand-md > .container-xl {
     padding-right: 0;
-    padding-left: 0; } }
+    padding-left: 0; }
+  
+    .navbar-collapse {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
 
 @media (min-width: 768px) {
   .navbar-expand-md {
@@ -9677,7 +9683,7 @@ p.white {
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
-  margin-left: auto; }
+  margin-left: auto }
 
 @media (min-width: 992px) {
   .container {
@@ -9729,7 +9735,6 @@ p.white {
   position: relative; }
 
 .title-big span {
-  font-family: 'Playfair Display',serif;
   font-weight: 700;
   font-style: italic;
   color: var(--primary-color); }
@@ -9968,7 +9973,7 @@ button.navbar-toggler.collapsed .icon-expand {
   font-weight: 600;
   letter-spacing: .5px;
   color: #fff;
-  opacity: .7; }
+}
 
 .navbar-expand-lg .navbar-nav .nav-link:hover {
   opacity: 1;
@@ -10204,9 +10209,11 @@ nav ul li a:hover {
   color: var(--para-color); }
 
 .w3l-main-slider .banner-info-bg {
-  max-width: 700px;
+  max-width: 600px;
   margin-top: 100px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  margin-left: auto;
+}
 
 .w3l-main-slider p.text-label {
   color: #fff;
@@ -10821,12 +10828,27 @@ select {
   font-weight: 600;
 }
 
+.product-capacities {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-holograms {
+  position: absolute;
+  top: 60%;
+}
+
 .product-holograms img {
   background-color: var(--primary-color);
   border: 1px solid white;
   border-radius: 50%;
   width: 26px;
   padding: 3px;
+}
+
+#product-description {
+  text-align: justify;
 }
 
 .w3l-products .products-content .content p {
@@ -12530,4 +12552,12 @@ h2.title {
 .about-product-holograms {
   display: flex;
   margin-top: 2%;;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
 }
