@@ -10851,6 +10851,10 @@ select {
   text-align: justify;
 }
 
+#product-tagline {
+  font-weight: 600;
+}
+
 .w3l-products .products-content .content p {
   margin-bottom: 2px;
 }

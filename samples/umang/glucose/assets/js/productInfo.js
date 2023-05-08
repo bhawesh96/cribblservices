@@ -1,4 +1,4 @@
-var products = {
+var automotive_products = {
         '4t-plus-10w-30': {
           'name': 'MAHA 4T PLUS 10W-30 API SL/ JASO MA2',
           'desc': 'It is a superior quality motorcycle engine oil developed specifically to meet the requirements of modern 4-stroke bike engines. It is blended from superior quality hydro processed base oils and an advanced additive technology. The engine oil also brings superior engine cleanliness and smoother clutch performance, leading to better ride comfort. It is specially formulated for the lubrication of the engine, gear box and wet clutch to result in an improved engine performance and engine durability. This oil ensures quick start and rapid acceleration under normal driving conditions. It has excellent control over deposit formation even at extreme operating conditions. This engine oil is recommended for all latest generation 4 stroke motorcycles manufactured by leading manufacturers.',
@@ -189,4 +189,182 @@ var products = {
           'image': 'assets/images/products/bucket-18kg.jpg',
           'capacities': [ '20 Ltr', '26 Ltr' ]
         }
+}
+
+var industrial_products = {
+  'compressor-oils--reciprocating-compressors': {
+      'name': 'Compressor Oils- Reciprocating Compressors',
+      'desc': 'These are high quality, high performance mineral oils developed for reciprocating air compressors. They are formulated from highly refined, high viscosity index base stocks and high performance additives with ashless chemistry. Compressors operate at high temperatures and pressures. These lubricants create a strong film in order to avoid surface wear. The thermal stability and oxidation resistance of these fluids can help maintain cleaner compressors, thereby enabling longer running periods between scheduled maintenance and oil changes. The outstanding anti-wear and corrosion protection are designed to enhance equipment life. They are designed to provide outstanding protection and lubrication to crankcase, cylinder and piston rings of reciprocating compressors.',
+      'image': 'assets/images/products/industrial/Compressor Oils- Reciprocating Compressors.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'Superior quality reciprocating air compressor oil'},
+  'compressor-oils--rotary-vane-&-screw-compressors': {
+      'name': 'Compressor Oils- Rotary Vane & Screw Compressors',
+      'desc': 'These are advanced oils developed for rotary vane and screw air compressors. They are formulated from high viscosity index base stocks and high performance advanced ashless additives to deliver the highest performance lubrication. These oils have outstanding resistance to oxidation and thermal degradation. The extremely low level of deposit formation help maintain internal surface cleanliness, thereby enabling longer running periods between scheduled maintenance and oil changes. The exceptional anti-wear and corrosion protection are designed to enhance equipment life while reducing maintenance requirements. They exhibit enhanced anti-foam characteristics and excellent air release property. Lower volatility results in lower evaporation and oil carry over in the compressor.',
+      'image': 'assets/images/products/industrial/Compressor Oils- Rotary Vane & Screw Compressors.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'Advanced high performance compressor oils'},
+  'metal-working-fluids--water-soluble': {
+      'name': 'Metal Working Fluids- Water Soluble',
+      'desc': 'It offers a range of premium quality soluble cutting oil blended from mineral oil and special additives to provide superior tool life, excellent surface finish and other benefits. It has excellent emulsion stability with hard water. Developed with a high mineral oil content, these can be for a variety of metal cutting operations like general machining, drilling, planning, milling, sawing of ferrous metals where cooling is important. These also offer good rust protection to the tools and work pieces.',
+      'image': 'assets/images/products/industrial/Metal Working Fluids- Water Soluble.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'Superior multipurpose fluids with excellent cooling, lubricity and rust protection.'},
+  'metal-working-fluids--neat-cut': {
+      'name': 'Metal Working Fluids- Neat Cut',
+      'desc': 'It offers a range of premium quality soluble cutting oil blended from mineral oil and special additives to provide superior tool life, excellent surface finish and other benefits. It has excellent emulsion stability with hard water. Developed with a high mineral oil content, these can be for a variety of metal cutting operations like general machining, drilling, planning, milling, sawing of ferrous metals where cooling is important. These also offer good rust protection to the tools and work pieces.',
+      'image': 'assets/images/products/industrial/Metal Working Fluids- Neat Cut.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'Superior metalworking fluids with active chemistry'},
+  'heat-transfer-fluids': {
+      'name': 'Heat Transfer Fluids',
+      'desc': 'A new generation, superior quality heat transfer fluid formulated exclusively from highly refined base stock and specially chosen additives. The antioxidant additive provides excellent resistance to oxidation and thermal break down of the oil and ensures longer operating life and excellent thermal conductivity. With a very high flash point, low vapour pressure, low volatility and non-corrosive nature , it is compatible with seal materials normally used in heat transfer systems. It is used for indirect heating in a closed forced circulated system.',
+      'image': 'assets/images/products/industrial/Heat Transfer Fluids.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'High performance heat transfer fluid'},
+  'heat-treatment-oils': {
+      'name': 'Heat Treatment Oils',
+      'desc': 'These superior quality quenching oils are formulated exclusively from highly refined base stock and special additives. Compounded with antioxidant additives and fatty oils, it offers longer operating life at elevated temperatures. Rust inhibitors and wetting agents alter surface tensions and aid faster cooling to achieve uniform hardening of parts with improved grain structure and with minimum distortion. It provides consistent and repeatable mechanical and metallurgical properties. These are suitable for the hardening of Carbon steel, Gray iron and High-alloy steel in open tanks, continuous furnaces, batch furnaces and vacuum furnaces. Different grades available for hot or cold quenching and fast or slow cooling',
+      'image': 'assets/images/products/industrial/Heat Treatment Oils.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'Compounded heat treatment oil for outstanding performance'},
+  'hydraulic-oils--aw-series': {
+      'name': 'Hydraulic Oils- AW Series',
+      'desc': 'It is a range of antiwear hydraulic oils blended from hydro-processed, high viscosity index Group I base oils. These oils are designed to operate over a wide range of working conditions including low load and severe high load conditions. High rate of water separation, exceptional hydrolytic stability, anti-foam and cleanliness allow efficient operation of the system. These oils ensures high level of antiwear property and film strength',
+      'image': 'assets/images/products/industrial/Hydraulic Oils- AW Series.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'Antiwear hydraulic fluid for superior performance'},
+  'hydraulic-oils--hlp-series': {
+      'name': 'Hydraulic Oils- HLP Series',
+      'desc': 'These oils are high performance premium quality hydraulic oils. They are blended from highly refined, high viscosity index Group I plus base oils with carefully selected balanced antiwear additive. These oils are designed to operate over a wide range of working conditions including low load and severe high load conditions. Formulated for excellent water separation, exceptional hydrolytic stability, anti-foam characteristics and cleanliness they allow efficient operation of the system. Superior moisture handling capability ensures longer life and reduces the risk of rusting and corrosion.',
+      'image': 'assets/images/products/industrial/Hydraulic Oils- HLP Series.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'Heavy duty hydraulic fluid for long life, excellent performance and protection'},
+  'hydraulic-oils--hlp-super-clean-series': {
+      'name': 'Hydraulic Oils- HLP Super Clean Series',
+      'desc': 'These oils are high performance premium quality hydraulic oils. They are blended from hydro processed, high viscosity index Group II plus base oils with proven zinc based antiwear additive. These oils are designed with excellent viscosity control to operate over a wide range of working conditions including severe mechanical stress and wide temperature range. They provide outstanding protection and performance in manufacturing and other operations subjected to wide ranges of ambient and operating temperatures. Formulated for excellent water separation, exceptional hydrolytic stability, anti-foam characteristics and cleanliness they allow efficient operation of the system. Superior moisture handling capability ensures longer life and reduces the risk of rusting and corrosion.',
+      'image': 'assets/images/products/industrial/Hydraulic Oils- HLP Super Clean Series.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'High viscosity index extra heavy duty hydraulic fluid for excellent performance over wide temperature range'},
+  'industrial-gear-oils': {
+      'name': 'Industrial Gear Oils',
+      'desc': 'These are a range of premium quality, extreme pressure industrial gear lubricants blended from high viscosity index solvent refined high quality base oils. The superior quality sulphur-phosphorus additive chemistry imparts high level of antiwear and extreme pressure property. Their high load carrying capacity and anti-friction property offer excellent performance and extra protection to the gear teeth, bearings and seals in order to handle severe stresses that occur in heavy duty industrial gears, spur, bevel, helical gears, worm gears, gear couplings and plain antifriction bearings subjected to shock/ heavy loads . Formulated with antifoam, antirust and antioxidation agents they offer excellent lubrication performance and long service life and are not corrosive to copper and copper alloys. These are compatible with seal materials and paints normally specified for use in industrial gear systems.',
+      'image': 'assets/images/products/industrial/Industrial Gear Oils.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'Premium quality high viscosity index, extreme pressure oils for industrial gears'},
+  'machine-way-oils': {
+      'name': 'Machine Way Oils',
+      'desc': 'High quality lubricating oils developed from high viscosity index base oil blended with carefully selected additive package imparts the frictional characteristics necessary to prevent stick-slip and jerky motion. These oils have very high resistance to oxidation in order to enhance the operating life. They also offer excellent oiliness, tackiness, wear resistance and non-drip characteristics make them compatible with the paints normally specified for use in industrial machine tool slide way systems. These are recommended for lubrication of machine tool slideways, tables and feed mechanisms for both horizontal and vertical guide ways.',
+      'image': 'assets/images/products/industrial/Machine Way Oils.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'Superior quality machine tool slideway lubricating oils'},
+  'mould-release-oils': {
+      'name': 'Mould Release Oils',
+      'desc': 'A wide range of operator friendly mould release oils with different flash points are offered which are suitable for various applications. This product facilitates release of moulds from metal casting and also to provide lubrication. It is recommended as a mould release agent in continuous and batch casting machines.',
+      'image': 'assets/images/products/industrial/Mould Release Oils.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'Mould release oils for Metal, Rubber, Plastics, Concrete etc.'},
+  'pneumatic-tool-oils': {
+      'name': 'Pneumatic Tool Oils',
+      'desc': 'These oils are high quality lubricating oils developed from highly refined high viscosity index paraffinic base stock and carefully selected additive package imparting outstanding ability to maintain tenacious oil film in low and high pressure and effectively lubricate the demanding requirements of pneumatic mechanisms. It has been developed to meet the special lubrication requirements of all percussion type pneumatic tools including those subjected to the most arduous conditions like rock drill, jack hammers, chippers, wagon drills etc. . They also offer excellent lubricity, wear resistance and adhesive characteristics.',
+      'image': 'assets/images/products/industrial/Pneumatic Tool Oils.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'Premium quality lubricating oils for pneumatic tools'},
+  'rolling-oils': {
+      'name': 'Rolling Oils',
+      'desc': 'Blended using highly refined, specially treated wax free straight mineral naphthenic oils are designed for very low temperature applications. These oils have good chemical stability and rapid solubility in liquefied refrigerants. They ensure high condenser efficiency and reduced compressor valve maintenance due to less amount of deposit formation. It is recommended for cylinder and bearing lubrication of a wide range of domestic and industrial refrigeration and air conditioning compressors. They can be used in both reciprocating and rotary compressors (open, hermetically sealed or semi-sealed) using either ammonia or conventional CFCs or HCFCs refrigerants.',
+      'image': 'assets/images/products/industrial/Rolling Oils.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'Superior quality high performance refrigerator compressor oils'},
+  'refrigeration-compressor-oils': {
+      'name': 'Refrigeration Compressor Oils',
+      'desc': 'Blended using highly refined, specially treated wax free straight mineral naphthenic oils are designed for very low temperature applications. These oils have good chemical stability and rapid solubility in liquefied refrigerants. They ensure high condenser efficiency and reduced compressor valve maintenance due to less amount of deposit formation. It is recommended for cylinder and bearing lubrication of a wide range of domestic and industrial refrigeration and air conditioning compressors. They can be used in both reciprocating and rotary compressors (open, hermetically sealed or semi-sealed) using either ammonia or conventional CFCs or HCFCs refrigerants.',
+      'image': 'assets/images/products/industrial/Refrigeration Compressor Oils.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'Superior quality high performance refrigerator compressor oils'},
+  'rubber-process-oils': {
+      'name': 'Rubber Process Oils',
+      'desc': 'It consists of a wide range of standard as well as customised rubber process oils that meet the needs of manufacturers of NR, SBR, PBR, Butyl and EPDM based rubber products.',
+      'image': 'assets/images/products/industrial/Rubber Process Oils.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'Superior solvency with excellent oxidation stability and ageing'},
+  'rust-preventive-oils--solvent-based': {
+      'name': 'Rust preventive oils- Solvent Based',
+      'desc': 'It a series of oils designed for use in the manufacture of nuts, bolts, HSS bearings, steel tubes, bars, tool-bits, tools and other small components for in-process protection. The oils work by effectively displacing moisture and protecting these machine parts from rust and corrosion. These are a specially formulated blend comprising superior quality hydrocarbon solvents, refined base oils and high-performance rust inhibitor additives. It protects steel against high humidity and extreme corrosive environments.',
+      'image': 'assets/images/products/industrial/Rust preventive oils- Solvent Based.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'Superior long lasting rust preventive solvents'},
+  'rust-preventive-oils--oil-based': {
+      'name': 'Rust preventive oils- Oil Based',
+      'desc': 'These are premium quality rust preventives designed to protect metal surfaces from rust and corrosion. The blend is formulated using light bodied base oil with polar rust preventing additives.',
+      'image': 'assets/images/products/industrial/Rust preventive oils- Oil Based.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'Superior long lasting rust preventive oil'},
+  'slideway-oils': {
+      'name': 'Slideway Oils',
+      'desc': 'These grades are high quality lubricating oils developed from high viscosity index base oil blended with carefully selected additive package. The high quality base stock combined with the additive package imparts the frictional characteristics necessary to prevent stick-slip and jerky motion. These oils have very high resistance to oxidation in order to enhance the operating life. They also offer excellent oiliness, wear resistance and non-drip characteristics.',
+      'image': 'assets/images/products/industrial/Slideway Oils.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'Superior quality machine tool slideway lubricating oils'},
+  'spray-oils': {
+      'name': 'Spray oils',
+      'desc': 'It offers an environmental friendly, non-toxic, non-phytotoxic, biodegradable, residue free organic farming product as a solution for European Red Mite (ERM). ERM PanonychusUlmi (Koch) has emerged as an important pest of apple in the last few years. It can be used for early season control of pests that overwinter on trees and shrubs, or it can be used during the growing season for variety of pest problems. It kills insects by smothering and is effective on insects in all stages of growth including the egg stage, clinging to the bark of trees and shrubs. Oil can be used for managing the overwintering populations of aphids, SAN JOSE scales, webworms, leafhoppers, tent caterpillars, mealy bugs, European red mites, etc.',
+      'image': 'assets/images/products/industrial/Spray oils.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'Environmental friendly, non-toxic and biodegradable oil'},
+  'transformer-oils': {
+      'name': 'Transformer Oils',
+      'desc': 'It is manufactured from severely hydro-treated low aromatic oil and free of polar compounds. Good dielectric property, high resistance to oxidation and aging, excellent low temperature property and low viscosity provides efficient heat transfer. It has a high resistance to thermal and chemical degradation and offers very high breakdown voltage. Very low water content in the oil makes it noncorrosive towards copper and does not require passivation.',
+      'image': 'assets/images/products/industrial/Transformer Oils.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'High performance electrical insulating oil'},
+  'turbine-oils': {
+      'name': 'Turbine Oils',
+      'desc': 'These are high performance oils blended from highly refined, high viscosity index base stocks and carefully selected additive to meet the demands lube oil pressure circulation systems of the modern steam, gas and hydraulic turbines. The additive system imparts extremely high resistance to the chemical and thermal degradation of the oil. It offers long oil life, a high degree of protection, minimised deposit formation, excellent water separation, antifoam characteristics, rapid air release and cleanliness.',
+      'image': 'assets/images/products/industrial/Turbine Oils.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'Superior quality industrial steam, gas and hydraulic turbine oils'},
+  'wire-rope-compound': {
+      'name': 'Wire rope compound',
+      'desc': 'These Compounds are a range of high viscosity black residual type bituminous lubricants. They contain specially selected bituminous compound which provides excellent adhesion. Due to its excellent tackiness it forms a highly tenacious film on metals and thus offers excellent performance under severe operating conditions. It offers a number of grades that are blends of bitumen and high viscosity base oils to suit various applications. The heavier grades require preheating before application and in liquid state they can be applied with swab, brush or paddle.',
+      'image': 'assets/images/products/industrial/Wire rope compound.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'High viscosity bituminous lubricant for wire ropes'},
+  'open-gear-compound': {
+      'name': 'Open gear compound',
+      'desc': 'These are a range of high viscosity black residual type bituminous lubricants. They contain specially selected bituminous compound which provides excellent adhesion. Due to its excellent tackiness it forms a highly tenacious film on metals and thus offers excellent performance under severe operating conditions. It offers a number of grades that are blends of bitumen and high viscosity base oils to suit various applications. The heavier grades require preheating before application and in liquid state they can be applied with swab, brush or paddle.',
+      'image': 'assets/images/products/industrial/Open gear compound.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'High viscosity bituminous lubricant for open gears'},
+  'coning-oils': {
+      'name': 'Coning oils',
+      'desc': 'It has been specially developed for preparation of cone of textile yarn. Coning is a process of preparing a cone of yarn that releases yarn uniformly in the next operations like on a knitting creel, warping creel or braiding creel. An ideal cone is not too soft or too hard. It enhances the subsequent operations like knitting, warping or braiding. It is blended from highly refined, hydro processed base stock fortified with special emulsifier, anti-flashing and antistatic additives. It is water soluble, emulsifiable and helps provide flexibility to the yarns. It also offers abrasion resistance, anti-staining and antistatic property to the yarns.',
+      'image': 'assets/images/products/industrial/Coning oils.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'High quality oil for cone preparation'},
+  'knitting-oils': {
+      'name': 'Knitting oils',
+      'desc': 'It is formulated from hydro treated, high viscosity index, water white base stocks. It is fortified with special anti-wear, emulsifier and other performance enhancing additives. It offers very good protection to the components of knitting machinery against wear and rust. This oil offers good resistance to oxidation and meets the requirements of textile industry in terms of increased speed and operating temperature. It significantly reduces deposits on the heavily loaded, sensitive needles and sinkers. This product offers excellent compatibility with the machine elements and reduces the operating temperatures. It is a fully washable type of oil and readily forms emulsion with water. It does not stain cloth and does not form deposits during subsequent processes.',
+      'image': 'assets/images/products/industrial/Knitting oils.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'High performance knitting machine oil'},
+  'spindle-oils': {
+      'name': 'Spindle oils',
+      'desc': 'It is a premium quality spindle oil developed for lubricating the bearings of ring frames in textile industries. It is formulated with high quality severely hydro processed mineral base oils and a high performance additive system designed to provide outstanding resistance to oxidation and thermal stress. Special antiwear additive package provides exceptional equipment protection against low temperature wear and offers reliability under severe operating conditions. High quality base oil coupled with special friction modifier has the potential for energy efficiency during the operation of the ring frames.',
+      'image': 'assets/images/products/industrial/Spindle oils.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'New generation energy efficient spindle oil for textile spinning frames'},
+  'warping-oils': {
+      'name': 'Warping oils',
+      'desc': 'It has been specially designed for warping application of textile yarn. Weaving of textile is a process of interlacing warps with wefts. In a fabric, longitudinal yarns are called warps and lateral or cross yarns are called wefts. In warping application, warp yarns are arranged parallel to each other and wound around a beam. Warping oil is used to treat textile yarns to withstand the abrasive forces the warp yarns face during weaving application. It is blended from highly refined, hydro processed base stock fortified with special emulsifier and antistatic additives. It is water soluble, emulsifiable and helps provide flexibility to the yarns. It also offers abrasion resistance, antistaining and antistatic property to the yarns.',
+      'image': 'assets/images/products/industrial/Warping oils.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'High quality oil for warping application'},
+  'weaving-oils': {
+      'name': 'Weaving oils',
+      'desc': 'It is specially designed with highly refined, high viscosity index base stocks and selected performance additives to meet the lubrication requirements of Auto looms. The unique additive chemistry used in the formulation provides optimum oil misting and reclassifying properties. It has enhanced surface wetting capabilities which allows a better lubricating oil film formation on bearings, gears, rollers, etc. Its outstanding anti-wear property reduces friction and enhances machine components life. It provides exceptional oxidation and thermal stability thereby helps maintain cleaner machine components and extends scheduled maintenance interval. It also exhibits excellent anti-corrosion characteristics and compatible with most of the machine components.',
+      'image': 'assets/images/products/industrial/Weaving oils.jpg',
+      'capacities': ['10 Ltr', '20 Ltr', '26 Ltr', '210 Ltr', 'Bulk'],
+      'tagline': 'High performance lubricant for Auto looms'
+      }
 }

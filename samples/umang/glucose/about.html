@@ -110,6 +110,7 @@ Author URL: http://Cribbl Services.com
                 <div class="cwp4-text col-lg-8 pl-lg-5 mt-lg-0 mt-sm-5 mt-4">
                     <!-- <span class="title-small">Our Story</span> -->
                     <h3 class="title-big" id="product-name"></h3>
+                    <p class="mt-4" id="product-tagline"></p>
                     <p class="mt-4" id="product-description"></p>
                     <ul class="mt-4" id="product-capacities"></ul>
                 </div>
@@ -308,18 +309,20 @@ function getUrlVars()
      }
    });
    var prodid = getUrlVars()['prodid'];
+   products = Object.assign({}, industrial_products, automotive_products);
+   console.log(products)
    var prod = products[prodid];
    $("#product-name").text(prod['name']);
+   prod['tagline'] && $("#product-tagline").text(prod['tagline']);
    $("#product-description").text(prod['desc']);
    var caps = prod['capacities'];
-   console.log(caps);
    caps.forEach(element => {
     $("#product-capacities").append(`<li id="prod-capacity"><p>${element}</p></li>`);
    });
   //  $('#product-capacities').text($('#product-capacities').text().slice(0, -1));
    
    var holos = prod['holograms'];
-   holos.forEach(holo => {
+   holos && holos.forEach(holo => {
     $(".about-product-holograms").append(`<li id="prod-hologram"><img src="assets/images/holograms/${holo}.png" /></li>`);
    })
 
