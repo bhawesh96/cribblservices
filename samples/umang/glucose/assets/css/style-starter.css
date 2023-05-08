@@ -12555,7 +12555,9 @@ h2.title {
 
 .about-product-holograms {
   display: flex;
-  margin-top: 2%;;
+  margin-top: 2%;
+  position: relative;
+  top: auto;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
